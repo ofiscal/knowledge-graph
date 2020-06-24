@@ -1,3 +1,4 @@
+#+TITLE: enph
 * PITFALL: These notes files are redundant
 There's an enig.org file, an enph.org file, and this one which pertains to both.
 * refs

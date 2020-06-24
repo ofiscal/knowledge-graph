@@ -1,3 +1,4 @@
+#+TITLE: todo-ofiscal
 * TODO shared decision
 ** TODO add cesantias + primas to (which?) income measure
  should be in denominator, and not numerator, of tax rate.
