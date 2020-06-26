@@ -22,8 +22,7 @@ the usual 19%, plus 8% more.)
       . correct( purchases ) )
 *** but purchases/correct.py uses assignment
 purchases = c.correct( purchases )
-** TODO if missing freq, assume monthly
-says Camilo Andres Avila Carreño
+** TODO [[id:75bcf182-59ba-4a14-8a5d-e25d588bd88d][missing freq => monthly freq]]
 ** TODO what does "otros impuestos" include?
 They represent a small but nonzero part of expenditures --
 see build/purchase_sums.py.

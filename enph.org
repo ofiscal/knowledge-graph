@@ -837,7 +837,11 @@ V1951
 8 » 8. Anual
 9 » 9.Esporádico
 10 » 10. Semestral
-*** Expenses with no recorded frequency are daily.
+*** TODO missing freq => monthly freq
+    :PROPERTIES:
+    :ID:       75bcf182-59ba-4a14-8a5d-e25d588bd88d
+    :END:
+ says Camilo Andres Avila Carreño
 ** expenditure files
 *** sea_enc_per_csv
 The table contains lots of information about the people answering the surveys. Apparently, it has variables that could be used to calibrate the “holy grail” (questions P800 to P8007…need to explore further).
