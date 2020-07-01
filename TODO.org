@@ -1,4 +1,10 @@
 #+TITLE: todo-ofiscal
+* TODO long-term: use GEIH, more recent
+** goal: maximally up-to-date income, expenditure data
+** it has no consumption data
+** the "Medicion de Pobreza ..."
+ask Daniel about it
+is a good measure of income distribution
 * TODO shared decision
 ** TODO add cesantias + primas to (which?) income measure
  should be in denominator, and not numerator, of tax rate.
@@ -11,18 +17,12 @@ is-purchase we probably assume to be 1, but the others ...?
 That's why, for instance, its max in purchases_2_vat_test is 0.27, not 19.
 (0.27 is the total tax levied on big motorcycles --
 the usual 19%, plus 8% more.)
-* TODO possibly wrong
+* TODO mysteries
+** TODO what are DANE's aggregate income, expenditure variables?
+** TODO If max "vat" is 0.27, max vat frac should be 0.213
+ but instead it's 0.160, which is what would derive from a max vat of 0.19.
+ This problem arises in purchases_2_vat_test.py
 ** TODO do my income variables include SS withholdings, etc?
-** TODO check non-functional use of Corrections
-*** e.g. in purchases_2_vat.py, one is run without assignment:
-  if True: # TODO ? move these upstream, to purchases/main.py
-    ( cla . Correction # no "never" frequencies
-      . Drop_Row_If_Column_Satisfies_Predicate(
-        "per month", lambda x: x==11 )
-      . correct( purchases ) )
-*** but purchases/correct.py uses assignment
-purchases = c.correct( purchases )
-** TODO [[id:75bcf182-59ba-4a14-8a5d-e25d588bd88d][missing freq => monthly freq]]
 ** TODO what does "otros impuestos" include?
 They represent a small but nonzero part of expenditures --
 see build/purchase_sums.py.
@@ -32,56 +32,37 @@ From the coicop bridge:
   Impuestos del vehiculo;12700602;0;0;0;
   Impuesto de renta;12700603;0;0;0;
   Otros impuestos (de timbre, etc);12700699;0;0;0;
-** TODO once `conda update` installs pandas 1.04, use that
-*** what to do
-Every week or so, try building the Dockerfile again.
-While building, search for "pandas", check the version.
-If it's still 1.03, ignore; otherwise, build a new tax.co.
-*** explanation
-1.04 fixes some bugs that may have been bothering me,
-  regarding categorical data, isin(), and replace(), among others.
-Currently the latest pandas version that conda update installs in the docker container is 1.03, which doesn't have that good stuff.
-The pandas version in the latest tax.co docker image is 1.02.
+** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
+* TODO possibly wrong
+** TODO Why are there fewer infinite values in the full sample?
+For the household data, in the 1/10 sample, I see
+  vat / purchase value, min   8719.0  0.000000           inf
+  vat / purchase value, max   8719.0  0.000000           inf
+but in the 1/1 sample, this:
+  vat / purchase value, min   87124.0  0.00000  2.129018e-01
+  vat / purchase value, max   87124.0  0.00000  2.129038e-01
 ** TODO estrato : drop values above 6
  what do they mean?
  and then adjust the tests
+** TODO check non-functional use of Corrections
+*** e.g. in purchases_2_vat.py, one is run without assignment:
+  if True: # TODO ? move these upstream, to purchases/main.py
+    ( cla . Correction # no "never" frequencies
+      . Drop_Row_If_Column_Satisfies_Predicate(
+        "per month", lambda x: x==11 )
+      . correct( purchases ) )
+*** but purchases/correct.py uses assignment
+purchases = c.correct( purchases )
 ** TODO pension variables are bad
 They're missing a lot, so their averages aren't right.
 But we don't use them.
-** TODO If max "vat" is 0.27, max vat frac should be 0.213
- but instead it's 0.160, which is what would derive from a max vat of 0.19.
- This problem arises in purchases_2_vat_test.py
-** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
-** TODO how bad is capitulo c?
-The following bullet items were written at two different times.
-They contradict each other.
-*** more than 2/3 of the "capitulo c" observations have no associated value
-**** and they are only divided into 25 broad categories, with no associated quantity variable, so imputation is infeasible
-**** Those value-missing observations are 19.2% of our data.
- Hopefully that will be close to 0 after discarding:
-   frequency = nunca
-   ~ bought it in the last week
-   value = 99
-*** most purchases use coicop, not capitulo c codes
- capitulo c is a very small fraction of total purchases
- >>> subsample = 10
- >>> purchases = oio.readStage( subsample, "purchases_2_vat" )
- >>> util.describeWithMissing( purchases[[[[ "25-broad-categs", "coicop"]] ]] )
-          25-broad-categs        coicop
- 0               0.000000  0.000000e+00
- length     689761.000000  6.897610e+05
- missing    657576.000000  3.218500e+04
- count       32185.000000  6.575760e+05
- mean           13.866801  4.833412e+06
- std             7.151346  4.292508e+06
- min             1.000000  1.110101e+06
- 25%             7.000000  1.160111e+06
- 50%            15.000000  1.220801e+06
- 75%            20.000000  8.300305e+06
- max            25.000000  1.270990e+07
 ** TODO ? throw out purchasees with absurd quantities?
 Something in the full sample has a quantity value of 9e7.
 * TODO test suite
+** TODO ensure no test conflates assetions with booleans
+That is, if a test returns a bool, it must be asserted, not merely evaluated.
+*** TODO to avoid this pitfall in the future
+Test each test by first making sure that when it fails, an error is thrown.
 ** TODO test "value, consumption"
 ** TODO fix this disabled assertion
 in a/python/build/households_1_agg_plus_test.py:
@@ -158,24 +139,6 @@ def test_income_ranks( ppl : pd.DataFrame ) -> ():
                (m < 1/n) )
 *** TODO check variable types
 see build/buildings_test.py for an example
-** TODO ensure no test conflates assetions with booleans
-That is, if a test returns a bool, it must be asserted, not merely evaluated.
-** TODO double-check mk_solidaridad for contractors
-Is the tax code really that absurd? There are clauses that never hold.
-** TODO incorporate tests in hand_test/ into automatic tests
-Note that not all of them can be automated --
-for instance, the ones that draw pictures.
-** TODO dtype argument for pd.read_csv should be stored for each file
-rather than coded anew every time it is read
-** TODO the logging idiom does not capture most recent test state
-A function does not record to the log unless it completes.
-*** TODO solution ? need a way to delete output if python program fails
-** TODO maybe
-*** TODO ? people.main:
-**** Test the range and missing-ness of the input file.
-**** unit tests for people/main.py
-? What if a variable is built up in steps in main.py?
-Should I divide main.py into a separate file for each step?
 ** TODO purchase_sums.py: subdivide for testing
 Currently the variables that are created before the groupby statement
 are not "cleverly testable". I can test their means, ranges, etc.,
@@ -183,6 +146,22 @@ but I can't test certain identities without the purchase-level data.
 
 Saving an intermediate purchase-lsevel data set containing
 them would make it possible.
+** TODO maybe
+*** TODO incorporate tests in hand_test/ into automatic tests
+ Note that not all of them can be automated --
+ for instance, the ones that draw pictures.
+*** TODO dtype argument for pd.read_csv should be stored for each file
+ rather than coded anew every time it is read
+*** TODO the logging idiom does not capture most recent test state
+ A function does not record to the log unless it completes.
+**** TODO solution ? need a way to delete output if python program fails
+*** TODO double-check mk_solidaridad for contractors
+ Is the tax code really that absurd? There are clauses that never hold.
+*** TODO ? people.main:
+**** Test the range and missing-ness of the input file.
+**** unit tests for people/main.py
+? What if a variable is built up in steps in main.py?
+Should I divide main.py into a separate file for each step?
 ** tasks
 *** restructure programs for testing
 so that it's like this:

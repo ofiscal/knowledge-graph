@@ -837,7 +837,7 @@ V1951
 8 » 8. Anual
 9 » 9.Esporádico
 10 » 10. Semestral
-*** TODO missing freq => monthly freq
+*** PITFALL: missing freq => monthly freq
     :PROPERTIES:
     :ID:       75bcf182-59ba-4a14-8a5d-e25d588bd88d
     :END:
