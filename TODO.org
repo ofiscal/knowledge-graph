@@ -1,10 +1,12 @@
-#+TITLE: todo-ofiscal
+#+TITLE: ofiscal, todo
 * TODO long-term: use GEIH, more recent
 ** goal: maximally up-to-date income, expenditure data
 ** it has no consumption data
 ** the "Medicion de Pobreza ..."
 ask Daniel about it
 is a good measure of income distribution
+* TODO maybe ENUT too (Encuesta Nacional del Uso del Tiempo)
+** propensity score matching
 * TODO shared decision
 ** TODO add cesantias + primas to (which?) income measure
  should be in denominator, and not numerator, of tax rate.
