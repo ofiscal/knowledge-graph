@@ -2,7 +2,11 @@
 #+ROAM_ALIAS: geih
 * references
 ** [[http://microdatos.dane.gov.co/index.php/catalog/659/get_microdata][GEIH 2020 online]]
-* PROBLEMS
+* geo matching
+per Daniel
+** ENPH divided by regions (bigger than departments)
+** GEIH divided by departments
+* TODO PROBLEMS
 ** the cuestionarios for 2020 changed twice
 Starting in March it has been done over the phone.
 In March and April ones were much shorter.

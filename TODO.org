@@ -1,12 +1,10 @@
 #+TITLE: ofiscal, todo
-* TODO long-term: use GEIH, more recent
+* TODO long-term: use [[file:20200702143747-geih.org][geih]] to supplement the [[file:enph.org][enph]]
 ** goal: maximally up-to-date income, expenditure data
 ** it has no consumption data
 ** the "Medicion de Pobreza ..."
 ask Daniel about it
 is a good measure of income distribution
-* TODO maybe ENUT too (Encuesta Nacional del Uso del Tiempo)
-** propensity score matching
 * TODO shared decision
 ** TODO add cesantias + primas to (which?) income measure
  should be in denominator, and not numerator, of tax rate.
@@ -36,6 +34,8 @@ From the coicop bridge:
   Otros impuestos (de timbre, etc);12700699;0;0;0;
 ** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
 * TODO possibly wrong
+** TODO merge buildings into households, not individuals
+This might resolve the mystery of what DANE's aggregate income variables mean.
 ** TODO Why are there fewer infinite values in the full sample?
 For the household data, in the 1/10 sample, I see
   vat / purchase value, min   8719.0  0.000000           inf
