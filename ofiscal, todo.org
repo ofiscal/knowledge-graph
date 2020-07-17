@@ -1,7 +1,5 @@
 #+TITLE: ofiscal, todo
-* renew visa
-** [[file:../pers/20200717133514-gabriel_jose_lubo_cardenas.org][Gabriel Lubo]] says my visa expires Sept 5
- https://mail.google.com/mail/u/0/#inbox/FMfcgxwJWrbbVwZbdwHklkTTQpgXklzr
+* [[file:../pers/20200717182542-visa_renewal.org][visa-renewal]]
 * Talk to a micro person at TPC about applying out-of-sample growth rates.
  They use old data (2011), on the theory that the US was closest to its steady state at that time, updating it somehow.
 * [[file:20200717181357-tax_co.org][tax.co]]
