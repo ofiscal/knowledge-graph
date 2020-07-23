@@ -1,5 +1,8 @@
 #+TITLE: ofiscal, todo
 * [[file:../pers/20200717182542-visa_renewal.org][visa-renewal]]
-* Talk to a micro person at TPC about applying out-of-sample growth rates.
- They use old data (2011), on the theory that the US was closest to its steady state at that time, updating it somehow.
+* learn about Applying out-of-sample rates of change
+** I asked [[file:../pers/20200722180004-kim_reuben.org][Kim Rueben at TPC]]
+because LCR remembers that they use old data (2011), on the theory that the US was closest to its steady state at that time, updating it somehow.
+** I asked on Cross-Validated
+https://stats.stackexchange.com/questions/478492/out-of-sample-updating-applying-an-estimated-rate-of-change-from-one-sample-to
 * [[file:20200717181357-tax_co.org][tax.co]]

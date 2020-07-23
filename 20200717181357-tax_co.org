@@ -5,6 +5,8 @@
 ** the "Medicion de Pobreza ..."
 ask Daniel about it
 is a good measure of income distribution
+* TODO calculate VAT only for purchases
+but not for non-purchases
 * TODO shared decision
 ** TODO add cesantias + primas to (which?) income measure
  should be in denominator, and not numerator, of tax rate.
@@ -20,9 +22,6 @@ the usual 19%, plus 8% more.)
 * TODO mysteries
 ** TODO what are DANE's aggregate income, expenditure variables?
 They can't be monthly.
-** TODO If max "vat" is 0.27, max vat frac should be 0.213
- but instead it's 0.160, which is what would derive from a max vat of 0.19.
- This problem arises in purchases_2_vat_test.py
 ** TODO do my income variables include SS withholdings, etc?
 ** TODO what does "otros impuestos" include?
 They represent a small but nonzero part of expenditures --
@@ -37,6 +36,9 @@ From the coicop bridge:
 * TODO possibly wrong
 ** TODO merge buildings into households, not individuals
 This might resolve the mystery of what DANE's aggregate income variables mean.
+** TODO If max "vat" is 0.27, max vat frac should be 0.213
+ but instead it's 0.160, which is what would derive from a max vat of 0.19.
+ This problem arises in purchases_2_vat_test.py
 ** TODO Why are there fewer infinite values in the full sample?
 For the household data, in the 1/10 sample, I see
   vat / purchase value, min   8719.0  0.000000           inf
