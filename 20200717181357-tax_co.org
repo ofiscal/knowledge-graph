@@ -1,12 +1,12 @@
 #+title: tax.co
+* TODO did I get the vat-for-purchases-only commit right?
+Purchase-like taxes such as the predial should not carry it.
 * TODO long-term: use [[file:20200702143747-geih.org][geih]] to supplement the [[file:enph.org][enph]]
 ** goal: maximally up-to-date income, expenditure data
 ** it has no consumption data
 ** the "Medicion de Pobreza ..."
 ask Daniel about it
 is a good measure of income distribution
-* TODO calculate VAT only for purchases
-but not for non-purchases
 * TODO shared decision
 ** TODO add cesantias + primas to (which?) income measure
  should be in denominator, and not numerator, of tax rate.
