@@ -5,8 +5,18 @@
 They use old data (2011), on the theory that the US was closest to its steady state at that time. They update it according to aggregate GDP changes.
 ** I asked on Cross-Validated
 https://stats.stackexchange.com/questions/478492/out-of-sample-updating-applying-an-estimated-rate-of-change-from-one-sample-to
-* TODO BLOCKED Juan asks if we can model something
+* BLOCKED Juan asks if we can model something
 ** I asked over Whatsapp if it's just a schedule change
 ** this file
 ~/Proyecto de Ley Reforma Tributaria 2020 Firmas 22 de julio.pdf
+** the law
+*** includes a wealth tax change
+the table in section 1
+*** a change in personal dividend income tax
+the table in section2
+*** a change in personal income tax
+Section 3, the first table. (The second one in theory should have no effect.)
+*** part 4: change in inheritance tax
+We have inheritance data, but I don't know if it's modeled as a tax.
+Maybe bundled with other taxes.
 * [[file:20200717181357-tax_co.org][tax.co]]
