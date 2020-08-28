@@ -1,0 +1,29 @@
+#+title: tax hike proposal, Colombian Senate, 2020
+* the law
+** part 1: wealth tax change
+I'm asking Daniel if it's measured in pesos (surely it is) or UVT.
+The brackets have changed but so too have the rates risen a lot,
+so we can put a minimum on the increase in revenue.
+** part 2: personal dividend income tax change
+** part 3: personal income tax change
+Section 3, the first table.
+(The second one in theory should have no effect.)
+** part 4: change in inheritance tax
+* TODO modifying tax.co for the proposal
+** PTIFALLS
+*** everything is specified in UVTs
+** inheritance income: incorporate into relevant totals
+** inheritance income: add taxes for it
+ape the dividend tax
+** replace python.regime.r2018.non_dividend_income_tax
+** DONE ask Lorenzo: answers are all yes
+*** the other taxes continue to apply, omitting inheritance, right?
+*** if the kinds of income taxed are the same
+** replace the dividend portion of python.regime.r2018.income_taxes
+* the current wealth brackets
+via Daniel
+https://www.dian.gov.co/impuestos/reformatributaria/impuestoalariqueza/Paginas/comoliquidoimpuesto-.aspx
+* does DIAN say how much revenue they took in from each wealth bracket in the wealth tax?
+Daniel's not sure this is it, but
+"the best data set I found was Estadísticas de recaudo mensual" (attached to the email).
+
