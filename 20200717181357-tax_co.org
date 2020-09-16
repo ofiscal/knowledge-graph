@@ -10,10 +10,18 @@ e.g. the haskell code
 ask Daniel about it
 is a good measure of income distribution
 * TODO shared decision
-** TODO add cesantias + primas to (which?) income measure
- should be in denominator, and not numerator, of tax rate.
- formality matters
-   if an informal person makes 500K, they don't get primas + cesantias
+** TODO cesantias + primas is mysterious
+    :PROPERTIES:
+    :ID:       ad1e6f0d-a695-41d3-885a-2f6cdef8d9d5
+    :END:
+*** Are "cesantias + primas" not a tax?
+I compute them in the SS contributions code,
+as a function of someone's cash income and independent/empleado status.
+But I don't label them "tax, ss" like I do the other SS contributions.
+*** TODO ? add cesantias + primas to an income measure
+****  Should be in denominator, and not numerator, of tax rate.
+****  Formality matters.
+    If an informal person makes 500K, they don't get primas + cesantias
 ** TODO what to do|is done about missing freq, where-got, is-purchase
 is-purchase we probably assume to be 1, but the others ...?
 (they are often missing)
@@ -22,10 +30,11 @@ That's why, for instance, its max in purchases_2_vat_test is 0.27, not 19.
 (0.27 is the total tax levied on big motorcycles --
 the usual 19%, plus 8% more.)
 * TODO mysteries
-** TODO what are DANE's aggregate income, expenditure variables?
+** TODO What are DANE's aggregate income, expenditure variables?
 They can't be monthly.
-** TODO do my income variables include SS withholdings, etc?
-** TODO what does "otros impuestos" include?
+They don't want to share the code.
+** TODO Do my income variables include SS withholdings, etc?
+** TODO What does "otros impuestos" include?
 They represent a small but nonzero part of expenditures --
 see build/purchase_sums.py.
 
@@ -36,13 +45,6 @@ From the coicop bridge:
   Otros impuestos (de timbre, etc);12700699;0;0;0;
 ** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
 * TODO possibly wrong
-** TODO Why are there fewer infinite values in the full sample?
-For the household data, in the 1/10 sample, I see
-  vat / purchase value, min   8719.0  0.000000           inf
-  vat / purchase value, max   8719.0  0.000000           inf
-but in the 1/1 sample, this:
-  vat / purchase value, min   87124.0  0.00000  2.129018e-01
-  vat / purchase value, max   87124.0  0.00000  2.129038e-01
 ** TODO estrato : drop values above 6
  what do they mean?
  and then adjust the tests
@@ -274,11 +276,11 @@ The definition of "beca_sources_govt" has been changed to reflect this.
 income, capital =                # first called "total income, monthly : capital"
     income, capital w/o dividends +
     income, capital, dividends   # first called "income, year : investment : dividends"
-*** DONE Sales need to be split. No sale is capital income.
+*** Sales need to be split. No sale is capital income.
 **** basic idea
 Real estate probably turns over less frequently than every 2 years on average, so call that "ganancia ocasional".
 Other things probably should be called non-labor income.
-**** TODO problem: this handles second-hand vehicle and equipment sales poorly
+**** TODO problem: This handles second-hand vehicle and equipment sales poorly
 Second-hand sales of those things are probably less frequent than every 2 years. We are basically assuming the retail market is bigger than the second-hand market.
 *** normal capital + profits from sales
 **** "normal capital income"

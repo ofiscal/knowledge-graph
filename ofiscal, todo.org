@@ -1,4 +1,12 @@
 #+TITLE: ofiscal, todo
+* IVA changed
+Notes from meeting, 2020 09 07.
+** products
+*** feminine hygiene
+*** sodas
+*** school supplies
+** some changed by law, some by court order
+** look for Juan's post early in the year comparing tax changes
 * [[file:../pers/20200717182542-visa_renewal.org][visa-renewal]]
 * [[file:../tech/20200825163418-multi_sample_estimation_econometrics.org][Multi-Sample Estimation (econometrics)]]
 * [[file:20200825164022-tax_hike_proposal_colombian_senate_2020.org][tax hike proposal, Colombian Senate, 2020]]
