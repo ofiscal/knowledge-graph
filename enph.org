@@ -797,7 +797,7 @@ V1949
 V1950
 V1951
 ** Gasto corriente = regular periodic spending
-** Gasto corriente monetario = expenses excluding barter
+** Gasto corriente monetario = expenses excluding barter, imputed rent, in-kind income
 * seldom used
 ** for copying: an empty list of the purchase files
 *** articulos

@@ -1,9 +1,68 @@
 #+title: tax.co
-* TODO merge some changes from proposal-2020-07-28-tax-hike into master
-e.g. the haskell code
+* refs
+** [[file:tricks.org][tricks - how to do some things]]
+* How to see that total income includes (exactly once) all capital income
+** dividends are covered exactly once
+It's only in income_short_name_dict_cash,
+and that is part of cash income,
+which is part of income.
+** interest and rental income
+are only in "income, capital (tax def)",
+which is part of cash income.
+** non-RE sales are in two things
+*** "income, sale not real estate" is part of cash income
+*** "income, non-labor" is defined in main.py but not used in it
+** RE sales are in two things
+*** "total income, monthly : infrequent" is part of cash income
+It is added into `cols_infrequent` separately,
+because it is not part of `income_infrequent`.
+*** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
+* TODO go online
+** TODO find a server
+*** use PUJ's?
+*** a cheap-looking bare-metal server rental
+ https://gthost.com/bare-metal-server/
+** how I described it to Dario
+https://mail.google.com/mail/u/0/#inbox/KtbxLxgRQpLHPNwckhRjwkgmGBvQtPdVcg
+*** the text
+Hola Dario! Un gusto leerte!
+
+La microsimulación permite que alguien especifica parametros alternativas del sistema tributario -- la tasa del impuesto de renta, o la tasa sobre dividendos, o la IVA -- para ver como afectaría la economía. Un usuario especifica los parametros, y el sistema genera unos tablas y graficos. El usuario puede ver los graficos en el navegador, y puede descargar las tablas.
+
+La especificación del IVA es complejo, porque cada clase de bien puede cargar una tasa diferente. Para permitir que un usuario pueda especificar tasas diferentes para cada clase de bien, le da la opción de subir una tabla (.xslx) al sistema mientras escojan los otros parametros.
+
+El programa puede usar menos de 20 GB de memoría para almacenar los datos funamentales (la Encuesta Nacional de Presupuestos de Hogares, hecho por el DANE), los subidos por usuarios, y los creado por el sistema. Está hecho en un contenedor Docker, así que no necesita acceso al disco entero de la máquina anfitriona; solo necesita su propio directorio, lo cual puede empezar vacio.
+
+El imagen Docker tendría un peso alrededor de 10 GB. (Eso ya he incluido en el anterior requisito de 100 GB.) El imagen incluye el servidor Apache; no tiene que usar otro servidor.
+
+Si el imagen tuviera acceso a más memoria, podría usar menos capacidad computacional. Alacenaría los resultados de los usuarios, así que si alguien pide algo que ya ha simulado, no tendría que simularlo de nuevo. Si me dicen que puede usar, digamos, hasta 50 GB, entonces cuando está a punto de pasar ese nivel borraría los resultados más viejos hasta que puede mantenerse debajo de ese límite.
+* TODO BLOCKED is the definition for non-labor income really so absurd?
+** waiting on this email
+https://mail.google.com/mail/u/0/#sent/QgrcJHsBscClkGsCMltcJxSpJLLRWwdrkRl
+** the problem
+I've got it including private beca funds, but not private non-beca funds,
+and not government edu funds.
+
+      ppl["income, non-labor (tax def)"] = (
+          ppl["income, sale not real estate"]
+        + ppl["income, month : private : beca, cash"]
+        + ppl["income, month : private : beca, in-kind"] )
+* TODO clarify income totals
+  :PROPERTIES:
+  :ID:       0818bef8-904f-4cda-9fe3-1c8dafe73b17
+  :END:
+https://mail.google.com/mail/u/0/#inbox/KtbxLxgNNvtdCSsLXNSGsTqfdGprqpbgsq
+** TODO non-labor income: no private becas, no govt non-beca edu funds?
+      ppl["income, non-labor (tax def)"] = (
+          ppl["income, sale not real estate"]
+        + ppl["income, month : private : beca, cash"]
+        + ppl["income, month : private : beca, in-kind"] )
+** TODO "income, govt" and "income, private": include edu funds.
+Yes.
+* TODO When it's safe, delete definitions specific to the 2020 tax proposal
 * TODO long-term: use [[file:20200702143747-geih.org][geih]] to supplement the [[file:enph.org][enph]]
-** [[file:../tech/20200825163418-multi_sample_estimation_econometrics.org][Multi-Sample Estimation (econometrics)]]
 ** TODO separate growth rates: labor, capital, pension, maybe dividend
+** [[file:../tech/20200825163418-multi_sample_estimation_econometrics.org][Multi-Sample Estimation (econometrics)]]
 ** goal: maximally up-to-date income, expenditure data
 ** GEIH has no consumption data
 ** the "Medicion de Pobreza ..."
@@ -19,8 +78,8 @@ I compute them in the SS contributions code,
 as a function of someone's cash income and independent/empleado status.
 But I don't label them "tax, ss" like I do the other SS contributions.
 *** TODO ? add cesantias + primas to an income measure
-****  Should be in denominator, and not numerator, of tax rate.
-****  Formality matters.
+**** Should be in denominator, and not numerator, of tax rate.
+**** Formality matters.
     If an informal person makes 500K, they don't get primas + cesantias
 ** TODO what to do|is done about missing freq, where-got, is-purchase
 is-purchase we probably assume to be 1, but the others ...?
@@ -34,6 +93,7 @@ the usual 19%, plus 8% more.)
 They can't be monthly.
 They don't want to share the code.
 ** TODO Do my income variables include SS withholdings, etc?
+  Write this up somewhere.
 ** TODO What does "otros impuestos" include?
 They represent a small but nonzero part of expenditures --
 see build/purchase_sums.py.
@@ -45,31 +105,22 @@ From the coicop bridge:
   Otros impuestos (de timbre, etc);12700699;0;0;0;
 ** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
 * TODO possibly wrong
-** TODO estrato : drop values above 6
+** TODO main.py: All but one of the cols_govt names are yearly, not monthly.
+** todo BLOCKED estrato : drop values of 9? Also 0?
+https://mail.google.com/mail/u/0/#sent/KtbxLwGvWcLvtwHCGFckxfTsTZcWMnmhpL
  what do they mean?
  and then adjust the tests
-** TODO check non-functional use of Corrections
-*** e.g. in purchases_2_vat.py, one is run without assignment:
-  if True: # TODO ? move these upstream, to purchases/main.py
-    ( cla . Correction # no "never" frequencies
-      . Drop_Row_If_Column_Satisfies_Predicate(
-        "per month", lambda x: x==11 )
-      . correct( purchases ) )
-*** but purchases/correct.py uses assignment
-purchases = c.correct( purchases )
 ** TODO pension variables are bad
 They're missing a lot, so their averages aren't right.
 But we don't use them.
 ** TODO ? throw out purchasees with absurd quantities?
 Something in the full sample has a quantity value of 9e7.
 * TODO test suite
-** TODO ensure no test conflates assetions with booleans
-That is, if a test returns a bool, it must be asserted, not merely evaluated.
-*** TODO to avoid this pitfall in the future
-Test each test by first making sure that when it fails, an error is thrown.
-** TODO test "value, consumption"
-** TODO test the new variables
-ICMDUG, GCMUG, etc.
+** TODO test the names of the raw income variables
+each should begin either "income, month" or "income, year"
+** TODO test new variables
+*** "value, consumption"
+*** ICMDUG, GCMUG, etc.
 ** TODO why did I have to weaken these tests from the time-to-save branch?
 *** The problem
 In commit 5ba74b5361bfdf8453e075c68a91ab93f01ec44c
@@ -229,14 +280,17 @@ where f x = min( x
                , 0% renta gravable laboral
                , 5040 uvt)
 Where does a dependent enter into that formula? What else might be considered a "beneficio"?
-** TODO yet to ask juan
-*** what's "renta exenta" in pension income?
+** TODO BLOCKED tax exemptions for pension income
+*** conversation with Daniel
+https://mail.google.com/mail/u/0/#inbox/KtbxLwGvXzhGCMCsrQXqlVbTLpTNZWPlzL
+*** the formula Juan gave me
 renta gravable pension =
     ingreso pension
   - ingreso pension no constitutivo de renta
   - renta exenta hasta mil uvt
-** TODO asking juan
-*** Can one dependent be used for one kind of income, and another for another?
+** TODO BLOCKED Can one dependent be used for one kind of income, and another for another?
+*** am asking Juan if he remembers
+https://mail.google.com/mail/u/0/#search/to%3Ajuan/KtbxLthRTjVQDvmgMfCRFJXPfdfFFqdZCg
 ** TODO pension + labor
 *** TODO labor
 **** DONE exempt v. deduction: solved
