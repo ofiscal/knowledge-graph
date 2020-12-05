@@ -1,0 +1,56 @@
+#+title: putting tax.co online
+* TODO tax.co needs to
+** take .json inputs
+*** TODO make a new branch
+*** add a new Makefile argument
+    the config.json file
+*** use config.json to define the standard Makefile arguments
+    subsample=$1
+    regime_year=$regime_year
+    strategy=$strategy
+*** test that it ingested properly
+    I can first leave all the Makefile recipes that use the command line-defined arguments in place. They don't need to use config.json yet. Instead just add a recipe that calls a new .py file that reads the json, defines some variables, and prints them to screen.
+*** rewrite extant Makefile recipes
+    to use config.json and ignore the earlier Makefile arguments.x
+*** delete the old arguments
+*** add a config param: VAT schedules
+*** add a config param: income tax schedules
+    This is hard, as it requires running Haskell code to generate the schedule as .py content, then executinig the .py content.
+** generate pictures
+* TODO ponder
+** Keep a db of requests?
+   It seems like the "right" thing to do,
+   but at the same time it's work for no obvious immediate gain.
+** Cache results: hard problem
+*** Hash each submitted configuration
+    Based on tax config spec but not email address,
+    so that if two people submit the same request,
+    it'll be obvious.
+*** Keep a db matching request hashes to (requests and) data products.
+*** The Makefile recipes are for simlinks.
+    Each request (a set greater than each hash-equivalent request)
+    lives in its own folder. The Makefile creates simlinks from that folder
+    to the "data products" folder.
+*** When a request is made,
+    the python code looks up whether
+** Ponder: idle user time, parallelism
+   Should the website pause while the model is computed?
+* TODO find a server
+** use PUJ's?
+** a cheap-looking bare-metal server rental
+https://gthost.com/bare-metal-server/
+* TODO [[id:3979ab42-2ac6-4c40-800b-ee5189aae26b][get Django to]]
+* how I described it to Dario
+https://mail.google.com/mail/u/0/#inbox/KtbxLxgRQpLHPNwckhRjwkgmGBvQtPdVcg
+** the text
+Hola Dario! Un gusto leerte!
+
+La microsimulación permite que alguien especifica parametros alternativas del sistema tributario -- la tasa del impuesto de renta, o la tasa sobre dividendos, o la IVA -- para ver como afectaría la economía. Un usuario especifica los parametros, y el sistema genera unos tablas y graficos. El usuario puede ver los graficos en el navegador, y puede descargar las tablas.
+
+La especificación del IVA es complejo, porque cada clase de bien puede cargar una tasa diferente. Para permitir que un usuario pueda especificar tasas diferentes para cada clase de bien, le da la opción de subir una tabla (.xslx) al sistema mientras escojan los otros parametros.
+
+El programa puede usar menos de 20 GB de memoría para almacenar los datos funamentales (la Encuesta Nacional de Presupuestos de Hogares, hecho por el DANE), los subidos por usuarios, y los creado por el sistema. Está hecho en un contenedor Docker, así que no necesita acceso al disco entero de la máquina anfitriona; solo necesita su propio directorio, lo cual puede empezar vacio.
+
+El imagen Docker tendría un peso alrededor de 10 GB. (Eso ya he incluido en el anterior requisito de 100 GB.) El imagen incluye el servidor Apache; no tiene que usar otro servidor.
+
+Si el imagen tuviera acceso a más memoria, podría usar menos capacidad computacional. Alacenaría los resultados de los usuarios, así que si alguien pide algo que ya ha simulado, no tendría que simularlo de nuevo. Si me dicen que puede usar, digamos, hasta 50 GB, entonces cuando está a punto de pasar ese nivel borraría los resultados más viejos hasta que puede mantenerse debajo de ese límite.
