@@ -224,6 +224,9 @@ Those integration tests should test ranges, if not statistics.
   re_nonNumeric = re.compile( "(.+\-|.*[^0-9\s\.,\-])" )
   re_white      = re.compile( ".*[^\s].*\s.*[^\s]" )
   ...
+** TODO The files that only need the full sample
+   Prior to the "online" branch, the Makefile had the full sample hard-coded into their recipes, to avoid duplicating the effort of running them.
+   Better (now that subsample is not a Makefile parameter)  would be for the programs run by those recipes to insert proof that the test passed in all four subsample directories.
 ** overview/pics.py: Makefile targets are incomplete, maybe inaccurate too
 It's important that the last thing a file makes is one of the dependencies in the Makefile; otherwise, the program could fail and `make` would still think its targets are up to date.
 

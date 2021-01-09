@@ -82,3 +82,19 @@ and then read that screen. (Dumping it to a file would mean losing the colors,
 which makes the reading process much slower.)
 * to tag(build a tags file) python code for use in emacs
 find . -type f -name '*.py' | xargs etags
+* to apply a function that generates frames from rows to a frame
+  # This isn't exactly it, but pretty close.
+
+  if True: # compute each household member's income rank
+    def sort_household_by_labor_income_then_make_index(df):
+      dff = df.sort_values("income, labor", ascending = False)
+      dff["rank, labor income"] = range(1, len(dff) + 1)
+      return dff
+    #
+    ppl = ppl . groupby('household'
+        ) . apply( sort_household_by_labor_income_then_make_index
+        ) . drop( columns = "household"
+                  # one level of the index holds the same information
+        ) . reset_index(
+        ) . drop( columns = "level_1" )
+                  # the other part of the index is unneeded

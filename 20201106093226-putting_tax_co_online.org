@@ -1,21 +1,41 @@
 #+title: putting tax.co online
 * TODO tax.co needs to
 ** take .json inputs
-*** TODO make a new branch
-*** add a new Makefile argument
-    the config.json file
-*** use config.json to define the standard Makefile arguments
-    subsample=$1
-    regime_year=$regime_year
-    strategy=$strategy
-*** test that it ingested properly
-    I can first leave all the Makefile recipes that use the command line-defined arguments in place. They don't need to use config.json yet. Instead just add a recipe that calls a new .py file that reads the json, defines some variables, and prints them to screen.
-*** rewrite extant Makefile recipes
-    to use config.json and ignore the earlier Makefile arguments.x
-*** delete the old arguments
-*** add a config param: VAT schedules
-*** add a config param: income tax schedules
-    This is hard, as it requires running Haskell code to generate the schedule as .py content, then executinig the .py content.
+*** DONE
+**** make a new branch, "online"
+**** add a new Makefile argument
+     the config.json file
+**** define usage in a comment of make.py
+**** use config.json to define the standard Makefile arguments
+     subsample=$1
+     regime_year=$regime_year
+     strategy=$strategy
+**** merge common* programs
+     I don't need to split the command line and the repl any more.
+     And I need the definition of common.valid_* to work from both contexts.
+**** test that it ingested properly
+     I can first leave all the Makefile recipes that use the command line-defined arguments in place. They don't need to use config.json yet. Instead just add a recipe that calls a new .py file that reads the json, defines some variables, and prints them to screen.
+**** rewrite extant Makefile recipes
+     to use config.json and ignore the earlier Makefile arguments
+**** change these files to only use the full sample
+***** DONE python/build/ss_functions_test.py
+***** DONE python/build/people_2_buildings.py
+***** DONE python/build/purchases/input_test.py
+***** DONE python/regime/r2018_test.py
+***** DONE python/build/buildings_test.py
+**** add a config param: VAT schedules (spreadsheet)
+**** add tests for spreadsheet valididty
+**** accept either .xlsx or .csv format
+*** add a config param: income tax schedules (spreadsheet)
+**** only for regime 2019
+**** DONE Haskell: share libraries
+**** DONE generate working Python
+**** TODO
+**** duplicate the hard-coded functions with some .csv-dynamic ones
+**** test that they give the same answers
+**** then delete the hard-coded 2019 functions
+**** Why this is hard.
+     It requires running Haskell code to generate the schedule as .py content, then executing the .py content.
 ** generate pictures
 * TODO ponder
 ** Keep a db of requests?
