@@ -1,5 +1,6 @@
 #+title: putting tax.co online
-* TODO tax.co needs to
+* TODO talk to PUJ tech about a server
+* TODO in tax.co
 ** take .json inputs
 *** DONE
 **** make a new branch, "online"
@@ -30,13 +31,28 @@
 **** only for regime 2019
 **** DONE Haskell: share libraries
 **** DONE generate working Python
-**** TODO
-**** duplicate the hard-coded functions with some .csv-dynamic ones
-**** test that they give the same answers
-**** then delete the hard-coded 2019 functions
+**** DONE turn CSV into a [Formula]
+***** TODO validateTable should be called in tableToMoneyBrackets
+      not in csvToPython
+**** DONE clear out those ", proposed" variables
+**** DONE build an executable, callable from shell, with command-line args
+     for translating a .csv file
+**** relevant files
+M       python/build/rate_input_test.py
+M       python/build/vat_rates.py
+M       python/common/misc.py
+M       bash/run-makefile.py
+        config/
+**** TODO duplicate the hard-coded functions with some .csv-dynamic ones
+**** TODO test that they give the same answers
+**** TODO then delete the hard-coded 2019 functions
 **** Why this is hard.
      It requires running Haskell code to generate the schedule as .py content, then executing the .py content.
 ** generate pictures
+* TODO in Django
+** TODO [[id:3979ab42-2ac6-4c40-800b-ee5189aae26b][get Django to]]
+** TODO show Makefile errors if build fails
+** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:20201014163254-wsgi.org][for pWsgi]]
 * TODO ponder
 ** Keep a db of requests?
    It seems like the "right" thing to do,
@@ -55,11 +71,10 @@
     the python code looks up whether
 ** Ponder: idle user time, parallelism
    Should the website pause while the model is computed?
-* TODO find a server
+* TODO find, deploy to a server
 ** use PUJ's?
 ** a cheap-looking bare-metal server rental
 https://gthost.com/bare-metal-server/
-* TODO [[id:3979ab42-2ac6-4c40-800b-ee5189aae26b][get Django to]]
 * how I described it to Dario
 https://mail.google.com/mail/u/0/#inbox/KtbxLxgRQpLHPNwckhRjwkgmGBvQtPdVcg
 ** the text

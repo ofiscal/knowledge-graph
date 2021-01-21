@@ -1,6 +1,7 @@
 #+title: tax.co
 * refs
 ** [[file:tricks.org][tricks - how to do some things]]
+** [[file:../tech/20200825163418-multi_sample_estimation_econometrics.org][Multi-Sample Estimation (econometrics)]]
 * How to see that total income includes (exactly once) all capital income
 ** dividends are covered exactly once
 It's only in income_short_name_dict_cash,
@@ -17,6 +18,34 @@ which is part of cash income.
 It is added into `cols_infrequent` separately,
 because it is not part of `income_infrequent`.
 *** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
+* TODO ? BUG in the 10-pct purchase data
+** this passage in purhcases/collect.py
+assert util.near(
+    # PITFALL: This differs from the usual idiom which separates testing
+    # from production. That's because the only thing tested here is
+    # the number of rows; reading the entire data set into memory again
+    # for such a simple test seems unworth the added execution time.
+    len ( purchases ),
+    misc . num_purchases / com . subsample,
+    tol_frac = (
+        1 / 20 if not com . subsample == 10
+        else 1 / 2 ) )
+# TODO | BUG? Why is theprevious conditional necessary? That is, why,
+# in the special case of subsample = 1/10, is the size of the
+# purchase data so different from what you'd expect.
+# This isn't necessarily wrong, since the data is subsampled by households,
+# and households can make different numbers of purchases.
+# That's why `tol_frac` needs to be substantial in both cases.
+# But it's surprising, because for subsample = 10,
+# the expectation differs from reality by a factor just shy of 36%.
+** the same ?bug shows up in these files
+   python/build/purchases/collect.py
+   python/build/purchases/correct_test.py
+   python/build/purchases_2_vat_test.py
+** this TODO item coincides with the following commit
+   61399515e9511d3dae923a29a9af63bc93b0378b
+   That's the one where I first included comments in the above-listed files
+   indicating this potential problem.
 * TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
 * TODO BLOCKED is this really the definition for non-labor income?
 ** waiting on this email
@@ -969,4 +998,12 @@ x = purchases["vat-rate"]
 0.0038864381329490067
 * interesting
 The Saez & Zuchman book offers a website where you can simulate any tax.
-
+* history of tax changes
+** IVA changed
+   Notes from meeting, 2020 09 07.
+*** products
+**** feminine hygiene
+**** sodas
+**** school supplies
+*** some changed by law, some by court order
+*** look for Juan's post early in the year comparing tax changes

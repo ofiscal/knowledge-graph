@@ -1,4 +1,33 @@
 #+TITLE: tricks - how to do some things
+* fast time series manipulations for Pandas (actually in NumPy)
+** PITFALL: Part of this code is unreadable in org-mode.
+** example code, with comments
+import numpy as np
+import pandas as pd
+from numba import jit
+
+@jit(nopython=True) # Makes it faster.
+def change_jit( time, spread ): # These are one-dimensional numpy arrays.
+    res = np.empty( time.shape )
+    res[0] = np.nan
+    for i in range(1, res.shape[0]):
+        # An ordinary for loop. Would be slow in a pandas frame,
+        # but somehow numba magicks it into something fast.
+        res[i] = time[i] / spread[i-1]
+          # A nonsense calculation. The point is you can refer "now" (i)
+          # to "earlier" (i-1) points in the data.
+    return res
+
+df['test'] = change_jit(
+    * # unpacks each row, delivering it as a separate argument
+    df[[ "time", "spread"]]
+    . values # to get a numpy array, which numba wants
+    . T # so that the rows unpacked by * above are the columns we want in `prices`.
+    )
+* shell: count all file extensions in filetree
+  find . -type f | sed 's/.*\.//' | sort | uniq -c
+* grep excluding nonreadable file types
+  find . -type f -not \( -name "*.csv" -o -name "*.xlsx" -o -name "*.tgz" -o -name "*.zip" -o -name "*.ssv" -o -name "*.sav" -o -name "*.pyc" -o -name "*.pdf" -o -name "*.jpeg" -o -name "*.odt" -o -name "*.pack" -o -name "*.ods" -o -name "*.ipynb" -o -name "*.idx" -o -name "*.docx" -o -name "*.dta" \) -print0 | xargs -0 grep "xxx" --color
 * view a readable diff of two csv files
 csv-diff file file2 --key="field-name"
 (This is installed in the Docker image.)
