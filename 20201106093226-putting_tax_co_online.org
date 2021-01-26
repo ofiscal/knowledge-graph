@@ -1,58 +1,169 @@
 #+title: putting tax.co online
-* TODO talk to PUJ tech about a server
 * TODO in tax.co
-** take .json inputs
-*** DONE
-**** make a new branch, "online"
-**** add a new Makefile argument
-     the config.json file
-**** define usage in a comment of make.py
-**** use config.json to define the standard Makefile arguments
-     subsample=$1
-     regime_year=$regime_year
-     strategy=$strategy
-**** merge common* programs
-     I don't need to split the command line and the repl any more.
-     And I need the definition of common.valid_* to work from both contexts.
-**** test that it ingested properly
-     I can first leave all the Makefile recipes that use the command line-defined arguments in place. They don't need to use config.json yet. Instead just add a recipe that calls a new .py file that reads the json, defines some variables, and prints them to screen.
-**** rewrite extant Makefile recipes
-     to use config.json and ignore the earlier Makefile arguments
-**** change these files to only use the full sample
-***** DONE python/build/ss_functions_test.py
-***** DONE python/build/people_2_buildings.py
-***** DONE python/build/purchases/input_test.py
-***** DONE python/regime/r2018_test.py
-***** DONE python/build/buildings_test.py
-**** add a config param: VAT schedules (spreadsheet)
-**** add tests for spreadsheet valididty
-**** accept either .xlsx or .csv format
-*** add a config param: income tax schedules (spreadsheet)
-**** only for regime 2019
-**** DONE Haskell: share libraries
-**** DONE generate working Python
-**** DONE turn CSV into a [Formula]
-***** TODO validateTable should be called in tableToMoneyBrackets
-      not in csvToPython
-**** DONE clear out those ", proposed" variables
-**** DONE build an executable, callable from shell, with command-line args
-     for translating a .csv file
-**** relevant files
-M       python/build/rate_input_test.py
-M       python/build/vat_rates.py
-M       python/common/misc.py
-M       bash/run-makefile.py
-        config/
-**** TODO duplicate the hard-coded functions with some .csv-dynamic ones
-**** TODO test that they give the same answers
-**** TODO then delete the hard-coded 2019 functions
-**** Why this is hard.
-     It requires running Haskell code to generate the schedule as .py content, then executing the .py content.
-** generate pictures
+** DONE take .json inputs
+*** make a new branch, "online"
+*** add a new Makefile argument
+    the config.json file
+*** define usage in a comment of make.py
+*** use config.json to define the standard Makefile arguments
+    subsample=$1
+    regime_year=$regime_year
+    strategy=$strategy
+*** merge common* programs
+    I don't need to split the command line and the repl any more.
+    And I need the definition of common.valid_* to work from both contexts.
+*** test that it ingested properly
+    I can first leave all the Makefile recipes that use the command line-defined arguments in place. They don't need to use config.json yet. Instead just add a recipe that calls a new .py file that reads the json, defines some variables, and prints them to screen.
+*** rewrite extant Makefile recipes
+    to use config.json and ignore the earlier Makefile arguments
+*** change these files to only use the full sample
+**** DONE python/build/ss_functions_test.py
+**** DONE python/build/people_2_buildings.py
+**** DONE python/build/purchases/input_test.py
+**** DONE python/regime/r2018_test.py
+**** DONE python/build/buildings_test.py
+*** add a config param: VAT schedules (spreadsheet)
+*** add tests for spreadsheet valididty
+*** accept either .xlsx or .csv format
+** TODO csv-dynamic income tax regimes
+   :PROPERTIES:
+   :ID:       1d3000ca-5771-4495-9632-099b606c277c
+   :END:
+*** only for regime 2019
+*** DONE Haskell: share libraries
+*** DONE generate working Python
+*** turn CSV into a [Formula]
+**** TODO validateTable should be called in tableToMoneyBrackets
+     not in csvToPython
+*** DONE clear out those ", proposed" variables
+*** DONE build an executable, callable from shell, with command-line args
+    for translating a .csv file
+*** DONE duplicate the hard-coded functions with some .csv-dynamic ones
+**** make the .csv files' location a config param
+     That location should have each of the files needed --
+     most_income.csv, dividend.csv, etc.
+**** keep .csv and generated .py under python/csv-dynamic
+     Some of the .csv can be permanent.
+**** build, execute a dynamic import statement
+     It can be executed with `exec`,
+       which is type String -> IO ().
+     It imports the needed .csv-generated .py files.
+     It is executed in python/regime/r2019.py.
+*** TODO test that they give the same answers
+**** in households_1*.csv, they don't!
+# First compute the data the two different ways,
+# and call them h_old and h_new.
+if True:
+  import pandas as pd
+  import numpy as np
+
+pd.options.display.min_rows = 100
+pd.options.display.max_rows = 100
+
+old = pd.read_csv( "output/vat/data/recip-10/h_old.csv" )
+new = pd.read_csv( "output/vat/data/recip-10/h_new.csv" )
+
+means = (old == new).mean()
+means[ means < 1 ]
+
+# Result:
+# estrato                                                  0.986468
+# pension, contributing (if not pensioned)                 0.845757
+# pension, contributor(s) (if not pensioned) = split       0.427408
+# pension, contributor(s) (if not pensioned) = self        0.427408
+# pension, contributor(s) (if not pensioned) = employer    0.427408
+# seguro de riesgos laborales                              0.849427
+# income-decile                                            0.981193
+# income-percentile                                        0.923050
+**** TODO look similarly at people_3
+     It's upstream from households, but it also depends on r2019.
+*** TODO then delete the hard-coded 2019 functions
+*** TODO Ponder: Why was this so much harder than expected?
+** TODO generate pictures
+*** decide which to draw
+*** code drawing them
+*** patch that into the website
+** TODO Makefile must catch all changes
+   :PROPERTIES:
+   :ID:       306f0e24-363e-4a61-99b3-0ef3028c57f1
+   :END:
+   Inc. changes to the user-supplied .csv files,
+   on which (only?) r2019 depends.
+** TODO solve memory, time constraints, cron job
+   :PROPERTIES:
+   :ID:       c3c33450-e196-4116-be1e-7b253bc68391
+   :END:
+*** let
+    M = total space
+    MR = space needed for a run
+    N = number of users
+    T = min time a run's results remain on disk
+*** under certain conditions, the model shouldn't run
+**** once N > M / MR
+    It would be an error in the webappif such a request landed in tax.co under those conditions. tax.co should then err with "no memory, this request should not have been received by tax.co".
+**** if the oldest run is younger than T
+     "there are users in front of you, this request should not have been received by tax.co."
+*** keep a db with user requests and times
+*** each time the model runs, if N+1 > M / MR
+**** otherwise delete the oldest run, and run again
+*** poll the request db, and run a new one whenever appropriate
+    That is, whenever a saved request has age > T.
 * TODO in Django
-** TODO [[id:3979ab42-2ac6-4c40-800b-ee5189aae26b][get Django to]]
 ** TODO show Makefile errors if build fails
-** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:20201014163254-wsgi.org][for pWsgi]]
+   :PROPERTIES:
+   :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
+   :END:
+*** convey exit status to webapp
+*** write error to a file
+*** find, display that error file in the webapp
+* ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
+* TODO integrate tax.co and the web app
+  :PROPERTIES:
+  :ID:       f94012e6-e4ad-4e3a-bd68-d3a82fb165de
+  :END:
+** user downloads .csv
+** user uploads .csv, inputs .json
+** tax.co finds user input
+** tax.co runs
+** tax.co informs webapp if, when it finishes
+** webapp emails user that it's ready, sends link
+** webapp finds, presents tax.co output
+* TODO find, deploy to a server
+  :PROPERTIES:
+  :ID:       6c1cd107-bffa-4ef2-879b-8adc1bbf942b
+  :END:
+** a cheap-looking bare-metal server rental
+https://gthost.com/bare-metal-server/
+** TODO Can DTI serve the app?
+*** who
+**** mesaservicios-dti@javeriana.edu.co
+**** Claudia Patricia Forero Rodriguez <cpforero@javeriana.edu.co>
+    said to write to mesaservicios-dti
+**** Dario Rivillas Ossa <drivilla@javeriana.edu.co>
+*** what I want
+  La microsimulación permite que alguien especifica parametros alternativas del sistema tributario -- la tasa del impuesto de renta, o la tasa sobre dividendos, o la IVA -- para ver como afectaría la economía. Un usuario especifica los parametros, y el sistema genera unos tablas y graficos. El usuario puede ver los graficos en el navegador, y puede descargar las tablas.
+
+  La especificación del IVA es complejo, porque cada clase de bien puede cargar una tasa diferente. Para permitir que un usuario pueda especificar tasas diferentes para cada clase de bien, le da la opción de subir una tabla (.xslx) al sistema mientras escojan los otros parametros.
+
+  El programa puede usar menos de 20 GB de memoría para almacenar los datos funamentales (la Encuesta Nacional de Presupuestos de Hogares, hecho por el DANE), los subidos por usuarios, y los creado por el sistema. Está hecho en un contenedor Docker, así que no necesita acceso al disco entero de la máquina anfitriona; solo necesita su propio directorio, lo cual puede empezar vacio.
+
+  El imagen Docker tendría un peso alrededor de 10 GB. (Eso ya he incluido en el anterior requisito de 100 GB.) El imagen incluye el servidor Apache; no tiene que usar otro servidor.
+
+  Si el imagen tuviera acceso a más memoria, podría usar menos capacidad computacional. Alacenaría los resultados de los usuarios, así que si alguien pide algo que ya ha simulado, no tendría que simularlo de nuevo. Si me dicen que puede usar, digamos, hasta 50 GB, entonces cuando está a punto de pasar ese nivel borraría los resultados más viejos hasta que puede mantenerse debajo de ese límite.
+*** Claudia said to specify
+    Sobre esta solicitud deben realizar un caso a la mesa de ayuda informan que ustedes tienen un programa donde están desarrollando una plataforma para  los servicios descrito en el correo, por favor en este correo ser especifico la parte técnica, como: el programa es multiusuario, como van hacer las conexiones, como va estar conectado el programa para que las persona ingresen los datos ejemplo por medio de  WEB? o como lo tiene pensado.
+*** form that mesaservicios-dti sent me (filled)
+  JUSTIFICACIÓN:
+
+  Claudia Patricia Forero Rodriguez del DTI me dijo que yo podría entrar al sitio Servir-T. Quiero hacer eso para preguntar si la aplicación web que estoy desarrollando se puede servir de la javeriana, o si tendría que usar otro dominio web.
+
+  SITUACIÓN ACTUAL:
+
+  El sistema Servir-T no me reconoce. Estoy usando el mismo nombre de usuario (brown-j) y clave que me permiten entrar al correo Javeriana, a Teams, etc.
+
+  ¿CUÁLES SON LOS CAMBIOS ESPERADOS?
+
+  Espero o que el sistema me reconozca.
 * TODO ponder
 ** Keep a db of requests?
    It seems like the "right" thing to do,
@@ -71,21 +182,3 @@ M       bash/run-makefile.py
     the python code looks up whether
 ** Ponder: idle user time, parallelism
    Should the website pause while the model is computed?
-* TODO find, deploy to a server
-** use PUJ's?
-** a cheap-looking bare-metal server rental
-https://gthost.com/bare-metal-server/
-* how I described it to Dario
-https://mail.google.com/mail/u/0/#inbox/KtbxLxgRQpLHPNwckhRjwkgmGBvQtPdVcg
-** the text
-Hola Dario! Un gusto leerte!
-
-La microsimulación permite que alguien especifica parametros alternativas del sistema tributario -- la tasa del impuesto de renta, o la tasa sobre dividendos, o la IVA -- para ver como afectaría la economía. Un usuario especifica los parametros, y el sistema genera unos tablas y graficos. El usuario puede ver los graficos en el navegador, y puede descargar las tablas.
-
-La especificación del IVA es complejo, porque cada clase de bien puede cargar una tasa diferente. Para permitir que un usuario pueda especificar tasas diferentes para cada clase de bien, le da la opción de subir una tabla (.xslx) al sistema mientras escojan los otros parametros.
-
-El programa puede usar menos de 20 GB de memoría para almacenar los datos funamentales (la Encuesta Nacional de Presupuestos de Hogares, hecho por el DANE), los subidos por usuarios, y los creado por el sistema. Está hecho en un contenedor Docker, así que no necesita acceso al disco entero de la máquina anfitriona; solo necesita su propio directorio, lo cual puede empezar vacio.
-
-El imagen Docker tendría un peso alrededor de 10 GB. (Eso ya he incluido en el anterior requisito de 100 GB.) El imagen incluye el servidor Apache; no tiene que usar otro servidor.
-
-Si el imagen tuviera acceso a más memoria, podría usar menos capacidad computacional. Alacenaría los resultados de los usuarios, así que si alguien pide algo que ya ha simulado, no tendría que simularlo de nuevo. Si me dicen que puede usar, digamos, hasta 50 GB, entonces cuando está a punto de pasar ese nivel borraría los resultados más viejos hasta que puede mantenerse debajo de ese límite.

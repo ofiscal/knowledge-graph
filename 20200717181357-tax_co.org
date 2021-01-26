@@ -18,6 +18,8 @@ which is part of cash income.
 It is added into `cols_infrequent` separately,
 because it is not part of `income_infrequent`.
 *** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
+* TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
+* TODO fill out progress spreadsheet for LC
 * TODO ? BUG in the 10-pct purchase data
 ** this passage in purhcases/collect.py
 assert util.near(
@@ -46,7 +48,6 @@ assert util.near(
    61399515e9511d3dae923a29a9af63bc93b0378b
    That's the one where I first included comments in the above-listed files
    indicating this potential problem.
-* TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
 * TODO BLOCKED is this really the definition for non-labor income?
 ** waiting on this email
 https://mail.google.com/mail/u/0/#sent/QgrcJHsBscClkGsCMltcJxSpJLLRWwdrkRl
@@ -249,6 +250,8 @@ We can apply similar integration tests to a subsample of the real ENPH.
 Those integration tests should test ranges, if not statistics.
 ** wish : shadowing was reported, but only for vars of the same type.
 * TODO refactor
+** TODO use os.path.join to join paths
+   It handles the problem of whether a subpath ends in '/' or not.
 ** TODO classes.py: Things like this should be defined within each enum type.
   re_nonNumeric = re.compile( "(.+\-|.*[^0-9\s\.,\-])" )
   re_white      = re.compile( ".*[^\s].*\s.*[^\s]" )
