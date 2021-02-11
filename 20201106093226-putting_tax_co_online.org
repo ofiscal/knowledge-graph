@@ -63,63 +63,59 @@
 *** details
    Inc. changes to the user-supplied .csv files,
    on which (only?) r2019 depends.
-*** DONE recursive import tracing
+*** recursive import tracing
     Can I encode the imports of a program as a recipe that does nothing,
     to ensure that it is re-run whenever any of those imports changes,
     without having to list dependencies of dependencies in each recipe
     that actually does something?
-*** TODO BLOCKED add Haskell files
+*** BLOCKED add Haskell files
     Adding them to make/deps is easy.
     The hard part is using them in make/build.
-** TODO solve memory, time constraints, cron job
+** solve memory, time constraints, cron job
    :PROPERTIES:
    :ID:       c3c33450-e196-4116-be1e-7b253bc68391
    :END:
-*** definitions
-    M = space available
-    MR = space needed for a run
-    N = number of users
-    T = min time a run's results remain on disk
-*** TODO decide optimal wait
+*** choose optimal wait
     Promise to respond within 2 hours,
     and to hold the results for at least 1 hour after making them.
+    If space for 10 users, then actually the response will always come in at most 100 minutes, and the data will stay for at least 100 minutes.
     If no new users bump the space, they might stay longer.
-*** steps
-**** receive from Django
-***** json spec
-***** spreadsheets (optional)
-**** compute hash of email address
-     This will be treated like a user name.
-**** TODO BLOCKED: if db already has request from user
-     blocked on Django
-***** TODO initial hack
-      Just assume they want the earlier result deleted.
-***** what to do
-     Ask if they want to delete the old one and replace it with the new one.
-     Explain they can only have one in the db at a time.
-**** create folder, move db and spec to it
-**** modify db of requests
-***** field : time of requests
-***** field : hash of email
-***** field : time of results
-      often missing
-***** sort  : time of request
-**** determine whether to run
-***** Run if both
-      (1) either (a) a result is more than an hour old, or
-                 (b) there's room for another run
-      (2) the db contains unexecuted requests
-***** The program will have to use `dh` from the shell.
-***** Delete a result only if necessary.
-**** run
-***** Makefile: smart within user
-      It won't recreate data products unnecessarily when I'm testing.
-***** all output should go to a specific user's folder
-****** TODO unduplicate the subsamples across users
-****** TODO ? unduplicate the other non-user-specific files
-       Probably, none of the first files constructed -- people_0, purchases_0, etc. -- are too small to warrant unduplication, but their construction might be slow, which would.
-**** email URL to user
+*** compute hash of email address
+    This will be treated like a user name.
+*** NEXT all* output should go to a specific user's folder
+    * except the subsample, which is slow and extremely initial
+**** places to change to_csv
+     report/overview.py
+     build/output_io
+*** add new user to db of requests
+**** sort  : time of request
+**** field : hash of email
+**** field : time of requests
+**** field : time of results
+     often missing
+*** maintain a .json file of spacetime params
+    data/constraints-time-memory.json
+*** The program will have to use `dh` from the shell.
+*** Makefile: smart within user
+    It won't recreate data products unnecessarily when I'm testing.
+*** incorporate requests_test.py into Makefile
 * TODO in Django
+** TODO send data to tax.co
+*** create folder with name = hash of user email
+*** insert json spec
+*** insert spreadsheets (optional)
+** determine whether, when to run
+*** Run if
+     ( ( a result is more than an hour old
+.       || there's room for another run )
+     & the db contains unexecuted requests )
+*** Delete a result only if necessary.
+*** TODO ? use cron
+*** TODO initial hack
+    Assume they want the earlier request bdeleted.
+*** TODO later
+   Ask if they want to delete the old one and replace it with the new one.
+   Explain they can only have one in the db at a time.
 ** TODO show Makefile errors if build fails
    :PROPERTIES:
    :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
@@ -127,6 +123,8 @@
 *** convey exit status to webapp
 *** write error to a file
 *** find, display that error file in the webapp
+** TODO email URL to user
+** TODO test email addresses with strange characters
 * ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
 * TODO integrate tax.co and the web app
   :PROPERTIES:

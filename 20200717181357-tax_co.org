@@ -19,6 +19,22 @@ It is added into `cols_infrequent` separately,
 because it is not part of `income_infrequent`.
 *** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
 * TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
+* TODO clean
+** ? tests (mostly?) do not have to be user-specific
+   PITFALL: At least one of them, rate_input_test,
+   is in fact user-specific.
+** test evidence should mirror the file tree
+   Currently it is flat.
+   This would only require rewriting the calls to oio.test_write()
+   and the locations of the evidence in the makefile.
+** rename shell.json to config.json
+   and repl.json to config.repl.json.
+** move repl.json from config/ to users/repl/
+   And add a README explaining that two of the folders,
+   repl and example, aren't real users.
+   Note that repl.json is referred to in make/ and python/.
+** ? unduplicate the other non-user-specific files
+   Probably, none of the first files constructed -- people_0, purchases_0, etc. -- are too small to warrant unduplication, but their construction might be slow, which would.
 * TODO fill out progress spreadsheet for LC
 * TODO ? BUG in the 10-pct purchase data
 ** this passage in purhcases/collect.py
