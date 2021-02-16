@@ -137,6 +137,7 @@
 ** tax.co informs webapp if, when it finishes
 ** webapp emails user that it's ready, sends link
 ** webapp finds, presents tax.co output
+* [[id:8949db07-95ac-44c8-9b7b-78d565c1943d][before production run, do web security stuff]]
 * TODO find, deploy to a server
   :PROPERTIES:
   :ID:       6c1cd107-bffa-4ef2-879b-8adc1bbf942b

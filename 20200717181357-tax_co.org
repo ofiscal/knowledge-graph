@@ -20,6 +20,11 @@ because it is not part of `income_infrequent`.
 *** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
 * TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
 * TODO clean
+** use this rule in Makefile.deps
+   [ -f $@ ] && touch $@
+   That way I don't have to keep the parallel .no_younger_than folder.
+*** if it works, provide feedback
+    https://stackoverflow.com/questions/65947352/makefile-how-to-recursively-trace-a-programs-import-hierarchy?noredirect=1#comment116761513_65947352
 ** ? tests (mostly?) do not have to be user-specific
    PITFALL: At least one of them, rate_input_test,
    is in fact user-specific.
