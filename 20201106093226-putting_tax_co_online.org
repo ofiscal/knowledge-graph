@@ -100,11 +100,49 @@
     It won't recreate data products unnecessarily when I'm testing.
 *** incorporate requests_test.py into Makefile
 * TODO in Django
+** TODO Django bug: filesystem not always written to
+   https://forum.djangoproject.com/t/view-only-sometimes-writes-to-filesystem/6799
 ** TODO send data to tax.co
-*** create folder with name = hash of user email
-*** insert json spec
-*** insert spreadsheets (optional)
-** determine whether, when to run
+*** DONE create folder with name = hash of user email
+*** DONE insert json spec
+*** DONE rename ingest_spec -> ingest_json
+    and move it to "examples",
+    and then start on "ingest_spec", which ingests both json and tables
+*** DONE factor out functions from ingest_json
+    The one that makes the user folder if needed,
+    and writes the json config data to it.
+*** TODO insert spreadsheets
+**** DONE in upload_multiple.html, read list of table names
+     from the calling Django view.
+**** DONE make spreadsheets in tax.co shareable
+     Move them to to-serve/,
+     and simlink their original locations to the new ones.
+     Then run tax.co to make sure they work.
+**** DONE configure Apache to find tax.co spreadsheets
+**** DONE Allow download of default spreadsheets.
+**** TODO complete upload of tables, inc. inclusion in spec
+***** goal
+     Check that the table is present.
+     If it is:
+       Write it to the user's folder.
+       Put that path in the user's json spec.
+     Otherwise:
+       The path should be whatever is the default.
+***** how
+****** `form . cleaned_data` looks like an ordinary dict.
+****** merge params
+      json . dump ( form . cleaned_data,
+      json . dump ( { **(form . cleaned_data),
+                      **{"testing-merge":"True"} },
+**** TODO handle the case of an invalid spec form
+     in ingest_full_spec
+*** TODO ? split email address from other details
+    (When I first tried this I ran into problems I didn't understand.)
+    It's mandatory and obvious, whereas the rest are optional and esoteric. Therefore they deserve a preamble, but it doesn't.
+** TODO determine whether, when to run
+*** change import path to see the db functions
+     https://stackoverflow.com/questions/4383571/importing-files-from-different-folder
+**** add request to tax.co/data/requests.csv
 *** Run if
      ( ( a result is more than an hour old
 .       || there's room for another run )
@@ -112,7 +150,7 @@
 *** Delete a result only if necessary.
 *** TODO ? use cron
 *** TODO initial hack
-    Assume they want the earlier request bdeleted.
+    Assume they want the earlier request deleted.
 *** TODO later
    Ask if they want to delete the old one and replace it with the new one.
    Explain they can only have one in the db at a time.
