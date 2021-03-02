@@ -100,8 +100,14 @@
     It won't recreate data products unnecessarily when I'm testing.
 *** incorporate requests_test.py into Makefile
 * TODO in Django
-** TODO Django bug: filesystem not always written to
-   https://forum.djangoproject.com/t/view-only-sometimes-writes-to-filesystem/6799
+** DONE solve Django bug: filesystem not always written to
+*** forum question
+    https://forum.djangoproject.com/t/view-only-sometimes-writes-to-filesystem/6799
+*** where the bug happens
+The last commit that works:
+  89a231c3bda51c3e245e1991a57b1b3f814cd3be
+The first that fails:
+  cb0e71e9ee3b3f9253cf2c21e376c7759e3ef6f0
 ** TODO send data to tax.co
 *** DONE create folder with name = hash of user email
 *** DONE insert json spec
@@ -120,6 +126,9 @@
      Then run tax.co to make sure they work.
 **** DONE configure Apache to find tax.co spreadsheets
 **** DONE Allow download of default spreadsheets.
+**** DONE handle the case of an invalid spec form
+     in ingest_full_spec
+     The trick was to populate  the optional "choices" fields of the Model elements.
 **** TODO complete upload of tables, inc. inclusion in spec
 ***** goal
      Check that the table is present.
@@ -134,8 +143,6 @@
       json . dump ( form . cleaned_data,
       json . dump ( { **(form . cleaned_data),
                       **{"testing-merge":"True"} },
-**** TODO handle the case of an invalid spec form
-     in ingest_full_spec
 *** TODO ? split email address from other details
     (When I first tried this I ran into problems I didn't understand.)
     It's mandatory and obvious, whereas the rest are optional and esoteric. Therefore they deserve a preamble, but it doesn't.

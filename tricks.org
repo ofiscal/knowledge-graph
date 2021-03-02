@@ -24,7 +24,7 @@ df['test'] = change_jit(
     . values # to get a numpy array, which numba wants
     . T # so that the rows unpacked by * above are the columns we want in `prices`.
     )
-* shell: count all file extensions in filetree
+* shell: show all file extensions in filetree
   find . -type f | sed 's/.*\.//' | sort | uniq -c
 * grep excluding nonreadable file types
   find . -type f -not \( -name "*.csv" -o -name "*.xlsx" -o -name "*.tgz" -o -name "*.zip" -o -name "*.ssv" -o -name "*.sav" -o -name "*.pyc" -o -name "*.pdf" -o -name "*.jpeg" -o -name "*.odt" -o -name "*.pack" -o -name "*.ods" -o -name "*.ipynb" -o -name "*.idx" -o -name "*.docx" -o -name "*.dta" \) -print0 | xargs -0 grep "xxx" --color
