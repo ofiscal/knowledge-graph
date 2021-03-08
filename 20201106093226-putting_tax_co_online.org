@@ -108,59 +108,71 @@ The last commit that works:
   89a231c3bda51c3e245e1991a57b1b3f814cd3be
 The first that fails:
   cb0e71e9ee3b3f9253cf2c21e376c7759e3ef6f0
-** TODO send data to tax.co
-*** DONE create folder with name = hash of user email
-*** DONE insert json spec
-*** DONE rename ingest_spec -> ingest_json
+** DONE send data to tax.co
+*** create folder with name = hash of user email
+*** insert json spec
+*** rename ingest_spec -> ingest_json
     and move it to "examples",
     and then start on "ingest_spec", which ingests both json and tables
-*** DONE factor out functions from ingest_json
+*** factor out functions from ingest_json
     The one that makes the user folder if needed,
     and writes the json config data to it.
-*** TODO insert spreadsheets
-**** DONE in upload_multiple.html, read list of table names
+*** insert spreadsheets
+**** in upload_multiple.html, read list of table names
      from the calling Django view.
-**** DONE make spreadsheets in tax.co shareable
+**** make spreadsheets in tax.co shareable
      Move them to to-serve/,
      and simlink their original locations to the new ones.
      Then run tax.co to make sure they work.
-**** DONE configure Apache to find tax.co spreadsheets
-**** DONE Allow download of default spreadsheets.
-**** DONE handle the case of an invalid spec form
+**** configure Apache to find tax.co spreadsheets
+**** Allow download of default spreadsheets.
+**** handle the case of an invalid spec form
      in ingest_full_spec
      The trick was to populate  the optional "choices" fields of the Model elements.
-**** TODO complete upload of tables, inc. inclusion in spec
-***** goal
-     Check that the table is present.
-     If it is:
-       Write it to the user's folder.
-       Put that path in the user's json spec.
-     Otherwise:
-       The path should be whatever is the default.
-***** how
-****** `form . cleaned_data` looks like an ordinary dict.
-****** merge params
-      json . dump ( form . cleaned_data,
-      json . dump ( { **(form . cleaned_data),
-                      **{"testing-merge":"True"} },
-*** TODO ? split email address from other details
-    (When I first tried this I ran into problems I didn't understand.)
+**** rearrange file tree
+     I want the user to have free access to tax.co,
+     but not to any secret keys in, say, web/.
+**** use symlinks for files not uploaded.
+     It could be that the user's folder always has a file for every uploadable table, but that in the event that they don't upload it, that file is a symlink.
+     This simplifies the config file -- no need to indicate where the files are, becuase they're always there -- and doesn't have much effect + or - on the simplicity of the code that puts the files there.
+**** remove some now-obsolete shell.json params
+ "vat_by_coicop"         : "data/vat/vat-by-coicop.csv",
+ "vat_by_capitulo_c"     : "data/vat/vat-by-capitulo-c.csv",
+ (and change all the code that used to depend on those,
+ to use the symlinks instead)
+**** ? move the spec to a subfolder
+     of the user folder called spec/
+     where "the spec" includes all uploaded tables too.
+**** handle the case that an uploaded file already exists
+** TODO ? split email address from other details
+   (When I first tried fixing this problem something went wrong I didn't understand.)
     It's mandatory and obvious, whereas the rest are optional and esoteric. Therefore they deserve a preamble, but it doesn't.
 ** TODO determine whether, when to run
-*** change import path to see the db functions
-     https://stackoverflow.com/questions/4383571/importing-files-from-different-folder
-**** add request to tax.co/data/requests.csv
-*** Run if
+*** CANCELED change import path to see the db functions
+    Hard to do. Instead, call tax.co/python/requests from tax.co.web
+*** add request to tax.co/data/requests.csv
+*** mark request complete when done
+    Only delete the request once the data for it has also been deleted.
+*** TODO use cron
+**** split tax.co/python/requests.py into lib, tests, main
+**** Run if
      ( ( a result is more than an hour old
-.       || there's room for another run )
+ .       || there's room for another run )
      & the db contains unexecuted requests )
-*** Delete a result only if necessary.
-*** TODO ? use cron
-*** TODO initial hack
-    Assume they want the earlier request deleted.
-*** TODO later
-   Ask if they want to delete the old one and replace it with the new one.
-   Explain they can only have one in the db at a time.
+**** Delete a result only if necessary.
+*** TODO Assume they want the earlier request deleted.
+    Provide a message explaining that's what happens.
+*** TODO why did I need jq?
+    The following expression reads a json file in which "paths" equals a sub-dictionary of terms,
+    and turns each term into a shell variable.
+      eval "$(jq -r '.paths | to_entries | .[] | .key + "=\"" + .value + "\""' < paths.json)"
+    For instance, it expects an input file called paths.json like this:
+      { "paths":
+        { "tax_co"     : "/mnt/tax_co/",
+          "tax_django" : "/mnt/web/",
+          "apache"     : "/mnt/apache2"
+        }
+      }
 ** TODO show Makefile errors if build fails
    :PROPERTIES:
    :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
