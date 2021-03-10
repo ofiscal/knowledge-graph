@@ -1,4 +1,5 @@
 #+title: putting tax.co online
+* TODO next: [[id:e20adb08-6439-484c-875c-1fb822f66634][determine whether, when to run]]
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -146,20 +147,57 @@ The first that fails:
 **** handle the case that an uploaded file already exists
 ** TODO ? split email address from other details
    (When I first tried fixing this problem something went wrong I didn't understand.)
-    It's mandatory and obvious, whereas the rest are optional and esoteric. Therefore they deserve a preamble, but it doesn't.
+   It's mandatory and obvious, whereas the rest are optional and esoteric.
+     Therefore they deserve a preamble, but it doesn't.
 ** TODO determine whether, when to run
+   :PROPERTIES:
+   :ID:       e20adb08-6439-484c-875c-1fb822f66634
+   :END:
 *** CANCELED change import path to see the db functions
     Hard to do. Instead, call tax.co/python/requests from tax.co.web
-*** add request to tax.co/data/requests.csv
-*** mark request complete when done
-    Only delete the request once the data for it has also been deleted.
-*** TODO use cron
-**** split tax.co/python/requests.py into lib, tests, main
-**** Run if
-     ( ( a result is more than an hour old
- .       || there's room for another run )
-     & the db contains unexecuted requests )
-**** Delete a result only if necessary.
+*** DONE split tax.co/python/requests.py into lib, tests, main
+*** DONE on each run of the view: add request to tax.co/data/requests.csv
+*** TODO on cron's time
+**** THINKING: unused functions
+***** delete_oldest_user_folder
+***** gb_used
+***** memory_permits_another_run
+***** delete_oldest_request
+***** at_least_one_is_old
+***** unexecuted_requests_exist
+**** the work
+     See if unexecuted requests exist.
+     If so, see if it can be run yet.
+     If there's room for another already, run the oldest unexecuted request.
+     If there's no room, but some request is old enough to be deleted,
+     then delete it from requests.csv and users/,
+     and then run the oldest unexecuted request.
+     Once the request has executed, mark it complete.
+*** TODO ! introduce a memory lock
+**** the filelock library seems good
+     https://pypi.org/project/filelock/
+     https://stackoverflow.com/a/498505/916142
+**** strategy
+***** temporarily hold new requests in a briefly-accessed file
+      Keep a file next to requests.csv called requests.new.csv.
+      Each time a user submits a request,
+      add it to requests.new.csv, rather than requests.csv.
+      Each time the cron job runs, it transfers from requests.new.csv to requests.csv.
+      The advantage of this is that the file is never needed for very long, so no process will meaningfully block another.
+***** only the cron job accesses requests.csv
+**** DONE stale
+***** why
+     Otherwise one instance of the cron job could clobber another,
+     or a user request could be missed
+     because the cron job held an earlier copy of requests.csv.
+***** if I were to DIY it
+****** To lock a file,
+       save a file of the same name with ".lock" appended. Optionally, write in the file the reason it's locked.
+****** To unlock a file,
+       delete the lock. But don't do that unless the lock is yours.
+****** To wait on a file
+       See if the file is locked.
+       If so, wait a given (as an argument) number of seconds.
 *** TODO Assume they want the earlier request deleted.
     Provide a message explaining that's what happens.
 *** TODO why did I need jq?
