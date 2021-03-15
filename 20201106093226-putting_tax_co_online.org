@@ -157,6 +157,31 @@ The first that fails:
     Hard to do. Instead, call tax.co/python/requests from tax.co.web
 *** DONE split tax.co/python/requests.py into lib, tests, main
 *** DONE on each run of the view: add request to tax.co/data/requests.csv
+*** TODO NEXT get try-to-advance to work in the repl at /mnt/tax_co
+**** IMPORTANT: DON"T MESS WITH tax.co/master
+     because tax.co/web has unsaved changes,
+     some for debugging and maybe some that fix bugs
+**** do it from within tax_web docker container
+**** may need to os.chdir to /mnt/tax_co
+     once running python from a different python
+**** eventually, will want to call from shell like this
+PYTHONPATH=/mnt/tax_co/						       \
+  python3							       \
+  /mnt/tax_co/python/requests/main.py				       \
+  /mnt/tax_co/users/972411cda1a01ae85f6c36b1b68118c3/config/shell.json \
+  972411cda1a01ae85f6c36b1b68118c3                                     \
+  try-to-advance
+*** TODO fix: view currently doesn't trigger add-to-requests
+    and yet this works from anywhere in the shell (in the docker container):
+  PYTHONPATH=/mnt/tax_co/                                               \
+  python3                                                               \
+  /mnt/tax_co/python/requests/main.py                                   \
+  /mnt/tax_co/users/972411cda1a01ae85f6c36b1b68118c3/config/shell.json  \
+  add-to-queue
+*** TODO change os.system calls to subprocess.run calls
+    can model on tax.co/python/requests/main.py
+*** TODO move all file definitions to dedicates files.py files
+    In both web/../views/ and tax/../request/
 *** TODO on cron's time
 **** THINKING: unused functions
 ***** delete_oldest_user_folder
@@ -220,6 +245,9 @@ The first that fails:
 *** find, display that error file in the webapp
 ** TODO email URL to user
 ** TODO test email addresses with strange characters
+** TODO calibrate time, memory constraints
+   in data/constraints-time-memory.json
+   To get the time right, will need to be using the server.
 * ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
 * TODO integrate tax.co and the web app
   :PROPERTIES:

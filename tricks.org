@@ -1,4 +1,5 @@
 #+TITLE: tricks - how to do some things
+* [[file:../tech/20210310202741-times_versus_numbers_in_numpy.org][times versus numbers in NumPy]]
 * fast time series manipulations for Pandas (actually in NumPy)
 ** PITFALL: Part of this code is unreadable in org-mode.
 ** example code, with comments
