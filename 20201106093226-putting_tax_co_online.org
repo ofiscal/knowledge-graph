@@ -157,32 +157,49 @@ The first that fails:
     Hard to do. Instead, call tax.co/python/requests from tax.co.web
 *** DONE split tax.co/python/requests.py into lib, tests, main
 *** DONE on each run of the view: add request to tax.co/data/requests.csv
-*** TODO NEXT get try-to-advance to work in the repl at /mnt/tax_co
+*** DONE the code expects vat_by_c*, not vat-by-c*
+    That is, underscores, not dashes.
+    So change all the filenames accordingly.
+    Also change the READMEs (plural) in data/vat
+*** DONE NEXT get try-to-advance to work in the repl
+*** TODO NEXT get try-to-advance to work from the shell
+**** BUG: [[file:../../.local/share/Trash/files/20210317174200-library_not_available_when_django_calls_python.org][library not available when Django pcalls Python]]
 **** IMPORTANT: DON"T MESS WITH tax.co/master
      because tax.co/web has unsaved changes,
      some for debugging and maybe some that fix bugs
 **** do it from within tax_web docker container
 **** may need to os.chdir to /mnt/tax_co
      once running python from a different python
-**** eventually, will want to call from shell like this
-PYTHONPATH=/mnt/tax_co/						       \
-  python3							       \
-  /mnt/tax_co/python/requests/main.py				       \
-  /mnt/tax_co/users/972411cda1a01ae85f6c36b1b68118c3/config/shell.json \
-  972411cda1a01ae85f6c36b1b68118c3                                     \
-  try-to-advance
-*** TODO fix: view currently doesn't trigger add-to-requests
+*** TODO bugfix: delete the oldest *extant* user
+    Call it liek this
+    (but change the value "4" to whatever is appropriate).
+
+    PYTHONPATH=/mnt/tax_co/		    \
+      /opt/conda/bin/python3.8		    \
+      /mnt/tax_co/python/requests/main.py   \
+      /mnt/tax_co/users/4/config/shell.json \
+      try-to-advance
+*** DONE fix: view currently doesn't trigger add-to-requests
     and yet this works from anywhere in the shell (in the docker container):
   PYTHONPATH=/mnt/tax_co/                                               \
   python3                                                               \
   /mnt/tax_co/python/requests/main.py                                   \
   /mnt/tax_co/users/972411cda1a01ae85f6c36b1b68118c3/config/shell.json  \
   add-to-queue
-*** TODO change os.system calls to subprocess.run calls
-    can model on tax.co/python/requests/main.py
+*** DONE clean requests/main.py
+  Change _file and _folder to _path.
+    This makes searching easier.
+
+  In advance_request_queue, don't redefine tax_root.
+*** TODO enable .xlsx upload
+**** keep original filename extensions
+     Currently the symlink always ends in .csv,
+     even though the file itself might end in .xlsx.
 *** TODO move all file definitions to dedicates files.py files
     In both web/../views/ and tax/../request/
-*** TODO on cron's time
+*** DONE change os.system calls to subprocess.run calls
+    can model on tax.co/python/requests/main.py
+*** DONE how to advance requests (on cron's time)
 **** THINKING: unused functions
 ***** delete_oldest_user_folder
 ***** gb_used
@@ -198,7 +215,7 @@ PYTHONPATH=/mnt/tax_co/						       \
      then delete it from requests.csv and users/,
      and then run the oldest unexecuted request.
      Once the request has executed, mark it complete.
-*** TODO ! introduce a memory lock
+*** DONE ! introduce a memory lock
 **** the filelock library seems good
      https://pypi.org/project/filelock/
      https://stackoverflow.com/a/498505/916142
@@ -236,6 +253,10 @@ PYTHONPATH=/mnt/tax_co/						       \
           "apache"     : "/mnt/apache2"
         }
       }
+*** TODO wart: some paths are defined in obscure places
+    in ~/of/webapp/django/run_make/views/lib.py,
+    in the function append_request_to_db().
+    Also in tax.co/python/requests/.
 ** TODO show Makefile errors if build fails
    :PROPERTIES:
    :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
