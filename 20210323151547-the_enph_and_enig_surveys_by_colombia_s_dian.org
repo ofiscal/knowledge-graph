@@ -1,3 +1,5 @@
+#+title: The ENPH and ENIG surveys, by Colombia's DIAN
+#+ROAM_ALIAS: ENPH ENIG "Encuesta Nacional de Presupuestos de Hogares"
 * PITFALL: These notes files are redundant
 There's an enig.org file, an enph.org file, and this one which pertains to both.
 * PITFALL: These notes are stale, from 2018-ish
@@ -34,4 +36,4 @@ This can be done for all of 2017, and for 2007 goods, but for 2007 services the 
 9 » 9. Esporádica"
 ss frequently than every year", assuming that the terms are ordered. But over here it interprets 9 as "Esporádica por semana".
 * references
-tax.co/hopefully-obsolete/enig-enph,email,david-suarez,2018-02-23.md
+  tax.co/hopefully-obsolete/enig-enph,email,david-suarez,2018-02-23.md
