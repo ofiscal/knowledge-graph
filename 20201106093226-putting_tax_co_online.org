@@ -162,8 +162,7 @@ The first that fails:
     So change all the filenames accordingly.
     Also change the READMEs (plural) in data/vat
 *** DONE NEXT get try-to-advance to work in the repl
-*** TODO NEXT get try-to-advance to work from the shell
-**** BUG: [[file:../../.local/share/Trash/files/20210317174200-library_not_available_when_django_calls_python.org][library not available when Django pcalls Python]]
+*** DONE NEXT get try-to-advance to work from the shell
 **** IMPORTANT: DON"T MESS WITH tax.co/master
      because tax.co/web has unsaved changes,
      some for debugging and maybe some that fix bugs
