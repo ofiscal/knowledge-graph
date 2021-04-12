@@ -1,4 +1,5 @@
 #+TITLE: ofiscal, todo
 * [[file:20200717181357-tax_co.org][tax.co]]
+* TODO read [[file:../tech/20210406174945-how_tpc_distributes_the_corporate_income_tax_paper.org][How TPC Distributes the Corporate Income Tax (paper)]]
 * DONE
 ** [[file:20200825164022-tax_hike_proposal_colombian_senate_2020.org][tax hike proposal, Colombian Senate, 2020]]
