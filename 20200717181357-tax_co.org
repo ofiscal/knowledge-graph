@@ -25,6 +25,9 @@ because it is not part of `income_infrequent`.
    That way I don't have to keep the parallel .no_younger_than folder.
 *** if it works, provide feedback
     https://stackoverflow.com/questions/65947352/makefile-how-to-recursively-trace-a-programs-import-hierarchy?noredirect=1#comment116761513_65947352
+** rename
+   people/ -> people_1/
+   purchases/ -> purchases_1/
 ** ? tests (mostly?) do not have to be user-specific
    PITFALL: At least one of them, rate_input_test,
    is in fact user-specific.

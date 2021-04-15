@@ -194,8 +194,12 @@ The first that fails:
 **** keep original filename extensions
      Currently the symlink always ends in .csv,
      even though the file itself might end in .xlsx.
-*** TODO move all file definitions to dedicates files.py files
+*** TODO move all file definitions to dedicated files.py files
     In both web/../views/ and tax/../request/
+**** more places?
+     in ~/of/webapp/django/run_make/views/lib.py,
+     in the function append_request_to_db().
+     Also in tax.co/python/requests/.
 *** DONE change os.system calls to subprocess.run calls
     can model on tax.co/python/requests/main.py
 *** DONE how to advance requests (on cron's time)
@@ -241,21 +245,7 @@ The first that fails:
        If so, wait a given (as an argument) number of seconds.
 *** TODO Assume they want the earlier request deleted.
     Provide a message explaining that's what happens.
-*** TODO why did I need jq?
-    The following expression reads a json file in which "paths" equals a sub-dictionary of terms,
-    and turns each term into a shell variable.
-      eval "$(jq -r '.paths | to_entries | .[] | .key + "=\"" + .value + "\""' < paths.json)"
-    For instance, it expects an input file called paths.json like this:
-      { "paths":
-        { "tax_co"     : "/mnt/tax_co/",
-          "tax_django" : "/mnt/web/",
-          "apache"     : "/mnt/apache2"
-        }
-      }
-*** TODO wart: some paths are defined in obscure places
-    in ~/of/webapp/django/run_make/views/lib.py,
-    in the function append_request_to_db().
-    Also in tax.co/python/requests/.
+*** TODO why did I think I needed [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]]?
 ** TODO show Makefile errors if build fails
    :PROPERTIES:
    :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
@@ -281,89 +271,76 @@ The first that fails:
 ** webapp emails user that it's ready, sends link
 ** webapp finds, presents tax.co output
 * [[id:8949db07-95ac-44c8-9b7b-78d565c1943d][before production run, do web security stuff]]
-* TODO find, deploy to a server
+* DONE find a server
+** chosen: [[file:../tech/aws.org][AWS]]
+** a cheap-looking bare-metal server rental
+   https://gthost.com/bare-metal-server/
+** [[file:20210414144055-javeriana_dti_getting_them_to_serve_the_tax_co_microsimulation_website.org][Javeriana DTI: getting them to serve the tax.co microsimulation website]]
+* TODO deploy to server
   :PROPERTIES:
   :ID:       6c1cd107-bffa-4ef2-879b-8adc1bbf942b
   :END:
-** a cheap-looking bare-metal server rental
-https://gthost.com/bare-metal-server/
-** TODO BLOCKED : Can DTI serve the app?
-*** case number 245936
-*** my latest response to DTI
-**** what I said in brief
-     Who's in charge of this shit?
-     Here's what the app does: _.
-**** planned response
-***** original, nixed
-Justificación:
-==============
-
-  Varios me han dicho que tal vez DTI me puede servir un sitio web que estoy programando. (Todavía me falta tal vez un mes de trabajo en ello.)
-
-Situación actual:
-=================
-
-  He preguntado muchas veces si lo pueden hacer, y descrito a muchos como funcionará la aplicación (a Claudia, Dario, Laura, y quien séa el que lea el correo mesaservicios_dti@javeriana.edu.co). Cada uno me ha dicho tengo que discutir con otra persona para resolver el pedido.
-
-***** sent, 2021 02 02
-Justificación:
-==============
-
-  Tengo entendido que la DTI me puede ayudar a albergar un sitio web interactivo que estoy programando para el Observatorio Fiscal de la Facultad de Ciencias Económicas y Administrativas.
-
-Situación actual:
-=================
-
-  Me gustaría saber quién es la persona a cargo del hosting en el servidor de la universidad para poder proceder a implementar el proyecto que tenemos en el Observatorio.
-
-Cambios esperados:
-==================
-
-  La microsimulación permitirá que alguien especifica parametros alternativos del sistema tributario -- la tasa del impuesto de renta, la tasa sobre dividendos, la IVA, etc. -- para ver como afectaría la economía. Un usuario especifica los parametros, y el sistema genera unas tablas y graficas. El usuario puede ver las graficas en el navegador, y puede descargar las tablas.
-
-  La especificación del IVA es complejo, porque cada clase de bien puede cargar una tasa diferente. Para permitir que un usuario pueda especificar tasas diferentes para cada clase de bien, le da la opción de subir una tabla (.xslx) al sistema mientras escojan los otros parametros.
-
-  El programa requiere alrededor de 50 GB. Cada vez que corre el modelo genera alrededor de 2.1GB de datos, y es multiusuario, así que tiene que guardar los datos de algunos usuarios a la misma vez. También empieza con alrededor de 10 GB de datos originales, de los cuales se genera los productos de datos espeficas para cada usuario. La mayoría de esos datos de orígen son la Encuesta Nacional de Presupuestos de Hogares, hecho por el DANE.
-
-  La aplicación está hecho en un contenedor Docker, así que no necesita acceso al disco entero de la máquina anfitriona; solo necesita su propio directorio.
-
-  El imagen Docker tendría un peso alrededor de 10 GB. (Eso ya he incluido en el anterior requisito de 100 GB.) Ese imagen incluye el servidor Apache; no tiene que usar otro servidor.
-
-  Cada vez que el sistema corre la simulación, los resultados se guardan en el disco por un día. Una vez existen, envia un correo al usuario, dicidendoles que están listos para ver y dando un enlace donde encontrarlos. Si la porción de la memoria aporcionada para la aplicación está lleno cuando un usuario pide resultados, tienen que esperar hasta que los de algún usuario han sido borrados.
-
-  Si algo falla durante el proceso, el sistema me enviará a mi un correo explicando el error. Por eso yo necesitaré acceso al contenedor Docker, y a la porción del disco que usa el contenedor Docker. No necesitaré acceso al sistema fuera de ese directorio.
-*** who
-**** mesaservicios-dti@javeriana.edu.co
-**** Claudia Patricia Forero Rodriguez <cpforero@javeriana.edu.co>
-    said to write to mesaservicios-dti
-**** Dario Rivillas Ossa <drivilla@javeriana.edu.co>
-**** Laura <Last name?> at DTI called me
-     I explained the project, she said someone else would contact me.
-     That was around Thursday Jan 28 or Friday 29.
-*** what I want
-  La microsimulación permite que alguien especifica parametros alternativas del sistema tributario -- la tasa del impuesto de renta, o la tasa sobre dividendos, o la IVA -- para ver como afectaría la economía. Un usuario especifica los parametros, y el sistema genera unos tablas y graficos. El usuario puede ver los graficos en el navegador, y puede descargar las tablas.
-
-  La especificación del IVA es complejo, porque cada clase de bien puede cargar una tasa diferente. Para permitir que un usuario pueda especificar tasas diferentes para cada clase de bien, le da la opción de subir una tabla (.xslx) al sistema mientras escojan los otros parametros.
-
-  El programa puede usar menos de 20 GB de memoría para almacenar los datos funamentales (la Encuesta Nacional de Presupuestos de Hogares, hecho por el DANE), los subidos por usuarios, y los creado por el sistema. Está hecho en un contenedor Docker, así que no necesita acceso al disco entero de la máquina anfitriona; solo necesita su propio directorio, lo cual puede empezar vacio.
-
-  El imagen Docker tendría un peso alrededor de 10 GB. (Eso ya he incluido en el anterior requisito de 100 GB.) El imagen incluye el servidor Apache; no tiene que usar otro servidor.
-
-  Si el imagen tuviera acceso a más memoria, podría usar menos capacidad computacional. Alacenaría los resultados de los usuarios, así que si alguien pide algo que ya ha simulado, no tendría que simularlo de nuevo. Si me dicen que puede usar, digamos, hasta 50 GB, entonces cuando está a punto de pasar ese nivel borraría los resultados más viejos hasta que puede mantenerse debajo de ese límite.
-*** Claudia said to specify
-    Sobre esta solicitud deben realizar un caso a la mesa de ayuda informan que ustedes tienen un programa donde están desarrollando una plataforma para  los servicios descrito en el correo, por favor en este correo ser especifico la parte técnica, como: el programa es multiusuario, como van hacer las conexiones, como va estar conectado el programa para que las persona ingresen los datos ejemplo por medio de  WEB? o como lo tiene pensado.
-*** form that mesaservicios-dti sent me (filled)
-  JUSTIFICACIÓN:
-
-  Claudia Patricia Forero Rodriguez del DTI me dijo que yo podría entrar al sitio Servir-T. Quiero hacer eso para preguntar si la aplicación web que estoy desarrollando se puede servir de la javeriana, o si tendría que usar otro dominio web.
-
-  SITUACIÓN ACTUAL:
-
-  El sistema Servir-T no me reconoce. Estoy usando el mismo nombre de usuario (brown-j) y clave que me permiten entrar al correo Javeriana, a Teams, etc.
-
-  ¿CUÁLES SON LOS CAMBIOS ESPERADOS?
-
-  Espero o que el sistema me reconozca.
+** DONE package the docker images
+*** where I put it
+    ~/tax_co.docker.tar
+*** how
+    https://stackoverflow.com/a/28364045/916142
+*** why: speed
+    Uploading such a .tar file from my home machine to the server will be much faster than downloading it from DockerHub onto the server.
+** TODO set up the instance
+*** DONE start an EC2 instance
+**** the config I'm trying
+***** AMI: Amazon Linux 2
+***** Instance type: 16 GB RAM
+***** configure: do nothing
+      "hibernation" is an option, but it requires an HD big enough to store the RAM in addition to whatever I want in "colder" storage.
+***** storage
+      16 GB HD
+        The Docker image iself is 7.1 GB.
+	Eventually I'll want even more, but later.
+***** Configure Security Group
+      All of these accessible from anywhere
+        (not "My IP", and not "Custom", whatever that is).
+      SSH (default)
+      HTTP (added)
+      HTTPS (added)
+*** DONE login
+    ssh -i ~/code/aws/secret/2021-04-14.1.pem ec2-user@18.228.171.239
+*** DONE associate a domain name with the EC2 instance
+    https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
+**** get the IPv4 Public IP address for the EC2 instance
+     18.228.171.239
+**** in Route53
+     Go to that domain.
+     Choose Create Record.
+*** DONE install docker, emacs
+    sudo yum install -y docker emacs
+**** first time I tried, all docker dependencies were already installed
+    sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+*** transfer from home machine
+    scp takes a long time for big files.
+**** ~/tax_co.docker.tar
+     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/tax_co.docker.tar ec2-user@18.228.171.239:~
+     docker import tax_co.docker.tar
+**** DONE ~/of/webapp.zip
+     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/of/webapp.zip ec2-user@18.228.171.239:~
+     unzip webapp.zip
+**** ~/of/tax.co/web.zip
+*** DONE configure Docker not to need sudo
+    sudo usermod -aG docker ec2-user
+    then close ssh and ssh back in
+*** screw with filepaths
+**** Take notes here of what needs changing.
+     webapp/commands.sh
+       change jeff -> ec2-user
+**** Eventually make those changes programmatic.
+*** visit something like this URL
+    sim.jefbrown.net/myapp/run_make/write_time
+** TODO test some capabilities
+*** DONE test: stop, reboot, restart
+    Doing this changes the instance's public IP address.
+** TODO fix blockers
+*** cannot download models from myapp/run_make/ingest_full_spec
 * TODO ponder
 ** Keep a db of requests?
    It seems like the "right" thing to do,
