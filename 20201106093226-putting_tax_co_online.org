@@ -1,5 +1,4 @@
 #+title: putting tax.co online
-* TODO next: [[id:e20adb08-6439-484c-875c-1fb822f66634][determine whether, when to run]]
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -150,9 +149,6 @@ The first that fails:
    It's mandatory and obvious, whereas the rest are optional and esoteric.
      Therefore they deserve a preamble, but it doesn't.
 ** TODO determine whether, when to run
-   :PROPERTIES:
-   :ID:       e20adb08-6439-484c-875c-1fb822f66634
-   :END:
 *** CANCELED change import path to see the db functions
     Hard to do. Instead, call tax.co/python/requests from tax.co.web
 *** DONE split tax.co/python/requests.py into lib, tests, main
@@ -301,41 +297,69 @@ The first that fails:
 ***** Configure Security Group
       All of these accessible from anywhere
         (not "My IP", and not "Custom", whatever that is).
-      SSH (default)
-      HTTP (added)
-      HTTPS (added)
+      SSH (default), which (I think) means* port 22
+      HTTP (added), which (I think) means* port 80
+      HTTPS (added), which (I think) means* port 443
 *** DONE login
-    ssh -i ~/code/aws/secret/2021-04-14.1.pem ec2-user@18.228.171.239
+    ssh -i ~/code/aws/secret/2021-04-14.1.pem ec2-user@18.231.152.118
 *** DONE associate a domain name with the EC2 instance
     https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
 **** get the IPv4 Public IP address for the EC2 instance
-     18.228.171.239
+     18.231.152.118
 **** in Route53
      Go to that domain.
      Choose Create Record.
-*** DONE install docker, emacs
-    sudo yum install -y docker emacs
+*** DONE install docker, emacs, git
+    sudo yum install -y docker emacs git
 **** first time I tried, all docker dependencies were already installed
     sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-*** transfer from home machine
+*** DONE transfer from home machine
     scp takes a long time for big files.
 **** ~/tax_co.docker.tar
-     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/tax_co.docker.tar ec2-user@18.228.171.239:~
-     docker import tax_co.docker.tar
-**** DONE ~/of/webapp.zip
-     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/of/webapp.zip ec2-user@18.228.171.239:~
+     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/tax_co.docker.tar ec2-user@18.231.152.118:~
+     docker load -i tax_co.docker.tar
+**** ~/of/webapp.zip
+     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/of/webapp.zip ec2-user@18.231.152.118:~
      unzip webapp.zip
 **** ~/of/tax.co/web.zip
+     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/of/tax.co/master.zip ec2-user@18.231.152.118:~
+     unzip master.zip
+     mv master tax.co
 *** DONE configure Docker not to need sudo
     sudo usermod -aG docker ec2-user
     then close ssh and ssh back in
-*** screw with filepaths
+*** DONE set up Git in the new environment
+  git config --global core.editor "emacs -nw"
+    # -nw: use Emacs at the command line (not via the gui)
+    # Maybe not necessary in a GUIless system.
+  Copy /.ssh/id_rsa from my home system to the new system.
+  Add my user name and email (Git will say how when I try to push).
+*** MAYBE DONE configure filepaths
 **** Take notes here of what needs changing.
      webapp/commands.sh
        change jeff -> ec2-user
 **** Eventually make those changes programmatic.
-*** visit something like this URL
-    sim.jefbrown.net/myapp/run_make/write_time
+*** configure Apache
+**** DONE try adding a port number to my request
+     Beware that the port number outside the container might map to a different one inside the container.
+     Edit ports.conf, add it (eventually) to git@github.com:ofiscal/tax.co.web.git
+*** TODO start apache as root
+    I can't serve to the internet unless I do that,
+    which means I need to start the docker container as root:
+      docker exec -it -u 0 webapp bash
+*** DONE if this works, add it to tax.co.web
+**** rewrite link.sh
+to_replace = apache2.conf ports.conf
+away=/etc/apache2
+home=/mnt/apache2
+
+for i in to_replace; do
+    rm    $away/$target
+    ln -s $home/$target $away/$target
+*** DONE visit this URL
+    http://sim.jefbrown.net/myapp/run_make/write_time
+      based on this
+        http://localhost:8000/myapp/run_make/write_time
 ** TODO test some capabilities
 *** DONE test: stop, reboot, restart
     Doing this changes the instance's public IP address.
