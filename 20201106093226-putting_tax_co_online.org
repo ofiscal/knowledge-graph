@@ -1,6 +1,13 @@
 #+title: putting tax.co online
+* TODO easy
+** [[id:b97325b2-a95c-4c00-9de5-a35429349813][rename /mnt/web -> /mnt/django]]
+** [[id:bdafda4f-6fab-46bd-8bbb-f03aee15443c][test email addresses with strange characters]]
+** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][move all file definitions to dedicated files.py files]]
+** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][Assume they want the earlier request deleted.]]
+** [[id:51d7d5fb-baa0-4558-8bdf-463b6d77f902][bugfix: delete the oldest *extant* user]]
 * TODO fix blockers
 ** cannot download models from myapp/run_make/ingest_full_spec
+** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -148,6 +155,11 @@ The first that fails:
 **** handle the case that an uploaded file already exists
 ** DONE rewrite link.sh to copy ports.conf in addition to apache2.conf
 ** TODO rename /mnt/web -> /mnt/django
+   :PROPERTIES:
+   :ID:       b97325b2-a95c-4c00-9de5-a35429349813
+   :END:
+   find . -name "*.py" -print0 | xargs -0 grep "mnt/web" --color
+   find . \( -name "*.py" -o -name "*.txt" -o -name "*.sh" -o -name "*.org" -o -name "*.md" -o -name "*.json" -o -name "*.html" -o -name "*.org" \) -print0 | xargs -0 sed -i "s/mnt\/web/mnt\/django/g"
 ** TODO ? split email address from other details
    (When I first tried fixing this problem something went wrong I didn't understand.)
    It's mandatory and obvious, whereas the rest are optional and esoteric.
@@ -170,6 +182,9 @@ The first that fails:
 **** may need to os.chdir to /mnt/tax_co
      once running python from a different python
 *** TODO bugfix: delete the oldest *extant* user
+    :PROPERTIES:
+    :ID:       51d7d5fb-baa0-4558-8bdf-463b6d77f902
+    :END:
     Call it liek this
     (but change the value "4" to whatever is appropriate).
 
@@ -195,6 +210,9 @@ The first that fails:
      Currently the symlink always ends in .csv,
      even though the file itself might end in .xlsx.
 *** TODO move all file definitions to dedicated files.py files
+    :PROPERTIES:
+    :ID:       9c7e0481-328c-46ed-82ab-57759d24f8b8
+    :END:
     In both web/../views/ and tax/../request/
 **** more places?
      in ~/of/webapp/django/run_make/views/lib.py,
@@ -244,6 +262,9 @@ The first that fails:
        See if the file is locked.
        If so, wait a given (as an argument) number of seconds.
 *** TODO Assume they want the earlier request deleted.
+    :PROPERTIES:
+    :ID:       6d78fc5f-9958-4b28-9ad5-b74e20c7b12a
+    :END:
     Provide a message explaining that's what happens.
 *** TODO why did I think I needed [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]]?
 ** TODO show Makefile errors if build fails
@@ -253,8 +274,11 @@ The first that fails:
 *** convey exit status to webapp
 *** write error to a file
 *** find, display that error file in the webapp
-** TODO email URL to user
+** TODO email [URL?] to user
 ** TODO test email addresses with strange characters
+   :PROPERTIES:
+   :ID:       bdafda4f-6fab-46bd-8bbb-f03aee15443c
+   :END:
 ** TODO calibrate time, memory constraints
    in data/constraints-time-memory.json
    To get the time right, will need to be using the server.
@@ -270,7 +294,6 @@ The first that fails:
 ** tax.co informs webapp if, when it finishes
 ** webapp emails user that it's ready, sends link
 ** webapp finds, presents tax.co output
-* [[id:8949db07-95ac-44c8-9b7b-78d565c1943d][before production run, do web security stuff]]
 * choose a [[file:../tech/20210419112140-web_server.org][web server]]
 * [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
 * TODO ponder

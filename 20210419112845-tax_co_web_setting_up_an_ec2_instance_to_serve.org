@@ -58,20 +58,20 @@
     Beware that the port number outside the container might map to a different one inside the container.
     Edit ports.conf, add it (eventually) to git@github.com:ofiscal/tax.co.web.git
 * each time it starts
-** DONE login
+** login
    ssh -i ~/code/aws/secret/2021-04-14.1.pem ec2-user@18.231.152.118
-** DONE associate a domain name with the EC2 instance
+** associate a domain name with the EC2 instance
    https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
 *** get the IPv4 Public IP address for the EC2 instance
     18.231.152.118
 *** in Route53
     Go to that domain.
     Choose Create Record.
-** TODO start apache as root
+** start apache as root
    I can't serve to the internet unless I do that,
    which means I need to start the docker container as root:
      docker exec -it -u 0 webapp bash
-** DONE visit this URL
+** visit this URL
    http://sim.jefbrown.net/myapp/run_make/write_time
      based on this
        http://localhost:8000/myapp/run_make/write_time
