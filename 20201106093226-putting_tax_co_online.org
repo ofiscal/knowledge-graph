@@ -1,4 +1,6 @@
 #+title: putting tax.co online
+* TODO fix blockers
+** cannot download models from myapp/run_make/ingest_full_spec
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -144,6 +146,8 @@ The first that fails:
      of the user folder called spec/
      where "the spec" includes all uploaded tables too.
 **** handle the case that an uploaded file already exists
+** DONE rewrite link.sh to copy ports.conf in addition to apache2.conf
+** TODO rename /mnt/web -> /mnt/django
 ** TODO ? split email address from other details
    (When I first tried fixing this problem something went wrong I didn't understand.)
    It's mandatory and obvious, whereas the rest are optional and esoteric.
@@ -267,104 +271,8 @@ The first that fails:
 ** webapp emails user that it's ready, sends link
 ** webapp finds, presents tax.co output
 * [[id:8949db07-95ac-44c8-9b7b-78d565c1943d][before production run, do web security stuff]]
-* DONE find a server
-** chosen: [[file:../tech/aws.org][AWS]]
-** a cheap-looking bare-metal server rental
-   https://gthost.com/bare-metal-server/
-** [[file:20210414144055-javeriana_dti_getting_them_to_serve_the_tax_co_microsimulation_website.org][Javeriana DTI: getting them to serve the tax.co microsimulation website]]
-* TODO deploy to server
-  :PROPERTIES:
-  :ID:       6c1cd107-bffa-4ef2-879b-8adc1bbf942b
-  :END:
-** DONE package the docker images
-*** where I put it
-    ~/tax_co.docker.tar
-*** how
-    https://stackoverflow.com/a/28364045/916142
-*** why: speed
-    Uploading such a .tar file from my home machine to the server will be much faster than downloading it from DockerHub onto the server.
-** TODO set up the instance
-*** DONE start an EC2 instance
-**** the config I'm trying
-***** AMI: Amazon Linux 2
-***** Instance type: 16 GB RAM
-***** configure: do nothing
-      "hibernation" is an option, but it requires an HD big enough to store the RAM in addition to whatever I want in "colder" storage.
-***** storage
-      16 GB HD
-        The Docker image iself is 7.1 GB.
-	Eventually I'll want even more, but later.
-***** Configure Security Group
-      All of these accessible from anywhere
-        (not "My IP", and not "Custom", whatever that is).
-      SSH (default), which (I think) means* port 22
-      HTTP (added), which (I think) means* port 80
-      HTTPS (added), which (I think) means* port 443
-*** DONE login
-    ssh -i ~/code/aws/secret/2021-04-14.1.pem ec2-user@18.231.152.118
-*** DONE associate a domain name with the EC2 instance
-    https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
-**** get the IPv4 Public IP address for the EC2 instance
-     18.231.152.118
-**** in Route53
-     Go to that domain.
-     Choose Create Record.
-*** DONE install docker, emacs, git
-    sudo yum install -y docker emacs git
-**** first time I tried, all docker dependencies were already installed
-    sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-*** DONE transfer from home machine
-    scp takes a long time for big files.
-**** ~/tax_co.docker.tar
-     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/tax_co.docker.tar ec2-user@18.231.152.118:~
-     docker load -i tax_co.docker.tar
-**** ~/of/webapp.zip
-     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/of/webapp.zip ec2-user@18.231.152.118:~
-     unzip webapp.zip
-**** ~/of/tax.co/web.zip
-     scp -i ~/code/aws/secret/2021-04-14.1.pem ~/of/tax.co/master.zip ec2-user@18.231.152.118:~
-     unzip master.zip
-     mv master tax.co
-*** DONE configure Docker not to need sudo
-    sudo usermod -aG docker ec2-user
-    then close ssh and ssh back in
-*** DONE set up Git in the new environment
-  git config --global core.editor "emacs -nw"
-    # -nw: use Emacs at the command line (not via the gui)
-    # Maybe not necessary in a GUIless system.
-  Copy /.ssh/id_rsa from my home system to the new system.
-  Add my user name and email (Git will say how when I try to push).
-*** MAYBE DONE configure filepaths
-**** Take notes here of what needs changing.
-     webapp/commands.sh
-       change jeff -> ec2-user
-**** Eventually make those changes programmatic.
-*** configure Apache
-**** DONE try adding a port number to my request
-     Beware that the port number outside the container might map to a different one inside the container.
-     Edit ports.conf, add it (eventually) to git@github.com:ofiscal/tax.co.web.git
-*** TODO start apache as root
-    I can't serve to the internet unless I do that,
-    which means I need to start the docker container as root:
-      docker exec -it -u 0 webapp bash
-*** DONE if this works, add it to tax.co.web
-**** rewrite link.sh
-to_replace = apache2.conf ports.conf
-away=/etc/apache2
-home=/mnt/apache2
-
-for i in to_replace; do
-    rm    $away/$target
-    ln -s $home/$target $away/$target
-*** DONE visit this URL
-    http://sim.jefbrown.net/myapp/run_make/write_time
-      based on this
-        http://localhost:8000/myapp/run_make/write_time
-** TODO test some capabilities
-*** DONE test: stop, reboot, restart
-    Doing this changes the instance's public IP address.
-** TODO fix blockers
-*** cannot download models from myapp/run_make/ingest_full_spec
+* choose a [[file:../tech/20210419112140-web_server.org][web server]]
+* [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
 * TODO ponder
 ** Keep a db of requests?
    It seems like the "right" thing to do,
