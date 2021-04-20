@@ -7,9 +7,12 @@
 *** TODO ? COMPARE: THIS BRANCH WORKS
     bug-2021-04-19-SOLVING-works-locally
 *** FALSE suspicion: sim.jefbrown.net is confusing it
-    I tried deleting it from ebdjango/settings.py:
-    ALLOWED_HOSTS = ['.localhost', '127.0.0.1', "sim.jefbrown.net"]
-    but it still doesn't work.
+    In the branch that fails,
+    even when I delete sim.jefbrown.net in
+      ebdjango/settings.py
+    in the definition of
+      ALLOWED_HOSTS
+    it still doesn't work.
 ** cannot download models from myapp/run_make/ingest_full_spec
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 * TODO easy
