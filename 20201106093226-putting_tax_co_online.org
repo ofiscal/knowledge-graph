@@ -1,13 +1,23 @@
 #+title: putting tax.co online
+* TODO fix blockers
+** bug-2021-04-19-permission-denied-on-browser-serving-locally
+   Once that's solved, remember to uncomment the portion of ports.conf that allows serving online.
+*** TODO ? Give up
+    Don't run locally.
+*** TODO ? COMPARE: THIS BRANCH WORKS
+    bug-2021-04-19-SOLVING-works-locally
+*** FALSE suspicion: sim.jefbrown.net is confusing it
+    I tried deleting it from ebdjango/settings.py:
+    ALLOWED_HOSTS = ['.localhost', '127.0.0.1', "sim.jefbrown.net"]
+    but it still doesn't work.
+** cannot download models from myapp/run_make/ingest_full_spec
+** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 * TODO easy
 ** [[id:b97325b2-a95c-4c00-9de5-a35429349813][rename /mnt/web -> /mnt/django]]
 ** [[id:bdafda4f-6fab-46bd-8bbb-f03aee15443c][test email addresses with strange characters]]
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][move all file definitions to dedicated files.py files]]
 ** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][Assume they want the earlier request deleted.]]
 ** [[id:51d7d5fb-baa0-4558-8bdf-463b6d77f902][bugfix: delete the oldest *extant* user]]
-* TODO fix blockers
-** cannot download models from myapp/run_make/ingest_full_spec
-** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -158,7 +168,7 @@ The first that fails:
    :PROPERTIES:
    :ID:       b97325b2-a95c-4c00-9de5-a35429349813
    :END:
-   find . -name "*.py" -print0 | xargs -0 grep "mnt/web" --color
+   find . -name "*.py" -print0 | xargs -0 grep "web" --color
    find . \( -name "*.py" -o -name "*.txt" -o -name "*.sh" -o -name "*.org" -o -name "*.md" -o -name "*.json" -o -name "*.html" -o -name "*.org" \) -print0 | xargs -0 sed -i "s/mnt\/web/mnt\/django/g"
 ** TODO ? split email address from other details
    (When I first tried fixing this problem something went wrong I didn't understand.)
@@ -214,10 +224,14 @@ The first that fails:
     :ID:       9c7e0481-328c-46ed-82ab-57759d24f8b8
     :END:
     In both web/../views/ and tax/../request/
+    find . -name "*.py" -print0 | xargs -0 grep "/" --color -l | grep -v "studies/"
 **** more places?
      in ~/of/webapp/django/run_make/views/lib.py,
      in the function append_request_to_db().
      Also in tax.co/python/requests/.
+**** use tax.co.web/paths.json
+     commands.sh already uses it,
+     but Python doesn't.
 *** DONE change os.system calls to subprocess.run calls
     can model on tax.co/python/requests/main.py
 *** DONE how to advance requests (on cron's time)
