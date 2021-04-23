@@ -1,26 +1,13 @@
 #+title: putting tax.co online
 * TODO fix blockers
-** bug-2021-04-19-permission-denied-on-browser-serving-locally
-   Once that's solved, remember to uncomment the portion of ports.conf that allows serving online.
-*** TODO ? Give up
-    Don't run locally.
-*** TODO ? COMPARE: THIS BRANCH WORKS
-    bug-2021-04-19-SOLVING-works-locally
-*** FALSE suspicion: sim.jefbrown.net is confusing it
-    In the branch that fails,
-    even when I delete sim.jefbrown.net in
-      ebdjango/settings.py
-    in the definition of
-      ALLOWED_HOSTS
-    it still doesn't work.
-** cannot download models from myapp/run_make/ingest_full_spec
+** [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 * TODO easy
-** [[id:b97325b2-a95c-4c00-9de5-a35429349813][rename /mnt/web -> /mnt/django]]
-** [[id:bdafda4f-6fab-46bd-8bbb-f03aee15443c][test email addresses with strange characters]]
-** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][move all file definitions to dedicated files.py files]]
 ** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][Assume they want the earlier request deleted.]]
-** [[id:51d7d5fb-baa0-4558-8bdf-463b6d77f902][bugfix: delete the oldest *extant* user]]
+** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
+** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][try starting one "try-to-advance" while another is running]]
+** [[id:bdafda4f-6fab-46bd-8bbb-f03aee15443c][Test email addresses with strange characters]].
+** record start time in log
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -47,6 +34,20 @@
 *** add a config param: VAT schedules (spreadsheet)
 *** add tests for spreadsheet valididty
 *** accept either .xlsx or .csv format
+** TODO what figures out which one to run next?
+   :PROPERTIES:
+   :ID:       927559bb-036d-49fc-9fdd-024745fb941b
+   :END:
+   In tax.co, python.requests.main is called with a particular user's folder as an argument. Therefore it must get called from something else that figures out which user to apply it to.
+** TODO Can I delete the "max_runtime_minutes" parameter?
+   I see nowhwere it's used, and I don't see how I'd use it.
+** keep these time-memory configurations
+*** for 1/1000 sample
+    { "min_survival_minutes" : 5,
+    "max_runtime_minutes" : 1,
+    "max_user_gb" : 0.016,
+    "max_gb" : 0.040
+    }
 ** csv-dynamic income tax regimes
    :PROPERTIES:
    :ID:       1d3000ca-5771-4495-9632-099b606c277c
@@ -121,6 +122,16 @@
 *** Makefile: smart within user
     It won't recreate data products unnecessarily when I'm testing.
 *** incorporate requests_test.py into Makefile
+*** TODO test the program (by hand)
+**** DONE starting one when memory is full and time's not up
+**** DONE try starting one when memory is full and time's up
+**** DONE try starting one when more than one are pending
+     make sure the right one started
+**** TODO try starting one "try-to-advance" while another is running
+     :PROPERTIES:
+     :ID:       f3149cb1-d95d-4dc7-ab07-27cf08eafa1c
+     :END:
+     Because one cron job could do this to an earlier one.
 * TODO in Django
 ** DONE solve Django bug: filesystem not always written to
 *** forum question
@@ -167,12 +178,7 @@ The first that fails:
      where "the spec" includes all uploaded tables too.
 **** handle the case that an uploaded file already exists
 ** DONE rewrite link.sh to copy ports.conf in addition to apache2.conf
-** TODO rename /mnt/web -> /mnt/django
-   :PROPERTIES:
-   :ID:       b97325b2-a95c-4c00-9de5-a35429349813
-   :END:
-   find . -name "*.py" -print0 | xargs -0 grep "web" --color
-   find . \( -name "*.py" -o -name "*.txt" -o -name "*.sh" -o -name "*.org" -o -name "*.md" -o -name "*.json" -o -name "*.html" -o -name "*.org" \) -print0 | xargs -0 sed -i "s/mnt\/web/mnt\/django/g"
+** DONE rename /mnt/web -> /mnt/django
 ** TODO ? split email address from other details
    (When I first tried fixing this problem something went wrong I didn't understand.)
    It's mandatory and obvious, whereas the rest are optional and esoteric.
@@ -194,17 +200,16 @@ The first that fails:
 **** do it from within tax_web docker container
 **** may need to os.chdir to /mnt/tax_co
      once running python from a different python
-*** TODO bugfix: delete the oldest *extant* user
+*** DONE bugfix: delete the oldest *extant* user
     :PROPERTIES:
     :ID:       51d7d5fb-baa0-4558-8bdf-463b6d77f902
     :END:
     Call it liek this
     (but change the value "4" to whatever is appropriate).
 
-    PYTHONPATH=/mnt/tax_co/		    \
-      /opt/conda/bin/python3.8		    \
+    PYTHONPATH=/mnt/tax_co/ python3         \
       /mnt/tax_co/python/requests/main.py   \
-      /mnt/tax_co/users/4/config/shell.json \
+      /mnt/tax_co/users/1/config/shell.json \
       try-to-advance
 *** DONE fix: view currently doesn't trigger add-to-requests
     and yet this works from anywhere in the shell (in the docker container):
@@ -299,7 +304,22 @@ The first that fails:
 ** TODO calibrate time, memory constraints
    in data/constraints-time-memory.json
    To get the time right, will need to be using the server.
-* ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
+* Apache stuff
+** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
+** DONE bug-2021-04-19-permission-denied-on-browser-serving-locally
+   Once that's solved, remember to uncomment the portion of ports.conf that allows serving online.
+*** ? Give up
+    Don't run locally.
+*** ? COMPARE: This branch works.
+    bug-2021-04-19-SOLVING-works-locally
+*** FALSE suspicion: sim.jefbrown.net is confusing it
+    In the branch that fails,
+    even when I delete sim.jefbrown.net in
+      ebdjango/settings.py
+    in the definition of
+      ALLOWED_HOSTS
+    it still doesn't work.
+** DONE cannot download models from myapp/run_make/ingest_full_spec
 * TODO integrate tax.co and the web app
   :PROPERTIES:
   :ID:       f94012e6-e4ad-4e3a-bd68-d3a82fb165de

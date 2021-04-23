@@ -1,4 +1,6 @@
 #+title: deploy tax.co.web over EC2
+* TODO change domain name
+  ofiscal.microsimulaciones.org/
 * DONE initial setup
 ** DONE package the docker images
 *** where I put it
