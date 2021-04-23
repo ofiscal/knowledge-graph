@@ -1,7 +1,10 @@
 #+title: putting tax.co online
 * TODO fix blockers
 ** [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
+** [[id:1c9cef73-d495-4735-a789-2daf051c9beb][show Makefile errors if build fails]]
+** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
+** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
 * TODO easy
 ** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][Assume they want the earlier request deleted.]]
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
@@ -38,16 +41,12 @@
    :PROPERTIES:
    :ID:       927559bb-036d-49fc-9fdd-024745fb941b
    :END:
-   In tax.co, python.requests.main is called with a particular user's folder as an argument. Therefore it must get called from something else that figures out which user to apply it to.
+*** ? SOLUTION
+    Maybe when calling "try to advance" do not include a user folder.
+*** the problem
+    In tax.co, python.requests.main is called with a particular user's folder as an argument. Therefore it must get called from something else that figures out which user to apply it to.
 ** TODO Can I delete the "max_runtime_minutes" parameter?
    I see nowhwere it's used, and I don't see how I'd use it.
-** keep these time-memory configurations
-*** for 1/1000 sample
-    { "min_survival_minutes" : 5,
-    "max_runtime_minutes" : 1,
-    "max_user_gb" : 0.016,
-    "max_gb" : 0.040
-    }
 ** csv-dynamic income tax regimes
    :PROPERTIES:
    :ID:       1d3000ca-5771-4495-9632-099b606c277c
@@ -76,10 +75,13 @@
 *** then delete the hard-coded 2019 functions
 *** TODO Ponder: Why was this so much harder than expected?
 ** TODO generate pictures
+   :PROPERTIES:
+   :ID:       b7595065-bed2-4703-875a-7077a1ee72b2
+   :END:
 *** decide which to draw
 *** code drawing them
 *** patch that into the website
-** Makefile must catch all changes
+** TODO Makefile must catch all changes
    :PROPERTIES:
    :ID:       306f0e24-363e-4a61-99b3-0ef3028c57f1
    :END:
@@ -121,8 +123,8 @@
 *** The program will have to use `dh` from the shell.
 *** Makefile: smart within user
     It won't recreate data products unnecessarily when I'm testing.
-*** incorporate requests_test.py into Makefile
-*** TODO test the program (by hand)
+*** TODO incorporate requests/test.py into Makefile
+*** test the program (by hand)
 **** DONE starting one when memory is full and time's not up
 **** DONE try starting one when memory is full and time's up
 **** DONE try starting one when more than one are pending
@@ -132,6 +134,8 @@
      :ID:       f3149cb1-d95d-4dc7-ab07-27cf08eafa1c
      :END:
      Because one cron job could do this to an earlier one.
+*** TODO find appropriate constraints for serving full sample
+    Can only be done from EC2.
 * TODO in Django
 ** DONE solve Django bug: filesystem not always written to
 *** forum question
@@ -297,13 +301,13 @@ The first that fails:
 *** write error to a file
 *** find, display that error file in the webapp
 ** TODO email [URL?] to user
+   :PROPERTIES:
+   :ID:       d3900b4b-c97d-4bd5-a898-06281df235be
+   :END:
 ** TODO test email addresses with strange characters
    :PROPERTIES:
    :ID:       bdafda4f-6fab-46bd-8bbb-f03aee15443c
    :END:
-** TODO calibrate time, memory constraints
-   in data/constraints-time-memory.json
-   To get the time right, will need to be using the server.
 * Apache stuff
 ** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
 ** DONE bug-2021-04-19-permission-denied-on-browser-serving-locally
@@ -320,7 +324,7 @@ The first that fails:
       ALLOWED_HOSTS
     it still doesn't work.
 ** DONE cannot download models from myapp/run_make/ingest_full_spec
-* TODO integrate tax.co and the web app
+* integrate tax.co and the web app
   :PROPERTIES:
   :ID:       f94012e6-e4ad-4e3a-bd68-d3a82fb165de
   :END:
