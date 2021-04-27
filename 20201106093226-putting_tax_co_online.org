@@ -1,16 +1,22 @@
 #+title: putting tax.co online
 * TODO fix blockers
+** WHy won't it build?
+*** stdout.txt shows `make` not even trying.
+    jeff@jbb-dell:~/of/tax.co/online/users/ue01af9d7df5e7e220c6ef60e400a6683]$ cat stdout.txt
+    make: Nothing to be done for 'bash/run-makefile.py'.
+    cat /mnt/tax_co/users/ue01af9d7df5e7e220c6ef60e400a6683/config/shell.json
+    {"user_email": "1@donde.net", "subsample": 1000, "strategy": "detail", "regime_year": 2019}PYTHONPATH='.' python3 python/build/rate_input_test.py /mnt/tax_co/users/ue01af9d7df5e7e220c6ef60e400a6683/config/shell.json
 ** [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
+** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][resubmission problems]]
 ** [[id:1c9cef73-d495-4735-a789-2daf051c9beb][show Makefile errors if build fails]]
 ** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
 * TODO easy
-** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][Assume they want the earlier request deleted.]]
+** rename lock -> lock_for_temp_db
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
+** Docker: change time zone to COT.
 ** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][try starting one "try-to-advance" while another is running]]
-** [[id:bdafda4f-6fab-46bd-8bbb-f03aee15443c][Test email addresses with strange characters]].
-** record start time in log
 * TODO in tax.co
 ** DONE take .json inputs
 *** make a new branch, "online"
@@ -287,11 +293,15 @@ The first that fails:
 ****** To wait on a file
        See if the file is locked.
        If so, wait a given (as an argument) number of seconds.
-*** TODO Assume they want the earlier request deleted.
+*** TODO resubmission problems
     :PROPERTIES:
     :ID:       6d78fc5f-9958-4b28-9ad5-b74e20c7b12a
     :END:
-    Provide a message explaining that's what happens.
+**** TODO If someone resubmits, delete earlier request, but keep earlier submission date.
+**** TODO Don't bork if someone resubmits when they already have a completed request.
+**** TODO an old completed request should not be able to clobber a new one from the same user
+**** TODO add disclaimer to webpage
+     Explain that that's what happens.
 *** TODO why did I think I needed [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]]?
 ** TODO show Makefile errors if build fails
    :PROPERTIES:
@@ -304,10 +314,9 @@ The first that fails:
    :PROPERTIES:
    :ID:       d3900b4b-c97d-4bd5-a898-06281df235be
    :END:
-** TODO test email addresses with strange characters
-   :PROPERTIES:
-   :ID:       bdafda4f-6fab-46bd-8bbb-f03aee15443c
-   :END:
+** TODO ? email addresses with strange characters
+   Django does not accept them.
+   Are they important?
 * Apache stuff
 ** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
 ** DONE bug-2021-04-19-permission-denied-on-browser-serving-locally
