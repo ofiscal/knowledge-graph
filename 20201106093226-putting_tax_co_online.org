@@ -1,5 +1,5 @@
 #+title: putting tax.co online
-* TODO fix blockers
+* TODO blocking
 ** DONE WHy won't it build?
 *** stdout.txt shows `make` not even trying.
     jeff@jbb-dell:~/of/tax.co/online/users/ue01af9d7df5e7e220c6ef60e400a6683]$ cat stdout.txt
@@ -17,15 +17,17 @@
 ** [[id:1c9cef73-d495-4735-a789-2daf051c9beb][show Makefile errors if build fails]]
 ** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
+** [[id:f94012e6-e4ad-4e3a-bd68-d3a82fb165de][Do all the things.]]
+* TODO important
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
+** [[id:52884b96-5c15-42d9-a55f-32c013934ffb][enable .xlsx or .csv upload]]
 * TODO easy
-** rename
-*** lock -> lock_for_temp_db
-*** at_least_one_is_old -> at_least_one_result_is_old
+** random-seed tax.co
+   because some jitter is used to compute income quantiles
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
-** Docker: change time zone to COT.
-** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][try starting one "try-to-advance" while another is running]]
+** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][Try starting one "try-to-advance" while another is running]]
 * TODO in tax.co
+** DONE Docker: change time zone to COT.
 ** DONE take .json inputs
 *** make a new branch, "online"
 *** add a new Makefile argument
@@ -50,7 +52,6 @@
 **** DONE python/build/buildings_test.py
 *** add a config param: VAT schedules (spreadsheet)
 *** add tests for spreadsheet valididty
-*** accept either .xlsx or .csv format
 ** TODO what figures out which one to run next?
    :PROPERTIES:
    :ID:       927559bb-036d-49fc-9fdd-024745fb941b
@@ -59,7 +60,7 @@
     Maybe when calling "try to advance" do not include a user folder.
 *** the problem
     In tax.co, python.requests.main is called with a particular user's folder as an argument. Therefore it must get called from something else that figures out which user to apply it to.
-** TODO Can I delete the "max_runtime_minutes" parameter?
+** DONE Can I delete the "max_runtime_minutes" parameter?
    I see nowhwere it's used, and I don't see how I'd use it.
 ** csv-dynamic income tax regimes
    :PROPERTIES:
@@ -95,7 +96,7 @@
 *** decide which to draw
 *** code drawing them
 *** patch that into the website
-** TODO Makefile must catch all changes
+** TODO ? Makefile must catch all changes
    :PROPERTIES:
    :ID:       306f0e24-363e-4a61-99b3-0ef3028c57f1
    :END:
@@ -114,30 +115,30 @@
    :PROPERTIES:
    :ID:       c3c33450-e196-4116-be1e-7b253bc68391
    :END:
-*** choose optimal wait
+*** DONE choose optimal wait
     Promise to respond within 2 hours,
     and to hold the results for at least 1 hour after making them.
     If space for 10 users, then actually the response will always come in at most 100 minutes, and the data will stay for at least 100 minutes.
     If no new users bump the space, they might stay longer.
-*** compute hash of email address
+*** DONE compute hash of email address
     This will be treated like a user name.
-*** NEXT all* output should go to a specific user's folder
+*** DONE NEXT all* output should go to a specific user's folder
     * except the subsample, which is slow and extremely initial
 **** places to change to_csv
      report/overview.py
      build/output_io
-*** add new user to db of requests
+*** DONE add new user to db of requests
 **** sort  : time of request
 **** field : hash of email
 **** field : time of requests
 **** field : time of results
      often missing
-*** maintain a .json file of spacetime params
+*** DONE maintain a .json file of spacetime params
     data/constraints-time-memory.json
-*** The program will have to use `dh` from the shell.
-*** Makefile: smart within user
+*** DONE The program will have to use `dh` from the shell.
+*** TODO ? Makefile: smart within user
     It won't recreate data products unnecessarily when I'm testing.
-*** TODO incorporate requests/test.py into Makefile
+*** DONE incorporate requests/test.py into Makefile
 *** test the program (by hand)
 **** DONE starting one when memory is full and time's not up
 **** DONE try starting one when memory is full and time's up
@@ -148,6 +149,7 @@
      :ID:       f3149cb1-d95d-4dc7-ab07-27cf08eafa1c
      :END:
      Because one cron job could do this to an earlier one.
+**** TODO collect other tests here
 *** TODO find appropriate constraints for serving full sample
     Can only be done from EC2.
 * TODO in Django
@@ -241,23 +243,6 @@ The first that fails:
     This makes searching easier.
 
   In advance_request_queue, don't redefine tax_root.
-*** TODO enable .xlsx upload
-**** keep original filename extensions
-     Currently the symlink always ends in .csv,
-     even though the file itself might end in .xlsx.
-*** TODO move all file definitions to dedicated files.py files
-    :PROPERTIES:
-    :ID:       9c7e0481-328c-46ed-82ab-57759d24f8b8
-    :END:
-    In both web/../views/ and tax/../request/
-    find . -name "*.py" -print0 | xargs -0 grep "/" --color -l | grep -v "studies/"
-**** more places?
-     in ~/of/webapp/django/run_make/views/lib.py,
-     in the function append_request_to_db().
-     Also in tax.co/python/requests/.
-**** use tax.co.web/paths.json
-     commands.sh already uses it,
-     but Python doesn't.
 *** DONE change os.system calls to subprocess.run calls
     can model on tax.co/python/requests/main.py
 *** DONE how to advance requests (on cron's time)
@@ -301,16 +286,53 @@ The first that fails:
 ****** To wait on a file
        See if the file is locked.
        If so, wait a given (as an argument) number of seconds.
-*** TODO resubmission problems
+*** DONE resubmission problems
     :PROPERTIES:
     :ID:       6d78fc5f-9958-4b28-9ad5-b74e20c7b12a
     :END:
-**** TODO If someone resubmits, delete earlier config, but keep earlier submission date.
-**** TODO Don't bork if someone resubmits when they already have a completed request.
-**** TODO an old completed request should not be able to clobber a new one from the same user
-**** TODO add disclaimer to webpage
+**** If someone resubmits, delete earlier config, but keep earlier submission date.
+***** to test
+****** From zero data: Create users 1 and 2.
+****** Give user 1 a bogus spreadsheet.
+****** Resubmit user 1.
+****** Verify the bogus spreadsheet is gone.
+****** TODO ? Run try-to-advance, verify that user 1 is the one advanced.
+       This last step is arguably an imperfect test,
+       because when calling try-to-advance one specifies the request to advance.
+       But the requests.csv spreadsheet shows the uniquified requests in the right order.
+**** Don't bork if someone resubmits when they already have a completed request.
+***** to test
+****** DONE submit user 1 request, then user 2 request
+****** DONE process user 1 request
+****** DONE submit a new user 1 request
+****** DONE process user 2 request
+****** DONE process user 1 request
+****** make sure nothing borked
+**** add disclaimer to webpage
      Explain that that's what happens.
-*** TODO why did I think I needed [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]]?
+*** DONE read shell variables from a .json file
+    Using [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]].
+    See commands.sh (in the tax.co.web repo)
+** TODO enable .xlsx or .csv upload
+   :PROPERTIES:
+   :ID:       52884b96-5c15-42d9-a55f-32c013934ffb
+   :END:
+*** keep original filename extensions
+    Currently the symlink always ends in .csv,
+    even though the file itself might end in .xlsx.
+** TODO move all file definitions to dedicated files.py files
+   :PROPERTIES:
+   :ID:       9c7e0481-328c-46ed-82ab-57759d24f8b8
+   :END:
+   In both web/../views/ and tax/../request/
+   find . -name "*.py" -print0 | xargs -0 grep "/" --color -l | grep -v "studies/"
+*** more places?
+    in ~/of/webapp/django/run_make/views/lib.py,
+    in the function append_request_to_db().
+    Also in tax.co/python/requests/.
+*** use tax.co.web/paths.json
+    commands.sh already uses it,
+    but Python doesn't.
 ** TODO show Makefile errors if build fails
    :PROPERTIES:
    :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
@@ -345,13 +367,13 @@ The first that fails:
   :PROPERTIES:
   :ID:       f94012e6-e4ad-4e3a-bd68-d3a82fb165de
   :END:
-** user downloads .csv
-** user uploads .csv, inputs .json
-** tax.co finds user input
-** tax.co runs
-** tax.co informs webapp if, when it finishes
-** webapp emails user that it's ready, sends link
-** webapp finds, presents tax.co output
+** DONE user downloads .csv
+** DONE user uploads .csv, inputs .json
+** DONE tax.co finds user input
+** TODO tax.co runs
+** TODO tax.co informs webapp if, when it finishes
+** TODO webapp emails user that it's ready, sends link
+** TODO webapp finds, presents tax.co output
 * choose a [[file:../tech/20210419112140-web_server.org][web server]]
 * [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
 * TODO ponder
