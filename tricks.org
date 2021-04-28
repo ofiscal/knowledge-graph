@@ -1,4 +1,30 @@
 #+TITLE: tricks - how to do some things
+* sorting and null/missing values in pandas
+** null always comes last, regardless of order
+** code to see it
+d = pd.DataFrame ( [
+    [np.nan,np.nan,np.nan],
+    [     1,np.nan,np.nan],
+    [     1,     1,np.nan],
+    [     1,     2,np.nan],
+    [     1,     2,1],
+    [     2,np.nan,np.nan],
+    [     2,     1,np.nan],
+    [     2,     2,np.nan],
+    [np.nan,np.nan,np.nan],
+    [     1,np.nan,np.nan],
+    [     1,     1,np.nan],
+    [     1,     2,np.nan],
+    [     1,     2,1],
+    [     2,np.nan,np.nan],
+    [     2,     1,np.nan],
+    [     2,     2,np.nan],
+    ],
+    columns = ["a","b","c"] )
+
+( d
+ . sort_values ( ["a","b","c"],
+                ascending = False ) )
 * [[file:../tech/20210310202741-times_versus_numbers_in_numpy.org][times versus numbers in NumPy]]
 * fast time series manipulations for Pandas (actually in NumPy)
 ** PITFALL: Part of this code is unreadable in org-mode.
