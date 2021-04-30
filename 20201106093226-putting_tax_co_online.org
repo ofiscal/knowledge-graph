@@ -6,24 +6,41 @@
     make: Nothing to be done for 'bash/run-makefile.py'.
     cat /mnt/tax_co/users/ue01af9d7df5e7e220c6ef60e400a6683/config/shell.json
     {"user_email": "1@donde.net", "subsample": 1000, "strategy": "detail", "regime_year": 2019}PYTHONPATH='.' python3 python/build/rate_input_test.py /mnt/tax_co/users/ue01af9d7df5e7e220c6ef60e400a6683/config/shell.json
-** [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
+** DONE What put user_email after user?
+   uniquify was doing it, because grouping and aggregating puts the grouping variables first.
+** DONE [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
+** TODO why is user 1's getting deleted early?
+*** the problem
+    When there's space for more than 2 users,
+    and 1 has data and 2 does not,
+    asking to advance the queue deletes user 1's data.
+*** sometimes it doesn't!
+    Once that happened, and I had 2 with data and 1 without,
+    and still had a request pending for 1,
+    advancing generated 1's data without deleting 2's.
+** [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
+** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
 ** if sp . returncode == 0:
         # TODO : `make` returns 0 even when from my point of view it didn't work, so this is unreliable.
         lib . mutate (
             requests_path,
             lambda reqs: lib . mark_complete (
                 user_hash, reqs ) )
-** [[id:6d78fc5f-9958-4b28-9ad5-b74e20c7b12a][resubmission problems]]
 ** [[id:1c9cef73-d495-4735-a789-2daf051c9beb][show Makefile errors if build fails]]
-** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 ** [[id:f94012e6-e4ad-4e3a-bd68-d3a82fb165de][Do all the things.]]
 * TODO important
+** DONE correct low-ceiling error in most.csv
+   The top income tax rate for most income ended at a finite income level; it shouldn't. Now it doesn't.
+   Daniel helped me find the error.
+   Comparing to the old code (still the latest commit in the main branch),
+   was able to see what the rates should have been.
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
 ** [[id:52884b96-5c15-42d9-a55f-32c013934ffb][enable .xlsx or .csv upload]]
 * TODO easy
 ** random-seed tax.co
    because some jitter is used to compute income quantiles
+** rename shell.json -> request.json
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
 ** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][Try starting one "try-to-advance" while another is running]]
 * TODO in tax.co
@@ -52,14 +69,31 @@
 **** DONE python/build/buildings_test.py
 *** add a config param: VAT schedules (spreadsheet)
 *** add tests for spreadsheet valididty
-** TODO what figures out which one to run next?
+** TODO ? in lib.py, canonicalize on read routine, write routine
+*** the idea
+    This prevents needing to canonicalize everywhere.
+    There might not yet be a write routine; if so make it.
+*** the problem
+    I might mutate reqs in a function, then pass it as an argument to another function, with no read or write step. Therefore the receiving function still has to canonicalize.
+** DONE what figures out which one to run next?
    :PROPERTIES:
    :ID:       927559bb-036d-49fc-9fdd-024745fb941b
    :END:
-*** ? SOLUTION
-    Maybe when calling "try to advance" do not include a user folder.
 *** the problem
     In tax.co, python.requests.main is called with a particular user's folder as an argument. Therefore it must get called from something else that figures out which user to apply it to.
+*** verify try_to_advance_request_queue and advance_request_queue don't need their user_hash arguments
+*** make try_to_advance_request_queue depend not on the user shell.json argument
+**** Why this is a good idea
+     Here are the only routines in python.requests that depend on the user specified by shell.json:
+ lib.py:
+   this_request()
+ main.py:
+   add-to-temp-queue (section, not function)
+     It calls
+       lib.this_request().
+   try-to-advance-user
+     It passes c.user to
+       main.try_to_advance_request_queue().
 ** DONE Can I delete the "max_runtime_minutes" parameter?
    I see nowhwere it's used, and I don't see how I'd use it.
 ** csv-dynamic income tax regimes
@@ -111,6 +145,8 @@
 *** BLOCKED add Haskell files
     Adding them to make/deps is easy.
     The hard part is using them in make/build.
+** TODO ? Makefile: smart within user
+   It won't recreate data products unnecessarily when I'm testing.
 ** solve memory, time constraints, cron job
    :PROPERTIES:
    :ID:       c3c33450-e196-4116-be1e-7b253bc68391
@@ -136,22 +172,28 @@
 *** DONE maintain a .json file of spacetime params
     data/constraints-time-memory.json
 *** DONE The program will have to use `dh` from the shell.
-*** TODO ? Makefile: smart within user
-    It won't recreate data products unnecessarily when I'm testing.
 *** DONE incorporate requests/test.py into Makefile
-*** test the program (by hand)
-**** DONE starting one when memory is full and time's not up
-**** DONE try starting one when memory is full and time's up
-**** DONE try starting one when more than one are pending
-     make sure the right one started
-**** TODO try starting one "try-to-advance" while another is running
-     :PROPERTIES:
-     :ID:       f3149cb1-d95d-4dc7-ab07-27cf08eafa1c
-     :END:
-     Because one cron job could do this to an earlier one.
-**** TODO collect other tests here
 *** TODO find appropriate constraints for serving full sample
     Can only be done from EC2.
+** test the program (by hand)
+   :PROPERTIES:
+   :ID:       cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7
+   :END:
+*** DONE starting one when memory is full and time's not up
+*** DONE try starting one when memory is full and time's up
+*** DONE try starting one when more than one are pending
+    make sure the right one started
+*** DONE try starting one "try-to-advance" while another is running
+    :PROPERTIES:
+    :ID:       f3149cb1-d95d-4dc7-ab07-27cf08eafa1c
+    :END:
+    Because one cron job could do this to an earlier one.
+*** DONE try running "try-to-advance-queue" giving the wrong user config
+    It shouldn't make a difference.
+*** DONE what happens if a user has two completed requests in requests.csv?
+    Nothing bad happens -- they get collapsed into one before tax.co tries to delete the corresponding folder.
+    (Otherwise it would bork the next time it tries to delete the same data, because it won't be there.)
+*** DONE collect other tests here
 * TODO in Django
 ** DONE solve Django bug: filesystem not always written to
 *** forum question
@@ -290,25 +332,22 @@ The first that fails:
     :PROPERTIES:
     :ID:       6d78fc5f-9958-4b28-9ad5-b74e20c7b12a
     :END:
-**** If someone resubmits, delete earlier config, but keep earlier submission date.
+**** DONE If someone resubmits, delete earlier config, but keep earlier submission date.
 ***** to test
 ****** From zero data: Create users 1 and 2.
 ****** Give user 1 a bogus spreadsheet.
 ****** Resubmit user 1.
 ****** Verify the bogus spreadsheet is gone.
-****** TODO ? Run try-to-advance, verify that user 1 is the one advanced.
-       This last step is arguably an imperfect test,
-       because when calling try-to-advance one specifies the request to advance.
-       But the requests.csv spreadsheet shows the uniquified requests in the right order.
-**** Don't bork if someone resubmits when they already have a completed request.
+****** DONE ? Run try-to-advance, verify that user 1 is the one advanced.
+**** DONE Don't bork if someone resubmits when they already have a completed request.
 ***** to test
-****** DONE submit user 1 request, then user 2 request
-****** DONE process user 1 request
-****** DONE submit a new user 1 request
-****** DONE process user 2 request
-****** DONE process user 1 request
+****** submit user 1 request, then user 2 request
+****** process user 1 request
+****** submit a new user 1 request
+****** process user 2 request
+****** process user 1 request
 ****** make sure nothing borked
-**** add disclaimer to webpage
+**** DONE add disclaimer to webpage
      Explain that that's what happens.
 *** DONE read shell variables from a .json file
     Using [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]].
