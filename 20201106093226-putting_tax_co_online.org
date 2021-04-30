@@ -9,17 +9,13 @@
 ** DONE What put user_email after user?
    uniquify was doing it, because grouping and aggregating puts the grouping variables first.
 ** DONE [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
-** TODO why is user 1's getting deleted early?
-*** the problem
-    When there's space for more than 2 users,
-    and 1 has data and 2 does not,
-    asking to advance the queue deletes user 1's data.
-*** sometimes it doesn't!
-    Once that happened, and I had 2 with data and 1 without,
-    and still had a request pending for 1,
-    advancing generated 1's data without deleting 2's.
-** [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
+** DONE why is user 1's getting deleted early?
+   I thought tax.co was deleting the data, but no, it was tax.co.web,
+   upon submitting the new request. Duh.
+** DONE [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
+** [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
 ** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
+** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 ** if sp . returncode == 0:
         # TODO : `make` returns 0 even when from my point of view it didn't work, so this is unreliable.
         lib . mutate (
@@ -27,8 +23,6 @@
             lambda reqs: lib . mark_complete (
                 user_hash, reqs ) )
 ** [[id:1c9cef73-d495-4735-a789-2daf051c9beb][show Makefile errors if build fails]]
-** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
-** [[id:f94012e6-e4ad-4e3a-bd68-d3a82fb165de][Do all the things.]]
 * TODO important
 ** DONE correct low-ceiling error in most.csv
    The top income tax rate for most income ended at a finite income level; it shouldn't. Now it doesn't.
@@ -409,10 +403,11 @@ The first that fails:
 ** DONE user downloads .csv
 ** DONE user uploads .csv, inputs .json
 ** DONE tax.co finds user input
-** TODO tax.co runs
-** TODO tax.co informs webapp if, when it finishes
-** TODO webapp emails user that it's ready, sends link
-** TODO webapp finds, presents tax.co output
+** TODO run tax.co as a cron job
+   :PROPERTIES:
+   :ID:       d002eec7-7fe7-4130-8423-88a6408c46ed
+   :END:
+** TODO email results to user as soon as they exist
 * choose a [[file:../tech/20210419112140-web_server.org][web server]]
 * [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
 * TODO ponder
