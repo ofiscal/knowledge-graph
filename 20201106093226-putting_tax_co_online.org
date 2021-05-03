@@ -37,6 +37,16 @@
 ** rename shell.json -> request.json
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
 ** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][Try starting one "try-to-advance" while another is running]]
+** make code more understandable
+*** in commands.sh, rather than hardcode paths, define commented variables
+    so the user knows to redefine them
+    maybe better, read paths.json
+*** make the users folder for quien@donde.net
+*** make the default run-makefile command not use "jeff" but instead the hash for quien@donde.net
+*** change the email address in users/exmaple/
+*** in users/example, include vat_by_*.csv
+*** what about tax.co.web/secret/ ?
+    and SECRET_KEY in ebdjango settings?
 * TODO in tax.co
 ** DONE Docker: change time zone to COT.
 ** DONE take .json inputs
