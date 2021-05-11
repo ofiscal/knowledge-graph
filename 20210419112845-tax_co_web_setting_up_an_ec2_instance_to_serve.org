@@ -1,12 +1,13 @@
 #+title: deploy tax.co.web over EC2
-[[file:../tech/20210414195930-aws_frequently_used_commands.org][AWS, frequently used commands]]
+* refs
+  [[file:../tech/20210414195930-aws-frequently-used-commands.org][AWS, frequently used commands]]
 * TODO change domain name
   ofiscal.microsimulaciones.org/
 * TODO set up automatic backups
   https://aws.amazon.com/blogs/aws/aws-backup-ec2-instances-efs-single-file-restore-and-cross-region-backup/
 * TODO understand [[file:../tech/20210511125343-hibernation_for_aws_ec2.org][hibernation for AWS EC2]]
 * initial setup
-** DONE launch an EC2 instance
+** launch an EC2 instance
 *** PITFALLs
 **** chose the cheapest 16GB machine here
      https://aws.amazon.com/ec2/pricing/on-demand/
