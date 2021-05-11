@@ -13,6 +13,7 @@
    I thought tax.co was deleting the data, but no, it was tax.co.web,
    upon submitting the new request. Duh.
 ** DONE [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
+** DONE [[file:../tech/20210511124423-give_appuser_apache_privileges.org][giving Apache privileges to a Docker user]]
 ** [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
 ** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
 ** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
@@ -31,12 +32,12 @@
    was able to see what the rates should have been.
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
 ** [[id:52884b96-5c15-42d9-a55f-32c013934ffb][enable .xlsx or .csv upload]]
+* TODO use Aaron's code
+  git fetch origin pull/1/head && git checkout FETCH_HEAD
 * TODO easy
 ** random-seed tax.co
    because some jitter is used to compute income quantiles
-** rename shell.json -> request.json
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
-** [[id:f3149cb1-d95d-4dc7-ab07-27cf08eafa1c][Try starting one "try-to-advance" while another is running]]
 ** make code more understandable
 *** in commands.sh, rather than hardcode paths, define commented variables
     so the user knows to redefine them
@@ -390,7 +391,7 @@ The first that fails:
 ** TODO ? email addresses with strange characters
    Django does not accept them.
    Are they important?
-* Apache stuff
+* in Apache
 ** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
 ** DONE bug-2021-04-19-permission-denied-on-browser-serving-locally
    Once that's solved, remember to uncomment the portion of ports.conf that allows serving online.
@@ -417,6 +418,10 @@ The first that fails:
    :PROPERTIES:
    :ID:       d002eec7-7fe7-4130-8423-88a6408c46ed
    :END:
+*** DONE verify that the command in the script works when entered by hand
+*** DONE Do I have to start tax.co.web as root to serve?
+    No.
+*** TODO should Docker-created files be owned by group "users"?
 ** TODO email results to user as soon as they exist
 * choose a [[file:../tech/20210419112140-web_server.org][web server]]
 * [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
