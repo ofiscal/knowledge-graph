@@ -1,4 +1,9 @@
 #+title: putting tax.co online
+* BLOCKED asking Angelica about reimbursement
+* TODO what permissions does a web visitor have?
+* TODO be sure I don't have FTP (port 21) open
+* TODO internalize
+** keep tax.co.web branches main and online (mostly) synced
 * TODO blocking
 ** DONE WHy won't it build?
 *** stdout.txt shows `make` not even trying.
@@ -14,9 +19,10 @@
    upon submitting the new request. Duh.
 ** DONE [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
 ** DONE [[file:../tech/20210511124423-give_appuser_apache_privileges.org][giving Apache privileges to a Docker user]]
-** [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
-** [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email [URL?] to user]]
-** [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
+** DONE [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
+** TODO [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email results to user]]
+** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials unavailable]]
+** DONE [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
 ** if sp . returncode == 0:
         # TODO : `make` returns 0 even when from my point of view it didn't work, so this is unreliable.
         lib . mutate (
@@ -33,10 +39,19 @@
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
 ** [[id:52884b96-5c15-42d9-a55f-32c013934ffb][enable .xlsx or .csv upload]]
 * TODO use Aaron's code
+** updating it
   git fetch origin pull/1/head && git checkout FETCH_HEAD
+** how to run it
+   docker-compose -f docker-compose-deploy.yml up --build
+   http://localhost:8080/run_make/ingest_full_spec
+** questions/comments for him
+  I see dependencies on a few URLs.
+  Don't really need every template changed; users aren't expected to visit most of them, just "ingest" and "thank".
 * TODO easy
 ** random-seed tax.co
    because some jitter is used to compute income quantiles
+** switch mount points to ~
+   so that cd brings me there
 ** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
 ** make code more understandable
 *** in commands.sh, rather than hardcode paths, define commented variables
@@ -384,10 +399,20 @@ The first that fails:
 *** convey exit status to webapp
 *** write error to a file
 *** find, display that error file in the webapp
-** TODO email [URL?] to user
+** TODO email results to user
    :PROPERTIES:
    :ID:       d3900b4b-c97d-4bd5-a898-06281df235be
    :END:
+*** DONE email a hello.txt file
+**** put secrets in a tax_co/secret folder
+     files named "email address", "password"
+*** DONE make a .zip file with all the logs, and the config file
+**** do user/../std* not get made any more?
+     If so, redirect run-makefile to write there, not in tax.co/make-logs/
+**** they include view.std* and std*
+**** send config file also, to know user's email & hash
+**** use `zipfile` library (builtin)
+*** separately send the .xlsx
 ** TODO ? email addresses with strange characters
    Django does not accept them.
    Are they important?
@@ -414,16 +439,42 @@ The first that fails:
 ** DONE user downloads .csv
 ** DONE user uploads .csv, inputs .json
 ** DONE tax.co finds user input
-** TODO run tax.co as a cron job
-   :PROPERTIES:
-   :ID:       d002eec7-7fe7-4130-8423-88a6408c46ed
-   :END:
-*** DONE verify that the command in the script works when entered by hand
-*** DONE Do I have to start tax.co.web as root to serve?
-    No.
-*** TODO should Docker-created files be owned by group "users"?
 ** TODO email results to user as soon as they exist
-* choose a [[file:../tech/20210419112140-web_server.org][web server]]
+* TODO hide my email credentials
+  :PROPERTIES:
+  :ID:       c04905da-d0fe-4eac-af96-c2a3bcc03649
+  :END:
+  They're not in the repo, but they'll be on the server,
+  so they shouldn't be in tax_co, which is publicly readable.
+* DONE run tax.co as a cron job
+  :PROPERTIES:
+  :ID:       d002eec7-7fe7-4130-8423-88a6408c46ed
+  :END:
+** verify that the command in the script works when entered by hand
+** Do I have to start tax.co.web as root to serve?
+   No.
+** Bug, solved: The cron script is not executing.
+*** the python3 call: works
+    :PROPERTIES:
+    :ID:       7deaf598-7d46-4ffa-870e-f99832dd58c7
+    :END:
+    PYTHONPATH=/mnt/tax_co:$PYTHONPATH python3 python/requests/main.py config/config.json try-to-advance-queue
+*** running tax_co_cron.sh by hand works
+    :PROPERTIES:
+    :ID:       d37c67b8-408e-404d-abf4-b8c9747561b2
+    :END:
+*** ownserhip is weird
+    Everything touched by either [[id:7deaf598-7d46-4ffa-870e-f99832dd58c7][the python3 call]] or [[id:d37c67b8-408e-404d-abf4-b8c9747561b2][running tax_co_cron.sh by hand]] is owned on the native EC2 system by
+       user ubuntu, group systemd-coredump
+    and in the Docker container by
+       user appuser, group appuser
+    whereas for other things the group is
+       ubuntu in the native EC2 system
+       1000 in the Docker container
+*** whoami.sh leads cron to write "appuser"
+*** Never had to [[file:../tech/20210513113219-python_script_works_unless_run_by_cron.org][ask the internets]].
+*** Verify the same happens on EC2
+* DONE choose a [[file:../tech/20210419112140-web_server.org][web server]]
 * [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
 * TODO ponder
 ** Keep a db of requests?

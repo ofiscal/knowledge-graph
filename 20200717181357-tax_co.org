@@ -21,6 +21,8 @@ because it is not part of `income_infrequent`.
 * TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
 * TODO clean
 ** try pydoc
+** do subprocess the same everywhere
+   and make it a function (to define my_env, etc.)
 ** use this rule in Makefile.deps
    [ -f $@ ] && touch $@
    That way I don't have to keep the parallel .no_younger_than folder.

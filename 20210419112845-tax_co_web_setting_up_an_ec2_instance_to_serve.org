@@ -6,7 +6,7 @@
 * TODO set up automatic backups
   https://aws.amazon.com/blogs/aws/aws-backup-ec2-instances-efs-single-file-restore-and-cross-region-backup/
 * TODO understand [[file:../tech/20210511125343-hibernation_for_aws_ec2.org][hibernation for AWS EC2]]
-* initial setup
+* initial setup, how to
 ** launch an EC2 instance
 *** PITFALLs
 **** chose the cheapest 16GB machine here
@@ -75,15 +75,28 @@
     unzip tax_co_web.zip
     unzip tax_co_online.zip
     # for the docker images, see "configure Docker" below
-** configure Docker not to need sudo, and load docker image
-*** commands
+** Docker
+*** configure Docker not to need sudo
    sudo dockerd &
    sudo groupadd docker
    sudo usermod -aG docker $JBB_AWS_USER
    << close ssh and ssh back in >>
-   docker load -i tax_co.docker.tar
+*** docker load -i tax_co.docker.tar
 *** PITFALL: Might need to reboot instance
     Before doing this, the Ubuntu instance didn't recognize that my non-root "ubuntu" user had docker privileges. (Maybe I could have rebooted Docker but it wasn't easy -- systemctl didn't do it, nor dockerd.)
+*** in the Docker container, update pip packages
+    :PROPERTIES:
+    :ID:       b8ffb948-5c2e-425f-8d59-094225f0b615
+    :END:
+**** alternatives
+***** this would work
+      pip install -U <pip-installed packages from the Dockerfile>
+      pip3 install --upgrade  csv-diff pydotplus graphviz \
+	weightedcalcs yfinance yahoofinancials            \
+	surbtc django icecream
+***** BLOCKED rebuilt, haven't tested Dockerfile
+      It's 1.5 GB bigger than the last one.
+**** If this isn't done, Django will tell me, thanks to requirements.txt
 ** git
    git config --global core.editor "emacs -nw"
      # -nw: use Emacs at the command line (not via the gui)
@@ -92,6 +105,7 @@
    chmod 600 ~/.ssh/id_rsa
    update git repos
      Add my user name and email (Git will say how when I try to push).
+   checkout the "online" branch of tax.co.web
 ** configure filepaths
 *** tax.co.web/paths.json
     should be something like this:
@@ -101,11 +115,12 @@
     "docker_tax_co"          : "/mnt/tax_co",
     "docker_django"          : "/mnt/django",
     "docker_apache"          : "/mnt/apache2"
-* each time it (re)starts
-** update [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][my record of the]] IPv4 Public IP address for the EC2 instance
-** update ~/.ssh/config
-** login
-   ssh -i $JBB_AWS_PEM $JBB_AWS_USER@$JBB_AWS_HOST
+** transfer new data
+*** tax_co/secret
+* restart it, how to
+** update native ~/.ssh/config
+** update native [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][record of the]] IPv4 Public IP address for the EC2 instance
+   and login
 ** Route53: associate a domain name with the EC2 instance
    https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
 *** faster: edit an old association in Route53
@@ -115,10 +130,6 @@
     Go to that domain.
     Choose Create Record.
     The first three boxes are all I used, and I think I left at least one of them the way it was.
-** configure Apache
-*** in apache2.conf, change this line:
-    ServerName http://127.0.0.1:8000
-*** in ports.conf, uncomment the lines permitting connection to the internet
 ** visit this URL
    http://sim.jefbrown.net/myapp/run_make/write_time
      based on this
