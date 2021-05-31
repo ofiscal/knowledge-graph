@@ -419,14 +419,14 @@ The first that fails:
       ALLOWED_HOSTS
     it still doesn't work.
 ** DONE cannot download models from myapp/run_make/ingest_full_spec
-* integrate tax.co and the web app
+* DONE integrate tax.co and the web app
   :PROPERTIES:
   :ID:       f94012e6-e4ad-4e3a-bd68-d3a82fb165de
   :END:
-** DONE user downloads .csv
-** DONE user uploads .csv, inputs .json
-** DONE tax.co finds user input
-** DONE email results to user as soon as they exist
+** user downloads .csv
+** user uploads .csv, inputs .json
+** tax.co finds user input
+** email results to user as soon as they exist
 * TODO hide my email credentials
   :PROPERTIES:
   :ID:       c04905da-d0fe-4eac-af96-c2a3bcc03649
