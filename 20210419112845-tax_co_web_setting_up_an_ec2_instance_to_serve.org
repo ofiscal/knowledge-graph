@@ -38,6 +38,7 @@
      SSH   (default), which (I think) means* port 22
      HTTP  (added),   which (I think) means* port 80
      HTTPS (added),   which (I think) means* port 443
+**** be sure I don't have FTP (port 21) open
 ** install docker, emacs, git, zip
 *** for AL 2:	sudo amazon-linux-extras install docker emacs git
     If that doesn't work, `yum install` might.
@@ -134,6 +135,8 @@
    http://sim.jefbrown.net/myapp/run_make/write_time
      based on this
        http://localhost:8000/myapp/run_make/write_time
+* TODO PITFALL: Restart it every week
+** it seemed to last a little more than a week the last time it was garbage-collected
 * create an EC2 backup ("snapshot")
 ** PITFALL why to do that
    So I can stop the EC2 instance and not worry if it's deleted automatically, which it will be if not hibernated.
