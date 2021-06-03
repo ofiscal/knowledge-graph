@@ -32,7 +32,7 @@
    I see dependencies on a few URLs.
    Don't really need every template changed; users aren't expected to visit most of them, just "ingest" and "thank".
 * TODO easy
-** [[id:9c7e0481-328c-46ed-82ab-57759d24f8b8][Move all file definitions to dedicated files.py files]].
+** [[file:../tech/20210531162655-collect_all_tax_co_and_tax_co_web_paths_in_a_single_repo_file.org][collect all tax.co and tax.co.web paths in a single (repo? file?)]]
 ** make code more understandable
 *** in commands.sh, rather than hardcode paths, define commented variables
     so the user knows to redefine them
@@ -245,24 +245,24 @@ The first that fails:
    (When I first tried fixing this problem something went wrong I didn't understand.)
    It's mandatory and obvious, whereas the rest are optional and esoteric.
      Therefore they deserve a preamble, but it doesn't.
-** TODO determine whether, when to run
+** DONE determine whether, when to run
 *** CANCELED change import path to see the db functions
     Hard to do. Instead, call tax.co/python/requests from tax.co.web
-*** DONE split tax.co/python/requests.py into lib, tests, main
-*** DONE on each run of the view: add request to tax.co/data/requests.csv
-*** DONE the code expects vat_by_c*, not vat-by-c*
+*** split tax.co/python/requests.py into lib, tests, main
+*** on each run of the view: add request to tax.co/data/requests.csv
+*** the code expects vat_by_c*, not vat-by-c*
     That is, underscores, not dashes.
     So change all the filenames accordingly.
     Also change the READMEs (plural) in data/vat
-*** DONE get try-to-advance to work in the repl
-*** DONE get try-to-advance to work from the shell
+*** get try-to-advance to work in the repl
+*** get try-to-advance to work from the shell
 **** IMPORTANT: DON"T MESS WITH tax.co/master
      because tax.co/web has unsaved changes,
      some for debugging and maybe some that fix bugs
 **** do it from within tax_web docker container
 **** may need to os.chdir to /mnt/tax_co
      once running python from a different python
-*** DONE bugfix: delete the oldest *extant* user
+*** bugfix: delete the oldest *extant* user
     :PROPERTIES:
     :ID:       51d7d5fb-baa0-4558-8bdf-463b6d77f902
     :END:
@@ -273,21 +273,21 @@ The first that fails:
       /mnt/tax_co/python/requests/main.py   \
       /mnt/tax_co/users/1/config/shell.json \
       try-to-advance
-*** DONE fix: view currently doesn't trigger add-to-requests
+*** fix: view currently doesn't trigger add-to-requests
     and yet this works from anywhere in the shell (in the docker container):
   PYTHONPATH=/mnt/tax_co/                                               \
   python3                                                               \
   /mnt/tax_co/python/requests/main.py                                   \
   /mnt/tax_co/users/972411cda1a01ae85f6c36b1b68118c3/config/shell.json  \
   add-to-queue
-*** DONE clean requests/main.py
+*** clean requests/main.py
   Change _file and _folder to _path.
     This makes searching easier.
 
   In advance_request_queue, don't redefine tax_root.
-*** DONE change os.system calls to subprocess.run calls
+*** change os.system calls to subprocess.run calls
     can model on tax.co/python/requests/main.py
-*** DONE how to advance requests (on cron's time)
+*** how to advance requests (on cron's time)
 **** THINKING: unused functions
 ***** delete_oldest_user_folder
 ***** gb_used
@@ -303,7 +303,7 @@ The first that fails:
      then delete it from requests.csv and users/,
      and then run the oldest unexecuted request.
      Once the request has executed, mark it complete.
-*** DONE ! introduce a memory lock
+*** ! introduce a memory lock
 **** the filelock library seems good
      https://pypi.org/project/filelock/
      https://stackoverflow.com/a/498505/916142
@@ -328,7 +328,7 @@ The first that fails:
 ****** To wait on a file
        See if the file is locked.
        If so, wait a given (as an argument) number of seconds.
-*** DONE resubmission problems
+*** resubmission problems
     :PROPERTIES:
     :ID:       6d78fc5f-9958-4b28-9ad5-b74e20c7b12a
     :END:
@@ -349,7 +349,7 @@ The first that fails:
 ****** make sure nothing borked
 **** DONE add disclaimer to webpage
      Explain that that's what happens.
-*** DONE read shell variables from a .json file
+*** read shell variables from a .json file
     Using [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]].
     See commands.sh (in the tax.co.web repo)
 ** TODO enable .xlsx or .csv upload
@@ -359,19 +359,6 @@ The first that fails:
 *** keep original filename extensions
     Currently the symlink always ends in .csv,
     even though the file itself might end in .xlsx.
-** TODO move all file definitions to dedicated files.py files
-   :PROPERTIES:
-   :ID:       9c7e0481-328c-46ed-82ab-57759d24f8b8
-   :END:
-   In both web/../views/ and tax/../request/
-   find . -name "*.py" -print0 | xargs -0 grep "/" --color -l | grep -v "studies/"
-*** more places?
-    in ~/of/webapp/django/run_make/views/lib.py,
-    in the function append_request_to_db().
-    Also in tax.co/python/requests/.
-*** use tax.co.web/paths.json
-    commands.sh already uses it,
-    but Python doesn't.
 ** TODO handle return codes
     :PROPERTIES:
     :ID:       1c9cef73-d495-4735-a789-2daf051c9beb
