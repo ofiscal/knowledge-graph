@@ -47,45 +47,6 @@ because it is not part of `income_infrequent`.
 ** ? unduplicate the other non-user-specific files
    Probably, none of the first files constructed -- people_0, purchases_0, etc. -- are too small to warrant unduplication, but their construction might be slow, which would.
 * TODO fill out progress spreadsheet for LC
-* TODO ? BUG in the 10-pct purchase data
-** this passage in purhcases/collect.py
-assert util.near(
-    # PITFALL: This differs from the usual idiom which separates testing
-    # from production. That's because the only thing tested here is
-    # the number of rows; reading the entire data set into memory again
-    # for such a simple test seems unworth the added execution time.
-    len ( purchases ),
-    misc . num_purchases / com . subsample,
-    tol_frac = (
-        1 / 20 if not com . subsample == 10
-        else 1 / 2 ) )
-# TODO | BUG? Why is theprevious conditional necessary? That is, why,
-# in the special case of subsample = 1/10, is the size of the
-# purchase data so different from what you'd expect.
-# This isn't necessarily wrong, since the data is subsampled by households,
-# and households can make different numbers of purchases.
-# That's why `tol_frac` needs to be substantial in both cases.
-# But it's surprising, because for subsample = 10,
-# the expectation differs from reality by a factor just shy of 36%.
-** the same ?bug shows up in these files
-   python/build/purchases/collect.py
-   python/build/purchases/correct_test.py
-   python/build/purchases_2_vat_test.py
-** this TODO item coincides with the following commit
-   61399515e9511d3dae923a29a9af63bc93b0378b
-   That's the one where I first included comments in the above-listed files
-   indicating this potential problem.
-* TODO BLOCKED is this really the definition for non-labor income?
-** waiting on this email
-https://mail.google.com/mail/u/0/#sent/QgrcJHsBscClkGsCMltcJxSpJLLRWwdrkRl
-** the problem
-I've got it including private beca funds, but not private non-beca funds,
-and not government edu funds.
-
-      ppl["income, non-labor (tax def)"] = (
-          ppl["income, sale not real estate"]
-        + ppl["income, month : private : beca, cash"]
-        + ppl["income, month : private : beca, in-kind"] )
 * TODO clarify income totals
   :PROPERTIES:
   :ID:       0818bef8-904f-4cda-9fe3-1c8dafe73b17
@@ -144,6 +105,92 @@ From the coicop bridge:
   Otros impuestos (de timbre, etc);12700699;0;0;0;
 ** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
 * TODO possibly wrong
+** TODO understand this absurdly strange bug
+   Solved at commit 19a996a50a457f37da040b63f3d4a01b3e0a15b2
+*** the solution
+   Delete the unused "import pytest" from python.build.classes
+*** the error that I was getting from run-makefile.py
+ [jeff@jbb-dell:~/of/tax.co/online/users/w/4/logs]$ cat make.stderr.txt
+ Traceback (most recent call last):
+   File "/opt/conda/lib/python3.8/platform.py", line 613, in _syscmd_uname
+     output = subprocess.check_output(('uname', option),
+ AttributeError: module 'subprocess' has no attribute 'check_output'
+
+ During handling of the above exception, another exception occurred:
+
+ Traceback (most recent call last):
+   File "python/common/misc_test.py", line 5, in <module>
+     import python.common.common as cl    # throws error alone
+   File "/mnt/tax_co/python/common/common.py", line 11, in <module>
+     import python.build.classes as cla
+   File "/mnt/tax_co/python/build/classes.py", line 12, in <module>
+     import pytest
+   File "/opt/conda/lib/python3.8/site-packages/pytest/__init__.py", line 3, in <module>
+     from . import collect
+   File "/opt/conda/lib/python3.8/site-packages/pytest/collect.py", line 8, in <module>
+     from _pytest.deprecated import PYTEST_COLLECT_MODULE
+   File "/opt/conda/lib/python3.8/site-packages/_pytest/deprecated.py", line 13, in <module>
+     from _pytest.warning_types import PytestDeprecationWarning
+   File "/opt/conda/lib/python3.8/site-packages/_pytest/warning_types.py", line 6, in <module>
+     import attr
+   File "/opt/conda/lib/python3.8/site-packages/attr/__init__.py", line 7, in <module>
+     from . import converters, exceptions, filters, setters, validators
+   File "/opt/conda/lib/python3.8/site-packages/attr/converters.py", line 7, in <module>
+     from ._make import NOTHING, Factory, pipe
+   File "/opt/conda/lib/python3.8/site-packages/attr/_make.py", line 7, in <module>
+     import uuid
+   File "/opt/conda/lib/python3.8/uuid.py", line 60, in <module>
+     _platform_system = platform.system()
+   File "/opt/conda/lib/python3.8/platform.py", line 891, in system
+     return uname().system
+   File "/opt/conda/lib/python3.8/platform.py", line 857, in uname
+     processor = _syscmd_uname('-p', '')
+   File "/opt/conda/lib/python3.8/platform.py", line 616, in _syscmd_uname
+     except (OSError, subprocess.CalledProcessError):
+ AttributeError: module 'subprocess' has no attribute 'CalledProcessError'
+ make: *** [make/Makefile.tests:94: users/ub44c3f2c29071c30d701b958ac0d2837/test/recip-10/common_misc.txt] Error 1
+
+ [jeff@jbb-dell:~/of/tax.co/online/users/w/4/logs]$
+** TODO ? BUG in the 10-pct purchase data
+*** this passage in purhcases/collect.py
+ assert util.near(
+     # PITFALL: This differs from the usual idiom which separates testing
+     # from production. That's because the only thing tested here is
+     # the number of rows; reading the entire data set into memory again
+     # for such a simple test seems unworth the added execution time.
+     len ( purchases ),
+     misc . num_purchases / com . subsample,
+     tol_frac = (
+         1 / 20 if not com . subsample == 10
+         else 1 / 2 ) )
+ # TODO | BUG? Why is theprevious conditional necessary? That is, why,
+ # in the special case of subsample = 1/10, is the size of the
+ # purchase data so different from what you'd expect.
+ # This isn't necessarily wrong, since the data is subsampled by households,
+ # and households can make different numbers of purchases.
+ # That's why `tol_frac` needs to be substantial in both cases.
+ # But it's surprising, because for subsample = 10,
+ # the expectation differs from reality by a factor just shy of 36%.
+*** the same ?bug shows up in these files
+    python/build/purchases/collect.py
+    python/build/purchases/correct_test.py
+    python/build/purchases_2_vat_test.py
+*** this TODO item coincides with the following commit
+    61399515e9511d3dae923a29a9af63bc93b0378b
+    That's the one where I first included comments in the above-listed files
+    indicating this potential problem.
+** TODO BLOCKED is this really the definition for non-labor income?
+*** waiting on this email
+    https://mail.google.com/mail/u/0/#sent/QgrcJHsBscClkGsCMltcJxSpJLLRWwdrkRl
+*** the problem
+ I've got it including private beca funds, but not private non-beca funds,
+ and not government edu funds.
+
+       ppl["income, non-labor (tax def)"] = (
+           ppl["income, sale not real estate"]
+         + ppl["income, month : private : beca, cash"]
+         + ppl["income, month : private : beca, in-kind"] )
+** TODO when I build the 1/100 sample, every subsample appears in test/
 ** TODO main.py: All but one of the cols_govt names are yearly, not monthly.
 ** todo BLOCKED estrato : drop values of 9? Also 0?
 https://mail.google.com/mail/u/0/#sent/KtbxLwGvWcLvtwHCGFckxfTsTZcWMnmhpL

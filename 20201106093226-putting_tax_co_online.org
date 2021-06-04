@@ -1,6 +1,9 @@
 #+title: putting tax.co online
 * BLOCKED asking Angelica about reimbursement
 * TODO blocking
+** TODO BUG: circular import with pandas
+   Somoene online suggests that pandas might be corrupted, try reinstalling. I'm running `conda update -y pandas` as root (otherwise it fails).
+   If it works, then I should be able to restore Makefile.tests to what it was.
 ** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials]]
 ** TODO [[id:1c9cef73-d495-4735-a789-2daf051c9beb][handle return codes]]
 ** DONE What put user_email after user?
