@@ -2,6 +2,8 @@
 * BLOCKED asking Angelica about reimbursement
 * TODO blocking
 ** TODO BUG: circular import with pandas
+   Rebuilding the Docker container may have solved it.
+
    Somoene online suggests that pandas might be corrupted, try reinstalling. I'm running `conda update -y pandas` as root (otherwise it fails).
    If it works, then I should be able to restore Makefile.tests to what it was.
 ** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials]]
@@ -35,6 +37,9 @@
    I see dependencies on a few URLs.
    Don't really need every template changed; users aren't expected to visit most of them, just "ingest" and "thank".
 * TODO easy
+** un-hardcode this path
+   secrets_path = "/mnt/apache2/secret"
+   in tax.co/python/email.py
 ** [[file:../tech/20210531162655-collect_all_tax_co_and_tax_co_web_paths_in_a_single_repo_file.org][collect all tax.co and tax.co.web paths in a single (repo? file?)]]
 ** make code more understandable
 *** in commands.sh, rather than hardcode paths, define commented variables
