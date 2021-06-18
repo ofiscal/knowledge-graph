@@ -46,7 +46,6 @@ because it is not part of `income_infrequent`.
    Note that repl.json is referred to in make/ and python/.
 ** ? unduplicate the other non-user-specific files
    Probably, none of the first files constructed -- people_0, purchases_0, etc. -- are too small to warrant unduplication, but their construction might be slow, which would.
-* TODO fill out progress spreadsheet for LC
 * TODO clarify income totals
   :PROPERTIES:
   :ID:       0818bef8-904f-4cda-9fe3-1c8dafe73b17

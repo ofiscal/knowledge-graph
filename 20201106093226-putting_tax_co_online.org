@@ -1,11 +1,9 @@
 #+title: putting tax.co online
-* BLOCKED asking Angelica about reimbursement
+* TODO once I have a duration estimate, ask Angelica to call a meeting with everyone, to figure out what we want the interface to be
+** study https://github.com/askvortsov1/dynamic-django-forms
+   ~/code/dynamic-django-forms
 * TODO blocking
-** TODO BUG: circular import with pandas
-   Rebuilding the Docker container may have solved it.
-
-   Somoene online suggests that pandas might be corrupted, try reinstalling. I'm running `conda update -y pandas` as root (otherwise it fails).
-   If it works, then I should be able to restore Makefile.tests to what it was.
+** BLOCKED asking Angelica about reimbursement
 ** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials]]
 ** TODO [[id:1c9cef73-d495-4735-a789-2daf051c9beb][handle return codes]]
 ** DONE What put user_email after user?
@@ -25,6 +23,20 @@
    Daniel helped me find the error.
    Comparing to the old code (still the latest commit in the main branch),
    was able to see what the rates should have been.
+** TODO add payroll taxes (SS contribs)
+** TODO IVA interface
+*** choose what's exempt, what's 5%, what's the other tax rate
+*** fiddle the 5% too
+*** "tarifa general", "tarifa especial", "exenta"
+*** three columns, with a choosable tax rate at the top
+    each row needs exactly one check in it.
+*** TODO will need someone to group the goods
+** TODO marginal tax rate interface
+   "de" is fixed at 0 on the first row,
+   and "hasta" is fixed at infinity in the last row.
+   Someone can add rows.
+** let someone download a config
+   So that they can upload it to the interface, instead of repeating themselves.
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
 ** [[id:52884b96-5c15-42d9-a55f-32c013934ffb][enable .xlsx or .csv upload]]
 ** TODO use Aaron's code
@@ -476,3 +488,9 @@ The first that fails:
     the python code looks up whether
 ** Ponder: idle user time, parallelism
    Should the website pause while the model is computed?
+* solved, weird
+** DONE BUG: circular import with pandas
+*** the apparent solution
+   Rebuilding the Docker container seems to have solved it. Maybe because I used `conda install` rather than `pip install` for everything available as a conda package. Maybe just because things were old.
+*** the problem
+    Somoene online suggested that pandas might be corrupted, and to try reinstalling. I ran `conda update -y pandas` as root (otherwise it fails). The problem didn't stop.
