@@ -1,7 +1,6 @@
 #+title: putting tax.co online
-* TODO once I have a duration estimate, ask Angelica to call a meeting with everyone, to figure out what we want the interface to be
-** study https://github.com/askvortsov1/dynamic-django-forms
-   ~/code/dynamic-django-forms
+* study https://github.com/askvortsov1/dynamic-django-forms
+  ~/code/dynamic-django-forms
 * TODO blocking
 ** BLOCKED asking Angelica about reimbursement
 ** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials]]
