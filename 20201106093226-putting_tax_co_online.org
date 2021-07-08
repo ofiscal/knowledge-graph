@@ -1,6 +1,35 @@
 #+title: putting tax.co online
 * TODO ? person-level analysis
   Divide IVA by income share.
+** what `households*.py` do, and what I'll need to map back to individuals
+*** Compute income rank.
+    This needs mapping back to individuals
+*** Sums some things,
+    from which the individual data needs total household income,
+    to apportion IVA back to individuals.
+*** Computes some min, max variables, reinterpreted as "has a" categories.
+    Any of those could be mapped back to individuals.
+*** Computes income quantiles.
+    Unneeded.
+*** Merges `purchase_sums` into households
+    value, purchase
+    value, non-purchase
+    transactions
+    vat paid, max
+    vat paid, min
+    value, tax, predial
+    value, tax, purchaselike non-predial non-VAT
+    value, tax, purchaselike non-VAT
+    value, spending
+    value, consumption
+*** Nullifies IVA in San Andrés
+*** Derives some simple new columns
+    "vat / purchase value, min"
+    "vat / purchase value, max"
+    "vat/income, min"
+    "vat/income, max"
+    "purchase value / income"
+** rename overveiw.py -> households.py
 * TODO blocking
 ** TODO dynamic forms
 *** the idea
