@@ -55,7 +55,7 @@ They follow urban 2 weeks, rural 1 week.
  In the GEIH they impute income from (space,edu)-neighbors for people reporting no income.
 ** One does not need quantity to determine expenditure.
 says Camilo Andres Avila Carreño
-** P7516, "used savings" 
+** P7516, "used savings"
 *** P7516, "used savings" is long-term only
 says Camilo Andres Avila Carreño
 *** P7516, "used savings" varies within household

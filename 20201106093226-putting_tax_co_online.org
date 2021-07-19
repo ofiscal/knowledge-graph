@@ -1,7 +1,8 @@
 #+title: putting tax.co online
+* TODO first web interface, then person-level, then incorporate DIAN
 * TODO ? person-level analysis
   Divide IVA by income share.
-** what `households*.py` do, and what I'll need to map back to individuals
+** what `households*.py` does, and what I'll need to map back to individuals
 *** Compute income rank.
     This needs mapping back to individuals
 *** Sums some things,
@@ -29,7 +30,6 @@
     "vat/income, min"
     "vat/income, max"
     "purchase value / income"
-** rename overveiw.py -> households.py
 * TODO blocking
 ** TODO dynamic forms
 *** the idea
@@ -48,12 +48,11 @@ Tasa          Min (COP)      Max (COP)
 0.2           4,000,000      10,000,000
 0.3           10,000,000     Infinito
 <Agrega nueva fila>
-*** latest code
-    studies/dynamic-table.html
-    studies/radio-table.html
+*** file:///home/jeff/of/tax.co.web/studies/dynamic-table.html
+    Bug: deleting an early one and then inserting gets the order wrong.
+*** file:///home/jeff/of/tax.co.web/studies/radio-table.html
 *** more things to track
 **** Deductions from income tax.
-****
 ** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials]]
 ** TODO [[id:1c9cef73-d495-4735-a789-2daf051c9beb][handle return codes]]
 ** DONE What put user_email after user?

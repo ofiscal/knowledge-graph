@@ -13,7 +13,7 @@ In March and April ones were much shorter.
 In May, a little longer but still much shorter than previously.
 * TODO
 ** use the cuestionarios, not the aggregate "Documentación en PDF"
-because they change from Feb to March of 2020, and the cuestionarios seem to have more info -- e.g. distinguishing 
+because they change from Feb to March of 2020, and the cuestionarios seem to have more info -- e.g. distinguishing
 ** kinds of income from the ENPH that we'll need from the GEIH
 *** investment: dividends, innterest
 *** sales
@@ -48,7 +48,7 @@ La unidad de muestreo es la Medida de Tamaño, MT, o segmento. La medida de tama
 promedio de diez viviendas las cuales se indagan todas, se incluyen todos los hogares de cada vivienda y cada persona de
 cada hogar.
 ** Vivienda > hogar
-"Hogar" appears to be a group of people; 
+"Hogar" appears to be a group of people;
 there can be more than one per "vivienda".
 ** Vivienda
 *** Wall material, etc. is included.

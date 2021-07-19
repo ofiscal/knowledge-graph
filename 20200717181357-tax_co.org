@@ -18,7 +18,25 @@ which is part of cash income.
 It is added into `cols_infrequent` separately,
 because it is not part of `income_infrequent`.
 *** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
-* TODO [[file:20201106093226-putting_tax_co_online.org][put tax.co online]]
+* TODO add new DIAN data
+** TODO BOTTOM LINE: until PILA, job is to use DIAN data for payroll and income taxes on the rich
+** one running variable: gross income, not considering costs
+** people file with 0 income if they have enough wealth or credit card transactions
+** 13 of the miltiles have 0 income
+** better than a random sample
+   we know exactly how many pesos have been declared in Colombia
+** use DIAN data for high income quantiles
+** check the tax burden from the DIAN data to the one we calculate
+** payroll taxes are not on income tax returns
+** compute payroll taxes based on labor income
+   The ENPH data on this is probably wrong, not even worth checking.
+** the VAT tax will come from the ENPH
+** the PILA: another data source
+   Planilla Integrada de Liquidacion de Aportes.
+   We might get it.
+   If so, use PILA for payroll taxes for everyone who makes min wage or more.
+   Otherwise, DIAN for both payroll and income taxes for the rich, ENPH for the rest.
+* TODO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][put tax.co online]]
 * TODO clean
 ** try pydoc
 ** do subprocess the same everywhere
@@ -104,6 +122,8 @@ From the coicop bridge:
   Otros impuestos (de timbre, etc);12700699;0;0;0;
 ** TODO why are the median columns in overview.py's df_tmi called "unweighted"?
 * TODO possibly wrong
+** TODO is alimony a cost to someone?
+   It should be.
 ** TODO understand this absurdly strange bug
    Solved at commit 19a996a50a457f37da040b63f3d4a01b3e0a15b2
 *** the solution

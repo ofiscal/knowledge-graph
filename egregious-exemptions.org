@@ -8,7 +8,7 @@
 ** Political contributions
 ** Bebidas calientes : Tinto, caf� con leche, chocolate, t�, bebida achocolatada caliente, leche, agua de panela, agua arom�tica, avena caliente y similares  para consumo inmediato, en establecimientos de servicio a la mesa y autoservicio,  medios de transporte, maquinas expendedoras, puestos moviles, y lugares de esparcimiento; se incluyen tambien las  contratadas por encargo, para llevar y por servicio a domicilio
 ** Arriendo por viviendas para uso del hogar diferentes a la que habita, (no incluye  los servicios de alojamiento ofrecidos por aldeas y centros de vacaciones)
-** Llantas y neum�ticos, rines para veh�culo    
+** Llantas y neum�ticos, rines para veh�culo
 ** Transporte de pasajeros y equipajes por mar, rios, ca�os, lagos, etc. en buque, nav�o, aerodeslizador, veh�culo de colch�n de aire (incluye transporte de veh�culos privados por este medio)
 ** Transporte de pasajeros y equipajes por mar, r�os, ca�os, lagos, etc. en ferry, planch�n, canoa y lancha
     You could make an exception for transport that actually helps someone survive.
