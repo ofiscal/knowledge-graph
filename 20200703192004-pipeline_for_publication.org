@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3478dbef-feca-4776-858a-63e59b8efe83
+:END:
 #+title: pipeline-for-publication
 * The steps to follow when writing an article for Observatorio Fiscal
 serial

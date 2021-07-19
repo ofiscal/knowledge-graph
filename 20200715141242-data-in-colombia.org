@@ -1,4 +1,7 @@
+:PROPERTIES:
+:ID:       2372a506-832e-4235-af0d-10e2e4fdc683
+:END:
 #+title: data sets on Colombia
-* [[file:20200702143747-geih.org][geih]]
-* [[file:enph.org][enph]]
+* [[id:6a0f91be-f15b-460b-a1f0-1b64d9f797fc][geih]]
+* [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
 * ENUT too (Encuesta Nacional del Uso del Tiempo)

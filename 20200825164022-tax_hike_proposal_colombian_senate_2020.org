@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       b03dbe01-ce5a-46ac-b2d3-7e22949781a1
+:END:
 #+title: tax hike proposal, Colombian Senate, 2020
 * the law
 ** new and changed taxes
@@ -41,4 +44,3 @@ https://www.dian.gov.co/impuestos/reformatributaria/impuestoalariqueza/Paginas/c
 * does DIAN say how much revenue they took in from each wealth bracket in the wealth tax?
 Daniel's not sure this is it, but
 "the best data set I found was Estadísticas de recaudo mensual" (attached to the email).
-

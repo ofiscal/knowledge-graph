@@ -1,4 +1,7 @@
 * are the bridges in vat/data/preserving superceded by the ones in vat/data/?
+  :PROPERTIES:
+  :ID:       25356ef8-9219-4893-aaa5-c942785e7766
+  :END:
 * news
 * yet to ask
 ** VAT rate(s) for coicop 12620105

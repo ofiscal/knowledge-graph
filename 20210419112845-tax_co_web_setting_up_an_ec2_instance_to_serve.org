@@ -1,11 +1,14 @@
+:PROPERTIES:
+:ID:       dc3cf615-f76e-40ed-b20d-2ea09ba3f74b
+:END:
 #+title: deploy tax.co.web over EC2
 * refs
-  [[file:../tech/20210414195930-aws-frequently-used-commands.org][AWS, frequently used commands]]
+  [[id:b4493a4d-f640-43aa-9f7c-ef36c5371a03][AWS, frequently used commands]]
 * TODO change domain name
   ofiscal.microsimulaciones.org/
 * TODO set up automatic backups
   https://aws.amazon.com/blogs/aws/aws-backup-ec2-instances-efs-single-file-restore-and-cross-region-backup/
-* TODO understand [[file:../tech/20210511125343-hibernation_for_aws_ec2.org][hibernation for AWS EC2]]
+* TODO understand [[id:4e174852-e887-4a8b-a2ab-6a9ea6718f31][hibernation for AWS EC2]]
 * initial setup, how to
 ** launch an EC2 instance
 *** PITFALLs

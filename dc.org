@@ -1,4 +1,7 @@
 * planning the rest of the year
+  :PROPERTIES:
+  :ID:       212960a4-7db5-46ad-b000-999da0fa8efa
+  :END:
 ** income tax: most important yet-missing tax
 ** corporate income
 ** predial

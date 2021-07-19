@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       9019705d-fcda-422e-bc89-88442094ca66
+:END:
 #+title: tax.co, a high-level overview of
 * the law
   We've had three people work on understanding the tax code -- David Suarez, then Juan Manrique, and lately Daniel and Juan.

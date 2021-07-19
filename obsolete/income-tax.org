@@ -1,4 +1,7 @@
 * SS contrib's
+  :PROPERTIES:
+  :ID:       66022a36-a6f7-4796-9139-9afa0e8995cd
+  :END:
 ** refs
 "rentas naturales.xlsx"
 the tax code

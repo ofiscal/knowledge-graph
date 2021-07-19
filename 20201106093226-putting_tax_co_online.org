@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f8d67417-cc75-4e62-b219-abaee0f73b0b
+:END:
 #+title: putting tax.co online
 * TODO first web interface, then person-level, then incorporate DIAN
 * TODO ? person-level analysis
@@ -62,10 +65,10 @@ Tasa          Min (COP)      Max (COP)
    I thought tax.co was deleting the data, but no, it was tax.co.web,
    upon submitting the new request. Duh.
 ** DONE [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
-** DONE [[file:../tech/20210511124423-give_appuser_apache_privileges.org][giving Apache privileges to a Docker user]]
+** DONE [[id:802932af-191e-4cb8-a3b5-855aec8ad7c0][giving Apache privileges to a Docker user]]
 ** DONE [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
 ** DONE [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email results to user]]
-** DONE [[file:../tech/20210419160403-django_security_things_to_do_before_production.org][Django security, things to do before production]]
+** DONE [[id:592838c4-5f21-41df-9a38-ccff592200f2][Django security, things to do before production]]
 * TODO important
 ** DONE correct low-ceiling error in most.csv
    The top income tax rate for most income ended at a finite income level; it shouldn't. Now it doesn't.
@@ -101,7 +104,7 @@ Tasa          Min (COP)      Max (COP)
 ** un-hardcode this path
    secrets_path = "/mnt/apache2/secret"
    in tax.co/python/email.py
-** [[file:../tech/20210531162655-collect_all_tax_co_and_tax_co_web_paths_in_a_single_repo_file.org][collect all tax.co and tax.co.web paths in a single (repo? file?)]]
+** [[id:e4ea6e32-6c7d-41a4-ae8d-e582d954b0d2][collect all tax.co and tax.co.web paths in a single (repo? file?)]]
 ** make code more understandable
 *** in commands.sh, rather than hardcode paths, define commented variables
     so the user knows to redefine them
@@ -419,7 +422,7 @@ The first that fails:
 **** DONE add disclaimer to webpage
      Explain that that's what happens.
 *** read shell variables from a .json file
-    Using [[file:../tech/20210414161239-jq_shell_command.org][jq (shell command)]].
+    Using [[id:99ce91f2-fb44-4b27-89ad-388b965b00eb][jq (shell command)]].
     See commands.sh (in the tax.co.web repo)
 ** TODO enable .xlsx or .csv upload
    :PROPERTIES:
@@ -460,7 +463,7 @@ The first that fails:
    Django does not accept them.
    Are they important?
 * in Apache
-** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[file:../tech/20201014163254-wsgi.org][wsgi]]
+** ? In Docker image, customize further [[id:dcc41642-ba24-45b8-bf55-daf08d7f701e][for Apache]] and [[id:13bdbc64-b271-44f7-a09f-27ce4c1cb590][wsgi]]
 ** DONE bug-2021-04-19-permission-denied-on-browser-serving-locally
    Once that's solved, remember to uncomment the portion of ports.conf that allows serving online.
 *** ? Give up
@@ -515,10 +518,10 @@ The first that fails:
        ubuntu in the native EC2 system
        1000 in the Docker container
 *** whoami.sh leads cron to write "appuser"
-*** Never had to [[file:../tech/20210513113219-python_script_works_unless_run_by_cron.org][ask the internets]].
+*** Never had to [[id:2c7ecfe3-e99b-46a5-95b2-984ada04f2a0][ask the internets]].
 *** Verify the same happens on EC2
-* DONE choose a [[file:../tech/20210419112140-web_server.org][web server]]
-* [[file:20210419112845-tax_co_web_setting_up_an_ec2_instance_to_serve.org][deploy tax.co.web over EC2]]
+* DONE choose a [[id:a51a0dca-2c22-458c-b464-eb3e65046478][web server]]
+* [[id:dc3cf615-f76e-40ed-b20d-2ea09ba3f74b][deploy tax.co.web over EC2]]
 * TODO ponder
 ** Keep a db of requests?
    It seems like the "right" thing to do,

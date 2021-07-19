@@ -1,4 +1,7 @@
 * PITFALL: These notes files are redundant
+  :PROPERTIES:
+  :ID:       b49c192b-f7c2-4440-9bb8-c7e4c800064d
+  :END:
 There's an enig.org file, an enph.org file, and this one which pertains to both.
 * PITFALL: These notes are stale, from 2018-ish
 But they might include some insights into the data due to David Suarez not recorded elsewhere.

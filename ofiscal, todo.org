@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
+:END:
 #+TITLE: ofiscal, todo
-* [[file:20200717181357-tax_co.org][tax.co]]
-* [[file:20201106093226-putting_tax_co_online.org][putting tax.co online]]
+* [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
+* [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][putting tax.co online]]
 * DONE
-** [[file:20210413190351-tax_co_a_high_level_overview_of.org][tax.co, a high-level overview of]]
-** [[file:20200825164022-tax_hike_proposal_colombian_senate_2020.org][tax hike proposal, Colombian Senate, 2020]]
-** [[file:../tech/20210406174945-how_tpc_distributes_the_corporate_income_tax_paper.org][How TPC Distributes the Corporate Income Tax (paper)]]
+** [[id:9019705d-fcda-422e-bc89-88442094ca66][tax.co, a high-level overview of]]
+** [[id:b03dbe01-ce5a-46ac-b2d3-7e22949781a1][tax hike proposal, Colombian Senate, 2020]]
+** [[id:dfb5198f-b392-4903-be09-bfa7217212cc][How TPC Distributes the Corporate Income Tax (paper)]]

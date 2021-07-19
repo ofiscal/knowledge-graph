@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       b903d756-7f7f-4725-ab0d-d265381c8cd6
+:END:
 -- This text easier to align in Emacs haskell-mode.
 
 -- Anything marked "#ne" is not implemented.

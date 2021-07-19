@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       5cc3537b-7ae5-40fe-bd4a-35a18204ea74
+:END:
 -- Anything marked "#ne" is not implemented.
 -- Everything else is implemented.
 -- Some things are marked "unknowable". However,

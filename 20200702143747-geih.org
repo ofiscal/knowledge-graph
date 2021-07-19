@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       6a0f91be-f15b-460b-a1f0-1b64d9f797fc
+:ROAM_ALIASES: geih
+:END:
 #+title: gran encuesta integrada de hogares
-#+ROAM_ALIAS: geih
 * references
 ** [[http://microdatos.dane.gov.co/index.php/catalog/659/get_microdata][GEIH 2020 online]]
 * geo matching

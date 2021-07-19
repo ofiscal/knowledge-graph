@@ -1,4 +1,7 @@
 * another unfair (right?) tax rate
+  :PROPERTIES:
+  :ID:       ca1e1b29-8137-4212-a457-c0c988a8bfaf
+  :END:
 "income, year : infrequent : refund, other" – retención en la fuente 35% (seguramente reportan el valor después de retención). But the reported amount is probably what was received after losing that tax.
 
 "P7510S1A1"  : "income, year : private : remittance, domestic" – se debe contabilizar como ingreso (otros ingresos), pagan impuesto tarifa 2 si superan 1.400 UVT, se considera ingreso no laboral

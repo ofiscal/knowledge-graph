@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       d047ae6a-25c0-4ce4-8617-f3c17d29421a
+:ROAM_ALIASES: "Encuesta Nacional de Presupuestos de Hogares" ENIG ENPH
+:END:
 #+title: The ENPH and ENIG surveys, by Colombia's DIAN
-#+ROAM_ALIAS: ENPH ENIG "Encuesta Nacional de Presupuestos de Hogares"
 * PITFALL: These notes files are redundant
 There's an enig.org file, an enph.org file, and this one which pertains to both.
 * PITFALL: These notes are stale, from 2018-ish
