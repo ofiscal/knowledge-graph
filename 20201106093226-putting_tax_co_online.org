@@ -1,8 +1,21 @@
 :PROPERTIES:
 :ID:       f8d67417-cc75-4e62-b219-abaee0f73b0b
+:ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
 * TODO first web interface, then person-level, then incorporate DIAN
+* TODO web interface
+** enter marginal tax rates into dynamic table
+*** create multiple such tables
+**** requirements
+    One for each tax.
+    The tables' names must differ; the buttons', maybe.
+**** methods
+***** Create an HTML table using Javascript.
+      https://www.delftstack.com/howto/javascript/create-table-javascript
+***** Create an HTML input using Javascript
+      https://www.techiedelight.com/dynamically-generate-input-type-button-javascript
+** choose VAT tax rates via a table
 * TODO ? person-level analysis
   Divide IVA by income share.
 ** what `households*.py` does, and what I'll need to map back to individuals

@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       dc3cf615-f76e-40ed-b20d-2ea09ba3f74b
+:ROAM_ALIASES: "tax.co.web on EC2"
 :END:
 #+title: deploy tax.co.web over EC2
 * refs
