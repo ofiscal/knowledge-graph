@@ -8,8 +8,8 @@
 ** enter marginal tax rates into dynamic table
 *** create multiple such tables
 **** requirements
-    One for each tax.
-    The tables' names must differ; the buttons', maybe.
+     One for each tax.
+     The tables' names must differ; the buttons', maybe.
 **** methods
 ***** DONE Create an HTML input using Javascript
       https://www.techiedelight.com/dynamically-generate-input-type-button-javascript
@@ -18,13 +18,7 @@
 **** roadmap
 ***** DONE Create a button via Javascript. Incorporate it into the page.
 ***** DONE Create the table via Javascript.
-***** TODO BUG: The deleteRow buttons aren't working in the programmatic table
-      :PROPERTIES:
-      :ID:       ccef89a2-e64a-4dce-8b4b-e07156215997
-      :END:
-      NOTE: The first row is different from the others -- the delete button in it actually works.
-      SOLUTION: It always refers to the Income tax table.
-      OVERKILL? I could make the insertRow function actually create the row from scratch, rather than copy the first row that's already in the table.
+***** DONE BUG: The deleteRow buttons aren't working in the programmatic table
 ***** Make the table-generating function take a name argument. Call it with a few.
 ** choose VAT tax rates via a table
 * TODO ? person-level analysis
