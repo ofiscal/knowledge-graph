@@ -3,6 +3,8 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
+* TODO [[id:5eb93e07-675e-4801-b615-6f8ef6fc7f87][Daniel's "ingresos.xlsx"]]
+* BLOCKED [[id:b91ea186-b66a-48ab-90d4-c7cba0688e3b][fix how exemptions are applied to "most income"]]
 * TODO first web interface, then person-level, then incorporate DIAN
 * TODO web interface
 ** enter marginal tax rates into dynamic table

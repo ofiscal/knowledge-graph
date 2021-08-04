@@ -39,6 +39,10 @@ because it is not part of `income_infrequent`.
    We might get it.
    If so, use PILA for payroll taxes for everyone who makes min wage or more.
    Otherwise, DIAN for both payroll and income taxes for the rich, ENPH for the rest.
+* TODO update documentation
+** the way it's run is now completely different
+** the org notes are now these
+   The top-level README needs to be amended to point to them.
 * TODO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][put tax.co online]]
 * TODO clean
 ** try pydoc
