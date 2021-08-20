@@ -4,6 +4,12 @@
 :END:
 #+title: putting tax.co online
 * TODO tax.co.web interface
+** TODO serial-ish
+*** TODO encode the actual default marginal tax rates
+**** BLOCKED Asking: Python version mismatch preventing pandas from loading.
+     https://forum.djangoproject.com/t/server-and-shell-using-different-python-versions/9303
+**** TODO ? alternative: hard-code the marginal rates into the Javascript
+*** TODO create, store user .csv files from marginal rate tables
 ** email + subsample + radio table + dynamic marginnal tables
 *** Comment out the other configuration stuff.
     Someday if there are more regimes I'm confident of,
