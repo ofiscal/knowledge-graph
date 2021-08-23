@@ -5,10 +5,49 @@
 #+title: putting tax.co online
 * TODO tax.co.web interface
 ** TODO serial-ish
-*** TODO encode the actual default marginal tax rates
-**** BLOCKED Asking: Python version mismatch preventing pandas from loading.
-     https://forum.djangoproject.com/t/server-and-shell-using-different-python-versions/9303
-**** TODO ? alternative: hard-code the marginal rates into the Javascript
+*** TODO pass a list from Python to Javascript HTML
+    Will need this to create the marginal rate tables from the .csv files.
+*** TODO show the default marginal tax rates in the UI
+    alternatives
+**** use the `csv` package rather than pandas from Django
+     Unlike `pandas`, the Python3.7 that Apache runs is able to find `csv`.
+**** hard-code the marginal rates into the Javascript
+**** FAILED use the tax.co:test branch of the docker image
+**** FAILED : Use pip to install NumPy for Python 3.7 too
+     It's already installed! So is pandas.
+     I can load it if I run python3.7 from the shell.
+     But I can't use it from Django/Apache.
+**** FAILED : Fix Python version mismatch that keeps pandas from loading.
+     I can't run Apache. It says it can't find libpcre.so.1,
+     even though pcre is installed.
+***** asking Django forum
+      https://forum.djangoproject.com/t/server-and-shell-using-different-python-versions/9303
+***** MAYBE DONE ? Install these without apt
+****** mod-wsgi
+       -apt install libapache2-mod-wsgi-py3
+       pip3 install mod-wsgi
+         requires apxs, which is in the `apache2-dev` apt repo
+****** apache
+       Installing it via apt causes python3.7 to be installed.
+****** ufw
+       Installing it via apt causes python3.7 to be installed.
+****** pip
+******* -apt install python3-pip
+         It installs python3.7.
+******* +python -m ensurepip --upgrade
+	Will this work if I use python3.8?
+        `ensurepip` is disabled in Debian's python
+******* If that doesn't work there's also get-pip.py:
+	https://pip.pypa.io/en/stable/installation/
+***** DONE figure out what causes apt to install python3.7
+      It's apache, ufw, mod-wsgi, and pip.
+***** Figure out why Apache doesn't respond after switching to Python 3.8.
+      specifically, after switching mod-wsgi
+***** TODO start apache differently
+      PREFIX seems to be /usr/local/apache2/bin/apachectl
+
+      # vi PREFIX/conf/httpd.conf
+      PREFIX/bin/apachectl -k start
 *** TODO create, store user .csv files from marginal rate tables
 ** email + subsample + radio table + dynamic marginnal tables
 *** Comment out the other configuration stuff.
