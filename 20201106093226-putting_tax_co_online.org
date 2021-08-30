@@ -3,6 +3,7 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
+* TODO fix time zone for make.txt
 * TODO tax.co.web interface
 ** TODO serial-ish
 *** TODO pass a list from Python to Javascript HTML
@@ -11,6 +12,9 @@
     alternatives
 **** use the `csv` package rather than pandas from Django
      Unlike `pandas`, the Python3.7 that Apache runs is able to find `csv`.
+**** update Python-alternatives before installing Apache
+     In smsn-public, see node
+     :xJwSDrXLZT7kTuDv:
 **** hard-code the marginal rates into the Javascript
 **** FAILED use the tax.co:test branch of the docker image
 **** FAILED : Use pip to install NumPy for Python 3.7 too
