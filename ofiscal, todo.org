@@ -4,6 +4,8 @@
 #+TITLE: ofiscal, todo
 * [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 * [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][putting tax.co online]]
+* BLOCKED dubious
+** [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]
 * DONE
 ** [[id:9019705d-fcda-422e-bc89-88442094ca66][tax.co, a high-level overview of]]
 ** [[id:b03dbe01-ce5a-46ac-b2d3-7e22949781a1][tax hike proposal, Colombian Senate, 2020]]
