@@ -3,6 +3,7 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
+* /home/jeff/code/erlang-py
 * TODO OVERVIEW serial: web interface, person-level, incorporate DIAN data
 * TODO tax.co.web interface
 ** TODO serial-ish
@@ -16,7 +17,7 @@
       See the example code from tax.co.web
         git log -p 06be64e943b13b191f82d98729935f7573b8316b
 ***** TODO steps
-****** In JS, populate table fields with arbitrary data from Django.
+****** DONE In JS, populate table fields with arbitrary data from Django.
 ****** In Django, read the CSV files from tax.co/data.
 ****** Hand the tax.co data, rather than the arbitrary data, to JS.
        Dictionaries *cannot* be passed from Django to JS.
