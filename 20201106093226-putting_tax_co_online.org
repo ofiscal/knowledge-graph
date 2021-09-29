@@ -3,13 +3,12 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
-* /home/jeff/code/erlang-py
 * TODO OVERVIEW serial: web interface, person-level, incorporate DIAN data
 * TODO tax.co.web interface
 ** TODO serial-ish
-*** TODO show the default marginal tax rates in the UI
+*** DONE show the default marginal tax rates in the UI
     alternatives
-**** TODO from Django, use the `csv` package rather than pandas
+**** DONE from Django, use the `csv` package rather than pandas
 ***** overview
       Don't read CSV directly from Javascript --
       I don't think it has permission.
@@ -67,12 +66,15 @@
       # vi PREFIX/conf/httpd.conf
       PREFIX/bin/apachectl -k start
 *** TODO create, store user .csv files from marginal rate tables
+    The tables' data is in the request POST.
+    The tables' names will have to determine where they are written.
 ** email + subsample + radio table + dynamic marginnal tables
 *** Comment out the other configuration stuff.
     Someday if there are more regimes I'm confident of,
     I can reenable it.
 ** the radio table has to affect both kinds of VAT
    Capitulo C and Coicop.
+* /home/jeff/code/erlang-py
 * TODO fix time zone for make.txt
 * TODO [[id:5eb93e07-675e-4801-b615-6f8ef6fc7f87][Daniel's "ingresos.xlsx"]]
 * BLOCKED [[id:b91ea186-b66a-48ab-90d4-c7cba0688e3b][fix how exemptions are applied to "most income"]]
