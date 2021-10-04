@@ -4,6 +4,9 @@
 :END:
 #+title: putting tax.co online
 * TODO OVERVIEW serial: web interface, person-level, incorporate DIAN data
+* TODO tax.co should use income floors, not ceilings
+  for its marginal income tax tables.
+  That way I could delete a bunch of cruft that converts ceilings to floors for display in the UI, and floors to ceilings for getting the UI data back into tax.co.
 * TODO tax.co.web interface
 ** TODO serial-ish
 *** DONE show the default marginal tax rates in the UI

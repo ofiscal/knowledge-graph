@@ -3,3 +3,4 @@
 :END:
 #+title: ofiscal website
 * It uses Wix.
+* TODO ? [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]

@@ -228,6 +228,11 @@ But we don't use them.
 ** TODO ? throw out purchasees with absurd quantities?
 Something in the full sample has a quantity value of 9e7.
 * TODO test suite
+** TODO [[id:cd0542f8-36de-4f9c-a6a5-2107fa041762][tests and IO]]
+** TODO My tests in tax.co don't compose.
+   :PROPERTIES:
+   :ID:       33e6fa69-2fb8-40d4-8037-cbcf19d552b4
+   :END:
 ** TODO test the names of the raw income variables
 each should begin either "income, month" or "income, year"
 ** TODO test new variables
