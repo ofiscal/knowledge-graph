@@ -135,10 +135,10 @@ Two heuristics that can catch this kind of bug:
       use column names that are similar but *not* identical
       to those int he real data.
 * to find all numbers in code
-In tmux, run
-  egrep "[0-9]+" -r build -r common -r draw -r regime *.py -C 5 --exclude="*test*"
-and then read that screen. (Dumping it to a file would mean losing the colors,
-which makes the reading process much slower.)
+  In tmux, run
+    egrep "[0-9]+" -r build -r common -r draw -r regime *.py -C 5 --exclude="*test*"
+  and then read that screen. (Dumping it to a file would mean losing the colors,
+  which makes the reading process much slower.)
 * to tag(build a tags file) python code for use in emacs
 find . -type f -name '*.py' | xargs etags
 * to apply a function that generates frames from rows to a frame

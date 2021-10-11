@@ -8,7 +8,8 @@
   for its marginal income tax tables.
   That way I could delete a bunch of cruft that converts ceilings to floors for display in the UI, and floors to ceilings for getting the UI data back into tax.co.
 * TODO tax.co.web interface
-** TODO serial-ish
+** DONE : UI for marginal income taxes
+   serial-ish
 *** DONE show the default marginal tax rates in the UI
     alternatives
 **** DONE from Django, use the `csv` package rather than pandas
@@ -68,15 +69,28 @@
 
       # vi PREFIX/conf/httpd.conf
       PREFIX/bin/apachectl -k start
-*** TODO create, store user .csv files from marginal rate tables
+*** DONE NEXT: Pickle the manual_ingest data, look at it
+*** DONE create, store user .csv files from marginal rate tables
     The tables' data is in the request POST.
     The tables' names will have to determine where they are written.
-** email + subsample + radio table + dynamic marginnal tables
-*** Comment out the other configuration stuff.
-    Someday if there are more regimes I'm confident of,
-    I can reenable it.
-** the radio table has to affect both kinds of VAT
-   Capitulo C and Coicop.
+** TODO Comment out non-pertinent config parameters.
+   Someday if there are more regimes I'm confident of,
+   I can reenable it.
+** TODO : UI for VAT
+*** TODO serial-ish
+**** mangle make experimental copies of the VAT tables
+     They should have a new column called "rate-group",
+     which takes, say, integer values between 1 and 10.
+**** ingest the experimental VAT data into Django
+**** create the UI
+***** A row for each "rate group", and (initially) 3 columns.
+***** User can input the rate for each column.
+      The "label" of each column is just a float input.
+***** The ability to add and delete columns.
+**** interpret the UI into user VAT data
+**** write and use the user VAT data
+*** the radio table has to affect both kinds of VAT
+    Capitulo C and Coicop.
 * /home/jeff/code/erlang-py
 * TODO fix time zone for make.txt
 * TODO [[id:5eb93e07-675e-4801-b615-6f8ef6fc7f87][Daniel's "ingresos.xlsx"]]
