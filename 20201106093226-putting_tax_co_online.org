@@ -4,9 +4,6 @@
 :END:
 #+title: putting tax.co online
 * TODO OVERVIEW serial: web interface, person-level, incorporate DIAN data
-* TODO tax.co should use income floors, not ceilings
-  for its marginal income tax tables.
-  That way I could delete a bunch of cruft that converts ceilings to floors for display in the UI, and floors to ceilings for getting the UI data back into tax.co.
 * TODO tax.co.web interface
 ** DONE : UI for marginal income taxes
    serial-ish
@@ -73,24 +70,78 @@
 *** DONE create, store user .csv files from marginal rate tables
     The tables' data is in the request POST.
     The tables' names will have to determine where they are written.
+** TODO : UI for VAT
+*** TODO serial-ish
+**** DONE make experimental, mangled copies of the VAT tables
+     They should have a new column called "rate-group",
+     which takes, say, integer values between 1 and 10.
+**** DONE transpose the VAT table
+     This way I can add and delete rows easily.
+     But will the resulting POST object make sense?
+     Can radio buttons even be horizontally aligned?
+**** DONE create the UI
+***** The first column lets the user set the rates.
+***** Each subsequent column is a group of consumables.
+**** DONE make VAT-related HTML object names hierarchical.
+**** DONE Share code between VAT and income tax UI objects.
+     Don't try to take it any further --
+     to share the "insert table" function proved hard.
+**** DONE Permit adding rows in VAT UI.
+**** DONE Permit deleting rows in VAT UI.
+**** DONE pass even faker data from Django to JS
+     This doesn't have to be from vat/fake_grouped yet.
+     Just anything.
+**** DONE in tax.co, fix a table to assign consumable groups to tax rate groups
+**** DONE use the `rate_group` column of consumable_groups.csv
+     consumable group , rate group
+     food             , 0
+     medicine         , 1
+     travel           , 2
+     entertainment    , 2
+**** DONE ingest the fake_grouped VAT data into Django, and pass that to JS
+**** BUGFIX: \r line endings in csv written from Django
+    fmap ( fmap ( fmap (filter (/= '\r') ) ) )
+    -- PITFALL: as of tax.co.web commit
+    -- d95eefcba2742fecaf05e4b5fc9e68b4ba110ce4
+    -- and tax.co commit
+    -- 8b0feff74801019de8e79c6a93ddcdbe8931f936
+    -- these garbage newlines started appearing.
+    -- I don't know why, but this removes them.
+
+    Use the lineterminator option to csv.writer.
+***** TODO Record that lineterminator solution in my notes.
+**** interpret the UI into user VAT data
+***** DONE In tax.co.web
+****** Get VAT data from POST object via make_hierarchical.
+       make_dict_one_level_hierarchical_from_top
+****** Write user VAT rate- and consumable-group data.
+***** In tax.co
+****** Compute "tax sum" columns in build/vat_rates.py
+       Initially this will just be the fake VAT rate,
+       derived from the fake group.
+       Then it will be real VAT.
+       Then it will be the sum of VAT and other taxes.
+****** Incorporate non-VAT taxes.
+       And, probably, relabel some things
+       (inc. but not only filenames).
+**** will need to disable or widen some tests
+     The ones that changing the tax rates could change.
+*** the radio table has to affect both kinds of VAT
+    Capitulo C and Coicop.
 ** TODO Comment out non-pertinent config parameters.
    Someday if there are more regimes I'm confident of,
    I can reenable it.
-** TODO : UI for VAT
-*** TODO serial-ish
-**** mangle make experimental copies of the VAT tables
-     They should have a new column called "rate-group",
-     which takes, say, integer values between 1 and 10.
-**** ingest the experimental VAT data into Django
-**** create the UI
-***** A row for each "rate group", and (initially) 3 columns.
-***** User can input the rate for each column.
-      The "label" of each column is just a float input.
-***** The ability to add and delete columns.
-**** interpret the UI into user VAT data
-**** write and use the user VAT data
-*** the radio table has to affect both kinds of VAT
-    Capitulo C and Coicop.
+* TODO tests are messed up now
+  python/build/rate_input_test.py: It uses the vat data in config/, not the user's data.
+* TODO where are those \r symbols coming from?
+  See long comment in
+    ~/of/tax.co/online/haskell/Main.hs
+  following `filter _ $` expression.
+* TODO move requests-log.txt from root folder to data/
+  grep requests-log.txt -r .
+* TODO tax.co should use income floors, not ceilings
+  for its marginal income tax tables.
+  That way I could delete a bunch of cruft that converts ceilings to floors for display in the UI, and floors to ceilings for getting the UI data back into tax.co.
 * /home/jeff/code/erlang-py
 * TODO fix time zone for make.txt
 * TODO [[id:5eb93e07-675e-4801-b615-6f8ef6fc7f87][Daniel's "ingresos.xlsx"]]
@@ -126,7 +177,7 @@
     "vat/income, max"
     "purchase value / income"
 * TODO blocking
-** TODO dynamic forms
+** DONE dynamic forms
 *** the idea
 **** for the IVA
      keep another column yet: "0" for exempt & 0 for excluded
@@ -148,7 +199,6 @@ Tasa          Min (COP)      Max (COP)
 *** file:///home/jeff/of/tax.co.web/studies/radio-table.html
 *** more things to track
 **** Deductions from income tax.
-** TODO [[id:c04905da-d0fe-4eac-af96-c2a3bcc03649][hide my email credentials]]
 ** TODO [[id:1c9cef73-d495-4735-a789-2daf051c9beb][handle return codes]]
 ** DONE What put user_email after user?
    uniquify was doing it, because grouping and aggregating puts the grouping variables first.
@@ -175,10 +225,6 @@ Tasa          Min (COP)      Max (COP)
 *** three columns, with a choosable tax rate at the top
     each row needs exactly one check in it.
 *** TODO will need someone to group the goods
-** TODO marginal tax rate interface
-   "de" is fixed at 0 on the first row,
-   and "hasta" is fixed at infinity in the last row.
-   Someone can add rows.
 ** let someone download a config
    So that they can upload it to the interface, instead of repeating themselves.
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
@@ -578,7 +624,7 @@ The first that fails:
 ** user uploads .csv, inputs .json
 ** tax.co finds user input
 ** email results to user as soon as they exist
-* TODO hide my email credentials
+* DONE hide my email credentials
   :PROPERTIES:
   :ID:       c04905da-d0fe-4eac-af96-c2a3bcc03649
   :END:
