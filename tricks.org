@@ -2,145 +2,147 @@
 :ID:       090a81f4-8cc4-4b78-9593-f876c848b75f
 :END:
 #+TITLE: tricks - how to do some things
-* sorting and null/missing values in pandas
-** null always comes last, regardless of order
-** code to see it
-d = pd.DataFrame ( [
-    [np.nan,np.nan,np.nan],
-    [     1,np.nan,np.nan],
-    [     1,     1,np.nan],
-    [     1,     2,np.nan],
-    [     1,     2,1],
-    [     2,np.nan,np.nan],
-    [     2,     1,np.nan],
-    [     2,     2,np.nan],
-    [np.nan,np.nan,np.nan],
-    [     1,np.nan,np.nan],
-    [     1,     1,np.nan],
-    [     1,     2,np.nan],
-    [     1,     2,1],
-    [     2,np.nan,np.nan],
-    [     2,     1,np.nan],
-    [     2,     2,np.nan],
-    ],
-    columns = ["a","b","c"] )
+* scipy
+** sorting and null/missing values in pandas
+*** null always comes last, regardless of order
+*** code to see it
+    d = pd.DataFrame ( [
+        [np.nan,np.nan,np.nan],
+        [     1,np.nan,np.nan],
+        [     1,     1,np.nan],
+        [     1,     2,np.nan],
+        [     1,     2,1],
+        [     2,np.nan,np.nan],
+        [     2,     1,np.nan],
+        [     2,     2,np.nan],
+        [np.nan,np.nan,np.nan],
+        [     1,np.nan,np.nan],
+        [     1,     1,np.nan],
+        [     1,     2,np.nan],
+        [     1,     2,1],
+        [     2,np.nan,np.nan],
+        [     2,     1,np.nan],
+        [     2,     2,np.nan],
+        ],
+        columns = ["a","b","c"] )
 
-( d
- . sort_values ( ["a","b","c"],
-                ascending = False ) )
-* [[id:6a0c6707-29de-4cb4-ba1a-7af6b9077872][times versus numbers in NumPy]]
-* fast time series manipulations for Pandas (actually in NumPy)
-** PITFALL: Part of this code is unreadable in org-mode.
-** example code, with comments
-import numpy as np
-import pandas as pd
-from numba import jit
+    ( d
+     . sort_values ( ["a","b","c"],
+                    ascending = False ) )
+** [[id:6a0c6707-29de-4cb4-ba1a-7af6b9077872][times versus numbers in NumPy]]
+** fast time series manipulations for Pandas (actually in NumPy)
+*** PITFALL: Part of this code is unreadable in org-mode.
+*** example code, with comments
+    import numpy as np
+    import pandas as pd
+    from numba import jit
 
-@jit(nopython=True) # Makes it faster.
-def change_jit( time, spread ): # These are one-dimensional numpy arrays.
-    res = np.empty( time.shape )
-    res[0] = np.nan
-    for i in range(1, res.shape[0]):
-        # An ordinary for loop. Would be slow in a pandas frame,
-        # but somehow numba magicks it into something fast.
-        res[i] = time[i] / spread[i-1]
-          # A nonsense calculation. The point is you can refer "now" (i)
-          # to "earlier" (i-1) points in the data.
-    return res
+    @jit(nopython=True) # Makes it faster.
+    def change_jit( time, spread ): # These are one-dimensional numpy arrays.
+        res = np.empty( time.shape )
+        res[0] = np.nan
+        for i in range(1, res.shape[0]):
+            # An ordinary for loop. Would be slow in a pandas frame,
+            # but somehow numba magicks it into something fast.
+            res[i] = time[i] / spread[i-1]
+              # A nonsense calculation. The point is you can refer "now" (i)
+              # to "earlier" (i-1) points in the data.
+        return res
 
-df['test'] = change_jit(
-    * # unpacks each row, delivering it as a separate argument
-    df[[ "time", "spread"]]
-    . values # to get a numpy array, which numba wants
-    . T # so that the rows unpacked by * above are the columns we want in `prices`.
-    )
-* shell: find, show all file extensions in filetree
-  find . -type f | sed 's/.*\.//' | grep -v "/" | sort | uniq -c
-* grep excluding nonreadable file types
-  find . -type f -not \( -name "*.csv" -o -name "*.xlsx" -o -name "*.tgz" -o -name "*.zip" -o -name "*.ssv" -o -name "*.sav" -o -name "*.pyc" -o -name "*.pdf" -o -name "*.jpeg" -o -name "*.odt" -o -name "*.pack" -o -name "*.ods" -o -name "*.ipynb" -o -name "*.idx" -o -name "*.docx" -o -name "*.dta" \) -print0 | xargs -0 grep "xxx" --color
-* view a readable diff of two csv files
-csv-diff file file2 --key="field-name"
-(This is installed in the Docker image.)
-** or, within python
- This is buggy, because it uses multiple keys.
- Instead must create a single composite key.
-   in tax.co, see python/hand_test/composite_index.py
+    df['test'] = change_jit(
+        * # unpacks each row, delivering it as a separate argument
+        df[[ "time", "spread"]]
+        . values # to get a numpy array, which numba wants
+        . T # so that the rows unpacked by * above are the columns we want in `prices`.
+        )
+* shell
+** find, show all file extensions in filetree
+   find . -type f | sed 's/.*\.//' | grep -v "/" | sort | uniq -c
+** grep excluding nonreadable file types
+   find . -type f -not \( -name "*.csv" -o -name "*.xlsx" -o -name "*.tgz" -o -name "*.zip" -o -name "*.ssv" -o -name "*.sav" -o -name "*.pyc" -o -name "*.pdf" -o -name "*.jpeg" -o -name "*.odt" -o -name "*.pack" -o -name "*.ods" -o -name "*.ipynb" -o -name "*.idx" -o -name "*.docx" -o -name "*.dta" \) -print0 | xargs -0 grep "xxx" --color
+** view a readable diff of two csv files
+   csv-diff file file2 --key="field-name"
+   (This is installed in the Docker image.)
+*** or, within python
+    This is buggy, because it uses multiple keys.
+    Instead must create a single composite key.
+      in tax.co, see python/hand_test/composite_index.py
 
- from csv_diff import load_csv, compare
- diff = compare(
-   load_csv("data/recip-10/people_3_income_taxish.detail.2018.csv",
-            key=["household","household-member"] ),
-   load_csv("no-dep-exempt/people_3_income_taxish.detail.2018.csv",
-            key=["household","household-member"] ) )
-* create tar.gz archive
-tar -czvf tarball-of-zipfiles.tar.gz individual-zipfiles/
-* create pdf from markdown
-pandoc -o bugs.pdf bugs.md
-To render beamer-style, add the option `-t beamer`.
-PITFALL: New sections must be preceded by a blank line.
+    from csv_diff import load_csv, compare
+    diff = compare(
+      load_csv("data/recip-10/people_3_income_taxish.detail.2018.csv",
+               key=["household","household-member"] ),
+      load_csv("no-dep-exempt/people_3_income_taxish.detail.2018.csv",
+               key=["household","household-member"] ) )
+** create tar.gz archive
+   tar -czvf tarball-of-zipfiles.tar.gz individual-zipfiles/
+** create pdf from markdown
+   pandoc -o bugs.pdf bugs.md
+   To render beamer-style, add the option `-t beamer`.
+   PITFALL: New sections must be preceded by a blank line.
 * emacs: number lines in a rectangle
-http://emacsworld.blogspot.com/2012/06/numbering-lines-and-lists-in-emacs.html
-"C-x r N" starts the line at 1.
-"C-u C-x r N" prompts for a starting value and format.
+  http://emacsworld.blogspot.com/2012/06/numbering-lines-and-lists-in-emacs.html
+  "C-x r N" starts the line at 1.
+  "C-u C-x r N" prompts for a starting value and format.
 * git add -p
-to cherry-pick the changes in a file to commit
+  to cherry-pick the changes in a file to commit
 * find: exclude a type of file
-use the ! symbol to negate the next option
-for example, this:
-  find . -type d ! -name "__pycache__"
-excludes anything called __pycache__
+  use the ! symbol to negate the next option
+  for example, this:
+    find . -type d ! -name "__pycache__"
+  excludes anything called __pycache__
 * `find -exec`: do something to every found result
 ** example: copy a file into every folder found
-find . -type d -exec cp __init__.py {} \;
+   find . -type d -exec cp __init__.py {} \;
 * using pytest for programs that import other local programs
-Put a line like this before any local import statements:
+  Put a line like this before any local import statements:
 
-import sys
-sys.path.insert(0, '.') # assuming pytest is run from the top of the project, this
-                        # allows local ("python.something.something") imports to work
+  import sys
+  sys.path.insert(0, '.') # assuming pytest is run from the top of the project, this
+                          # allows local ("python.something.something") imports to work
 * draw graph of Makefile dependencies
-See README here:
-https://github.com/ofiscal/tax.co/tree/master/dependencies/README.md
+  See README here:
+  https://github.com/ofiscal/tax.co/tree/master/dependencies/README.md
 * announce the separator used in a .csv file
-put something like "sep=;" at the top of the file
+  put something like "sep=;" at the top of the file
 * open office
 ** cell traversal shortcuts
-C-S-F2: go to formula window
-C-S-T: go to cell address window ("(T)raverse", probably)
+   C-S-F2: go to formula window
+   C-S-T: go to cell address window ("(T)raverse", probably)
 ** the apostrophes-turn-numbers-into-strings problem
 *** recipe
-1. Highlight all of the cells and use Format -> Cells to change the cell format to an appropriate number format.
-2. With all of the cells still selected, go to the menu Edit -> Find & Replace
-3. In the Search For box enter .* (period asterisk)
-4. In the Replace with box enter &
-5. Select More Options and check Current Selection Only and Regular Expressions
-6. Click Replace All
+    1. Highlight all of the cells and use Format -> Cells to change the cell format to an appropriate number format.
+    2. With all of the cells still selected, go to the menu Edit -> Find & Replace
+    3. In the Search For box enter .* (period asterisk)
+    4. In the Replace with box enter &
+    5. Select More Options and check Current Selection Only and Regular Expressions
+    6. Click Replace All
 *** source
-https://forum.openoffice.org/en/forum/viewtopic.php?f=9&t=49046
+    https://forum.openoffice.org/en/forum/viewtopic.php?f=9&t=49046
 * pandas display
 ** use scientific notation
-pd.set_option('display.float_format', '{:.2g}'.format)
+   pd.set_option('display.float_format', '{:.2g}'.format)
 ** show as many columns as screen permits
    pd.options.display.width = 5000
 ** show lots of rows
    pd.options.display.min_rows = 50
 * makefile --trace explains why it wants to rebuild something
-Kind of useless, though -- it only restates the dependency section of the target it wants to rebuild.
-A natural companion to --dry-run.
+  Kind of useless, though -- it only restates the dependency section of the target it wants to rebuild.
+  A natural companion to --dry-run.
 * bughunting tricks
 ** problem: incomplete generalization from example to function.
-Two heuristics that can catch this kind of bug:
-  (1) Make sure every variable in the type signature is used.
-  (2) When designing test data,
-      use column names that are similar but *not* identical
-      to those int he real data.
+  Two heuristics that can catch this kind of bug:
+    (1) Make sure every variable in the type signature is used.
+    (2) When designing test data,
+        use column names that are similar but *not* identical
+        to those int he real data.
 * to find all numbers in code
   In tmux, run
     egrep "[0-9]+" -r build -r common -r draw -r regime *.py -C 5 --exclude="*test*"
   and then read that screen. (Dumping it to a file would mean losing the colors,
   which makes the reading process much slower.)
 * to tag(build a tags file) python code for use in emacs
-find . -type f -name '*.py' | xargs etags
+  find . -type f -name '*.py' | xargs etags
 * to apply a function that generates frames from rows to a frame
   # This isn't exactly it, but pretty close.
 
