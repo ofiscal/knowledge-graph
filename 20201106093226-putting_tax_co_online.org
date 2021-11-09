@@ -3,6 +3,83 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
+* TODO NEW from mtg
+** parameters for the SS schedule
+*** 0.7, 0.4, 0.25, 1 min wage, 10 mw, 25 mw, 13 mw
+*** and then another table for average tax rates
+** corporate income tax module
+*** nominal corporate inncome tax rate (currently 35%)
+*** sim needs to know what revenues from corporate taxes are
+*** would be nice to split corp tax between workers and owners
+    ask user for % that falls on workers
+** spelunking the VAT table
+*** 0.128 for sugary drinks
+    it's now 0.19 ordinary VAT, no other tax applicable
+*** 0.15 for vehicle motors
+    Motores para veh�culo
+    Was 0.15, should be 0.17694 (see below).
+    VAT depending on value (no vat for Diesel engines up to 150 HP). For electric cars, the VAT rate is 5% (goods with different VAT rates). I (jbb, oct 2021) guess the rest must be 0.19.
+    (6.8 * 0 + 0.1 * 0.05 + (100 - 6.8 - 0.1) * 0.19) / 100
+    = 0.17694
+**** UI solution: let someone assign tax rates to those three things
+     and use a distribution to compute the final average tax rate
+*** bimodal transport
+    Servicio en dos o m�s medios de transporte cuando el gasto no se puede discriminar ,7350101,,0.0,0.01,goods with different tax rates
+    Just call it 0 | the free-transport group.
+*** photocopies
+    "Servicio de fotocopias, reducciones, ampliaciones, laminaciones, argollados, impresi�n de hojas y documentos, servicio de scanner, servicio de quemado de CD o DVD y trabajos en computador",12709903,,0.0,0.0,VAT depending on place of purchase (most people buy these goods at pleces where no VAT is charged).
+    Group: Services? Education? jbb says "printing".
+*** residential phone
+    Servicio telef�nico residencial (local y larga distancia)  ,8300204,,0.0,0.02,exemption for the first 325 minutes month
+    Comunicaciones
+*** no idea
+    Mercados sin especificar productos,1190901,,0.0,0.19,goods with different tax rates
+*** anchetas
+    Anchetas,1191001,,0.0,0.19,goods with different tax rates
+*** smartphone
+    Compra de celular inteligente y accesorios,8200203,,0.0,0.19,"vat depending on value (cellphones above 22UVT, aprox. $700800 COP)"
+    When we run this, we want the best weighted VAT rate we can calculate, weighted by value.
+    But for other people, it's just assigned a group.
+*** internet cafe
+    Servicios de internet en centros de acceso p�blico con costo (caf� internet),8300303,,0.0,0.19,There could be a tax cascade
+    Why is this multiple rates?
+    What did I mean by tax casade?
+*** computers
+    "Computadores personales de escritorio (PC, all in one)",9130101,,0.0,0.19,"vat depending on value (computers above 50UVT, aprox. $1593000 COP)"
+    actual VAT by weight
+    what group(s?) appliesa
+*** laptops
+    Computadores port�tiles,9130110,,0.0,0.19,"vat depending on value (cellphones above 50UVT, aprox. $1593000 COP)"
+    same problem
+*** tablets
+    Tabletas (ipads),9130111,,0.0,0.19,"vat depending on value (tablets above 22UVT, aprox. $700800 COP)"
+    now (oct 2021) it's about 8e5 COP
+    same thing
+*** plants and accessories
+    Semillas, bulbos de plantas, c�sped, fertilizantes, fungicidas, abonos, materas, macetas y tiestos para flores y plantas",9330501,,0.0,0.19,goods with different tax rates
+*** primitive books
+    "Revistas sueltas, comics, novelas gr�ficas, historietas, cuentos y cuadernillos para colorear",9520301,,0.0,0.19,goods with different tax rates
+*** pens+
+    "Bol�grafos, estil�grafos, plumas, marcadores, plumones y resaltadores",9540202,,0.0,0.19,goods with different tax rates
+*** makeup, umbrellas, and sunglasses
+    "Art�culos personales varios como: gafas de sol, lentes de contacto, cosmeticos, bastones, paraguas y sombrillas, abanicos, llaveros, etc",12320401,,0.0,0.19,goods with different tax rates
+*** credit payments
+    Cuotas o pagos directos a almacenes y distribuidores por compras a cr�dito (excluye tarjetas de cr�dito expedidas por almacenes y distribuidores),12620105,,0.0,0.19,
+*** internet 2?
+    "Servicios de acceso a Internet proporcionados por operadores de infraestructura cableada, inal�mbrica o satelital",8300301a,,0.02,0.19,vat depending on estrato (>3)
+*** Avena en hojuelas
+    1110302,,0.05,0.19,
+*** bikes
+    Compra de bicicletas nuevas o usadas (excepto para ni�os),7130101,,0.05,0.19,Depending on value an nature. If value is below 50 UVT (aprox $1593000 COP) the VAT rate is 5%
+*** bikes 2
+    "Bicicletas para ni�o(a), triciclos, columpios",9310202,,0.05,0.19,Depending on value an nature. If electric OR below 50 UVT (aprox $1593000 COP) the VAT rate is 5%
+*** car parts
+    "Buj�as, inyectores, filtros, amortiguadores, bater�as, carburadores, distribuidores de corriente, vidrios, condensadores, correas de ventilador, etc.",7219902,,0.15,0.19,goods with different tax rates
+** TODO we never did the "impuesto nacional al consumo"
+   See the bigger VAT spreadsheet.
+** TODO that 0.128 VAT for sugary drinks is obsolete
+   it's now 0.19, as of Jan 1 2020
+** The gender VAT rate supercedes the VAT rates determined by COICOP groups.
 * TODO OVERVIEW serial: web interface, person-level, incorporate DIAN data
 * TODO tax.co.web interface
 ** DONE : UI for marginal income taxes

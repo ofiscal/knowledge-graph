@@ -3,7 +3,11 @@
 :END:
 #+TITLE: tricks - how to do some things
 * [[id:1d0f193f-10f0-4c2c-9cf5-d0e9a1fc49d7][Python (programming language)]]
+** [[id:1a97cb6c-b6ff-4439-9790-ff372bc1ee38][scipy (libraries for Python)]]
+** [[id:74d6d7d1-7749-4d60-925d-43958fcd3ee3][testing in Python]]
 * [[id:7b1955b6-78d0-4912-8347-3eb653b7a1de][shell programming]]
+* [[id:4e6db9f5-bfc0-4a9f-918c-56a30f3762a4][LibreOffice (software)]]
+* [[id:e76bfca8-f61d-45a2-908f-bad416a7c304][Git (version control software)]]
 * [[id:784c0660-a998-4bbf-bc80-c0b46a89a632][make (build utility)]]
 * [[id:7a777588-b76a-48de-9a4d-40d78f6f5ba4][csv (file format)]]
 * [[id:7dc33cd5-40bc-421a-aa1d-a40cf0635119][to tag(build a tags file) python code for use in emacs]]
