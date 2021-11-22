@@ -3,18 +3,30 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
-* TODO off the top of my head
-** understand Daniel's spreadsheet
+* TODO next
+** TODO understand Daniel's spreadsheet
+   read the consumables groups dict
 ** DONE repair the vat column in that spreadsheet
    Just use the vat* columns from the earlier one,
    merging on coicop.
 ** DONE add coicop-based categories
 ** DONE add prefix-group average VAT rates
+** BLOCKED treat capitulo C the same way
+** transpose the VAT UI table
+*** header column at left
+*** tax rate-setting row of numeric inputs at top
+*** delete column buttons in bottom row
+*** add column button below
+*** move fake_grouped/rate_groups.csv up one folder
+    note that it's referred to in both tax.co and tax.co.web
 ** *add* tax groups
    e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
-** deal with the special restaurant (?) tax
-** transpose the VAT UI table
-* TODO NEW from mtg
+** shift to person-level analysis
+* TODO ideas from others
+** TODO read the answers from (ITP?) to some questions we have
+   in their FAQ
+   https://itep.org/itep-tax-model/
+   https://itep.org/modelfaq/
 ** parameters for the SS schedule
 *** 0.7, 0.4, 0.25, 1 min wage, 10 mw, 25 mw, 13 mw
 *** and then another table for average tax rates
@@ -24,8 +36,6 @@
 *** would be nice to split corp tax between workers and owners
     ask user for % that falls on workers
 ** spelunking the VAT table
-*** 0.128 for sugary drinks
-    it's now 0.19 ordinary VAT, no other tax applicable
 *** 0.15 for vehicle motors
     Motores para veh�culo
     Was 0.15, should be 0.17694 (see below).
@@ -88,10 +98,8 @@
     "Buj�as, inyectores, filtros, amortiguadores, bater�as, carburadores, distribuidores de corriente, vidrios, condensadores, correas de ventilador, etc.",7219902,,0.15,0.19,goods with different tax rates
 ** TODO we never did the "impuesto nacional al consumo"
    See the bigger VAT spreadsheet.
-** TODO that 0.128 VAT for sugary drinks is obsolete
-   it's now 0.19, as of Jan 1 2020
 ** The gender VAT rate supercedes the VAT rates determined by COICOP groups.
-* TODO OVERVIEW serial: web interface, person-level, incorporate DIAN data
+* TODO incorporate DIAN data
 * TODO tax.co.web interface
 ** DONE : UI for marginal income taxes
    serial-ish
