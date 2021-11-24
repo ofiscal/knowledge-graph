@@ -12,13 +12,6 @@
 ** DONE add coicop-based categories
 ** DONE add prefix-group average VAT rates
 ** BLOCKED treat capitulo C the same way
-** transpose the VAT UI table
-*** header column at left
-*** tax rate-setting row of numeric inputs at top
-*** delete column buttons in bottom row
-*** add column button below
-*** move fake_grouped/rate_groups.csv up one folder
-    note that it's referred to in both tax.co and tax.co.web
 ** *add* tax groups
    e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
 ** shift to person-level analysis
