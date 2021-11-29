@@ -4,14 +4,6 @@
 :END:
 #+title: putting tax.co online
 * TODO next
-** TODO understand Daniel's spreadsheet
-   read the consumables groups dict
-** DONE repair the vat column in that spreadsheet
-   Just use the vat* columns from the earlier one,
-   merging on coicop.
-** DONE add coicop-based categories
-** DONE add prefix-group average VAT rates
-** BLOCKED treat capitulo C the same way
 ** *add* tax groups
    e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
 ** shift to person-level analysis

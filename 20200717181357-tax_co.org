@@ -21,6 +21,7 @@ which is part of cash income.
 It is added into `cols_infrequent` separately,
 because it is not part of `income_infrequent`.
 *** "income, ganancia ocasional, 10%-taxable" is not used further in main.py
+* TODO Why do I use Anaconda?
 * TODO add new DIAN data
 ** TODO BOTTOM LINE: until PILA, job is to use DIAN data for payroll and income taxes on the rich
 ** one running variable: gross income, not considering costs
