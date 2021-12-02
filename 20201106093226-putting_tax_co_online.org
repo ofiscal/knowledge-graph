@@ -3,10 +3,21 @@
 :ROAM_ALIASES: tax.co.web
 :END:
 #+title: putting tax.co online
-* TODO next
-** *add* tax groups
-   e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
-** shift to person-level analysis
+* refs
+** github
+         https://github.com/ofiscal/tax.co.web
+   git clone git@github.com:ofiscal/tax.co.web.git
+* TODO create (real) consumables group data
+** columns: consumable group (primary), rate group
+** rows
+   1 for each prefix
+     each of which gets its associated rate group
+   1 for each of the groups Daniel & Valentina defined
+     each of which is assigned the rate group corresponding to 0 VAT
+* TODO use the real consumable groups
+* TODO *add* tax groups
+  e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
+* TODO shift to person-level analysis
 * TODO ideas from others
 ** TODO read the answers from (ITP?) to some questions we have
    in their FAQ
