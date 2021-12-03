@@ -7,6 +7,9 @@
 ** github
          https://github.com/ofiscal/tax.co.web
    git clone git@github.com:ofiscal/tax.co.web.git
+* PITFALLs
+** if csv files have the wrong (i.e. Windows-style) line terminators
+   [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
 * TODO create (real) consumables group data
 ** columns: consumable group (primary), rate group
 ** rows
@@ -94,7 +97,6 @@
     "Buj�as, inyectores, filtros, amortiguadores, bater�as, carburadores, distribuidores de corriente, vidrios, condensadores, correas de ventilador, etc.",7219902,,0.15,0.19,goods with different tax rates
 ** TODO we never did the "impuesto nacional al consumo"
    See the bigger VAT spreadsheet.
-** The gender VAT rate supercedes the VAT rates determined by COICOP groups.
 * TODO incorporate DIAN data
 * TODO tax.co.web interface
 ** DONE : UI for marginal income taxes
@@ -191,17 +193,6 @@
      travel           , 2
      entertainment    , 2
 **** DONE ingest the fake_grouped VAT data into Django, and pass that to JS
-**** BUGFIX: \r line endings in csv written from Django
-    fmap ( fmap ( fmap (filter (/= '\r') ) ) )
-    -- PITFALL: as of tax.co.web commit
-    -- d95eefcba2742fecaf05e4b5fc9e68b4ba110ce4
-    -- and tax.co commit
-    -- 8b0feff74801019de8e79c6a93ddcdbe8931f936
-    -- these garbage newlines started appearing.
-    -- I don't know why, but this removes them.
-
-    Use the lineterminator option to csv.writer.
-***** TODO Record that lineterminator solution in my notes.
 **** interpret the UI into user VAT data
 ***** DONE In tax.co.web
 ****** Get VAT data from POST object via make_hierarchical.
@@ -770,7 +761,7 @@ The first that fails:
     the python code looks up whether
 ** Ponder: idle user time, parallelism
    Should the website pause while the model is computed?
-* solved, weird
+* solutions
 ** DONE BUG: circular import with pandas
 *** the apparent solution
    Rebuilding the Docker container seems to have solved it. Maybe because I used `conda install` rather than `pip install` for everything available as a conda package. Maybe just because things were old.
