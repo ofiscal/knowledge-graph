@@ -12,24 +12,32 @@
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
-* DONE create (real) consumables group data
-** columns: consumable group (primary), rate group
-** rows
-   1 for each prefix
-     each of which gets its associated rate group
-   1 for each of the groups Daniel & Valentina defined
-     each of which is assigned the rate group corresponding to 0 VAT
-* DONE use the real consumable groups in the UI
-* DONE divide consumable_groups.csv in two: prefixes and other
-** The UI for the other_consumables should just have a 0 column and an "add column" button.
-   serial
-** rename consumable_groups.csv to consumable_groups_by_coicop
-   even though that's not all it is,
-   because that's all it will be soon
-** ingest a fake other_groups.csv file
-   and make a UI table using that
-* TODO *add* tax groups
-  e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
+* DONE use consumables groups like "pink tax"
+** DONE create (real) consumables group data
+*** columns: consumable group (primary), rate group
+*** rows
+    1 for each prefix
+      each of which gets its associated rate group
+    1 for each of the groups Daniel & Valentina defined
+      each of which is assigned the rate group corresponding to 0 VAT
+** DONE use the real consumable groups in the UI
+** DONE divide consumable_groups.csv in two: prefixes and other
+*** The UI for the other_consumables should just have a 0 column and an "add column" button.
+    serial
+*** rename consumable_groups.csv to consumable_groups_by_coicop
+    even though that's not all it is,
+    because that's all it will be soon
+*** ingest a fake other_groups.csv file
+    and make a UI table using that
+** DONE change the prefix for the non-prefix consumables table's rows
+   so that those are distinguishable from prefix rows,
+   which will be treated differently in the sim.
+** DONE bugfix: Changing a VAT rate in the UI now has an effect.
+** DONE *add* tax groups
+   e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
+* TODO Thread the new, simpler vat columns through the rest of the program.
+** There's no "vat min" or "vat max" now, just "vat".
+* TODO Merge branch consumable_groups into master.
 * TODO shift to person-level analysis
 * TODO ideas from others
 ** TODO read the answers from (ITP?) to some questions we have
