@@ -35,10 +35,45 @@
 ** DONE bugfix: Changing a VAT rate in the UI now has an effect.
 ** DONE *add* tax groups
    e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
-* TODO Thread the new, simpler vat columns through the rest of the program.
+* DONE Thread the new, simpler vat columns through the rest of the program.
 ** There's no "vat min" or "vat max" now, just "vat".
-* TODO Merge branch consumable_groups into master.
+** Fix: UI doesn't work if no VAT other groups provided.
+** Fix tests: don't worry about user-provided nonsense.
+   The tests won't be run for them anyway.
+   So just assume it's the usual 2019 regime.
+* DONE Merge branch consumable_groups into master.
 * TODO shift to person-level analysis
+  serial
+** Merge from household data into new, later stage of person data:
+   ? "(rank, labor income) = *" # for * in [1,5]
+   total income (but what's it called?)
+     so that VAT can be allocated among household members
+     according to their share of the household's total income
+   'transactions',
+   'value, consumption',
+   'value, non-purchase',
+   'value, purchase',
+   'value, spending'
+   'value, tax, predial',
+   'value, tax, purchaselike non-predial non-VAT',
+   'value, tax, purchaselike non-VAT',
+   'vat paid',
+** Build in person data ala household data:
+   households["income-decile"] = (
+     util.noisyQuantile( 10, 0, 1, households["income"] ) )
+   households["income-percentile"] = (
+     util.noisyQuantile( 100, 0, 1, households["income"] ) )
+   households["one"] = 1 # used in report/households.py to create the trivial partition.
+   merge["vat / purchase value" ] = (
+     merge["vat paid"]   / merge["value, purchase" ] )
+   merge["vat/income"] = (
+     merge["vat paid"]   / merge["income"] )
+   merge["purchase value / income"   ] = (
+     merge["value, purchase"] / merge["income"] )
+** Create reports/people, ala reports/households
+* TODO after the break, ask Daniel
+** The hog tax is 8%, right?
+   See purchases_2_vat.py
 * TODO ideas from others
 ** TODO read the answers from (ITP?) to some questions we have
    in their FAQ
