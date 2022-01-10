@@ -113,9 +113,8 @@
      # Maybe not necessary in a GUIless system.
    Copy ~/.ssh/id_rsa from my home system to the new system.
    chmod 600 ~/.ssh/id_rsa
-   update git repos
+   git repos: checkout the appropriate branches, update them
      Add my user name and email (Git will say how when I try to push).
-   checkout the "online" branch of tax.co.web
 ** configure filepaths
 *** tax.co.web/paths.json
     should be something like this:
@@ -138,18 +137,7 @@
    which gets reset after each restart of the EC2 instance.
 ** update native [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][record of the]] IPv4 Public IP address for the EC2 instance
    and login
-** Route53: associate a domain name with the EC2 instance
-   https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
-*** TODO PITFALL: The domain name I bought for the Observatorio is for Ohio
-    not N Virginia like the rest of what I do.
-**** TODO can I make it available in both?
-*** faster: edit an old association in Route53
-    I've already got something associated with sim.jefbrown.net.
-    Just tweak that to the new IPv4 address.
-*** how to create the association in Route53
-    Go to that domain.
-    Choose Create Record.
-    The first three boxes are all I used, and I think I left at least one of them the way it was.
+** [[id:c594dfb7-aaf8-4395-a5b4-d5e3c46ae6a4][AWS Route53]] - associate a domain name with the EC2 instance
 ** visit this URL
    http://sim.jefbrown.net/myapp/run_make/write_time
      based on this
