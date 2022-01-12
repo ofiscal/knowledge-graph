@@ -7,53 +7,51 @@
   [[id:b4493a4d-f640-43aa-9f7c-ef36c5371a03][AWS, frequently used commands]]
 * TODO change domain name
   ofiscal.microsimulaciones.org/
-* TODO set up automatic backups
-  https://aws.amazon.com/blogs/aws/aws-backup-ec2-instances-efs-single-file-restore-and-cross-region-backup/
 * TODO understand [[id:4e174852-e887-4a8b-a2ab-6a9ea6718f31][hibernation for AWS EC2]]
 * initial setup, how to
 ** launch an EC2 instance
-*** PITFALLs
-**** chose the cheapest 16GB machine here
+*** PITFALL: Before configuring: Use US East 1 (N Virginia)
+    Sao Paolo is almost twice as expensive (as of Jan 2022).
+    If few machines appear, refresh the page. I found one today (2020 05 04)
+*** the launch setup menu
+**** Page 1, Choose AMI: Ubuntu
+     Ubuntu is at least 5, maybe 10 GB slimmer.
+     It doesn't come with zip, maybe other stuff I want.
+**** Page 2, Choose Instance Type: lookup the cheapest, elsewhere
+     Find the cheapest 16GB machine here:
      https://aws.amazon.com/ec2/pricing/on-demand/
 ***** some cheap ones that look good enough
-****** r6g.large
-       2 processors, 16 GB, EBS, 10 gigabit, 10c/hr
-       Currently unavailable. Previous generation, I suspect.
-****** r5a.large
+****** TODO r5a.large
+       Was the best in July 2021 and again inn Jan 2022.
        2 processors, 16 GB, EBS, 10 gigabit, 10c/hr
        Same specs.
-**** Use US East, not Sao Paolo (which is like 20% more).
-     If few machines appear, refresh the page. I found one today (2020 05 04)
-***** use US East 1 (N Virginia)
-      Cheaper than Sao Paolo by at least 15%
-**** enable hibernation
+****** r6g.large -- never available
+       2 processors, 16 GB, EBS, 10 gigabit, 10c/hr
+       Currently unavailable. Previous generation, I suspect.
+**** Page 3, Configure Instance: enable hibernation
      or if not, make backups (from EC2 console)
-**** Ubuntu is at least 5, maybe 10 GB slimmer
-     It doesn't come with zip, maybe other stuff I want.
-*** the config I'm trying
-**** AMI: Amazon Linux 2
-**** Instance type: r5a.large, 16 GB RAM
-**** configureation: enable hibernation
-**** storage: 50 GB HD
+**** storage: 60 GB
      Using 45 with Ubuntu (which is slimmer than Amazon Linux) I ran into the ceiling when unpacking the docker images.
+     10 GB without anything fancy is $1/mo.
 **** Configure Security Group
      All of these are accessible from anywhere
        (not "My IP", and not "Custom", whatever that is).
      SSH   (default), which (I think) means* port 22
      HTTP  (added),   which (I think) means* port 80
      HTTPS (added),   which (I think) means* port 443
-**** be sure I don't have FTP (port 21) open
+** [[id:171d9a6a-8fc5-4f22-97f3-5ea33366596e][log into it]]
 ** install docker, emacs, git, zip
 *** for AL 2:	sudo amazon-linux-extras install docker emacs git
     If that doesn't work, `yum install` might.
 *** for AL:	sudo yum install -y docker emacs git
 *** for Ubuntu
     sudo apt update # IMPORTANT. Without this nothing happens.
+    sudo apt upgrade -y
     sudo apt install -y zip unzip jq git emacs docker.io
 ** transfer my data into the EC2 instance
 *** PITFALL: Keep the S3 bucket with my data
     Transferring from it to an EC2 instance (in the same region) is extremely fast. Transferring from here takes hours.
-*** package local stuff
+*** package local (Dell 2017) stuff
 **** .tar the docker images
 ***** where I put it
       ~/tax_co.docker.tar
@@ -74,6 +72,11 @@
       wget https://tax-co-archives.s3.amazonaws.com/tax_co.docker.tar
 ***** maybe I can download the whole bucket
       but who cares, the above is really fast
+**** adjust that S3 bucket
+     Update the repos with git.
+     If necessary, rebuild the Docker image.
+       I think this is faster than transferring it.
+     Replace the data on S3.
 **** could use S3 CLI, but it's more work
      aws s3 cp s3://my_bucket/my_folder/my_file.ext my_copied_file.ext
 *** uncompress
@@ -82,10 +85,11 @@
     # for the docker images, see "configure Docker" below
 ** Docker
 *** configure Docker not to need sudo
-   sudo dockerd &
-   sudo groupadd docker
-   sudo usermod -aG docker $JBB_AWS_USER
-   << close ssh and ssh back in >>
+    sudo dockerd &
+    sudo groupadd docker
+    sudo usermod -aG docker $JBB_AWS_USER
+      # probably "ubuntu" or "ec2-user"
+    << close ssh and ssh back in >>
 *** docker load -i tax_co.docker.tar
 *** PITFALL: Might need to reboot instance
     Before doing this, the Ubuntu instance didn't recognize that my non-root "ubuntu" user had docker privileges. (Maybe I could have rebooted Docker but it wasn't easy -- systemctl didn't do it, nor dockerd.)
@@ -122,12 +126,22 @@
     "docker_apache"          : "/mnt/apache2"
 ** transfer new data
 *** tax_co/secret
-* restart it, how to
-** update native ~/.ssh/config
+* (re)start it, how to
+** UNNEEDED? update native ~/.ssh/config
+   Read the file and it becomes obvious what to do.
+** to login, use ~/of/ssh-of.sh
+   :PROPERTIES:
+   :ID:       171d9a6a-8fc5-4f22-97f3-5ea33366596e
+   :END:
+   If it's not working, update the IP address,
+   which gets reset after each restart of the EC2 instance.
 ** update native [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][record of the]] IPv4 Public IP address for the EC2 instance
    and login
 ** Route53: associate a domain name with the EC2 instance
    https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html
+*** TODO PITFALL: The domain name I bought for the Observatorio is for Ohio
+    not N Virginia like the rest of what I do.
+**** TODO can I make it available in both?
 *** faster: edit an old association in Route53
     I've already got something associated with sim.jefbrown.net.
     Just tweak that to the new IPv4 address.
@@ -150,3 +164,6 @@
    Select "create snapshot".
 ** where mine is
    https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Snapshots:visibility=owned-by-me;snapshotId=snap-07448d2690e517576;sort=snapshotId
+* dubious TODOs
+** set up automatic backups
+   https://aws.amazon.com/blogs/aws/aws-backup-ec2-instances-efs-single-file-restore-and-cross-region-backup/
