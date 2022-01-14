@@ -109,8 +109,7 @@
 **** If this isn't done, Django will tell me, thanks to requirements.txt
 ** git
    git config --global core.editor "emacs -nw"
-     # -nw: use Emacs at the command line (not via the gui)
-     # Maybe not necessary in a GUIless system.
+     (details [[id:70269641-9c54-4bd8-93f8-6554005a913c][here]])
    Copy ~/.ssh/id_rsa from my home system to the new system.
    chmod 600 ~/.ssh/id_rsa
    git repos: checkout the appropriate branches, update them
