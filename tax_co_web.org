@@ -18,40 +18,12 @@
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
-* DONE use consumables groups like "pink tax"
-** DONE create (real) consumables group data
-*** columns: consumable group (primary), rate group
-*** rows
-    1 for each prefix
-      each of which gets its associated rate group
-    1 for each of the groups Daniel & Valentina defined
-      each of which is assigned the rate group corresponding to 0 VAT
-** DONE use the real consumable groups in the UI
-** DONE divide consumable_groups.csv in two: prefixes and other
-*** The UI for the other_consumables should just have a 0 column and an "add column" button.
-    serial
-*** rename consumable_groups.csv to consumable_groups_by_coicop
-    even though that's not all it is,
-    because that's all it will be soon
-*** ingest a fake other_groups.csv file
-    and make a UI table using that
-** DONE change the prefix for the non-prefix consumables table's rows
-   so that those are distinguishable from prefix rows,
-   which will be treated differently in the sim.
-** DONE bugfix: Changing a VAT rate in the UI now has an effect.
-** DONE *add* tax groups
-   e.g. if someone assigns a 5% pink tax, a 7% food tax, and a 1% coicop-starts-with-a-1 tax, pink food starting with a 1 gets 13% taxed.
-* DONE Thread the new, simpler vat columns through the rest of the program.
-** There's no "vat min" or "vat max" now, just "vat".
-** Fix: UI doesn't work if no VAT other groups provided.
-** Fix tests: don't worry about user-provided nonsense.
-   The tests won't be run for them anyway.
-   So just assume it's the usual 2019 regime.
-* DONE Merge branch consumable_groups into master.
-* add row names
-* in aws branch, disable tests
 * add explanations
-* TODO after the break, ask Daniel
+* TODO build failures for certain sample sizes
+** build fails at 1/1 sample
+   tests too, but build > tests
+** tests fail at 1/10 sample
+* BLOCKED asking Daniel : hog tax
 ** The hog tax is 8%, right?
    See purchases_2_vat.py
 * TODO new ideas
@@ -194,122 +166,6 @@
 ** TODO we never did the "impuesto nacional al consumo"
    See the bigger VAT spreadsheet.
 ** TODO incorporate DIAN data
-* TODO tax.co.web interface
-** DONE : UI for marginal income taxes
-   serial-ish
-*** DONE show the default marginal tax rates in the UI
-    alternatives
-**** DONE from Django, use the `csv` package rather than pandas
-***** overview
-      Don't read CSV directly from Javascript --
-      I don't think it has permission.
-      Unlike `pandas`, the Python3.7 that Apache runs is able to find `csv`.
-      See the example code from tax.co.web
-        git log -p 06be64e943b13b191f82d98729935f7573b8316b
-***** TODO steps
-****** DONE In JS, populate table fields with arbitrary data from Django.
-****** In Django, read the CSV files from tax.co/data.
-****** Hand the tax.co data, rather than the arbitrary data, to JS.
-       Dictionaries *cannot* be passed from Django to JS.
-       A [ ( tax_name :: String,
-             data :: [ [Float] ]
-	     ) ] should.
-****** Read the data from the webpage, and write to a user folder.
-       Refer to however I did this before.
-**** update Python-alternatives before installing Apache
-     In smsn-public, see node
-     :xJwSDrXLZT7kTuDv:
-**** hard-code the marginal rates into the Javascript
-**** FAILED use the tax.co:test branch of the docker image
-**** FAILED : Use pip to install NumPy for Python 3.7 too
-     It's already installed! So is pandas.
-     I can load it if I run python3.7 from the shell.
-     But I can't use it from Django/Apache.
-**** FAILED : Fix Python version mismatch that keeps pandas from loading.
-     I can't run Apache. It says it can't find libpcre.so.1,
-     even though pcre is installed.
-***** asking Django forum
-      https://forum.djangoproject.com/t/server-and-shell-using-different-python-versions/9303
-***** MAYBE DONE ? Install these without apt
-****** mod-wsgi
-       -apt install libapache2-mod-wsgi-py3
-       pip3 install mod-wsgi
-         requires apxs, which is in the `apache2-dev` apt repo
-****** apache
-       Installing it via apt causes python3.7 to be installed.
-****** ufw
-       Installing it via apt causes python3.7 to be installed.
-****** pip
-******* -apt install python3-pip
-         It installs python3.7.
-******* +python -m ensurepip --upgrade
-	Will this work if I use python3.8?
-        `ensurepip` is disabled in Debian's python
-******* If that doesn't work there's also get-pip.py:
-	https://pip.pypa.io/en/stable/installation/
-***** DONE figure out what causes apt to install python3.7
-      It's apache, ufw, mod-wsgi, and pip.
-***** Figure out why Apache doesn't respond after switching to Python 3.8.
-      specifically, after switching mod-wsgi
-***** TODO start apache differently
-      PREFIX seems to be /usr/local/apache2/bin/apachectl
-
-      # vi PREFIX/conf/httpd.conf
-      PREFIX/bin/apachectl -k start
-*** DONE NEXT: Pickle the manual_ingest data, look at it
-*** DONE create, store user .csv files from marginal rate tables
-    The tables' data is in the request POST.
-    The tables' names will have to determine where they are written.
-** TODO : UI for VAT
-*** TODO serial-ish
-**** DONE make experimental, mangled copies of the VAT tables
-     They should have a new column called "rate-group",
-     which takes, say, integer values between 1 and 10.
-**** DONE transpose the VAT table
-     This way I can add and delete rows easily.
-     But will the resulting POST object make sense?
-     Can radio buttons even be horizontally aligned?
-**** DONE create the UI
-***** The first column lets the user set the rates.
-***** Each subsequent column is a group of consumables.
-**** DONE make VAT-related HTML object names hierarchical.
-**** DONE Share code between VAT and income tax UI objects.
-     Don't try to take it any further --
-     to share the "insert table" function proved hard.
-**** DONE Permit adding rows in VAT UI.
-**** DONE Permit deleting rows in VAT UI.
-**** DONE pass even faker data from Django to JS
-     This doesn't have to be from vat/fake_grouped yet.
-     Just anything.
-**** DONE in tax.co, fix a table to assign consumable groups to tax rate groups
-**** DONE use the `rate_group` column of consumable_groups.csv
-     consumable group , rate group
-     food             , 0
-     medicine         , 1
-     travel           , 2
-     entertainment    , 2
-**** DONE ingest the fake_grouped VAT data into Django, and pass that to JS
-**** interpret the UI into user VAT data
-***** DONE In tax.co.web
-****** Get VAT data from POST object via make_hierarchical.
-       make_dict_one_level_hierarchical_from_top
-****** Write user VAT rate- and consumable-group data.
-***** In tax.co
-****** Compute "tax sum" columns in build/vat_rates.py
-       Initially this will just be the fake VAT rate,
-       derived from the fake group.
-       Then it will be real VAT.
-       Then it will be the sum of VAT and other taxes.
-****** Incorporate non-VAT taxes.
-       And, probably, relabel some things
-       (inc. but not only filenames).
-**** will need to disable or widen some tests
-     The ones that changing the tax rates could change.
-*** the radio table has to affect both kinds of VAT
-    Capitulo C and Coicop.
-** TODO Comment out non-pertinent config parameters.
-   Someday if there are more regimes I'm confident of,
-   I can reenable it.
 * TODO where are those \r symbols coming from?
   See long comment in
     ~/of/tax.co/online/haskell/Main.hs
