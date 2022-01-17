@@ -18,14 +18,14 @@
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
-* add explanations
-* TODO build failures for certain sample sizes
+* TODO failures at certain sample sizes
 ** build fails at 1/1 sample
    tests too, but build > tests
 ** tests fail at 1/10 sample
-* BLOCKED asking Daniel : hog tax
+* DONE asking Daniel : hog tax
 ** The hog tax is 8%, right?
    See purchases_2_vat.py
+** Answer: Yes.
 * TODO new ideas
 ** TODO shift to person-level analysis
    serial
