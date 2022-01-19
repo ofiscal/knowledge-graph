@@ -18,78 +18,13 @@
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
-* TODO failures at certain sample sizes
-** build fails at 1/1 sample
-   tests too, but build > tests
-** tests fail at 1/10 sample
+* TODO tests fail at 1/10 sample
+* TODO [[id:2d8ca73e-da41-4876-9a8e-982164228839][tax.co person-level analysis]]
 * DONE asking Daniel : hog tax
 ** The hog tax is 8%, right?
    See purchases_2_vat.py
 ** Answer: Yes.
 * TODO new ideas
-** TODO shift to person-level analysis
-   serial
-*** TODO simple solution
-    Split VAT proportionally to income;
-    if income is zero for everyone, divide it equally among the 18+
-*** the current situation
-    Most of the build code is devoted to creating a person-level data set. Once that's done there are two programs for building household-level data, and then one more to summarize them in a report.
-
-    The two household-building programs take a lot of means, mins and maxes -- "is there a child" is a max, "is it all women" is a min, etc. It also computes income taxes and a lot of VAT variables.
-*** TODO confused
-    What about households with no income?
-
-    ph["income share"] = ph["income"] / ph["household income"]
-
-    for c in ho_columns:
-      ph[c] = ph[c] * ph["income share"]
-*** TODO the plan
-**** Make a new person-level data set that
-***** incorporates some of those househld-level variables
-****** import and impute
-       Import all the income tax, VAT, and spending from the households,
-       then impute it to indivudals based on earnings.
-       Preserve individual total income, to divide by household income.
-******* the variables
-	? "(rank, labor income) = *" # for * in [1,5]
-	total income (but what's it called?)
-	  so that VAT can be allocated among household members
-	  according to their share of the household's total income
-	'transactions',
-	'value, consumption',
-	'value, non-purchase',
-	'value, purchase',
-	'value, spending'
-	'value, tax, predial',
-	'value, tax, purchaselike non-predial non-VAT',
-	'value, tax, purchaselike non-VAT',
-	'vat paid',
-****** thereafter ignore "household" column => break families apart
-       A household with two equal earners that spent 10e6 pesos and paid 2e6 in taxes will at the individual look like two adults who spent 5e6 and paid 1e6 in taxes, and mauybe some number of people (kids, etc.) with no money.
-***** restrict to union (people with income, people in labor force)
-      labor force = employed + unemployed
-***** computes the person-level equivalents of others
-****** the two general categories
-******* vat-related fractions
-******* income percentiles
-	exclude people with no earnings and no unemployment status
-****** model code & specific variable names
-       households["income-decile"] = (
-	 util.noisyQuantile( 10, 0, 1, households["income"] ) )
-       households["income-percentile"] = (
-	 util.noisyQuantile( 100, 0, 1, households["income"] ) )
-       households["one"] = 1 # used in report/households.py to create the trivial partition.
-       merge["vat / purchase value" ] = (
-	 merge["vat paid"]   / merge["value, purchase" ] )
-       merge["vat/income"] = (
-	 merge["vat paid"]   / merge["income"] )
-       merge["purchase value / income"   ] = (
-	 merge["value, purchase"] / merge["income"] )
-**** Make a new person-level report
-     analogous to the household-level report we've already got. Exactly the same variables, just with slightly different meanings as described above.
-**** Send users both kinds of spreadsheets.
-     If they don't understand household-level results they can ignore them.
-*** record these changes in [[id:f59167a2-3e74-4d37-a9ec-780c413789a4][the Overleaf doc]]
 ** TODO read the answers from (ITP?) to some questions we have
    in their FAQ
    https://itep.org/itep-tax-model/
