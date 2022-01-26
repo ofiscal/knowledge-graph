@@ -18,42 +18,8 @@
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
-* TODO [[id:7f3be852-18ca-4381-8462-c6425cfa37ca][Mailgun & tax.co.web]]
-* TODO Are there still purchases with vat paid > 0 and "value, purchase" == 0?
-** There were before the bugfix.
-   They are all COICOP-encoded;
-     the capitulo C stuff shows no such problems.
-   They all use COICOP code 12700601, which is the predial:
-     "Impuesto predial y de valorizaci�n de la(s) vivienda(s) ocupada(s) por el hogar,12700601,0.0,0.0,0.0"
-** definitions
-*** purchases["value"] =	      (in purchases_2_vat.py)
-    purchases["per month"] * purchases["value"]
-*** purchases["vat paid"] =	      (in purchases_2_vat.py)
-    purchases["value"] * purchases["vat frac"]
-*** purchases["value, purchase"] =    (in purchase_sums.py)
-    (purchases[ "is-purchase" ] > 0) * purchases["value"]
-*** merge["vat / purchase value" ] =  (in households_2_purchases.py)
-    merge["vat paid"] / merge["value, purchase" ]
-*** purchases["is-purchase"] is (renamed but) defined very early
-** More notes from during Thursday's bugfix.
-   "vat / purchase value" is too big sometimes
-**** ??? In purchase_sums.py, vat paid is zeroed for non-purchases!
-     for col in vat_columns:
-       purchases[col] = (
-	 (purchases[ "is-purchase" ] > 0) *
-	 purchases[col] )
-**** The bug shows up in households_2_purchases_test.py
-     around this line:
-       "vat / purchase value"      : cl.InRange( 0, 0.3 ),
-**** the weird households
-  hs = ( merge
-	 [ merge["vat / purchase value"] > 0.3 ]
-	 [ "household" ] )
-       == [ 215095
-          , 524310
-	  , 598117
-	  , 610546 ]
-* TODO Why is Gmail blocking me again?
+* [[id:7f3be852-18ca-4381-8462-c6425cfa37ca][Mailgun & tax.co.web]]
+  In case Gmail breaks more seriously.
 * TODO things we define and don't use
   We don't use the last two of these.
   (They're all defined in the same place, purchase_sums.py.)
