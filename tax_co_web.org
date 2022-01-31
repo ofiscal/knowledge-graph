@@ -20,6 +20,10 @@
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]
 * [[id:7f3be852-18ca-4381-8462-c6425cfa37ca][Mailgun & tax.co.web]]
   In case Gmail breaks more seriously.
+* DONE consumable_groups_by_coicop.csv should include data from coicop_major_codes.tsv
+  And maybe that should be .csv, and the .tsv saved in the 1.dos2unix subfolder
+* TODO [[id:2d8ca73e-da41-4876-9a8e-982164228839][tax.co person-level analysis]]
+* TODO replace vat/income -> vat / income
 * TODO things we define and don't use
   We don't use the last two of these.
   (They're all defined in the same place, purchase_sums.py.)
@@ -28,7 +32,6 @@
   "value, purchase"
   "value, tax, purchaselike non-predial non-VAT"
   "value, non-purchase"
-* TODO [[id:2d8ca73e-da41-4876-9a8e-982164228839][tax.co person-level analysis]]
 * DONE asking Daniel : hog tax
 ** The hog tax is 8%, right?
    See purchases_2_vat.py
