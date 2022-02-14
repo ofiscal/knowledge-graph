@@ -2,10 +2,16 @@
 :ID:       2d8ca73e-da41-4876-9a8e-982164228839
 :END:
 #+title: tax.co person-level analysis
+* TODO add tests for people_4
+  python/build/people_4_post_households_test.py
+* TODO create the person-level report
+  report/earners.py
+* TODO what about n/a values for those employment stats?
+* TODO rename "vat/income" -> "vat / income"
 * on employment stats
   Ingrid: Study, housework or incapacitated = "inactive"
   Descopuado = could work but not looking for it.
-  Poblacion economicamente activad = of working age and working or looking for it.
+  Poblacion economicamente activa = of working age and working or looking for it.
   That thing is split into ocupados & desocupados.
   Ocupados includes everyone who works, whether paid or not.
 o  Desocupados is everyone else. It includes "desempleo abierto" and "desempleo oculto". The first is not working & looking for it. The second is that they looked for work in the last 12 months and they have a valid reason to be discouraged and they're available to work. They (?) left out a category, people not working and not trying to do so.
@@ -18,13 +24,13 @@ o  Desocupados is everyone else. It includes "desempleo abierto" and "desempleo 
 * TODO For employed, remove people who make no money.
 * TODO Include children who work
 ** And if they are a big fraction, point that out.
-* TODO Households with no income are weird.
+* DONE Households with no income are weird.
 ** a naive income share calculation divides by 0 sometimes
    ph["income share"] = ph["income"] / ph["household income"]
 
    for c in ho_columns:
      ph[c] = ph[c] * ph["income share"]
-** TODO simple solution
+** simple solution
    Split VAT proportionally to income.
    If income is zero for everyone,
    divide it equally among people aged > 17.
@@ -89,6 +95,7 @@ o  Desocupados is everyone else. It includes "desempleo abierto" and "desempleo 
     P6340  : "Durante los últimos 12 meses ... ha hecho alguna diligencia para conseguir trabajo o instalar un negocio?"
     P6350  : "Si le hubiera resultado algún trabajo a ... ¿estaba disponible la semana pasada para empezar a trabajar?"
 ** TODO restrict analysis to union of people with income & adults in labor force
+   Divide household expenditures among those people.
 ** Make a new person-level report.
    Analogous to the household-level report we've already got. Exactly the same variables, just with slightly different meanings as described above.
 ** Send users both kinds of spreadsheets.

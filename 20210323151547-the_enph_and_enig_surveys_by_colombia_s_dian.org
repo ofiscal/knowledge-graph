@@ -7,6 +7,21 @@
 There's an enig.org file, an enph.org file, and this one which pertains to both.
 * PITFALL: These notes are stale, from 2018-ish
 But they might include some insights into the data due to David Suarez not recorded elsewhere.
+* some GEIH-ENPH variable correspondences
+  :PROPERTIES:
+  :ID:       84203014-dccc-4ca0-b57a-f83e52b4219b
+  :END:
+  employment_variables_in_geih_and_enph = {
+    # GEIH  : ENPH
+    "p1125" : "P6240",
+    "p5953" : "P6250",
+    "p6260" : "P6260",
+    "p8340" : "P6270",
+    "p6280" : "P6280",
+    "p6310" : "P6310",
+    "p6340" : "P6340",
+    "p6351" : "P6350",
+  }
 * to do
 ** interpreting frequencies
 *** problem: 2.1 or 2?

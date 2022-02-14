@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       45a20eff-9c1e-4c93-ac93-597e81f14ef9
+:ROAM_ALIASES: GEIH
+:END:
+#+title: Gran Encuesta Integrada de Hogares (Colombian economic survey)
+* [[id:84203014-dccc-4ca0-b57a-f83e52b4219b][some GEIH-ENPH variable correspondences]]
