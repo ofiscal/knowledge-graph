@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* learn to SSH over HTTPS
+  https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
 * [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 * [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][putting tax.co online]]
 * BLOCKED dubious

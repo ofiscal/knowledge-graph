@@ -15,6 +15,7 @@
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/myapp/run_make/write_time
+* TODO ? Use [[id:8475bbbf-efbb-423e-901c-b464e807784c][parquet (file format)]].
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
    [[id:214c56b0-03f1-4709-9bc9-2ec6f742fa16][how to use Linux-, not Windows-style, line terminators in csvlib]]

@@ -10,6 +10,7 @@
    https://www.overleaf.com/project/5e595b989b19b0000110cfbe
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
+* TODO ? Use [[id:8475bbbf-efbb-423e-901c-b464e807784c][parquet (file format)]].
 * How to see that total income includes (exactly once) all capital income
 ** dividends are covered exactly once
 It's only in income_short_name_dict_cash,
