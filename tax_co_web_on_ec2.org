@@ -138,6 +138,7 @@
 ** update native [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][record of the]] IPv4 Public IP address for the EC2 instance
    and login
 ** [[id:c594dfb7-aaf8-4395-a5b4-d5e3c46ae6a4][AWS Route53]] - associate a domain name with the EC2 instance
+** start the docker container
 ** visit this URL
    http://sim.jefbrown.net/myapp/run_make/write_time
      based on this

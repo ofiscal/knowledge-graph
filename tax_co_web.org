@@ -15,6 +15,11 @@
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/myapp/run_make/write_time
+* TODO email all relevant .xlsx files
+  report_earners.detail.2019.xlsx
+  report_earners_tmi.detail.2019.xlsx
+  report_households.detail.2019.xlsx
+  report_households_tmi.detail.2019.xlsx
 * TODO ? Use [[id:8475bbbf-efbb-423e-901c-b464e807784c][parquet (file format)]].
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
