@@ -15,6 +15,35 @@
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/myapp/run_make/write_time
+* TODO u : meeting notes
+** translate UVTs into 2022 COP
+   because COP v. UVT: confusing
+*** The sim still runs in 2017 COP.
+    That's fine, as the graphical results will just be changes.
+*** TODO get COP per UVT from microsim.
+** TODO URGENT: show images and offer downloads in browser
+*** why urgent
+**** because sending from my own email is dangerous
+*** Can I open a new tab with the image, without storing the image?
+*** bar graphs of change of tax burden for deciles
+    [[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
+** TODO Get someone's IP?
+   I need a way of ensuring one person doesn't flood the order queue.
+** So they can't make more than one request
+** always use full sample
+** ? rename "detail"
+** thresholds have to be monotonic
+** use more memory
+** select rows, columns
+** add a note about monotonicity?
+** the IVA buckets are approximate
+   :PROPERTIES:
+   :ID:       106ca7be-c9de-42c6-89aa-db93c5202304
+   :END:
+** need instructions
+** explain that it computes tax burdens, hence post-tax income, but does not do GE -- everyone's base income is unchanged
+** eliminate the option of deleting columns in the 2 IVA tables
+** forward clicks to PUJ
 * TODO email all relevant .xlsx files
   report_earners.detail.2019.xlsx
   report_earners_tmi.detail.2019.xlsx
