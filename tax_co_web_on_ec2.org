@@ -5,6 +5,51 @@
 #+title: deploy tax.co.web over AWS EC2
 * refs
   [[id:b4493a4d-f640-43aa-9f7c-ef36c5371a03][AWS, frequently used commands]]
+* TODO think about this diff
+** it's between the aws branch on EC2 and the master branch
+** I can't save it as AWS because there appears to already be something called AWS on Github.
+** the diff
+diff --git a/bash/run-makefile.py b/bash/run-makefile.py
+index 4b4a83a..ba6c140 100644
+--- a/bash/run-makefile.py
++++ b/bash/run-makefile.py
+@@ -44,8 +44,8 @@ with open( os.path.join( logs_path, "make.txt"),
+
+ targets = [ "show_config",
+             "show_params",
+-            "tests",
+-            "reports",
++            # "tests",
++            "report_households"
+           ]
+   # Makefile targets.
+   # For the full list of possible targets,
+diff --git a/docker/Dockerfile b/docker/Dockerfile
+index 98d6800..59826b0 100644
+--- a/docker/Dockerfile
++++ b/docker/Dockerfile
+@@ -100,7 +100,7 @@ RUN chmod +777 /usr/bin/python-from-here
+ # PITFALL: While the names "jeff" and "users" aren't important,
+ # the IDs are. This is designed to match my system,
+ # where "jeff" = 1000 and "users" = 100.
+-RUN groupmod -g 100 users            && \
++RUN groupmod -g 1000 users           && \
+     useradd -r -u 1000 -g users jeff && \
+     mkdir /home/jeff                 && \
+     chmod +777 /home/jeff            && \
+diff --git a/docker/commands.sh b/docker/commands.sh
+index ccf3f51..d4b3c7c 100644
+--- a/docker/commands.sh
++++ b/docker/commands.sh
+@@ -5,7 +5,7 @@
+ # A trick to quickly edit a Docker-locked file from the host system:
+ # https://stackoverflow.com/a/26915343
+
+-DOCKER_IMAGE_SUFFIX="2022-01-11.Conda-2021-11_user-jeff"
++DOCKER_IMAGE_SUFFIX="2022-01-11.for-aws.Conda-2021-11_user-jeff"
+
+ # Start a docker container based on the latest image.
+ docker run --name tax -itd                   \
 * TODO ? use [[id:c3b5cb8e-0b24-49d8-b4c4-920f210abc83][Terraform]]
 * TODO change domain name
   ofiscal.microsimulaciones.org/
@@ -137,8 +182,9 @@
    which gets reset after each restart of the EC2 instance.
 ** update native [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][record of the]] IPv4 Public IP address for the EC2 instance
    and login
-** [[id:c594dfb7-aaf8-4395-a5b4-d5e3c46ae6a4][AWS Route53]] - associate a domain name with the EC2 instance
+** in [[id:c594dfb7-aaf8-4395-a5b4-d5e3c46ae6a4][AWS Route53]],associate a domain name with the EC2 instance
 ** start the docker container
+** TODO add more steps -- start services in the docker container?
 ** visit this URL
    http://sim.jefbrown.net/myapp/run_make/write_time
      based on this

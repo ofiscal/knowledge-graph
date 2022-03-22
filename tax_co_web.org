@@ -14,7 +14,20 @@
     http://ofiscal-puj.org/microsim/run_make/manual_ingest
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
-    http://ofiscal-puj.org/myapp/run_make/write_time
+    http://ofiscal-puj.org/microsim/run_make/write_time
+* TODO for Daniel
+** move output/recip-1/bk/* up one folder
+* TODO debugging Apache|Django|AWS
+** a setup that worked
+*** tax.co.web
+    6ec7510ceed3a1d70e4533d91ad6f6d7fd39a092
+  -ALLOWED_HOSTS = ['.localhost', '127.0.0.1', "ofiscal-puj.org"]
+  +ALLOWED_HOSTS = ['.localhost', '127.0.0.1', "www.ofiscal-puj.org"]
+*** tax.co
+    55df68f263cf76a8a406ea826971cc4c9b4faf76
+*** this URL
+    http://www.ofiscal-puj.org/microsim/run_make/manual_ingest
+* TODO find notes about payroll tax sim
 * TODO u : meeting notes
 ** TODO URGENT: bar graphs of change of tax burden for deciles
    [[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
