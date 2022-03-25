@@ -15,68 +15,53 @@
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/microsim/run_make/write_time
-* TODO for Daniel
-** move output/recip-1/bk/* up one folder
-* TODO debugging Apache|Django|AWS
-** a setup that worked
-*** tax.co.web
-    6ec7510ceed3a1d70e4533d91ad6f6d7fd39a092
-  -ALLOWED_HOSTS = ['.localhost', '127.0.0.1', "ofiscal-puj.org"]
-  +ALLOWED_HOSTS = ['.localhost', '127.0.0.1', "www.ofiscal-puj.org"]
-*** tax.co
-    55df68f263cf76a8a406ea826971cc4c9b4faf76
-*** this URL
-    http://www.ofiscal-puj.org/microsim/run_make/manual_ingest
+* TODO make a new AWS image
+* TODO Know if someone closes the page
+  If so, stop the process and delete their folder.
+* TODO offer a link they can visit later
+* TODO Get someone's IP?
+** So they can't make more than one request
+   I need a way of ensuring one person doesn't flood the order queue.
+* TODO URGENT: bar graphs of change of tax burden for deciles
+  [[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
+** what to draw
+  The horizontal axis will be income deciles or percentiles.
+  The vertical one needs to be "after tax income".
+    The income column is just "income".
+    VAT paid
+      is the VAT column
+    tax, income
+      is the major one
+    All of these might or might not be part of "tax, income"
+      tax, income, gmf
+      cesantias
+      tax, ss, cajas de compensacion
+      tax, ss, parafiscales
+      tax, ss, solidaridad
+      tax, ss, salud, employer
+      tax, ss, salud
+    Some that we're ignoring?
+      tax, predial
+      whatever else is similar to that
+* TODO URGENT: show images and offer downloads in browser
+** why urgent
+*** because sending from my own email is dangerous
+** Can I open a new tab with the image, without storing the image?
 * TODO find notes about payroll tax sim
-* TODO u : meeting notes
-** TODO URGENT: bar graphs of change of tax burden for deciles
-   [[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
-*** what to draw
-   The horizontal axis will be income deciles or percentiles.
-   The vertical one needs to be "after tax income".
-     The income column is just "income".
-     VAT paid
-       is the VAT column
-     tax, income
-       is the major one
-     All of these might or might not be part of "tax, income"
-       tax, income, gmf
-       cesantias
-       tax, ss, cajas de compensacion
-       tax, ss, parafiscales
-       tax, ss, solidaridad
-       tax, ss, salud, employer
-       tax, ss, salud
-     Some that we're ignoring?
-       tax, predial
-       whatever else is similar to that
-** TODO URGENT: show images and offer downloads in browser
-*** why urgent
-**** because sending from my own email is dangerous
-*** Can I open a new tab with the image, without storing the image?
-** TODO Get someone's IP?
-*** So they can't make more than one request
-    I need a way of ensuring one person doesn't flood the order queue.
-** DONE always use full sample
-** TODO internalize: to change the sample size
-   Change the default value of `subsample`
-   in the definition of `class TaxConfig`.
-** ? rename "detail"
-** use more memory
-** select rows, columns
-** need instructions
-*** explain that it computes tax burdens, hence post-tax income, but does not do GE -- everyone's base income is unchanged
-*** thresholds have to be monotonic
-*** the IVA buckets are approximate
-    :PROPERTIES:
-    :ID:       106ca7be-c9de-42c6-89aa-db93c5202304
-    :END:
-** forward clicks to PUJ
-* TODO email all relevant .xlsx files
-  report_earners.detail.2019.xlsx
-  report_earners_tmi.detail.2019.xlsx
-  report_households.detail.2019.xlsx
-  report_households_tmi.detail.2019.xlsx
+* TODO internalize: to change the sample size
+  Change the default value of `subsample`
+  in the definition of `class TaxConfig`.
+* streamline [[id:cf805990-0558-4608-9d51-ccd76d82d036][tax.co.web's request queue]]
+* ? rename "detail"
+* use more memory
+* need instructions
+** explain that it computes tax burdens, hence post-tax income, but does not do GE -- everyone's base income is unchanged
+** thresholds have to be monotonic
+** the IVA buckets are approximate
+   :PROPERTIES:
+   :ID:       106ca7be-c9de-42c6-89aa-db93c5202304
+   :END:
+* forward clicks to PUJ
 * TODO ? Use [[id:8475bbbf-efbb-423e-901c-b464e807784c][parquet (file format)]].
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
