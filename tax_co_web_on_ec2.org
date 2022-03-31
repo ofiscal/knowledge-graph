@@ -51,8 +51,6 @@ index ccf3f51..d4b3c7c 100644
  # Start a docker container based on the latest image.
  docker run --name tax -itd                   \
 * TODO ? use [[id:c3b5cb8e-0b24-49d8-b4c4-920f210abc83][Terraform]]
-* TODO change domain name
-  ofiscal.microsimulaciones.org/
 * TODO understand [[id:4e174852-e887-4a8b-a2ab-6a9ea6718f31][hibernation for AWS EC2]]
 * to launch an EC2 instance for tax.co.web "from scratch"
 ** PITFALL: *WAY EASIER* is to [[id:205fb9d2-73f2-4c02-aba8-3bbf974c8dc2][use the existing AMI]] called "tax.co(.web)"

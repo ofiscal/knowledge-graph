@@ -15,37 +15,8 @@
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/microsim/run_make/write_time
-* TODO Know if someone closes the page
-  If so, stop the process and delete their folder.
-* TODO offer a link they can visit later
-* TODO Get someone's IP?
-** So they can't make more than one request
-   I need a way of ensuring one person doesn't flood the order queue.
-* TODO URGENT: bar graphs of change of tax burden for deciles
-  [[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
-** what to draw
-   The horizontal axis will be income deciles or percentiles.
-   The vertical one needs to be "after tax income".
-     The income column is just "income".
-     VAT paid
-       is the VAT column
-     tax, income
-       is the major one
-     All of these might or might not be part of "tax, income"
-       tax, income, gmf
-       cesantias
-       tax, ss, cajas de compensacion
-       tax, ss, parafiscales
-       tax, ss, solidaridad
-       tax, ss, salud, employer
-       tax, ss, salud
-     Some that we're ignoring?
-       tax, predial
-       whatever else is similar to that
-* TODO URGENT: show images and offer downloads in browser
-** why urgent
-*** because sending from my own email is dangerous
-** Can I open a new tab with the image, without storing the image?
+* TODO URGENT: [[id:7971c41c-a733-4e13-8207-8664b75b39b7][graph changes in tax burden by decile]]
+* TODO URGENT: [[id:cac03e9f-585d-48f6-9d05-c4e73d7b19bc][show images, offer downloads from browser, don't email]]
 * TODO find notes about payroll tax sim
 * TODO internalize: to change the sample size
   Change the default value of `subsample`

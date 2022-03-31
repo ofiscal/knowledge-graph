@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       7971c41c-a733-4e13-8207-8664b75b39b7
+:END:
+#+title: graph changes in tax burden by decile in tax.co.web
+[[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
+* what to draw
+  The horizontal axis will be income deciles or percentiles.
+  The vertical one needs to be the sum of all taxes.
+    The income column is just "income".
+    VAT paid
+      is the VAT column
+    tax, income
+      is the major one
+    All of these might or might not be part of "tax, income"
+      tax, income, gmf
+      cesantias
+      tax, ss, cajas de compensacion
+      tax, ss, parafiscales
+      tax, ss, solidaridad
+      tax, ss, salud, employer
+      tax, ss, salud
+    Some that we're ignoring?
+      tax, predial
+      whatever else is similar to that
