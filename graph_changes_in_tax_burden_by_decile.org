@@ -2,8 +2,8 @@
 :ID:       7971c41c-a733-4e13-8207-8664b75b39b7
 :END:
 #+title: graph changes in tax burden by decile in tax.co.web
-[[id:106ca7be-c9de-42c6-89aa-db93c5202304][This]] makes that hard.
-* what to draw
+* TODO Rediscover how to draw anything.
+* TODO Include every tax in the (new?) variable "tax".
   The horizontal axis will be income deciles or percentiles.
   The vertical one needs to be the sum of all taxes.
     The income column is just "income".
@@ -22,3 +22,15 @@
     Some that we're ignoring?
       tax, predial
       whatever else is similar to that
+* TODO Make a baseline every time.
+** Bear in mind that [[id:106ca7be-c9de-42c6-89aa-db93c5202304][this]] means the baseline is approximate.
+** Don't modify the makefile, but create a new user.
+   Call the user "baseline" (no ampersand needed).
+   Check user/baseline/ into git.
+   In run-makefile.py, first run on baseline,
+   then on the current user.
+** Just run it once, for the full sample.
+* TODO Draw something that compares to the baseline.
+** Compare the full-sample baseline results to the current user's.
+   Do that even if the current user is using another subsample.
+   It can only help.
