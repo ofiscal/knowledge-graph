@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       b5b1e9a8-12ab-4f46-8d3a-59202df8a57a
+:END:
+#+title: ofiscal
+* [[id:cb1bb067-d8cc-48d2-ad90-60ba4308adf8][ofiscal, todo]]
+* [[id:b162f515-3010-4e3f-b39a-eba879b839dd][ofiscal website]]
+* [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
+* our virtual office
+  https://gather.town/preeaif0RiJXfiW6/Obsevatorio%20Fiscal
+* ofiscal, some contacts from
+** [[id:c392a730-16c4-464f-8d26-501a0a4ebf06][Felipe Tello]] is making a movie about us.
+** [[id:4fec30a7-6b55-4265-98f5-127374a65ed3][Camilo Andres Avila Carreño]] at DANE
+** [[id:8606b159-7e0b-467c-8c2a-c5e2f2653662][Cesar Attilio Ferrari]]
+** [[id:2cc322dd-f644-41ef-b2da-3032127a37b2][Gabriel José Lubo Cárdenas]]
+* ofiscal, processes
+** [[id:3478dbef-feca-4776-858a-63e59b8efe83][pipeline for publication]]
+* some work I did
+** [[id:37557bc3-593e-4288-99ec-69e6107b2ff8][Colombia 2021 Tax Expenditures Report, by the Tax Experts Comission]]
+   I summarized section 4, on the CIT.
