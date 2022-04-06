@@ -13,31 +13,31 @@
      python/draw/examples.py
 ** to draw paired bar charts, like we did in the `cities` repo
    ~/of/_old/cities/Code/draw/chart/pairs.py
-* TODO Include every tax in the (new?) variable "tax".
-  The horizontal axis will be income deciles or percentiles.
-  The vertical one needs to be the sum of all taxes.
-    The income column is just "income".
-    VAT paid
-      is the VAT column
-    tax, income
-      is the major one
-    All of these might or might not be part of "tax, income"
-      tax, income, gmf
-      cesantias
-      tax, ss, cajas de compensacion
-      tax, ss, parafiscales
-      tax, ss, solidaridad
-      tax, ss, salud, employer
-      tax, ss, salud
-    Some that we're ignoring?
-      tax, predial
-      whatever else is similar to that
+* TODO Create the (new?) variable "tax".
+** where to find them
+** some variables
+   VAT paid
+     is the VAT column
+   tax, income
+     is the major one
+   All of these might or might not be part of "tax, income"
+     tax, income, gmf
+     cesantias
+     tax, ss, cajas de compensacion
+     tax, ss, parafiscales
+     tax, ss, solidaridad
+     tax, ss, salud, employer
+     tax, ss, salud
+  Some that we're ignoring?
+     tax, predial
+     Whatever else is similar to that --
+       showing up in the ENPH as a purchase.
 * TODO Make a baseline every time.
   :PROPERTIES:
   :ID:       b8f2e47c-a378-439b-8836-769065fb41be
   :END:
 ** Bear in mind that [[id:106ca7be-c9de-42c6-89aa-db93c5202304][this]] means the baseline is approximate.
-** Don't modify the makefile, but create a new user.
+** Don't modify the Makefile, but create a new user.
    Call the user "baseline" (no ampersand needed).
    Check user/baseline/ into git.
    In run-makefile.py, first run on baseline,
