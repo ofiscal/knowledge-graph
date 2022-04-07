@@ -16,22 +16,35 @@
 * TODO Create the (new?) variable "tax".
 ** where to find them
 ** some variables
-   VAT paid
-     is the VAT column
-   tax, income
-     is the major one
-   All of these might or might not be part of "tax, income"
-     tax, income, gmf
-     cesantias
-     tax, ss, cajas de compensacion
-     tax, ss, parafiscales
+   :PROPERTIES:
+   :ID:       5ddcf6f3-75c6-4d0a-abea-00e612953ebb
+   :END:
+*** VAT paid
+*** tax, income = the sum of
+    python/regime/r2019.py
+
+    "tax, income, most"
+    "tax, income, dividend"
+    "tax, income, ganancia ocasional"
+    "tax, income, gmf"
+*** BLOCKED (asking Luis) about ss taxes
+**** raw
+     cesantias + primas             # PITFALL: nominally from the employer
+     tax, ss, cajas de compensacion # PITFALL: nominally from the employer
+     tax, ss, parafiscales	    # PITFALL: nominally from the employer
      tax, ss, solidaridad
-     tax, ss, salud, employer
      tax, ss, salud
-  Some that we're ignoring?
-     tax, predial
-     Whatever else is similar to that --
-       showing up in the ENPH as a purchase.
+     tax, ss, salud, employer
+     tax, ss, pension
+     tax, ss, pension, employer
+**** a partial sum
+     ppl["tax, ss, total employee contribs"] = (
+       ppl["tax, ss, pension"] +
+       ppl["tax, ss, salud"] +
+       ppl["tax, ss, solidaridad"] )
+*** purchase_sums["value, tax, purchaselike non-VAT"] = (
+      purchase_sums["value, tax, predial"] +
+      purchase_sums["value, tax, purchaselike non-predial non-VAT"] )
 * TODO Make a baseline every time.
   :PROPERTIES:
   :ID:       b8f2e47c-a378-439b-8836-769065fb41be
