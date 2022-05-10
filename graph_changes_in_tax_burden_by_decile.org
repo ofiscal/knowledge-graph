@@ -13,6 +13,12 @@
      python/draw/examples.py
 ** to draw paired bar charts, like we did in the `cities` repo
    ~/of/_old/cities/Code/draw/chart/pairs.py
+* code of interest
+** Demo: how to draw colored arrows over a bar chart.
+   commit 493f381ab7d30fc35f60ccee9f1354e860b0999a
+   Date:   Thu Mar 31 17:22:15 2022 -0500
+
+   M   python/draw/examples.py
 * TODO Create the (new?) variable "tax".
 ** where to find them
 ** some variables
@@ -27,7 +33,7 @@
     "tax, income, dividend"
     "tax, income, ganancia ocasional"
     "tax, income, gmf"
-*** BLOCKED (asking Luis) about ss taxes
+*** (asking Luis) about ss taxes
 **** raw
      cesantias + primas             # PITFALL: nominally from the employer
      tax, ss, cajas de compensacion # PITFALL: nominally from the employer
@@ -42,9 +48,9 @@
        ppl["tax, ss, pension"] +
        ppl["tax, ss, salud"] +
        ppl["tax, ss, solidaridad"] )
-*** purchase_sums["value, tax, purchaselike non-VAT"] = (
-      purchase_sums["value, tax, predial"] +
-      purchase_sums["value, tax, purchaselike non-predial non-VAT"] )
+*** peurchase_sums["value, tax, purchaselike non-VAT"] = (
+    purchase_sums["value, tax, predial"] +
+    purchase_sums["value, tax, purchaselike non-predial non-VAT"] )
 * TODO Make a baseline every time.
   :PROPERTIES:
   :ID:       b8f2e47c-a378-439b-8836-769065fb41be
