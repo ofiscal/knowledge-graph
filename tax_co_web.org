@@ -16,9 +16,6 @@
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/microsim/run_make/write_time
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO Add a note that docker pull takes forever
-* TODO add ENPH documentation to github image
-* TODO tax.co instructuons should use http for remotes
 * TODO URGENT: [[id:7971c41c-a733-4e13-8207-8664b75b39b7][graph changes in tax burden by decile]]
 * TODO URGENT: [[id:cac03e9f-585d-48f6-9d05-c4e73d7b19bc][show images, offer downloads from browser, don't email]]
 * TODO URGENT: include corporate income taxes
