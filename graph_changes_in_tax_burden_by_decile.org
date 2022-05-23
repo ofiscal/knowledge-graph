@@ -3,6 +3,9 @@
 :END:
 #+title: graph changes in tax burden by decile in tax.co.web
 * How to draw.
+  :PROPERTIES:
+  :ID:       be19a110-46de-46aa-9a1e-87e2f54c48a6
+  :END:
 ** draw arrows, red for up, green for down
    :PROPERTIES:
    :ID:       bf27d9d3-3dc0-418f-8a32-322d65c0dc93
@@ -11,7 +14,8 @@
      arrows_on_bars()
    in
      python/draw/examples.py
-** to draw paired bar charts, like we did in the `cities` repo
+** to draw paired bar charts, like
+   we did in the `cities` repo
    ~/of/_old/cities/Code/draw/chart/pairs.py
 * DONE [[id:5c33d122-94ee-41fa-ba7e-b1ed1a539fc4][Create a new total tax variable.]]
 * DONE Make a baseline every time.
@@ -44,7 +48,7 @@
    The baseline user's config should use the full sample.
    That's affordable because it won't actually run every time --
    it will only build the baseline user when the code changes.
-* TODO Draw something that compares to the baseline.
+* DONE [[id:be19a110-46de-46aa-9a1e-87e2f54c48a6][Draw]] something that compares to the baseline.
 ** This should be a separate makefile target. "compare".
    That way I can avoid running it for the baseline user.
    (It wouldn't be terrible if it did,
@@ -57,3 +61,5 @@
 ** Compare the full-sample baseline results to the current user's.
    Do that even if the current user is using another subsample.
    It can only help.
+* TODO BUG: Comparison comes up empty.
+  Look at high-tax-user and low-tax-user in symlinks for examples.
