@@ -61,5 +61,33 @@
 ** Compare the full-sample baseline results to the current user's.
    Do that even if the current user is using another subsample.
    It can only help.
-* TODO BUG: Comparison comes up empty.
-  Look at high-tax-user and low-tax-user in symlinks for examples.
+* DONE BUG: Comparison comes up empty.
+  Look at high-tax-user, low-tax-user and baseline.
+** DONE compare final data sets
+   from which the pictures are drawn
+*** they do in fact appear to be equal on the "tax" row
+** DONE people_3 seems good
+   Only income tax, not VAT, is defined there,
+   but it differs across the three users as expected.
+** DONE people_4 and households_2
+*** "tax, income, most" seems good
+    differs across the three users as expected.
+*** "vat paid" seems good
+    differs across the three users as expected.
+** DONE report/compare_test.py
+   Testing compare() with fake data,
+   it works.
+** DONE test the summary data tables created in report.var_summaries_by_group
+   Even for this data (!),
+   the means for "one" and "income-decile: 0" look good.
+** AHA !! getBaselineData is buggy
+*** these should not fetch the same data (unless the user is baseline), but they do
+    user      = oio.readUserData (
+      com.subsample,
+      "report_" + unit + "." + com.strategy_year_suffix )
+
+    baseline  = oio.readBaselineData (
+      com.subsample,
+      "report_" + unit + "." + com.strategy_year_suffix )
+** test tabulate_stats_by_group()
+   It's used in python.report.var_summaries_by_group
