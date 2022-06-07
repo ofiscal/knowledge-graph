@@ -11,7 +11,7 @@
 ** some tax.co.web websites
 *** manual_ingest
     http://localhost:8000/microsim/run_make/manual_ingest
-    http://ofiscal-puj.org/microsim/run_make/manual_ingest
+    http://www.ofiscal-puj.org/microsim/run_make/manual_ingest
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/microsim/run_make/write_time

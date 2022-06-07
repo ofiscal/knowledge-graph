@@ -96,7 +96,7 @@ index ccf3f51..d4b3c7c 100644
 ** transfer my data into the EC2 instance
 *** PITFALL: Keep the S3 bucket with my data
     Transferring from it to an EC2 instance (in the same region) is extremely fast. Transferring from here takes hours.
-*** package local (Dell 2017) stuff
+*** package local (HP 2017) stuff
 **** .tar the docker images
 ***** where I put it
       ~/tax_co.docker.tar
