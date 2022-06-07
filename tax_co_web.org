@@ -10,8 +10,13 @@
    git clone git@github.com:ofiscal/tax.co.web.git
 ** some tax.co.web websites
 *** manual_ingest
-    http://localhost:8000/microsim/run_make/manual_ingest
-    http://www.ofiscal-puj.org/microsim/run_make/manual_ingest
+**** offline
+     http://localhost:8000/microsim/run_make/manual_ingest
+**** online
+     :PROPERTIES:
+     :ID:       1ce3f194-cd72-4163-a0ea-88e672f3760a
+     :END:
+     http://ofiscal-puj.org/microsim/run_make/manual_ingest
 *** write_time (for testing)
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/microsim/run_make/write_time

@@ -180,13 +180,10 @@ index ccf3f51..d4b3c7c 100644
    which gets reset after each restart of the EC2 instance.
 ** update native [[id:7edb7369-ce7a-47a7-a7d5-2dead9a03ac0][record of the]] IPv4 Public IP address for the EC2 instance
    and login
-** in [[id:c594dfb7-aaf8-4395-a5b4-d5e3c46ae6a4][AWS Route53]],associate a domain name with the EC2 instance
+** in [[id:c594dfb7-aaf8-4395-a5b4-d5e3c46ae6a4][AWS Route53]], associate a domain name with the EC2 instance
 ** start the docker container
 ** TODO add more steps -- start services in the docker container?
-** visit this URL
-   http://sim.jefbrown.net/myapp/run_make/write_time
-     based on this
-       http://localhost:8000/myapp/run_make/write_time
+** visit [[id:1ce3f194-cd72-4163-a0ea-88e672f3760a][manual_ingest online]]
 * create an EC2 backup ("snapshot")
 ** PITFALL why to do that
    So I can stop the EC2 instance and not worry if it's deleted automatically, which it will be if not hibernated.
