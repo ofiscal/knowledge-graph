@@ -4,6 +4,10 @@
 #+title: ofiscal
 * [[id:cb1bb067-d8cc-48d2-ad90-60ba4308adf8][ofiscal, todo]]
 * [[id:b162f515-3010-4e3f-b39a-eba879b839dd][ofiscal website]]
+* the ofiscal brand on Google Accounts
+  https://myaccount.google.com/brandaccounts/105238770854355867911/view
+** Alejandro made me an owner of it
+   https://mail.google.com/mail/u/0/?zx=xb759uhvwper#inbox/FMfcgzGpHHNfkJrrwTLxgsNznDdXwxGh
 * [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
 * our virtual office
   https://gather.town/preeaif0RiJXfiW6/Obsevatorio%20Fiscal
