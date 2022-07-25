@@ -22,7 +22,7 @@
     http://ofiscal-puj.org/microsim/run_make/write_time
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
 * TODO resume filing [[id:73fe22f8-0635-4954-ad04-90ef21c14523][here]] downward
-* DONE [[id:7971c41c-a733-4e13-8207-8664b75b39b7][graph changes in tax burden by decile]]
+* TODO URGENT: [[id:7167ee03-5643-44f3-8caa-4ad59b978ef8][let user modify SS taxes]]
 * TODO URGENT: include corporate income taxes
 ** the idea
    "Each person pays corporate taxes in an amount equal to a parameter A multiplied by their share of dividend income, and a parameter B multiplied by their share of (rentas de capital + ganancias ocasionales). A and B should be easily updatable - though by us, not by the user."
@@ -32,13 +32,18 @@
 *** sim needs to know what revenues from corporate taxes are
 *** would be nice to split corp tax between workers and owners
     ask user for % that falls on workers
-* TODO URGENT: let user modify SS taxes
-** find notes about this
-** parameters for the SS schedule
-*** 0.7, 0.4, 0.25, 1 min wage, 10 mw, 25 mw, 13 mw
-*** and then another table for average tax rates
 * TODO URGENT: [[id:cac03e9f-585d-48f6-9d05-c4e73d7b19bc][show images, offer downloads from browser, don't email]]
+* TODO a test is failing
+** full sample, python/build/people_4_post_households.py
+*** the problem
+    For 6 out of 86439 observations,
+    earners["share"] is less than 0.7.
+*** It's only a problem in the full sample.
+*** Search for the word "share" in people_4*.py
 * TODO internalize: to change the sample size
+  :PROPERTIES:
+  :ID:       3f092a7a-4a04-426a-bf23-e4502ac4d84f
+  :END:
   Change the default value of `subsample`
   in the definition of `class TaxConfig`.
 * streamline [[id:cf805990-0558-4608-9d51-ccd76d82d036][tax.co.web's request queue]]
@@ -59,11 +64,6 @@
   In case Gmail breaks more seriously.
 * DONE consumable_groups_by_coicop.csv should include data from coicop_major_codes.tsv
   And maybe that should be .csv, and the .tsv saved in the 1.dos2unix subfolder
-* DONE [[id:2d8ca73e-da41-4876-9a8e-982164228839][tax.co person-level analysis]]
-* DONE asking Daniel : hog tax
-** The hog tax is 8%, right?
-   See purchases_2_vat.py
-** Answer: Yes.
 * TODO new ideas
 ** TODO read the answers from (ITP?) to some questions we have
    in their FAQ
@@ -169,40 +169,6 @@
     "vat/income, min"
     "vat/income, max"
     "purchase value / income"
-* TODO blocking
-** DONE dynamic forms
-*** the idea
-**** for the IVA
-     keep another column yet: "0" for exempt & 0 for excluded
-
-Rates          0        0.05      0.19   <add another column>
-Food           x
-Medicine       x
-Cars                              x
-Yachts                  x
-...
-**** for the income taxes
-Tasa          Min (COP)      Max (COP)
-0             0               4,000,000
-0.2           4,000,000      10,000,000
-0.3           10,000,000     Infinito
-<Agrega nueva fila>
-*** file:///home/jeff/of/tax.co.web/studies/dynamic-table.html
-    Bug: deleting an early one and then inserting gets the order wrong.
-*** file:///home/jeff/of/tax.co.web/studies/radio-table.html
-*** more things to track
-**** Deductions from income tax.
-** DONE What put user_email after user?
-   uniquify was doing it, because grouping and aggregating puts the grouping variables first.
-** DONE [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
-** DONE why is user 1's getting deleted early?
-   I thought tax.co was deleting the data, but no, it was tax.co.web,
-   upon submitting the new request. Duh.
-** DONE [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
-** DONE [[id:802932af-191e-4cb8-a3b5-855aec8ad7c0][giving Apache privileges to a Docker user]]
-** DONE [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
-** DONE [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email results to user]]
-** DONE [[id:592838c4-5f21-41df-9a38-ccff592200f2][Django security, things to do before production]]
 * TODO to promote
   :PROPERTIES:
   :ID:       73fe22f8-0635-4954-ad04-90ef21c14523
@@ -232,14 +198,13 @@ Tasa          Min (COP)      Max (COP)
    Daniel helped me find the error.
    Comparing to the old code (still the latest commit in the main branch),
    was able to see what the rates should have been.
-** TODO add payroll taxes (SS contribs)
 ** TODO IVA interface
 *** choose what's exempt, what's 5%, what's the other tax rate
 *** fiddle the 5% too
 *** "tarifa general", "tarifa especial", "exenta"
 *** three columns, with a choosable tax rate at the top
     each row needs exactly one check in it.
-*** TODO will need someone to group the goods
+*** DONE will need someone to group the goods
 ** let someone download a config
    So that they can upload it to the interface, instead of repeating themselves.
 ** [[id:b7595065-bed2-4703-875a-7077a1ee72b2][generate pictures]]
@@ -632,41 +597,81 @@ The first that fails:
     it still doesn't work.
 ** DONE cannot download models from myapp/run_make/ingest_full_spec
 * forward clicks to PUJ
-* DONE hide my email credentials
-  :PROPERTIES:
-  :ID:       c04905da-d0fe-4eac-af96-c2a3bcc03649
-  :END:
-  They're not in the repo, but they'll be on the server,
-  so they shouldn't be in tax_co, which is publicly readable.
-* DONE run tax.co as a cron job
-  :PROPERTIES:
-  :ID:       d002eec7-7fe7-4130-8423-88a6408c46ed
-  :END:
-** verify that the command in the script works when entered by hand
-** Do I have to start tax.co.web as root to serve?
-   No.
-** Bug, solved: The cron script is not executing.
-*** the python3 call: works
-    :PROPERTIES:
-    :ID:       7deaf598-7d46-4ffa-870e-f99832dd58c7
-    :END:
-    PYTHONPATH=/mnt/tax_co:$PYTHONPATH python3 python/requests/main.py config/config.json try-to-advance-queue
-*** running tax_co_cron.sh by hand works
-    :PROPERTIES:
-    :ID:       d37c67b8-408e-404d-abf4-b8c9747561b2
-    :END:
-*** ownserhip is weird
-    Everything touched by either [[id:7deaf598-7d46-4ffa-870e-f99832dd58c7][the python3 call]] or [[id:d37c67b8-408e-404d-abf4-b8c9747561b2][running tax_co_cron.sh by hand]] is owned on the native EC2 system by
-       user ubuntu, group systemd-coredump
-    and in the Docker container by
-       user appuser, group appuser
-    whereas for other things the group is
-       ubuntu in the native EC2 system
-       1000 in the Docker container
-*** whoami.sh leads cron to write "appuser"
-*** Never had to [[id:2c7ecfe3-e99b-46a5-95b2-984ada04f2a0][ask the internets]].
-*** Verify the same happens on EC2
-* DONE choose a [[id:a51a0dca-2c22-458c-b464-eb3e65046478][web server]]
+* DONE things, very incomplete but maybe useful as a reference
+** DONE dynamic forms
+*** the idea
+**** for the IVA
+     keep another column yet: "0" for exempt & 0 for excluded
+
+Rates          0        0.05      0.19   <add another column>
+Food           x
+Medicine       x
+Cars                              x
+Yachts                  x
+...
+**** for the income taxes
+Tasa          Min (COP)      Max (COP)
+0             0               4,000,000
+0.2           4,000,000      10,000,000
+0.3           10,000,000     Infinito
+<Agrega nueva fila>
+*** file:///home/jeff/of/tax.co.web/studies/dynamic-table.html
+    Bug: deleting an early one and then inserting gets the order wrong.
+*** file:///home/jeff/of/tax.co.web/studies/radio-table.html
+*** more things to track
+**** Deductions from income tax.
+** DONE What put user_email after user?
+   uniquify was doing it, because grouping and aggregating puts the grouping variables first.
+** DONE [[id:927559bb-036d-49fc-9fdd-024745fb941b][What figures out which one to run next?]]
+** DONE why is user 1's getting deleted early?
+   I thought tax.co was deleting the data, but no, it was tax.co.web,
+   upon submitting the new request. Duh.
+** DONE [[id:cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7][test the program (by hand)]]
+** DONE [[id:802932af-191e-4cb8-a3b5-855aec8ad7c0][giving Apache privileges to a Docker user]]
+** DONE [[id:d002eec7-7fe7-4130-8423-88a6408c46ed][run tax.co as a cron job]]
+** DONE [[id:d3900b4b-c97d-4bd5-a898-06281df235be][email results to user]]
+** DONE [[id:592838c4-5f21-41df-9a38-ccff592200f2][Django security, things to do before production]]
+** DONE [[id:7971c41c-a733-4e13-8207-8664b75b39b7][graph changes in tax burden by decile]]
+** DONE hide my email credentials
+   :PROPERTIES:
+   :ID:       c04905da-d0fe-4eac-af96-c2a3bcc03649
+   :END:
+   They're not in the repo, but they'll be on the server,
+   so they shouldn't be in tax_co, which is publicly readable.
+** DONE run tax.co as a cron job
+   :PROPERTIES:
+   :ID:       d002eec7-7fe7-4130-8423-88a6408c46ed
+   :END:
+*** verify that the command in the script works when entered by hand
+*** Do I have to start tax.co.web as root to serve?
+    No.
+*** Bug, solved: The cron script is not executing.
+**** the python3 call: works
+     :PROPERTIES:
+     :ID:       7deaf598-7d46-4ffa-870e-f99832dd58c7
+     :END:
+     PYTHONPATH=/mnt/tax_co:$PYTHONPATH python3 python/requests/main.py config/config.json try-to-advance-queue
+**** running tax_co_cron.sh by hand works
+     :PROPERTIES:
+     :ID:       d37c67b8-408e-404d-abf4-b8c9747561b2
+     :END:
+**** ownserhip is weird
+     Everything touched by either [[id:7deaf598-7d46-4ffa-870e-f99832dd58c7][the python3 call]] or [[id:d37c67b8-408e-404d-abf4-b8c9747561b2][running tax_co_cron.sh by hand]] is owned on the native EC2 system by
+	user ubuntu, group systemd-coredump
+     and in the Docker container by
+	user appuser, group appuser
+     whereas for other things the group is
+	ubuntu in the native EC2 system
+	1000 in the Docker container
+**** whoami.sh leads cron to write "appuser"
+**** Never had to [[id:2c7ecfe3-e99b-46a5-95b2-984ada04f2a0][ask the internets]].
+**** Verify the same happens on EC2
+** DONE choose a [[id:a51a0dca-2c22-458c-b464-eb3e65046478][web server]]
+** DONE [[id:2d8ca73e-da41-4876-9a8e-982164228839][tax.co person-level analysis]]
+** DONE asking Daniel : hog tax
+*** The hog tax is 8%, right?
+    See purchases_2_vat.py
+*** Answer: Yes.
 * [[id:dc3cf615-f76e-40ed-b20d-2ea09ba3f74b][deploy tax.co.web over EC2]]
 * TODO ponder
 ** Keep a db of requests?

@@ -11,6 +11,31 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
+* TODO immediate
+** look within the top 1%
+** graph change in after-tax income
+** actividad economica X formal/informal
+** Can we identify employment sector, formality
+*** SS contribs for pension are a good proxy
+* TODO run mypy everywhere
+  As of <2022-07-21 Thu>,
+  I've run it on all the top-level files in these folders:
+    python/
+    python/build/
+  as well as on
+    bash/run-makefile.py
+* TODO why does (e.g.) ss_functions_test.py install into a user folder?
+  in make/Makefile.tests, there's this passage:
+
+    users/$(user)/test/recip-1/build_ss_functions.txt:               \
+      .no_younger_than/python/build/ss/functions_test.py
+    	date
+    	$(python_from_here) python/build/ss/functions_test.py \
+              $(config_file)
+
+  Other tests are likely to have the same property --
+  specifically, those that install to a recip-1/ subfolder,
+  rather than recip-$(ss) ($(ss) being the subsample).
 * TODO add tests for "income, capital"
 * TODO remove layers of indirection in people/main.py
   There are too many definitions like income_short_name_dict_cash.
@@ -54,8 +79,6 @@ because it is not part of `income_infrequent`.
    Otherwise, DIAN for both payroll and income taxes for the rich, ENPH for the rest.
 * TODO update documentation
 ** the way it's run is now completely different
-** the org notes are now these
-   The top-level README needs to be amended to point to them.
 * TODO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][put tax.co online]]
 * TODO clean
 ** try pydoc
@@ -76,8 +99,6 @@ because it is not part of `income_infrequent`.
    Currently it is flat.
    This would only require rewriting the calls to oio.test_write()
    and the locations of the evidence in the makefile.
-** rename shell.json to config.json
-   and repl.json to config.repl.json.
 ** move repl.json from config/ to users/repl/
    And add a README explaining that two of the folders,
    repl and example, aren't real users.
@@ -144,7 +165,7 @@ From the coicop bridge:
 * TODO possibly wrong
 ** TODO is alimony a cost to someone?
    It should be.
-** TODO understand this absurdly strange bug
+** TODO understand, document absurdly strange (solved) bug
    Solved at commit 19a996a50a457f37da040b63f3d4a01b3e0a15b2
 *** the solution
    Delete the unused "import pytest" from python.build.classes

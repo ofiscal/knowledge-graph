@@ -3,6 +3,7 @@
 :END:
 #+title: ofiscal
 * [[id:cb1bb067-d8cc-48d2-ad90-60ba4308adf8][ofiscal, todo]]
+* [[id:4df2bfcf-e5d4-482f-b2b3-f93659f61e80][ofiscal sharepoint folder]]
 * [[id:b162f515-3010-4e3f-b39a-eba879b839dd][ofiscal website]]
 * the ofiscal brand on Google Accounts
   https://myaccount.google.com/brandaccounts/105238770854355867911/view
@@ -18,7 +19,7 @@
 ** [[id:2cc322dd-f644-41ef-b2da-3032127a37b2][Gabriel José Lubo Cárdenas]]
 * ofiscal, processes
 ** [[id:3478dbef-feca-4776-858a-63e59b8efe83][pipeline for publication]]
-* some work I did
+* some work I did, and an incomplete summary thereof
+** [[id:cc06cc2e-b6a7-4110-98d7-0adf9a75b170][my work at the Observatorio: informal, for the new boss]]
 ** [[id:37557bc3-593e-4288-99ec-69e6107b2ff8][Colombia 2021 Tax Expenditures Report, by the Tax Experts Comission]]
    I summarized section 4, on the CIT.
-* [[id:cc06cc2e-b6a7-4110-98d7-0adf9a75b170][my work at the Observatorio: informal, for the new boss]]
