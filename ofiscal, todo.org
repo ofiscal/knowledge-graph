@@ -2,10 +2,10 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 * TODO check out Oliver's paper
   ~/Downloads/Pardo*.pdf
 * TODO figure out why the model seemed down for me and not Sebastian
-* [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 * [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][putting tax.co online]]
 * BLOCKED dubious
 ** learn [[id:f28ddaf7-698b-4d5e-a529-a34bc625f3dd][how to SSH over HTTPS, for Github or maybe anything]]
