@@ -13,10 +13,15 @@
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
 * TODO immediate
 ** look within the top 1%
+   See program
+     python/exemplar/zoom_top_quantile.py
+   which outputs to
+     zoom-in-on-rich/
 ** graph change in after-tax income
 ** actividad economica X formal/informal
 ** Can we identify employment sector, formality
-*** SS contribs for pension are a good proxy
+*** SS contribs for pension are a good proxy, but incomplete.
+    Someone could be pensioned and working.
 * TODO run mypy everywhere
   As of <2022-07-21 Thu>,
   I've run it on all the top-level files in these folders:
