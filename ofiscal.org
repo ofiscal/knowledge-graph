@@ -3,7 +3,12 @@
 :END:
 #+title: ofiscal
 * [[id:cb1bb067-d8cc-48d2-ad90-60ba4308adf8][ofiscal, todo]]
-* [[id:4df2bfcf-e5d4-482f-b2b3-f93659f61e80][ofiscal sharepoint folder]]
+* internally shared content
+** We seem to prefer to use Teams.
+   Go there, and then to "files".
+   There are two teams, green and blue, the latter all-caps.
+   The new one, Oliver's, is blue and all-caps.
+** But there's also an [[id:4df2bfcf-e5d4-482f-b2b3-f93659f61e80][ofiscal sharepoint folder]].
 * [[id:b162f515-3010-4e3f-b39a-eba879b839dd][ofiscal website]]
 * the ofiscal brand on Google Accounts
   https://myaccount.google.com/brandaccounts/105238770854355867911/view

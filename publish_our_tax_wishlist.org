@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b46c6c89-e13f-4d51-a1a4-ba543188a458
+:END:
+#+title: publish our tax wishlist
+* thoughts on the [[id:7c550e05-82e1-41d6-a8da-c8171f59f68c][corporate tax]]
+* SS contributions (taxes) ought to be marginal.
+* Green and health taxes that are boolean buckets aren't equitable.

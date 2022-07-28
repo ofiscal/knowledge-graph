@@ -3,8 +3,12 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
-* TODO check out Oliver's paper
-  ~/Downloads/Pardo*.pdf
+* TODO [[id:f5a95bb8-5404-472c-983f-f8cd15fdeca7][measure sugary drink consumption (group project)]]
+* TODO upload thoughts about [[id:7c550e05-82e1-41d6-a8da-c8171f59f68c][corporate tax]]
+  I made them readable here:
+  ~/corporate_tax_some_thoughts_on.txt
+* [[id:b46c6c89-e13f-4d51-a1a4-ba543188a458][publish our tax wishlist]]
+* TODO check out [[id:30298122-ef45-4038-81f5-0b80dcb21548][Oliver's paper]]
 * TODO figure out why the model seemed down for me and not Sebastian
 * [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][putting tax.co online]]
 * BLOCKED dubious
