@@ -3,5 +3,6 @@
 :END:
 #+title: publish our tax wishlist
 * thoughts on the [[id:7c550e05-82e1-41d6-a8da-c8171f59f68c][corporate tax]]
+* blog post on the personal income tax
 * SS contributions (taxes) ought to be marginal.
 * Green and health taxes that are boolean buckets aren't equitable.
