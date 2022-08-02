@@ -11,17 +11,7 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO immediate, per Oliver
-** DONE ? Can we look within the top 1%
-   See program
-     python/exemplar/zoom_top_quantile.py
-   which outputs to
-     zoom-in-on-rich/
-** graph change in after-tax income
-** actividad economica X formal/informal
-** Can we identify employment sector, formality
-*** SS contribs for pension are a good proxy, but incomplete.
-    Someone could be pensioned and working.
+* TODO IMMEDIATE : [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 * TODO run mypy everywhere
   As of <2022-07-21 Thu>,
   I've run it on all the top-level files in these folders:

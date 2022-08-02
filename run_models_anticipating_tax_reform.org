@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       58d82abc-96d5-4aa9-965e-d406c0f788dd
+:END:
+#+title: run models anticipating tax reform
+* DONE new groups: top ten miltiles
+  in people_4 and households_1, search for "income-perc"
+** DONE generate the income-millile column
+** DONE use the top ten income milliles in the report
+* DONE new stats
+  income, average & total
+  income taxes paid, average & total
+  average tax rate, i.e. average of ( taxes paid / income )
+  aggregate taxes / aggregate income
+* TODO one where there's only one marginal income tax schedules
+* other inputs pending
+** one where only marginal rates taxes
+** one where only ganacias ocasionales changes
+** one only where deductions are absolute rather than proportional
+** one with everything
+* Which tax does an increase in revenue/taxes paid come from?
+* DONE ? Can we look within the top 1%
+  See program
+    python/exemplar/zoom_top_quantile.py
+  which outputs to
+    zoom-in-on-rich/
+* graph change in after-tax income
+* actividad economica X formal/informal
+* Can we identify employment sector, formality
+** SS contribs for pension are a good proxy, but incomplete.
+   Someone could be pensioned and working.
