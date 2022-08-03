@@ -11,19 +11,21 @@
   income taxes paid, average & total
   average tax rate, i.e. average of ( taxes paid / income )
   aggregate taxes / aggregate income
-* TODO one where there's only one marginal income tax schedules
-* other inputs pending
+* graph change in after-tax income
+* BLOCKED one where there's only one marginal income tax schedule
+  So what's the specific formula? Don't exempt any of the other stuff?
+* BLOCKED other inputs pending
 ** one where only marginal rates taxes
 ** one where only ganacias ocasionales changes
-** one only where deductions are absolute rather than proportional
+** BLOCKED one where only deductions are absolute rather than proportional
+   What's the deduction limit?
 ** one with everything
-* Which tax does an increase in revenue/taxes paid come from?
+* Ponder: Which tax does an increase in revenue/taxes paid come from?
 * DONE ? Can we look within the top 1%
   See program
     python/exemplar/zoom_top_quantile.py
   which outputs to
     zoom-in-on-rich/
-* graph change in after-tax income
 * actividad economica X formal/informal
 * Can we identify employment sector, formality
 ** SS contribs for pension are a good proxy, but incomplete.
