@@ -2,6 +2,126 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* document units of observation and quantiles somewhere
+Recall that the meaning of the quantiles in nonzero-laborers is different. In each data set the quantiles are over the unit in the name of that data set -- so earners quantiles are computed over all earners (including the unemployed), not households; household quantiles are computed over households; and nonzero_laborers quantiles are computed over earners with nonzero labor income. But additionally, whereas the other two data sets have their quantiles computed with respect to total income, the nonzero-laborers quantiles are computed only with regard to labor income.
+* TODO verify in report
+** statements regarding quantiles
+** statements regarding sugar
+* TODO OF <2022-08-08 Mon>, from 9th floor all day
+** TODO change microsim
+*** DONE ONGOING new strategy, where there is only one kind of income
+    Exemptions only to labor income.
+    The threshold changes from 5040 to 1210.
+    Nothing else changes in the deduction formula.
+*** TODO create a differences spreadsheet
+**** DONE mypy it
+**** run it
+**** adjust Makefile
+*** DONE 9 groups of 10%, 9 of 1%, 10 of 0.1%
+    Named as open intervals --
+    [0,10), [10,20) ... etc.
+** BLOCKED (Daniel?) run sims corresponding to Oliver's spreadsheet
+*** don't change the code, just the numbers
+*** where
+    OF @ Teams / Documents / General
+      / Informes / Informe Petro 1 / Progressivity
+**** as a link
+     https://teams.microsoft.com/_#/xlsx/viewer/teamsSdk/https:~2F~2Flivejaverianaedu.sharepoint.com~2Fsites~2FOBSERVATORIOFISCAL727~2FShared%20Documents~2FGeneral~2FInformes~2FInforme%20Tributaria%20Petro%2001~2FProgresivity.xlsx?threadId=19:qSg_hobWVyO5CoICHIu0CUVwCnS3AFYXPOZDo9F1rkE1@thread.tacv2&subEntityId=%257B%2522web%2522%253A%2522https%253A%252F%252Flivejaverianaedu.sharepoint.com%252Fsites%252FOBSERVATORIOFISCAL727%2522%252C%2522list%2522%253A%2522https%253A%252F%252Flivejaverianaedu.sharepoint.com%252Fsites%252FOBSERVATORIOFISCAL727%252FShared%2520Documents%2522%252C%2522folder%2522%253A%2522%252Fsites%252FOBSERVATORIOFISCAL727%252FShared%2520Documents%252FGeneral%252FInformes%252FInforme%2520Tributaria%2520Petro%252001%2522%257D&baseUrl=https:~2F~2Flivejaverianaedu.sharepoint.com~2Fsites~2FOBSERVATORIOFISCAL727&fileId=6fb2105f-fd09-44cb-a5e2-8547d112e83b&ctx=openFilePreview&viewerAction=edit
+
+** formula from Oliver's spreadsheet that confused me
+   base = D2 - MIN( ( MIN(G2,I2))+H2,
+                    J2)
+        = (inglab-ss)
+          - min ( min ( ex, cota(ex) ) + ded,
+                  cota(ex+ded) )
+** important from the Reforma preliminary report
+*** Reducción de topes nominales*
+    5040 -> 1210
+    2880 -> 790
+    renta exenta de pensiones
+      12.000 UVT -> 1.790 UVT
+* TODO create nonzero labor earners data
+** DONE In people/main, fuzz labor income *after* total income.
+   so they don't interact.
+** in reports/*, create "nonzero_earner" data:
+*** Restrict earner data to people with labor income > 0.
+*** Overwrite quantiles based on labor income.
+** in request/*
+   add those spreadsheets to the attached data
+** explain
+   that the new data's quantiles are different,
+   based only on labor income
+* TODO re-enable tests offline
+* TODO next, ordered
+** TODO include the earners data
+** TODO generate and report on gender groups for the earners data
+** TODO add a remove-depenency-exemption option to the sim & UI
+** TODO BUGHUNT ??
+*** DONE Use myQuantile, not noisyQuantiles.
+*** TODO Check that things that shouldn't differ now don't.
+*** the problem
+    Merely changing the way cedula_gravable_general is calculated
+    seems to change things that should be unaffected,
+    like social security taxes or income.
+*** hunch
+    The changes only happen in quantiles,
+    not in the other subsets,
+    which suggests the problem is the randomness in those quantiles.
+*** some exploratory code
+**** PITFALL: conditions under which to run it
+     I should have generated baseline and quien,
+     in as big a sample as I can stand,
+     with baseline using the "detail" strategy
+     and quien using "single_2052_UVT_income_tax_deduction".
+**** PITFALL: I've hardcoded recip-100 into the code below.
+**** the code
+ if True:
+   from   os import path
+   import matplotlib
+   import matplotlib.pyplot  as plt
+   import numpy              as np
+   import pandas             as pd
+   from   scipy import stats
+
+
+ def myPath ( who : str,
+            strategy : str ) -> str:
+   return path.join (
+     "users/symlinks",
+     who,
+     "data/recip-10/report_earners_tmi." + strategy + ".2019.csv" )
+
+ quien = (
+   pd.read_csv (
+     myPath ( "quien", "single_2052_UVT_income_tax_deduction" ) )
+   . set_index ( "measure" ) )
+
+ default = (
+   pd.read_csv (
+     myPath ( "baseline", "detail" ) )
+   . set_index ( "measure" ) )
+
+ # Can't -- there are booleans somewhere.
+ # x = quien - default
+
+ # for i in quien.index: print(i)
+
+ measure = "tax, income, most: mean"
+ q = quien  .loc [measure] . astype( "float" )
+ d = default.loc [measure] . astype( "float" )
+ c = (q - d) . abs()
+ cp = c / q
+
+ x = c # or cp
+ x . abs() . max()
+
+ threshold = 1e6
+ x [ x.abs() > threshold ]
+ d [ x.abs() > threshold ]
+ q [ x.abs() > threshold ]
+** TODO make the maximum deduction a numerical user input
+** TODO inflate to 2022 pesos
+** TODO ? [[id:5c2e57e1-21ec-4be5-b2ce-6248fb301867][rewrite algorithm to compute cedula gravable general]]
 * TODO IMMEDIATE : [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 * TODO ? Tax on capital affects employment, not just wages
 * TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]

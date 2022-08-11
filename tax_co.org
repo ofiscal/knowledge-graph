@@ -11,8 +11,15 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO IMMEDIATE : Do we inflate from 2017 to 2022?
+* TODO what to do about baseline subsample size?
+  I'd like to only use recip-1 but that can be slow.
+* TODO It's confusing that the baseline gets emailed too.
+* TODO run-makefile should rebuild the baseline automatically
+* TODO ? [[id:5c2e57e1-21ec-4be5-b2ce-6248fb301867][rewrite algorithm to compute cedula gravable general]]
+* TODO IMMEDIATE : Inflate from 2017 to 2022
 * TODO IMMEDIATE : [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
+* TODO automate this test
+  python/regime/test.py
 * TODO run mypy everywhere
   As of <2022-07-21 Thu>,
   I've run it on all the top-level files in these folders:
