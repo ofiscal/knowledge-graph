@@ -45,7 +45,8 @@
   :ID:       3f092a7a-4a04-426a-bf23-e4502ac4d84f
   :END:
   Change the default value of `subsample`
-  in the definition of `class TaxConfig`.
+  in the definition of `class TaxConfig`,
+  in run_make/models.py
 * streamline [[id:cf805990-0558-4608-9d51-ccd76d82d036][tax.co.web's request queue]]
 * ? rename the "detail" strategy to "default"
 * use more memory on AWS
