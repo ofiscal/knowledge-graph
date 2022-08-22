@@ -2,12 +2,36 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* document units of observation and quantiles somewhere
-Recall that the meaning of the quantiles in nonzero-laborers is different. In each data set the quantiles are over the unit in the name of that data set -- so earners quantiles are computed over all earners (including the unemployed), not households; household quantiles are computed over households; and nonzero_laborers quantiles are computed over earners with nonzero labor income. But additionally, whereas the other two data sets have their quantiles computed with respect to total income, the nonzero-laborers quantiles are computed only with regard to labor income.
-* TODO merge Mariana's data on coicop, somehow
-* TODO verify in report
-** statements regarding quantiles
-** statements regarding sugar
+* mtg
+** vocab
+*** doliente (noun)
+    responsable
+*** "casilla" de genero
+*** tufillo
+    "tuvo un tufillo" (de hacer algo sobre el genero)
+*** jepatura
+*** plasmar
+** TODO We have employment sector, right?
+   Yes. "CIIU"
+** subsidize healthy prepared food
+   for gender equity
+** hotels employ more women
+* TODO BUG Makefile rebuilds when everything should be done.
+* TODO new sim, but for after the "income-tax" picture
+** irrelevant to the code: more declarantes
+   alternatives?
+*** everyone declares
+*** if you earn more than 2e6 CGG, you have to declare taxes
+    CGG = labor income - SS - 2e6 - 1e6 * #dependents
+** negative CGG => reimbursed
+** 1 million per child, can have more than 1
+** make a slightly different baseline: include dependents in the 40%, but only 25% if none
+   for the baseline only
+** 20% income tax for negative CGG
+** assign fractional dependents -- divide # dependents by # of taxpayers
+** if no earners, head of household gets (- 2e6 - 1e6 * #deps)
+* TODO document units of observation and quantiles somewhere
+  Recall that the meaning of the quantiles in nonzero-laborers is different. In each data set the quantiles are over the unit in the name of that data set -- so earners quantiles are computed over all earners (including the unemployed), not households; household quantiles are computed over households; and nonzero_laborers quantiles are computed over earners with nonzero labor income. But additionally, whereas the other two data sets have their quantiles computed with respect to total income, the nonzero-laborers quantiles are computed only with regard to labor income.
 * TODO OF <2022-08-08 Mon>, from 9th floor all day
 ** TODO change microsim
 *** DONE ONGOING new strategy, where there is only one kind of income
@@ -28,7 +52,6 @@ Recall that the meaning of the quantiles in nonzero-laborers is different. In ea
       / Informes / Informe Petro 1 / Progressivity
 **** as a link
      https://teams.microsoft.com/_#/xlsx/viewer/teamsSdk/https:~2F~2Flivejaverianaedu.sharepoint.com~2Fsites~2FOBSERVATORIOFISCAL727~2FShared%20Documents~2FGeneral~2FInformes~2FInforme%20Tributaria%20Petro%2001~2FProgresivity.xlsx?threadId=19:qSg_hobWVyO5CoICHIu0CUVwCnS3AFYXPOZDo9F1rkE1@thread.tacv2&subEntityId=%257B%2522web%2522%253A%2522https%253A%252F%252Flivejaverianaedu.sharepoint.com%252Fsites%252FOBSERVATORIOFISCAL727%2522%252C%2522list%2522%253A%2522https%253A%252F%252Flivejaverianaedu.sharepoint.com%252Fsites%252FOBSERVATORIOFISCAL727%252FShared%2520Documents%2522%252C%2522folder%2522%253A%2522%252Fsites%252FOBSERVATORIOFISCAL727%252FShared%2520Documents%252FGeneral%252FInformes%252FInforme%2520Tributaria%2520Petro%252001%2522%257D&baseUrl=https:~2F~2Flivejaverianaedu.sharepoint.com~2Fsites~2FOBSERVATORIOFISCAL727&fileId=6fb2105f-fd09-44cb-a5e2-8547d112e83b&ctx=openFilePreview&viewerAction=edit
-
 ** formula from Oliver's spreadsheet that confused me
    base = D2 - MIN( ( MIN(G2,I2))+H2,
                     J2)
@@ -83,7 +106,6 @@ Recall that the meaning of the quantiles in nonzero-laborers is different. In ea
    import numpy              as np
    import pandas             as pd
    from   scipy import stats
-
 
  def myPath ( who : str,
             strategy : str ) -> str:
