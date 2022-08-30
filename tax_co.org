@@ -11,13 +11,25 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO what to do about baseline subsample size?
-  I'd like to only use recip-1 but that can be slow.
+* TODO Solve / Internalize : If the strategy changes but a user already has data generated from the other one, the makefile gets confused.
+  A dumb solution is to nuke the user's data folder
+  each time its strategy changes.
+
+  A better one would be to write a file when the strategy changes,
+  and make others depend on that.
+* Can we identify employment sector, formality
+** SS contribs for pension are a good proxy, but incomplete.
+   Someone could be pensioned and working.
+* TODO use this kind of test for quantiles
+per_column_spec = {
+    "age-decile"    : cl.CoversRange( 0, 9 ),
+    "female head"   : cl.CoversRange( 0, 1 ) }
+
+for k,v in per_cell_spec.items():
+  assert v . test( out[k] )
 * TODO It's confusing that the baseline gets emailed too.
-* TODO run-makefile should rebuild the baseline automatically
 * TODO ? [[id:5c2e57e1-21ec-4be5-b2ce-6248fb301867][rewrite algorithm to compute cedula gravable general]]
 * TODO IMMEDIATE : Inflate from 2017 to 2022
-* TODO IMMEDIATE : [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 * TODO automate this test
   python/regime/test.py
 * TODO run mypy everywhere
@@ -854,6 +866,7 @@ but zero people in the sample received any of it:
 ** "P6500 (asalariado income) > 0" should be perfecty corr'd with pension contrib's
 ** ??? pension contribs = formality.
 * DONE | hopefully stale
+** [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 ** estimate november-2018 reform effects
 *** the motorbike tax
  After the reform, would be 27% on all bikes.
@@ -1006,6 +1019,12 @@ that's already implemented.
 ** some pics are drawn but not included in the report
 *** people/spending
 * TODO PITFALLs in code
+** Internalize: Baseline config file must match sample size of user config file
+   :PROPERTIES:
+   :ID:       6c7711c7-c228-4400-bd26-ce39997e2681
+   :END:
+   This only matters when running by hand;
+   the online sim automatically sets both to 1.
 ** in my own
 *** the special motorcycle tax
 It is represented in code, not data.

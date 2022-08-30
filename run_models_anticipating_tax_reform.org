@@ -19,19 +19,6 @@
 ** verify that the process completes, and emails to me
 ** undo subsample change on AWS
 ** commit changes in tax.co on AWS
-* TODO Solve / Internalize : If the strategy changes but a user already has data generated from the other one, the makefile gets confused.
-  A dumb solution is to nuke the user's data folder
-  each time its strategy changes.
-
-  A better one would be to write a file when the strategy changes,
-  and make others depend on that.
-* TODO use this kind of test for quantiles
-per_column_spec = {
-    "age-decile"    : cl.CoversRange( 0, 9 ),
-    "female head"   : cl.CoversRange( 0, 1 ) }
-
-for k,v in per_cell_spec.items():
-  assert v . test( out[k] )
 * DONE make new groups
 ** one option: 9 deciles, next 9 percentiles, top 10 milliles
 *** 0-10, 10-20, .. 80-90
@@ -70,6 +57,3 @@ for k,v in per_cell_spec.items():
   which outputs to
     zoom-in-on-rich/
 * actividad economica X formal/informal
-* Can we identify employment sector, formality
-** SS contribs for pension are a good proxy, but incomplete.
-   Someone could be pensioned and working.

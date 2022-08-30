@@ -2,7 +2,7 @@
 :ID:       5c2e57e1-21ec-4be5-b2ce-6248fb301867
 :END:
 #+title: rewrite algorithm to compute cedula gravable general
-* Maybe the dependent exemption should be inside the 40%
+* the dependent exemption should be inside the 40%
   rather than on top of it.
 * DONE UNDONE earlier notes
 ** THIS IS OBSOLETE
