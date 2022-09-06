@@ -21,9 +21,17 @@
     http://localhost:8000/microsim/run_make/write_time
     http://ofiscal-puj.org/microsim/run_make/write_time
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
+* TODO a test is failing
+** full sample, python/build/people_4_post_households.py
+*** the problem
+    For 6 out of 86439 observations,
+    earners["share"] is less than 0.7.
+*** It's only a problem in the full sample.
+*** Search for the word "share" in people_4*.py
 * TODO resume filing [[id:73fe22f8-0635-4954-ad04-90ef21c14523][here]] downward
-* TODO URGENT: [[id:7167ee03-5643-44f3-8caa-4ad59b978ef8][let user modify SS taxes]]
-* TODO URGENT: include corporate income taxes
+* TODO [[id:c1b53258-b3bc-4dec-a708-2fa875fcdcfa][make tax.co.web publishable]]
+* TODO [[id:7167ee03-5643-44f3-8caa-4ad59b978ef8][let user modify SS taxes]]
+* TODO include corporate income taxes
 ** the idea
    "Each person pays corporate taxes in an amount equal to a parameter A multiplied by their share of dividend income, and a parameter B multiplied by their share of (rentas de capital + ganancias ocasionales). A and B should be easily updatable - though by us, not by the user."
    -- LCR, https://mail.google.com/mail/u/0/#search/from%3Aluis/QgrcJHrntPsWjTvkLbDQFRqvHTFTrvqrhVL
@@ -32,14 +40,6 @@
 *** sim needs to know what revenues from corporate taxes are
 *** would be nice to split corp tax between workers and owners
     ask user for % that falls on workers
-* TODO URGENT: [[id:cac03e9f-585d-48f6-9d05-c4e73d7b19bc][show images, offer downloads from browser, don't email]]
-* TODO a test is failing
-** full sample, python/build/people_4_post_households.py
-*** the problem
-    For 6 out of 86439 observations,
-    earners["share"] is less than 0.7.
-*** It's only a problem in the full sample.
-*** Search for the word "share" in people_4*.py
 * TODO internalize: to change the sample size
   :PROPERTIES:
   :ID:       3f092a7a-4a04-426a-bf23-e4502ac4d84f
@@ -49,14 +49,6 @@
   in run_make/models.py
 * streamline [[id:cf805990-0558-4608-9d51-ccd76d82d036][tax.co.web's request queue]]
 * ? rename the "detail" strategy to "default"
-* use more memory on AWS
-* need instructions
-** explain that it computes tax burdens, hence post-tax income, but does not do GE -- everyone's base income is unchanged
-** thresholds have to be monotonic
-** the IVA buckets are approximate
-   :PROPERTIES:
-   :ID:       106ca7be-c9de-42c6-89aa-db93c5202304
-   :END:
 * TODO ? Use [[id:8475bbbf-efbb-423e-901c-b464e807784c][parquet (file format)]].
 * PITFALLs
 ** if csv files have the wrong (i.e. Windows-style) line terminators
@@ -133,66 +125,12 @@
     "Buj�as, inyectores, filtros, amortiguadores, bater�as, carburadores, distribuidores de corriente, vidrios, condensadores, correas de ventilador, etc.",7219902,,0.15,0.19,goods with different tax rates
 ** TODO we never did the "impuesto nacional al consumo"
    See the bigger VAT spreadsheet.
-** TODO incorporate DIAN data
 * TODO where are those \r symbols coming from?
   See long comment in
     ~/of/tax.co/online/haskell/Main.hs
   following `filter _ $` expression.
 * /home/jeff/code/erlang-py
 * TODO [[id:5eb93e07-675e-4801-b615-6f8ef6fc7f87][Daniel's "ingresos.xlsx"]]
-* TODO ? person-level analysis
-  Divide IVA by income share.
-** what `households*.py` does, and what I'll need to map back to individuals
-*** Compute income rank.
-    This needs mapping back to individuals
-*** Sums some things,
-    from which the individual data needs total household income,
-    to apportion IVA back to individuals.
-*** Computes some min, max variables, reinterpreted as "has a" categories.
-    Any of those could be mapped back to individuals.
-*** Computes income quantiles.
-    Unneeded.
-*** Merges `purchase_sums` into households
-    value, purchase
-    value, non-purchase
-    transactions
-    vat paid, max
-    vat paid, min
-    value, tax, predial
-    value, tax, purchaselike non-predial non-VAT
-    value, tax, purchaselike non-VAT
-    value, spending
-    value, consumption
-*** Nullifies IVA in San Andrés
-*** Derives some simple new columns
-    "vat / purchase value, min"
-    "vat / purchase value, max"
-    "vat/income, min"
-    "vat/income, max"
-    "purchase value / income"
-* TODO to promote
-  :PROPERTIES:
-  :ID:       73fe22f8-0635-4954-ad04-90ef21c14523
-  :END:
-** TODO collect log-like files
-*** collect global logs in logs/ rather than project root
-    data/requests.csv
-    data/requests.temp.csv
-    data/requests.temp.csv.lock
-
-    income_tax.pickle
-    manual_ingest.pickle
-    non_tax.pickle
-    vat.pickle
-    requests-cron-log.txt
-    requests-log.txt
-*** DONE collect user logs in user folder
-** TODO tax.co should use income floors, not ceilings
-   for its marginal income tax tables.
-   That way I could delete a bunch of cruft that converts ceilings to floors for display in the UI, and floors to ceilings for getting the UI data back into tax.co.
-** TODO fix time zone for make.txt
-** BLOCKED [[id:b91ea186-b66a-48ab-90d4-c7cba0688e3b][fix how exemptions are applied to "most income"]]
-** TODO [[id:1c9cef73-d495-4735-a789-2daf051c9beb][handle return codes]]
 * TODO important
 ** DONE correct low-ceiling error in most.csv
    The top income tax rate for most income ended at a finite income level; it shouldn't. Now it doesn't.
@@ -219,6 +157,27 @@
 *** questions/comments for him
    I see dependencies on a few URLs.
    Don't really need every template changed; users aren't expected to visit most of them, just "ingest" and "thank".
+* TODO to promote
+  :PROPERTIES:
+  :ID:       73fe22f8-0635-4954-ad04-90ef21c14523
+  :END:
+** TODO collect log-like files
+*** collect global logs in logs/ rather than project root
+    data/requests.csv
+    data/requests.temp.csv
+    data/requests.temp.csv.lock
+
+    income_tax.pickle
+    manual_ingest.pickle
+    non_tax.pickle
+    vat.pickle
+    requests-cron-log.txt
+    requests-log.txt
+*** DONE collect user logs in user folder
+** TODO tax.co should use income floors, not ceilings
+   for its marginal income tax tables.
+   That way I could delete a bunch of cruft that converts ceilings to floors for display in the UI, and floors to ceilings for getting the UI data back into tax.co.
+** TODO [[id:1c9cef73-d495-4735-a789-2daf051c9beb][handle return codes]]
 * TODO easy
 ** un-hardcode this path
    secrets_path = "/mnt/apache2/secret"
@@ -597,8 +556,8 @@ The first that fails:
       ALLOWED_HOSTS
     it still doesn't work.
 ** DONE cannot download models from myapp/run_make/ingest_full_spec
-* forward clicks to PUJ
 * DONE things, very incomplete but maybe useful as a reference
+** DONE [[id:b91ea186-b66a-48ab-90d4-c7cba0688e3b][fix how exemptions are applied to "most income"]]
 ** DONE dynamic forms
 *** the idea
 **** for the IVA
@@ -692,6 +651,8 @@ Tasa          Min (COP)      Max (COP)
     the python code looks up whether
 ** Ponder: idle user time, parallelism
    Should the website pause while the model is computed?
+* meh
+** forward clicks to PUJ
 * solutions
 ** DONE BUG: circular import with pandas
 *** the apparent solution

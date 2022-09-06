@@ -16,6 +16,33 @@
 ** subsidize healthy prepared food
    for gender equity
 ** hotels employ more women
+* TODO review [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]: in org-roam, and TODO notes in code
+* TODO mtg: DIAN-extending the model, <2022-08-30 Tue>
+** TODO the regression uses *(natural) log of yearly* income
+   so to apply them to the microsimulation,
+   first divide by 12, then take the log,
+   then apply the coefficients,
+   then exponentiate (base e).
+** notes
+*** imagine ganancias oc taxed at 10%
+    since can't tell in DIAN data
+*** maybe ge erate synthetic households
+    based on the ENPH data, from the DIAN data
+*** need income individuals for income taxes
+*** use a regression to predict DIAN quantile given an ENPH observation
+    income, no laboral
+    income, labor
+    income, capital
+    income, ganancias ocasionales (total)
+    income, pension
+    income, dividend
+** questions
+*** DONE How do unequal income earners split wealth on their tax declarations?
+    like I thought -- hard.
+    Can change the divison each year, arbitrarily.
+*** what's the PILA?
+    SS contrib data
+* TODO [[id:448b41e2-e1b1-4659-beaa-e9661a03a048][document the microsimulation]]
 * TODO testing whether email == quien@donde.net is failing
 ** how to test
    I already set a trace in requests.main.

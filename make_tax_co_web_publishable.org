@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c1b53258-b3bc-4dec-a708-2fa875fcdcfa
+:END:
+#+title: make tax.co.web publishable
+* use more memory on AWS
+* [[id:cac03e9f-585d-48f6-9d05-c4e73d7b19bc][show images, offer downloads from browser, don't email]]

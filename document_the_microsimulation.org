@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       448b41e2-e1b1-4659-beaa-e9661a03a048
+:END:
+#+title: document the microsimulation
+* need instructions
+** explain that it computes tax burdens, hence post-tax income, but does not do GE -- everyone's base income is unchanged
+** thresholds have to be monotonic
+** the IVA buckets are approximate
+   :PROPERTIES:
+   :ID:       106ca7be-c9de-42c6-89aa-db93c5202304
+   :END:
