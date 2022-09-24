@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       09717e0a-fb87-4a45-9685-270e6c13cd48
+:END:
+#+title: Guia Presupuestal 2022, by the Observatorio Fiscal
+* refs
+  https://www.ofiscal.org/_files/ugd/e33cdb_05ce91571e02412b8b976c51cacc8c82.pdf

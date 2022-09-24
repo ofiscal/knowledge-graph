@@ -16,6 +16,19 @@
 ** subsidize healthy prepared food
    for gender equity
 ** hotels employ more women
+* TODO understand
+** make a "household income per capita"
+** Why do the poor pay more ganancias ocasionales as a fraction of income.
+   I think GOs bump them into the taxpaying region.
+** What's "depuracion"?
+** verify we don't use retencion en la fuente
+   P1652S2 & P1652S2A1
+* TODO read the [[id:09717e0a-fb87-4a45-9685-270e6c13cd48][Guia Presupuestal 2022, by the Observatorio Fiscal]]
+* TODO new products
+** gender within percentiles
+** percentiles within gender
+*** households by gender of head of household
+*** individuals by gender
 * TODO review [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]: in org-roam, and TODO notes in code
 * TODO mtg: DIAN-extending the model, <2022-08-30 Tue>
 ** TODO the regression uses *(natural) log of yearly* income

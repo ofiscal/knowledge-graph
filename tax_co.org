@@ -11,6 +11,12 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
+* TODO where I left off
+** How is income-percentile defined?
+   [jeff@jbb-hp17:~/of/tax.co/online/python]$ grep -i "percentile" -r build --color
+** different for nonzero earners than others
+** gender split comes after quantile definitions
+* TODO [[id:390f47d2-bc82-4509-893d-f7e816f2b624][gender-split data sets might have bad quantile definitions]]
 * TODO Solve / Internalize : If the strategy changes but a user already has data generated from the other one, the makefile gets confused.
   A dumb solution is to nuke the user's data folder
   each time its strategy changes.
