@@ -16,6 +16,9 @@
 ** subsidize healthy prepared food
    for gender equity
 ** hotels employ more women
+* TODO research [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]]
+** J Ec Perspectives
+* TODO [[id:d000cb7c-3f7c-408c-acec-0e330519335a][our report on the second Petro tax reform, <2022-09-28>-ish]]
 * TODO understand
 ** make a "household income per capita"
 ** Why do the poor pay more ganancias ocasionales as a fraction of income.

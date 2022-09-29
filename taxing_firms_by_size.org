@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       dcc368b4-e09c-4334-9500-d11f203e1fd8
+:END:
+#+title: taxing firms by size
+* questions
+** does it work?
+** how to measure size?
