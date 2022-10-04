@@ -2,8 +2,11 @@
 :ID:       dcc368b4-e09c-4334-9500-d11f203e1fd8
 :END:
 #+title: taxing firms by size
-* TODO talk about marginal and average rates
-** to the part about firms staying small
+* TODO add ideas
+** talk about marginal and average rates
+*** to the part about firms staying small
+    Stark if defined in terms of average rather than marginal rates.
+** effect on government revenue
 * ref
   [[/home/jeff/of/papers/tax-rates-by-firm-size.minhacienda-2022.pdf][Minhacienda (2022) computes tax rates by firm size]]
 * questions

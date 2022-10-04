@@ -16,8 +16,12 @@
 ** subsidize healthy prepared food
    for gender equity
 ** hotels employ more women
-* TODO research [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]]
-** J Ec Perspectives
+* TODO [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]]
+* TODO ask David Suarez
+  if we can send regressions for them to run
+* TODO is the GO trick real?
+  ganancias ocasionales, non-monotonic total income tax rate
+* TODO ? draw a poverty line
 * TODO [[id:d000cb7c-3f7c-408c-acec-0e330519335a][our report on the second Petro tax reform, <2022-09-28>-ish]]
 * TODO understand
 ** make a "household income per capita"
@@ -26,7 +30,6 @@
 ** What's "depuracion"?
 ** verify we don't use retencion en la fuente
    P1652S2 & P1652S2A1
-* TODO read the [[id:09717e0a-fb87-4a45-9685-270e6c13cd48][Guia Presupuestal 2022, by the Observatorio Fiscal]]
 * TODO new products
 ** gender within percentiles
 ** percentiles within gender
@@ -93,6 +96,7 @@
 * TODO figure out why the model seemed down for me and not Sebastian
 * [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][putting tax.co online]]
 * BLOCKED dubious
+** read the [[id:09717e0a-fb87-4a45-9685-270e6c13cd48][Guia Presupuestal 2022, by the Observatorio Fiscal]]
 ** learn [[id:f28ddaf7-698b-4d5e-a529-a34bc625f3dd][how to SSH over HTTPS, for Github or maybe anything]]
 ** [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]
 * DONE
