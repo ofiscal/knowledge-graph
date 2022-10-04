@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       78338d97-3af9-431d-94b4-b4e911b8d901
+:END:
+#+title: taxing firms by size, my essay on
+Some people in and out of the government believe it should tax firms differently based on their size. That could become law this year, so it's worth looking at the motivation behind it, and the effects it could have.
+
+
+The motivation behind the idea
+------------------------------
+
+The motivation for taxing bigger firms more fits in a single word: Progressivity. The idea -- which is enshrined in Colombia's constitution -- is that the rich should pay proportionally more. For instance, a progressive income tax is one in which those with higher incomes pay a greater fraction of their income in taxes.
+
+It's worth nothing that in certain respects, Colombia's tax code is indeed already progressive. For instance, someone who makes 3 million COP per month in labor income pays 0 tax on it, whereas someone who made 100 million COP per month would pay about 34.5% of that money in taxes. On a more inclusive measure, unfortunately, the tax code is regressive, because it taxes different kinds of income at different rates. In particular, while the top marginal rate for labor income is 39%, the top rate for dividend income is 10%. Since dividend income flows disproportionately to the richest Colombians, their effective tax rates are lower than those borne by people who earn less.
+
+The government is aware of problems like these, and wants to correct them. Taxing bigger firms more has been proposed as one way of making the tax code more progressive. The idea is that bigger firms represent richer people, and therefore taxing them more heavily means taxing the rich more than the poor.
+
+
+What we can expect if it happens
+--------------------------------
+
+The argument assumes that firm size is closely coupled to profitability and wealth. The assumption, unfortunately, does not bear out.
+
+Size and profitability are weakly coupled. A small company can make a lot of money (hedge funds or law firms), and a big company can have low or even negative profit (Avianca).
+
+Size and owners' wealth are also weakly coupled. A small company can belong to rich people -- indeed, a single rich person is often the sole owner of many small businesses. Similarly, a big company can belong to a lot of poor people. Most retirees are like this -- they are the owners of a pension fund, and thereby the owners of the typically large businesses in which that fund has invested. To tax a big company owned largely by pension funds is, in effect, to tax a lot of poor old people.
+
+Employees bear some of the corporate tax, too -- a company with a lower tax burden can afford more employees and higher salaries. And on this dimension too, size can be negatively correlated with wealth: A plastic surgeon's private practice might have three well-paid employees, while a big fast food chain could have thousands of poorly-paid ones.
+
+So taxing firms by size would make the relationship between income and taxation more chaotic, without systematically favoring the poor. But that's not the only effect it would have.
+
+It would also create an incentive for firms to be small -- to avoid growing if they are small, and to break up if they are big. This would be inefficient, because bigger firms tend to be more efficient than smaller firms, thanks to "economies of scale". Economies of scale are cost advantages that arise when a company increases its output. Filing taxes itself turns out to be a good example. Filing taxes for twenty people is not twice as hard as filing taxes for ten people. Two firms with ten people will have to spend more time and money filing their taxes than a single twenty-person firm would. The world is full of economies of scale. A country whose businesses are too small is one that is duplicating too much effort.
+
+A corporate tax based on size would also distort firms' behavior in ways that depend on how the law defines "size" -- for instance, by misrepresenting the value of their assets. It's hard to anticipate the details of those distortions, but easy to anticipate that they would happen. (How to define "size" is not obvious -- see the addendum at the bottom of this article.)
+
+
+Conclusion
+----------
+
+A corporate tax that depends on firm size is motivated by progressivity, but would not have the desired effect. If it happens, we can expect to see changes in which kinds of businesses exist, a decrease in average firm size (and a corresponding decrease in firms' efficiency), and lower pension incomes for private pensioners whose money is invested in big firms.
+
+Since rich people and poor people can own the same business, the only way to reliably tax rich people more than poor people is through the personal income tax, not the corporate one. Taxing dividend income just like ordinary income, rather than giving it its own special low rate, would be a good start.
+
+
+Addendum: How would the law define firm size?
+---------------------------------------------
+
+Profit would be an unreliable measure, as any firm can have zero or negative profit in any year. Number of employees also seems like a bad measure, because (as mentioned earlier) a company with a few lawyers can be richer than a copmany with fifty farm hands.
+
+Revenue is a reasonable way to measure size. It's not very tightly coupled to wealth, though -- both for the reason described earlier, and because businesses with the same revenue can have wildly different profit margins. A grocery store, for instance, might make 2% profit on its revenue, while a used car dealer 16%.
+
+The other reasonable candidate I'm aware of is assets. To tax businesses with more assets more heavily would be to penalize capital-intensive activities like farming or drug production, in favor of capital-light businesses like call centers and law firms. A business's assets are surely somewhat correlated with its owners' wealth -- but a simple consideration of some example industries suggests that the link might be weak.
+
+There might be other reasonable candidates.
