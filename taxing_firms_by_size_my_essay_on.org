@@ -29,9 +29,17 @@ Size and owners' wealth are also weakly coupled. A small company can belong to r
 
 Employees bear some part of the corporate tax, too. A company with a lower tax burden can afford more employees and higher salaries. And on this dimension too, size can be negatively correlated with wealth: A plastic surgeon's private practice might have three well-paid employees, while a big fast food chain could have hundreds of poorly-paid ones.
 
-So taxing firms by size would make the relationship between income and taxation more chaotic, without systematically favoring the poor. But that's not the only effect it would have.
+### It would, however, certainly have effects.
 
-Such a tax would also create an incentive for firms to be small -- to avoid growing if they are small, and to break up if they are big. This would be inefficient, because bigger firms tend to be more efficient than smaller firms, thanks to "economies of scale". Economies of scale are cost advantages that arise when a company increases its output. Filing taxes itself turns out to be a good example. Filing taxes for twenty people is not twice as hard as filing taxes for ten people. Two firms with ten people will have to spend more time and money filing their taxes than a single twenty-person firm would. The world is full of economies of scale. A country whose businesses are too small is one that is duplicating too much effort.
+As described above, taxing firms by size would make the relationship between income and taxation more chaotic, without systematically favoring the poor.
+
+It would also create an incentive for firms to be small, if the tax is defined in terms of average rather than marginal tax rates -- which tentative proposals seem to indicate, and which is common through much of the existing tax code. For a clear explanation of the difference between marginal and average tax rates, please refer to [[link to Juan's piece]].
+
+Figure (1) illustrates a simple example. Here, the average corporate tax rate is 10% for firms making up to 100 million COP; for firms making more than that, it jumps to 20%. Under this scheme, a firm that makes 99.999 million pesos pays roughly 10 million pesos in taxes, while a firm that makes 100.001 million pesos pays roughly 20 million in taxes.
+
+This motivates firms just under the threshold to remain small: Why earn another million COP if it will raise your taxes by 10 million? It also motivates big firms to break up. Why pay 20% of 270 million COP when you could instead pay 10% of 90 million COP three times?
+
+A motivation to be small is inefficient, because bigger firms tend to be more efficient than smaller firms, thanks to "economies of scale". Economies of scale are cost advantages that arise when a company increases its output. Filing taxes itself turns out to be a good example. Filing taxes for twenty people is not twice as hard as filing taxes for ten people. Two firms with ten people will have to spend more time and money filing their taxes than a single twenty-person firm would. The world is full of economies of scale. A country whose businesses are too small is one that is duplicating too much effort.
 
 A corporate tax based on size would also distort firms' behavior in ways that depend on how the law defines "size" -- for instance, by misrepresenting the value of their assets. It's hard to anticipate the details of those distortions, but easy to anticipate that they would happen. (How to define "size" is not obvious -- see the addendum at the bottom of this article.)
 
