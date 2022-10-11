@@ -40,13 +40,7 @@
 *** sim needs to know what revenues from corporate taxes are
 *** would be nice to split corp tax between workers and owners
     ask user for % that falls on workers
-* TODO internalize: to change the sample size
-  :PROPERTIES:
-  :ID:       3f092a7a-4a04-426a-bf23-e4502ac4d84f
-  :END:
-  Change the default value of `subsample`
-  in the definition of `class TaxConfig`,
-  in run_make/models.py
+* internalizing: [[id:3f39bd42-4d68-41b0-879a-65f2a1cba116][to change sample size in tax.co.web]]
 * streamline [[id:cf805990-0558-4608-9d51-ccd76d82d036][tax.co.web's request queue]]
 * ? rename the "detail" strategy to "default"
 * TODO ? Use [[id:8475bbbf-efbb-423e-901c-b464e807784c][parquet (file format)]].

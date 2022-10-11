@@ -17,8 +17,11 @@
    for gender equity
 ** hotels employ more women
 * TODO [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]]
-* TODO ask David Suarez
+* BLOCKED ask David Suarez
   if we can send regressions for them to run
+* TODO Incorporate test_dependentsToClaim () into Makefile.
+  in python/build/people_3_income_taxish_functions.py
+* TODO data/vat/README.md is stale
 * TODO is the GO trick real?
   ganancias ocasionales, non-monotonic total income tax rate
 * TODO ? draw a poverty line
@@ -100,6 +103,8 @@
 ** learn [[id:f28ddaf7-698b-4d5e-a529-a34bc625f3dd][how to SSH over HTTPS, for Github or maybe anything]]
 ** [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]
 * DONE
+** [[id:6e740e9c-0406-46d0-b7c7-5e6dd92cd286][changing the sim 2022-10-07]]
+** [[id:62c907a9-7b2b-487e-80a8-c7df64e7f591][look over section three of our report <2022-10-08 Sat>]]
 ** [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 ** [[id:9019705d-fcda-422e-bc89-88442094ca66][tax.co, a high-level overview of]]
 ** [[id:b03dbe01-ce5a-46ac-b2d3-7e22949781a1][tax hike proposal, Colombian Senate, 2020]]
