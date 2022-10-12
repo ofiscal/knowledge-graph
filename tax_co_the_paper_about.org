@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       30fb3fac-5f4b-472b-a437-cc224704ba30
+:END:
+#+title: tax.co, the paper about
+* refs
+** in tax.co
+   tax.co/tex/overview-paper.tex
+** on Overleaf
+   https://www.overleaf.com/project/5e595b989b19b0000110cfbe

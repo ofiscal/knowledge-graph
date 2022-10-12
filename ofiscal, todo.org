@@ -17,6 +17,7 @@
    for gender equity
 ** hotels employ more women
 * TODO [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]]
+* TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 * BLOCKED ask David Suarez
   if we can send regressions for them to run
 * TODO Incorporate test_dependentsToClaim () into Makefile.
