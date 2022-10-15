@@ -16,6 +16,7 @@
 ** subsidize healthy prepared food
    for gender equity
 ** hotels employ more women
+* TODO [[id:e4963fac-4f3a-46f5-8b69-e581195aa4f0][translate "Un año de la pandemia: opacidad en los gastos y una reforma tributaria para pagarlos"]]
 * TODO [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]]
 * TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 * BLOCKED ask David Suarez
