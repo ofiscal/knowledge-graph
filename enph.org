@@ -2,13 +2,17 @@
 :ID:       cf5eb548-54b3-48bf-b231-b29d3b627399
 :END:
 #+TITLE: enph
-* PITFALL: These notes files are redundant
-There's an enig.org file, an enph.org file, and this one which pertains to both.
+* some variables/kinds of data it has
+** employment sector
+   search for "CIIU"
 * refs
 ** The ENPH
 http://microdatos.dane.gov.co/index.php/catalog/566/get_microdata
 ** pictures of it from DANE
  https://www.dane.gov.co/files/investigaciones/boletines/enph/boletin-enph-2017.pdf
+* very old notes
+* PITFALL: These notes files are redundant
+There's an enig.org file, an enph.org file, and this one which pertains to both.
 * PITFALLS
 ** avoid repeating
 *** "home purchase value" variable: created, later deleted
