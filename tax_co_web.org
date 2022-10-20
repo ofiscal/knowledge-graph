@@ -319,7 +319,7 @@
 *** DONE incorporate requests/test.py into Makefile
 *** TODO find appropriate constraints for serving full sample
     Can only be done from EC2.
-** test the program (by hand)
+** test tax.co (by hand)
    :PROPERTIES:
    :ID:       cd69f027-d73b-4d3d-be8f-bf0a6c7d90e7
    :END:

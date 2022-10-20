@@ -2,7 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO BEFORE TUESDAY: frame our work in terms of UN Sustainable Development Goals
+* TODO BEFORE TUESDAY: [[id:2dde7214-a6b2-4324-961c-5ce4926671eb][frame]] [[id:4202cb00-b6a5-4ff3-8ec9-8327c15ba5c9][our work]] in terms of [[id:377aa850-0fc7-4d55-834f-7f346c4f3a7c][UN Sustainable Development Goals]]
 * DONE [[id:ad00525e-44a3-4483-aa7f-e49cc2e45055][Multidimensional Inequality Report, Fedesarrollo, Oct 2022]]
 * TODO mtg with AFD ("French Development Bank"?)
 ** TODO know what research has AFD done, esp. using CEQ

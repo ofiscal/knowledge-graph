@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       2dde7214-a6b2-4324-961c-5ce4926671eb
+:END:
+#+title: framing our work in terms of the UN Sustainable Development Goals
+* refs
+** [[id:4202cb00-b6a5-4ff3-8ec9-8327c15ba5c9][our work]]
+** [[id:377aa850-0fc7-4d55-834f-7f346c4f3a7c][UN Sustainable Development Goals]]
+* how we further the SDGs
+**  1 no poverty
+**  2 no hunger
+**  3 health and well-being
+**  4 education
+**  5 gender equality
+**  6 clean water and sanitation
+**  7 energy: affordable and clean
+**  8 decent work and economic growth
+*** ofiscal promotes this by promoting less distortionary business taxes
+**  9 industry, innovation and infrastructuree
+** 10 reduced inequalities
+** 11 sustainable cities and communities
+** 12 responsible consumption and production
+** 13 climate action
+*** A better business climate and more responsible spending on education make it easier to start or expand businesses motivated by climate goals, such as solar power installers.
+** 14 life below water
+** 15 life on land
+** 16 peace, justice, and strong institutions
+** 17 partnerships for the goals

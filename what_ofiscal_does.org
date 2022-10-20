@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4202cb00-b6a5-4ff3-8ec9-8327c15ba5c9
+:END:
+#+title: what the Observatorio Fiscal does
+* determine who taxes come from
+* determine who spending goes to
