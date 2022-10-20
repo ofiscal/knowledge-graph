@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       1bfc20ac-3e04-4eca-a82c-be3e04ad7b49
+:END:
+#+title: CEQ (method for evaluating fiscal incidence)
