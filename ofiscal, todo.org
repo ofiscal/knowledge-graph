@@ -2,19 +2,9 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO BEFORE TUESDAY: [[id:2dde7214-a6b2-4324-961c-5ce4926671eb][frame]] [[id:4202cb00-b6a5-4ff3-8ec9-8327c15ba5c9][our work]] in terms of [[id:377aa850-0fc7-4d55-834f-7f346c4f3a7c][UN Sustainable Development Goals]]
-* DONE [[id:ad00525e-44a3-4483-aa7f-e49cc2e45055][Multidimensional Inequality Report, Fedesarrollo, Oct 2022]]
-* TODO mtg with AFD ("French Development Bank"?)
-** TODO know what research has AFD done, esp. using CEQ
-** TODO find: World Bank updated ENPH to 2020
-   "Jairo", wrote Oliver.
-** who they are
-*** a development bank, part of the govt
-*** gives to governments (local & national) & NGOs
-** African Centre of Excellence for Inequality Research (ACEIR)
-** focusing on 4 countries
-*** South Africa, Colombia, Indonesia & _?
-** GEMMES (economic model with carbon)
+* TODO [[id:200e0a81-01ca-4845-a803-519ef0021e00][2022-10-31 read links for grant applications]]
+* TODO [[id:0d8d7d94-72c7-44c5-8dc7-58432c5bec6f][mtg with AFD ("French Development Bank"?), 2022-10-19-ish]]
+  file, act on
 * TODO (after Tuesday): extend [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]] with a comparison to [[id:300513f2-4ed7-408d-974d-df907e588b5b][Cedetrabajo and ACOPI propose taxing small firms less]]
 * mtg
 ** subsidize healthy prepared food
@@ -121,6 +111,9 @@
 ** learn [[id:f28ddaf7-698b-4d5e-a529-a34bc625f3dd][how to SSH over HTTPS, for Github or maybe anything]]
 ** [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]
 * DONE
+** write about [[id:bfa4ff53-54e7-4e25-b5b0-ab10f15280b6][gender inequality in Colombia, and how policy exacerbates it]], for OSF
+** [[id:2dde7214-a6b2-4324-961c-5ce4926671eb][frame our work in terms of UN SDGs]]
+** [[id:ad00525e-44a3-4483-aa7f-e49cc2e45055][Multidimensional Inequality Report, Fedesarrollo, Oct 2022]]
 ** [[id:6e740e9c-0406-46d0-b7c7-5e6dd92cd286][changing the sim 2022-10-07]]
 ** [[id:62c907a9-7b2b-487e-80a8-c7df64e7f591][look over section three of our report <2022-10-08 Sat>]]
 ** [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]

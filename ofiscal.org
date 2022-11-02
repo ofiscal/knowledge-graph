@@ -26,4 +26,4 @@
 ** [[id:cc06cc2e-b6a7-4110-98d7-0adf9a75b170][my work at the Observatorio: informal, for the new boss]]
 ** [[id:37557bc3-593e-4288-99ec-69e6107b2ff8][Colombia 2021 Tax Expenditures Report, by the Tax Experts Comission]]
    I summarized section 4, on the CIT.
-* [[id:4202cb00-b6a5-4ff3-8ec9-8327c15ba5c9][what we do]] (in less than two sentences)
+* [[id:4202cb00-b6a5-4ff3-8ec9-8327c15ba5c9][what we do, and how, and why]]

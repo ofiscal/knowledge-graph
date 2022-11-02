@@ -1,0 +1,74 @@
+:PROPERTIES:
+:ID:       200e0a81-01ca-4845-a803-519ef0021e00
+:END:
+#+title: 2022-10-31 read links for grant applications
+* TODO [[id:9a455c6a-6129-43d5-b8bd-91c4317bc497][RESUME HERE]]
+* TODO rank them by feasibility
+* the grants (links)
+** made a first pass
+*** Global Innovation Fund
+    https://www.globalinnovation.fund/apply/
+**** We're a good fit for almost everything they want.
+     https://www.globalinnovation.fund/apply/about/what-we-fund/
+*** Fund for Innovation in Development
+    https://fundinnovation.dev/en/application-form-step-0/
+**** their goals
+     https://fundinnovation.dev/en/
+***** They want to reduce poverty.
+***** They want "evidence of clear, measurable outcomes", which seems hard.
+***** They want cost effectiveness. We are certainly cheap.
+      Making research scales in a way that
+      making drugs or any physical product doesn't.
+***** They want scalability. We're already in a sense at scale.
+*** Fundación S'AIDDES
+    http://www.saiddes.org/subventions-aux-ong_110.html
+    I don't speak French.
+*** Inter American Foundation
+    https://www.iaf.gov/es/solicite-fondos/
+**** eligibility looks shaky
+     https://www.iaf.gov/apply-for-grant/#eligibility
+     "We do NOT fund proposals submitted or directed by ... Privately-held companies"
+     "we rarely fund projects submitted by universities. It often takes us longer than a school year to review proposals and release the funds, so student groups seeking funds for their projects will not receive them in time."
+*** BLOCKED (bad docs) UN Trust Fund for Human Security (UNTFHS)
+**** Buried in bureaucratic crap. No idea what they want.
+     [[/home/jeff/of/papers/UNTFHS-Guidelines.9th-Edition_2020.pdf]]
+     https://www.un.org/humansecurity/trustfund/faqs-2-2/
+*** BLOCKED (bad site) The Gef Small Grants Programme
+    https://sgp.undp.org/index.php?option=com_content&view=article&id=94:how-to-apply&catid=45:aboutus&Itemid=160#.VkNeYV7Vo_8
+**** Small grants -- 25K to 50K USD.
+**** broken webpage
+***** email I sent them about it
+      https://mail.google.com/mail/u/0/#sent/KtbxLrjNZJWdQcVDHdMqVlxNTPZQRkQgsq
+***** problem: the only area of work available is biodiversity
+     https://sgp.undp.org/areas-of-work-151/biodiversity-170.html
+*** CIVICUS
+    https://www.civicus.org/index.php/what-we-do/defend/crisis-response-fund
+**** Does not look well suited to us.
+     It's about crises of civic freedom.
+** haven't
+*** The OPEC Fund
+**** refs
+***** website
+      https://opecfund.org/what-we-offer/grants/grant-application
+***** grant guidelines (pdf)
+      [[/home/jeff/of/papers/OPEC-fund-grant-guidelines.pdf]]
+**** They want measurability and alignment.
+     Alignment of our goals with theirs.
+**** shaky -- need a "government commitment"?
+***** the worrisome passage
+      For all types of grants, and with the exception of emergency aid grants and grants in support of projects sponsored by other development finance institutions or UN agencies, proposed activities and projects may be undertaken only where there is a solid commitment from the government to the project concerned.
+***** but maybe that's okay because
+      we're a project sponsored by another development finance institution (OSF)
+**** RESUME HERE
+     :PROPERTIES:
+     :ID:       9a455c6a-6129-43d5-b8bd-91c4317bc497
+     :END:
+     reading the website first, then the grant guidelines
+*** The Lantos Foundation for Human Rights and Justic
+    https://www.lantosfoundation.org/frontlinefundgrants
+*** Fondo de Transparencia del BID
+    https://www.iadb.org/es/transparencia/fondo-de-transparencia
+* ideas
+** Compare us to the CBO, and then compare our budgets.
+* questions
+** How can we measure our outcomes?
