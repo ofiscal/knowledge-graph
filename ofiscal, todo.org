@@ -3,6 +3,7 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO [[id:200e0a81-01ca-4845-a803-519ef0021e00][2022-10-31 read links for grant applications]]
+* TODO order households by per-capita income
 * TODO [[id:0d8d7d94-72c7-44c5-8dc7-58432c5bec6f][mtg with AFD ("French Development Bank"?), 2022-10-19-ish]]
   file, act on
 * TODO (after Tuesday): extend [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]] with a comparison to [[id:300513f2-4ed7-408d-974d-df907e588b5b][Cedetrabajo and ACOPI propose taxing small firms less]]

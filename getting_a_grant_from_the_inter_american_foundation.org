@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       5ff764f6-74c0-4151-a68f-7d4fb2a9be23
+:END:
+#+title: getting a grant from the Inter American Foundation
+https://www.iaf.gov/es/solicite-fondos/
+* eligibility looks shaky
+  https://www.iaf.gov/apply-for-grant/#eligibility
+  "We do NOT fund proposals submitted or directed by ... Privately-held companies"
+  "we rarely fund projects submitted by universities. It often takes us longer than a school year to review proposals and release the funds, so student groups seeking funds for their projects will not receive them in time."

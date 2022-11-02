@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       ece43518-7a0b-44b8-88c3-979337b6a5a0
+:END:
+#+title: getting a grant from the Fund for Innovation in Development
+https://fundinnovation.dev/en/application-form-step-0/
+* their goals
+  https://fundinnovation.dev/en/
+** They want to reduce poverty.
+** TODO They want "evidence of clear, measurable outcomes". Tricky.
+** They want cost effectiveness. We are certainly cheap.
+   Making research scales in a way that
+   making drugs or any physical product doesn't.
+** They want scalability. We're already in a sense at scale.
+* infinite money
+* The application process does not seem unreasonably hard.
+* It takes at least half a year.
