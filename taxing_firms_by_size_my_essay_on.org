@@ -2,6 +2,8 @@
 :ID:       78338d97-3af9-431d-94b4-b4e911b8d901
 :END:
 #+title: taxing firms by size, my essay on
+* CHANGELOG
+  As of <2022-11-09 Wed> I am removing talk of "firm size" as a separate concept from profits.
 * the essay
 # The reasoning behind, and the likely effect of, a tax that depends on firm size
 
@@ -12,7 +14,7 @@ Some people in and out of the government believe it should tax firms differently
 
 The motivation for taxing bigger firms more fits in a single word: Progressivity. The idea -- which is enshrined in Colombia's constitution -- is that the rich should pay proportionally more. For instance, a progressive income tax is one in which those with higher incomes pay a greater fraction of their income in taxes.
 
-It's worth noting that in certain respects, Colombia's tax code is indeed already progressive. For instance, someone who makes 3 million COP per month in labor income pays no tax on it, whereas someone who made 100 million COP per month would pay about 34.5% of it in taxes. On a more inclusive measure, unfortunately, the tax code is regressive, because it taxes different kinds of income at different rates. In particular, while the top marginal rate for labor income is 39%, the top rate for dividend income is 10%. Since dividend income flows disproportionately to the richest Colombians, the effective tax rate borne by the rich is lower than that borne by people who earn less.
+It's worth noting that in certain respects, Colombia's tax code is indeed already progressive. For instance, someone who makes 3 million COP per month in labor income pays no tax on it, whereas someone who made 100 million COP per month would pay about 34.5% of it in taxes. On a more inclusive measure, unfortunately, the tax code is regressive, because it taxes different kinds of income at different rates. In particular, while the top marginal rate for labor income is 39%, the top rate for dividend income is 10%. Since dividend income flows disproportionately to the richest Colombians, the effective tax rate borne by the very rich is lower than that borne by many people who earn less.
 
 The government is aware of problems like these, and wants to correct them. Taxing bigger firms more has been proposed as one way of making the tax code more progressive. The idea is that bigger firms represent richer people, and therefore taxing them more heavily means taxing the rich more than the poor.
 
@@ -21,27 +23,41 @@ The government is aware of problems like these, and wants to correct them. Taxin
 
 ### It would not have the intended effect.
 
-The argument assumes that firm size is closely coupled to profitability and wealth. The assumption, unfortunately, does not bear out.
+The argument assumes that the more profitable firms are owned by the wealthiest people. The assumption, unfortunately, does not bear out: Firm profits size and owner wealth are weakly coupled.
 
-Size and profitability are weakly coupled. A small company can make a lot of money (hedge funds or law firms), and a big company can have low or even negative profit (Avianca).
+A small company can belong to rich people -- indeed, a single rich person is often the sole owner of many small businesses. Similarly, a big company can belong to a lot of poor people. Millions of retirees are like this -- they are the owners of a pension fund, and thereby the owners of the  businesses, typically large ones, in which that fund has invested. To tax a big company owned largely by pension funds is, in effect, to tax a lot of poor old people.
 
-Size and owners' wealth are also weakly coupled. A small company can belong to rich people -- indeed, a single rich person is often the sole owner of many small businesses. Similarly, a big company can belong to a lot of poor people. Millions of retirees are like this -- they are the owners of a pension fund, and thereby the owners of the typically large businesses in which that fund has invested. To tax a big company owned largely by pension funds is, in effect, to tax a lot of poor old people.
+Employees bear some part of the corporate tax, too. A company with a lower tax burden can afford more employees and higher salaries. And on this dimension too, size can be negatively correlated with wealth: A plastic surgeon's private practice might have three well-paid employees, while a big fast food chain could have hundreds of poorly-paid ones. Taxing the big fast food chain more than the littlen surgery effectively shifts some money from fast food workers to surgerons' assistants.
 
-Employees bear some part of the corporate tax, too. A company with a lower tax burden can afford more employees and higher salaries. And on this dimension too, size can be negatively correlated with wealth: A plastic surgeon's private practice might have three well-paid employees, while a big fast food chain could have hundreds of poorly-paid ones.
-
-### It would, however, certainly have effects.
+### It would have other effects.
 
 As described above, taxing firms by size would make the relationship between income and taxation more chaotic, without systematically favoring the poor.
 
-It would also create an incentive for firms to be small, if the tax is defined in terms of average rather than marginal tax rates -- which tentative proposals seem to indicate, and which is common through much of the existing tax code. For a clear explanation of the difference between marginal and average tax rates, please refer to [[link to Juan's piece]].
+It would also create an incentive for firms to be small. That incentive is inefficient, because bigger firms tend to be more efficient than smaller firms, thanks to "economies of scale". Economies of scale are cost advantages that arise when a company increases its output. Filing taxes itself turns out to be a good example. Filing taxes for twenty people is not twice as hard as filing taxes for ten people. Two firms with ten people will therefore have to spend more time and money filing their taxes than a single twenty-person firm would.
 
-Figure (1) illustrates a simple example. Here, the average corporate tax rate is 10% for firms making up to 100 million COP; for firms making more than that, it jumps to 20%. Under this scheme, a firm that makes 99.999 million pesos pays roughly 10 million pesos in taxes, while a firm that makes 100.001 million pesos pays roughly 20 million in taxes.
+The world is full of economies of scale: 500 companies making 100 cars would use far more resources than a single company making 50000 cars. A hundred people each growing food in their backyards will do much more work than a single farmer with the same amount of land. A country whose businesses are too small is one that is duplicating too much effort. Tax laws that motivate firms to be small damage national productivity.
 
-This motivates firms just under the threshold to remain small: Why earn another million COP if it will raise your taxes by 10 million? It also motivates big firms to break up. Why pay 20% of 270 million COP when you could instead pay 10% of 90 million COP three times?
 
-A motivation to be small is inefficient, because bigger firms tend to be more efficient than smaller firms, thanks to "economies of scale". Economies of scale are cost advantages that arise when a company increases its output. Filing taxes itself turns out to be a good example. Filing taxes for twenty people is not twice as hard as filing taxes for ten people. Two firms with ten people will have to spend more time and money filing their taxes than a single twenty-person firm would. The world is full of economies of scale. A country whose businesses are too small is one that is duplicating too much effort.
+## Marginal rates, average rates, and firm incentives
 
-A corporate tax based on size would also distort firms' behavior in ways that depend on how the law defines "size" -- for instance, by misrepresenting the value of their assets. It's hard to anticipate the details of those distortions, but easy to anticipate that they would happen. (How to define "size" is not obvious -- see the addendum at the bottom of this article.)
+This discussion so far elides an important distinction: the one between average and marginal tax rates. Tax laws can be defined using either concept, but the results are wildly different.
+
+In brief, the average tax rate is the ratio of taxes paid to income received, while the marginal tax rate is the ratio of an increase in taxes paid to an incrase in income. (For a detailed explanation of the difference between marginal and average tax rates, please refer to [[link to Juan's piece, if it exists]].)
+
+Average tax rates are easier to understand, and much of the tax code is defined in terms of them, so let's start there. Consider a corporate income tax defined in terms of average tax rates. Let's call this law P (for "tarifa Promedio"). Under this law, the average tax rate is 30% for firms making up to 100 million COP, and 35% for firms making above that threshold. A firm that earns 100 million COP before taxes will thus pay 30% * 100 million = 30 million COP in taxes, and a firm that earns 101 million COP before taxes will pay 35% * 101 million = more than 35 million COP in taxes. This is strange! By earning an extra 1 million COP before taxes, it raises its tax bill by more than 5 million COP. Under this law P, a firm would actually prefer to make 100 million COP before taxes than 101 million. (If on December 15th it finds that it has made 100 million, the firm would be smart to close for the rest of the year.)
+
+Now consider a similar law, defined in terms of marginal rather than average rates. Let's call it law M (for "tarifa Marginal"). Under this law, the marginal tax rate is 30% for income up to 100 million COP, and 35% for income above that threshold. Thus if a firm makes 100 million COP before taxes, it pays 30% * 100 million = 30 million COP in taxes. If instead it makes 101 million COP, then it pays 30% * 100 million + 35% * 1 million = 30,350,000 COP in taxes. In this case, those last 1 million pesos in before-tax profit only raised its tax bill by 0.35 million COP. Thus, reassuringly, under law M the firm would prefer to make 101 million COP before taxes rather than 100 million. (But note that the firm could still save money by dividing into two firms, so that none of its income incurs the higher tax rate.)
+
+*Either law P or law M is being considered right now. We're not sure which.* [[Text recently approved in the lower chamber of Congress]] uses the term "tarifa marginal", which suggests that it is describing a marginal tax schedule. However, for every marginal tax schedule currently enshrined in law, the law defines the formula that should be used to compute taxes from income, and the text under consideration does not. [[Provide an image of such a law.]] This suggests that the text under consideration is defining average tax rates, not marginal ones.
+
+
+### Revenue effects
+
+Both laws provide similar incentives for big firms to split into smaller firms. Under law P, if a firm can spin off a portion that makes less than 100 million COP into a separate firm, it saves 5% on all the income of that new firm. Under law M, even if the firms splits into two firms that both make more than 100 million COP, it *still* saves 5 million COP, because now it is paying 30% on 200 million COP instead of 100 million COP.
+
+Both laws also provide an incentive for small firms to stay small. That incentive is extreme for law P (for instance, in the example above of a firm that stops operating on December 15th). Law M reduces that incentive, but it does so by sacrificing more revenue.
+
+Specifically, while laws P and M treat firms making less than 100 million COP the same way, they treat bigger firms differently. Under law P, every firm making more than 100 million COP will pay the same in taxes as it currently does: 35% of everything it earns. Under law M, by contrast, any firm making more than 100 COP will pay 5 million COP less in taxes, because on its first 100 million COP of before-tax income they pay only 30% rather than 35%.
 
 
 ## Conclusion
@@ -50,15 +66,5 @@ A corporate tax that depends on firm size is motivated by progressivity, but wou
 
 Since rich people and poor people can own the same business, the only way to reliably tax rich people more than poor people is through the personal income tax, not the corporate one. Taxing dividend income just like ordinary income, rather than giving dividends their own special low rate, would be a good start.
 
-
-## Addendum: How would the law define firm size?
-
-Profit would be an unreliable measure, as any firm can have zero or negative profit in any year. Number of employees also seems like a bad measure, because (as mentioned earlier) a company with a few lawyers can be richer than a company with fifty farm hands.
-
-Revenue is a reasonable way to measure size. It's not very tightly coupled to wealth, though -- both for the reason described earlier, and because businesses with the same revenue can have wildly different profit margins. A grocery store, for instance, might make 2% profit on its revenue, while a used car dealer 16%.
-
-The other reasonable candidate I'm aware of is assets. To tax businesses with more assets more heavily would be to penalize capital-intensive activities like farming or drug production, in favor of capital-light businesses like call centers and law firms. A business's assets are surely somewhat correlated with its owners' wealth, but a simple consideration of some example industries suggests that the link is weak.
-
-There might be other reasonable candidates.
 * Figure 1
   [[/home/jeff/many-small/blob/2022-10-05-ZPAHEsvb.progressive-average-tax-and-incentive-to-be-small.jpg]]

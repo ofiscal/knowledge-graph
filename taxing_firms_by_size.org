@@ -3,9 +3,8 @@
 :END:
 #+title: taxing firms by size
 * TODO add ideas
+** the actual law that is half-approved
 ** talk about marginal and average rates
-*** to the part about firms staying small
-    Stark if defined in terms of average rather than marginal rates.
 ** effect on government revenue
 * refs
   [[/home/jeff/of/papers/tax-rates-by-firm-size.minhacienda-2022.pdf][Minhacienda (2022) computes tax rates by firm size]]

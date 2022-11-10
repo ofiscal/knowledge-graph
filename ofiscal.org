@@ -17,7 +17,7 @@
 * [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
 * our virtual office
   https://gather.town/preeaif0RiJXfiW6/Obsevatorio%20Fiscal
-* [[id:305eb465-cd34-4eb2-8998-85fd2daeaef5][some ofiscal-relevant contacts]]
+* [[id:305eb465-cd34-4eb2-8998-85fd2daeaef5][some ofiscal people]]
 * ofiscal, processes
 ** [[id:3478dbef-feca-4776-858a-63e59b8efe83][pipeline for publication]]
 * ofiscal, some of our output

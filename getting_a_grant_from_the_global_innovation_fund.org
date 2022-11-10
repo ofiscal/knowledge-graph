@@ -3,7 +3,14 @@
 :END:
 #+title: getting a grant from the Global Innovation Fund
 https://www.globalinnovation.fund/apply/
-* We're a good fit for almost everything they want.
+* their goals
   https://www.globalinnovation.fund/apply/about/what-we-fund/
+** focus on poor
+** novel
+** backed by evidence of impact
+** can scale
+** apply to many issues
+** will generate new knowledge
+* We're a good fit for almost everything they want.
 * Infinite money, and seems not too onerous.
 * process duration: could not find.
