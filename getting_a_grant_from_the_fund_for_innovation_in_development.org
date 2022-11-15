@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       ece43518-7a0b-44b8-88c3-979337b6a5a0
+:ROAM_ALIASES: "grant, Fund for Innovation in Development" "Fund for Innovation in Development, grant"
 :END:
 #+title: getting a grant from the Fund for Innovation in Development
 https://fundinnovation.dev/en/application-form-step-0/
-* WE DID IT. <2022-11-08 Tue>
 * their goals
   https://fundinnovation.dev/en/
 ** They want to reduce poverty.
@@ -14,38 +14,131 @@ https://fundinnovation.dev/en/application-form-step-0/
 ** They want scalability. We're already in a sense at scale.
 * infinite money
 * The grant process takes at least half a year.
-* TODO when applying
-** mention we are almost all Colombian and have a few women
-** yes, we're in a middle-income country
-   "high middle"
-   https://www.oecd.org/dac/financing-sustainable-development/development-finance-standards/DAC-List-ODA-Recipients-for-reporting-2021-flows.pdf
-** mention how our "innovation" compares to alternatives
-** my innovation *can* improve the lives of those living on less than $5 PPP a day.
-** "could be applied in several developing countries."
-** "potential to scale to reach millions"
-** "has expertise in this area and the skills and experience to make the innovation a success"
-** "The innovation is ready to be applied, tested or scaled in a real-world setting."
-** "I have a clear vision for how GIF can contribute to our vision of success"
-** "My team aims to generate and share evidence and learning from our work."
-** TODO "guidance on a Type of Funding and Stage of Funding and am confident I meet the criteria for my chosen category"
-   type: grant
-   stage: pilot?
-** goal is to ensure money is spent, not just well, but also fairly, specifically on the most vulnerable
-** legal and technical unfamiliarity is a barrier to participation
-** there's no oversight mechanism
-   "no se evidencian mecanismos de seguimiento o monitoreo a los proyectos que se aprueban con destino específico a los territorios de grupos étnicos. "
-* What we put
-** project title
-   Automatic System of Alerts for Government-Funded Investments
-** one-sentence pitch
-   Our system will automatically detect anomalous public contracts and report them to the public -- unlike anything that currently exists in Colombia.
-** 2 paragraph pitch
-*** max 1800 characters
-*** to include
-    why your approach is innovative
-    expected impacts
-    potential to scale
-    team leading your innovation
-*** the pitch
-    Information on public contracts in Colombia is published in an online database [NAME OF DB] that is extremely large, somewhat incomplete, and difficult to read, understand or search. Our system will automatically search it, and publish anomalies it finds. Making this resulting information easy to find and understand will encourage citizen participation in the political process, empower voters, and impose much-needed accountability for the use of public funds. Once in place, the system will require no extra investment to perform at full scale, monitoring all public contracts in Colombia.
-    We are a small group of economists, accountants, lawyers, programmers, and communications specialists. For five years, we have researched fiscal policy in Colombia, made our results easily understood, and shared them with the general public, the media and government. As Colombia's first (and still one of only two) independent policy watchdogs, we have been influential in numerous policy debates.
+* TODO questions
+** "Applicant Organization Type"
+   Are we Academic or an NGO?
+** "How many employees are in your organization?"
+   <10, <50, <300, 300+
+** Who is responsible for the grant application
+*** Primary Contact
+    First Name:
+    Last Name:
+    Job Title:
+    Email:
+    Phone:
+    Gender:
+    Nationality:
+*** Secondary Contact
+    same info
+** Do we have any involved partners?
+   "For each partner involved who is a recipient of a sub-grant from the funds being requested from FID, please indicate the name and type of organization"
+   I think PUJ takes a cut but I don't know if that makes it a partner.
+** We have no research partners, right?
+** Contact info for "Professional references"
+*** qualifications : "individual who can attest
+    to your ability to implement the activities proposed. These may include previous funders, supervisors, partner organizations, or others, but not members of your organization or a partner organization involved in the proposed activities."
+*** fields to fill
+    First Name:
+    Last Name:
+    Job Title:
+    Employer:
+    Employer organization type:
+    Relation to the project:
+    Email:
+*** they want 2
+** Which other funders have we applied to for the project?
+   "If yes, which funders?"
+** What stage are we at?
+*** Stage 1: Pilot
+    goes up to 200K USD
+    "Pilot stage of innovations that are early in development and need real-world testing to refine the basic model and establish the viability of the innovation at small scale."
+*** Stage 2: Test and position to scale
+    goes up to 1.5M USD
+    "The further testing and continued growth of innovations to assess the likelihood that they can achieve both impact and viability at a larger scale"
+** [[id:8a84343d-03e9-4cba-b069-445fb3e200f2][In Theory of Change, how many people needed?]]
+* TODO difference between Stage 1 and Stage 2 questions
+** same
+*** "1. Short description of the Solution"
+*** "2. Development Challenge"
+*** "3. Description of the Innovation or Solution"
+*** Project progress and need for funding
+    numbered differently, but the same question
+*** Theory of Change (narrative)
+    same question, different number
+*** Learning Agenda and expected results
+    same, except different numbers
+*** Pathway to Scale
+    same, except different numbers
+*** Cost-effectiveness of the innovation
+** only for stage 2
+*** Evaluation methodology planned or to be developed
+* TODO processing: answers
+** DONE "Development Challenge"
+Public contract spending in Colombia is opaque. This results in official impunity, the misuse and misappropriation of funds, and voter apathy – the last of which entrenches poor governance.
+
+On paper, Colombia provides a wealth of services to every population, including its most vulnerable – healthcare (which is socialized), education, public housing, sanitation, energy, infrastructure, security, justice, and countless others. In practice, though, much of this spending is wasted or stolen. Those with the means spend to secure better private services. Those without suffer red tape and long queues for shoddy services. Ambulances can take hours to arrive. Police often simply don't. Ordinary citizens pay the price in time, money, health, security, justice and economic growth. Colombians would have more of all of those things, if government funds were better spent.
+
+Greater transparency would result not just in better spending. It would also, by making officials accountable for their actions, improve democratic outcomes, specifically citizen participation and candidate quality. Colombia would not only better fulfill its existing promises, but make better ones in the future.
+** DONE Description of the Innovation or Solution
+Ironically, the information needed to monitor public contracts in Colombia is technically available to anybody. Colombia publishes data on public contracts in a number of online databases. The amount of data, while incomplete, is extremely large, and it can be searched, albeit not easily. If a citizen suspected a specific contract of being mismanaged, they could often find details on it in these systems. But systematically traversing the data as it is updated to look for anomalies would require an impossible amount of time, were a human to do it.
+
+A computer could do it, though, and that is our plan. We have already written code that can extract data from Colombia's online contract databases. What remains to be written is and a supervised learning algorithm to automatically detect anomalous contracts, and an automatic system for publication of anomalous results. We have experience creating online systems -- specifically, our online tax microsimulation: http://www.ofiscal-puj.org/microsim/run_make/manual_ingest. And for cases of mismanagement grievous enough to warrant special publication efforts, we have deep experience communicating with lawmakers, the media, and civil society groups -- as evidenced by our Youtube catalog: https://www.youtube.com/channel/UCf75rVz--QES-Xs83tdrl5A/videos
+
+This project will solve a problem that nobody has attempted to solve. The only existing "solution" is to hope that individuals sampling droplets from the ocean of online data on public contracts will somehow be able to provide the accountability that a well-functioning democracy requires. Rather than requiring an absurd amount of human labor, our system will require 12 months of programming and research from a small team. Thereafter it will be able to run indefinitely on a single server, monitoring all public information on contracts available in Colombia, with occasional maintenance from a single programmer-economist.
+** DONE theory of change
+*** their question
+    "The theory of change identifies the prerequisites, pathways, and interventions needed to achieve that goal. A theory of change should include an identification of needs, inputs, outputs, intermediate outcomes, and final outcomes"
+    "specify the assumptions on which your theory of change is based, and your level of confidence around these assumptions"
+*** our answer
+**** outline
+***** prereqs
+****** work
+******* Understand each DB.
+******* Manually label training data from them "fishy" or "normal".
+******* Experiment with supervised learning architectures, and select one.
+******* Train it.
+******* Experiment with unsupervised learning algorithms.
+******* Code a process to scrape the databases for updates.
+******* Code a process to publish fishy data to one of our websites.
+****** assets
+******* a year of labor (of how many people?)
+	:PROPERTIES:
+	:ID:       8a84343d-03e9-4cba-b069-445fb3e200f2
+	:END:
+******* a server running continuously
+****** assumptions
+******* The online DBs will continue to exist.
+******* The online DBs will continue to be parseable.
+******* We will be permitted to publish the data.
+******* The coding will take a year.
+**** text
+The assets this project requires are minimal: The labor of [[HOW MANY PEOPLE, OF WHAT KIND?]] and one server running 24/7.
+
+The work required consists of the following stages:
+(*) Learn to parse each of the remaining DBs. (We can already parse some of them.)
+(*) Label a set of training data, identifying suspicious- and ordinary-looking contracts.
+(*) Experiment with supervised learning architectures. Select one.
+(*) Experiment with unsupervised learning algorithms. Select one.
+(*) Train both algorithms and integrate them.
+(*) Code a process to scrape the databases for updates.
+(*) Code a process to regularly publish suspicious contracts to one of our websites.
+
+The project relies on the following assumptions, each of which we presenttogether with the probability we assign it:
+(*) 95%: The online DBs will continue to exist.
+(*) 95%: The online DBs will continue to be parseable.
+(*) 99%: We will be permitted to publish the data.
+(*) 99%: Our work will attract attention and fuel debate.
+(*) 50%: The coding will take a year.
+** DONE picture of theory of change
+   [[/home/jeff/of/grants/Fund-for-Innovation-in-Development/theory of change, one page.png]]
+** DONE Learning Agenda and expected results
+We already have a deep understanding of how to make data on government activities available in an easily-digestible form, and how to bring citizens' attention to those data. We also have five years of evidence that doing so engages citizens, gets the attention of lawmakers and the media, and stimulates political debate.
+
+Therefore the only real research this project requires is of the engineering variety. We will determine how to parse every relevant source of data. We will experiment with machine learning architectures for identifying problematic contract data. We will learn how to continuously update the input data to the ML model from the relevant government databases, and how to continuously update the website where the AI's findings are published.
+
+This research is, essentially, the software development process. The result will be a live, continuously updating machine learning process that identifies suspicious contract activity and publishes those contracts on our website. Your funding will enable us to pay the team members responsible for the development.
+** DONE Pathway to Scale
+Once the software is written and running, it will immediately perform at full-scale, monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and it will make the data available to everyone (indeed, even to people outside the country -- it's just a website, after all). Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will serve everyone equally.
+
+The major expense is building the software. Once it is running it will only require occasional maintenance from a single developer, plus the cost of running the server itself, which might be two hundred dollars a month.
+** BLOCKED Cost-effectiveness of the innovation
