@@ -89,7 +89,7 @@
    :END:
    Automatic System of Alerts for Potentially Problematic Government Contracts (and associated communication efforts)
 ** DONE short description
-   Our system will automatically detect anomalous public contracts and report them to the public, empowering voters and providing accountability for lawmakers. Nothing like this currently exists in Colombia.
+   Our system will automatically detect anomalous public contracts and report them to the public, empowering voters and providing accountability for lawmakers. We will also engage in communication efforts -- with the media, with lawmakers, various forms of publication, and colloquia -- to make the system's findings known.
 ** DONE "Development Challenge"
 Public contract spending in Colombia is opaque. This results in official impunity, the misuse and misappropriation of funds, and voter apathy – the last of which entrenches poor governance.
 
@@ -97,14 +97,18 @@ On paper, Colombia provides a wealth of services to every population, particular
 
 Greater transparency would result not just in better spending. It would also, by making officials accountable for their actions, improve democratic outcomes, specifically citizen participation and candidate quality. Colombia would not only better fulfill its existing promises, but make better ones in the future.
 
-These issues affect every one of Colombia's 50 million citizens. Our solution would particularly help the majority of citizens who are unable to secure private alternatives to government-provided services -- which constitutes more than 90% of the population.
+These issues affect, and hence our solution would help, every one of Colombia's 50 million citizens. It would particularly help those citizens who are unable to secure private alternatives to government-provided services -- a group that constitutes more than 90% of the population.
 ** DONE "Gender Equality"
    :PROPERTIES:
    :ID:       dfd72ac4-d488-4cf9-bb1f-dd2b39dbbfce
    :END:
-Adequate provision of government services is especially important to the most vulnerable populations. To the extent -- which is substantial -- that women and female-led households have, on average, fewer resources than men and male-led households, our work will further gender equality.
+Our project will improve gender equality in three ways.
 
-Furthermore, where it is possible, we will monitor for gender parity in the contracts themselves. This will be possible when a contract involves enough sub-contracts that the fractions going to men and women can be considered statistically meaningful evidence of unequal gender treatment.
+(1) Adequate provision of government services is especially important to the most vulnerable populations. To the extent -- which is substantial -- that women and female-led households have, on average, fewer resources than men and male-led households, our work will further gender equality.
+
+(2) The databases of public contracts in Colombia include a flag for projects intended to benefit women specifically. Whenever our work detects suspicious information in such contracts, it will permit citizen oversight of a sort that can benefit the women for whom the spending was intended.
+
+(3) Furthermore, where it is possible, we will monitor for gender parity in the contracts themselves. This will be possible when a contract involves enough sub-contracts that the fractions going to men and women can be considered statistically meaningful evidence of unequal gender treatment.
 ** BLOCKED Description of the Innovation or Solution
    :PROPERTIES:
    :ID:       d172453e-1881-4b31-a488-abab43f2dab1
@@ -113,15 +117,15 @@ Furthermore, where it is possible, we will monitor for gender parity in the cont
 *** our answer
 The information needed to monitor public contracts in Colombia is, technically, available to everybody. Colombia publishes data on public contracts in a number of online databases. The amount of data, while incomplete, is extremely large, and with some difficulty it can be searched. If a citizen suspected a specific contract of being mismanaged, they could typically find a great deal of information regarding it from these systems. But systematically traversing the data as it is updated to look for anomalies would require an impossible amount of time, were a human to do it.
 
-A computer could do it, though, and that is our plan. We have already written code that can extract data from some of the online contract databases. The software that remains to be written is a supervised learning algorithm to automatically detect anomalous contracts, and an automatic system for publication of anomalous results.
+A computer could do it, though, and that is our plan. We have already written code that can extract data from some of the online contract databases. The software that remains to be written is a supervised learning algorithm to automatically detect anomalous contracts, and an automatic system for publication of anomalous results. We have two years of experience creating online systems -- in particular, our online tax microsimulation: http://www.ofiscal-puj.org/microsim/run_make/manual_ingest.
 
-We have two years of experience creating online systems -- in particular, our online tax microsimulation: http://www.ofiscal-puj.org/microsim/run_make/manual_ingest. And we have five years of experience communicating with lawmakers, the media, and civil society groups -- as abundantly evidenced by our Youtube channel: https://www.youtube.com/channel/UCf75rVz--QES-Xs83tdrl5A/videos We will rely on that experience as we pilot local dissemination efforts -- colloquia in small communities, explaining what the software has discovered about contracts in those communities, and how ordinary citizens can use it to monitor such activity.
+We have five years of experience communicating with lawmakers, the media, and civil society groups -- as abundantly evidenced by our Youtube channel: https://www.youtube.com/channel/UCf75rVz--QES-Xs83tdrl5A/videos We will rely on that experience as we pilot local dissemination efforts -- colloquia in small communities, explaining what the software has discovered about contracts in those communities, and how ordinary citizens can use it to monitor such activity.
 
 This project is not merely innovative, but unique -- it solves a problem nobody has tackled before. The only existing "solution" is to hope that individuals sampling droplets from the ocean of online data on public contracts will somehow be able to provide the accountability that a well-functioning democracy requires. Instead of that -- instead of needing an absurd amount of human labor -- our system will require 24 months of programming and research from a small team.
 
 Once the software is written, it will be able to run indefinitely on a single server, monitoring all public information on contracts available in Colombia, with occasional maintenance from a single programmer-economist. We will continue to engage in publicity efforts, but those will be cheap relative to the up-front cost of developing the system.
-*** TODO to add to that
-Our prior investigations of public contract databases revealed that the funds allocated by the Fondo de Mitigación de Emergencia (FOME) for the Covid emergency were being directed by a private agency under no obligation to make its spending public. The attention we brought to this issue forced the government to move those funds to the ministry of health, which as part of the government is so obligated to make its contracts public. The resulting transparency permitted citizen oversight of spending, resulting in more efficient spending, as well as savings, we believe, of thousands of millions of pesos.
+
+Our prior investigations of public contract databases revealed that the funds allocated by the Fondo de Mitigación de Emergencia (FOME) for the Covid emergency were being directed by a private agency under no obligation to make its spending public. The attention we brought to this issue forced the government to move those funds to the ministry of health, which as part of the government is so obligated to make its contracts public. The resulting transparency permitted citizen oversight of spending, resulting in more efficient spending, as well as savings, we believe, of thousands of millions of pesos. And those results came merely from monitoring a single database, manually. Our automated system will monitor contracts on a much greater scale.
 ** DONE theory of change
 *** their question
     "The theory of change identifies the prerequisites, pathways, and interventions needed to achieve that goal. A theory of change should include an identification of needs, inputs, outputs, intermediate outcomes, and final outcomes"
@@ -178,15 +182,13 @@ The potential benefits of this program are literally too many to count, but thre
 (*) Greater public safety. This, like infrastructure, enables people to spend more time at work, studying, or engaging in leisure. These benefits accrue disproportionately to the vulnerable populations, since wealthier ones have already bought a greater measure of safety from the private sector.
 ** DONE picture of theory of change
    [[/home/jeff/of/grants/Fund-for-Innovation-in-Development/theory of change, one page.png]]
-** DONE Learning Agenda and expected results
+** DONE Hypothesis validation and assessment of pilot results
    :PROPERTIES:
    :ID:       0383af4d-0cce-4452-bd5a-bf5b70920087
    :END:
-We already have a deep understanding of how to make data on government activities available in an easily-digestible form, and how to bring citizens' attention to those data. We also have five years of evidence that doing so engages citizens, gets the attention of lawmakers and the media, and stimulates political debate.
+Since contracts include location data, we can run controlled experiments to determine the effectiveness of the program, by randomly dividing regions into treatment and control groups, and publishing our system's results for the treatment group while withholding it for the control group. After running the intervention for a period long enough to expect some impact -- at least half a year -- the change in contract problematicity in the control and treatment groups will permit statistical testing to determine whether the intervention makes a meaningful difference.
 
-Therefore the only real research this project requires is of the engineering variety. We will determine how to parse every relevant source of data. We will experiment with machine learning architectures for identifying problematic contract data. We will learn how to continuously update the input data to the ML model from the relevant government databases, and how to continuously update the website where the AI's findings are published.
-
-This research is, essentially, the software development process. The result will be a live, continuously updating machine learning process that identifies suspicious contract activity and publishes those contracts on our website. Your funding will enable us to pay the team members responsible for the development.
+We will use supervised and unsupervised learning to develop our measure of problematicity in government contracts. Note that while this measure will not be the same as corruption or mismanagement, they will be correlated.
 ** DONE Pathway to Scale
 Once the software is written and running, it will immediately perform at full-scale, monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and it will make the data available to everyone (indeed, even to people outside the country -- it's just a website, after all). Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will serve everyone equally.
 
