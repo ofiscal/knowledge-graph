@@ -2,6 +2,9 @@
 :ID:       b5b1e9a8-12ab-4f46-8d3a-59202df8a57a
 :END:
 #+title: ofiscal
+* address
+  Cra 7 #40b-36, Piso 7
+  Bogotá, Colombia 110231
 * [[id:cb1bb067-d8cc-48d2-ad90-60ba4308adf8][ofiscal, todo]]
 * internally shared content
 ** We seem to prefer to use Teams.

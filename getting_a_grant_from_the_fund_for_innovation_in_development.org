@@ -3,7 +3,11 @@
 :ROAM_ALIASES: "grant, Fund for Innovation in Development" "Fund for Innovation in Development, grant"
 :END:
 #+title: getting a grant from the Fund for Innovation in Development
-https://fundinnovation.dev/en/application-form-step-0/
+* refs
+** main page
+   https://fundinnovation.dev/en/application-form-step-0/
+** login
+   https://fundinnovation.wiin.io/en/login
 * their goals
   https://fundinnovation.dev/en/
 ** They want to reduce poverty.
@@ -46,8 +50,14 @@ https://fundinnovation.dev/en/application-form-step-0/
     Relation to the project:
     Email:
 *** they want 2
-** Which other funders have we applied to for the project?
+** TODO Which other funders have we applied to for the project?
    "If yes, which funders?"
+   I only put two.
+** TODO [[id:c224ac6b-6bab-4c59-b0ce-cc51fa4cf138][title]] too long?
+** TODO have I described [[id:d172453e-1881-4b31-a488-abab43f2dab1][the solution]] correctly?
+** TODO am I overpromising in the [[id:dfd72ac4-d488-4cf9-bb1f-dd2b39dbbfce][gender section]]?
+** TODO [[id:9e6d77be-38fd-467d-aeb8-41fbea9d98bb][how many people]] will work on it?
+** TODO what [[id:0383af4d-0cce-4452-bd5a-bf5b70920087][research]] will be needed for divulgación?
 ** What stage are we at?
 *** Stage 1: Pilot
     goes up to 200K USD
@@ -73,18 +83,45 @@ https://fundinnovation.dev/en/application-form-step-0/
 ** only for stage 2
 *** Evaluation methodology planned or to be developed
 * TODO processing: answers
+** DONE project title
+   :PROPERTIES:
+   :ID:       c224ac6b-6bab-4c59-b0ce-cc51fa4cf138
+   :END:
+   Automatic System of Alerts for Potentially Problematic Government Contracts (and associated communication efforts)
+** DONE short description
+   Our system will automatically detect anomalous public contracts and report them to the public, empowering voters and providing accountability for lawmakers. Nothing like this currently exists in Colombia.
 ** DONE "Development Challenge"
 Public contract spending in Colombia is opaque. This results in official impunity, the misuse and misappropriation of funds, and voter apathy – the last of which entrenches poor governance.
 
-On paper, Colombia provides a wealth of services to every population, including its most vulnerable – healthcare (which is socialized), education, public housing, sanitation, energy, infrastructure, security, justice, and countless others. In practice, though, much of this spending is wasted or stolen. Those with the means spend to secure better private services. Those without suffer red tape and long queues for shoddy services. Ambulances can take hours to arrive. Police often simply don't. Ordinary citizens pay the price in time, money, health, security, justice and economic growth. Colombians would have more of all of those things, if government funds were better spent.
+On paper, Colombia provides a wealth of services to every population, particularly its most vulnerable – healthcare (which is socialized), education, public housing, sanitation, energy, infrastructure, security, justice, and countless others. In practice, however, much of this spending is wasted or stolen. Those with the means spend to secure better services from the private sector. Those without suffer red tape and long queues for shoddy services. Ambulances can take hours to arrive. Police often simply don't. Ordinary citizens pay the price in time, money, health, security, justice and economic growth. Colombians would have more of all of those things, if government funds were better spent.
 
 Greater transparency would result not just in better spending. It would also, by making officials accountable for their actions, improve democratic outcomes, specifically citizen participation and candidate quality. Colombia would not only better fulfill its existing promises, but make better ones in the future.
-** DONE Description of the Innovation or Solution
-Ironically, the information needed to monitor public contracts in Colombia is technically available to anybody. Colombia publishes data on public contracts in a number of online databases. The amount of data, while incomplete, is extremely large, and it can be searched, albeit not easily. If a citizen suspected a specific contract of being mismanaged, they could often find details on it in these systems. But systematically traversing the data as it is updated to look for anomalies would require an impossible amount of time, were a human to do it.
 
-A computer could do it, though, and that is our plan. We have already written code that can extract data from Colombia's online contract databases. What remains to be written is and a supervised learning algorithm to automatically detect anomalous contracts, and an automatic system for publication of anomalous results. We have experience creating online systems -- specifically, our online tax microsimulation: http://www.ofiscal-puj.org/microsim/run_make/manual_ingest. And for cases of mismanagement grievous enough to warrant special publication efforts, we have deep experience communicating with lawmakers, the media, and civil society groups -- as evidenced by our Youtube catalog: https://www.youtube.com/channel/UCf75rVz--QES-Xs83tdrl5A/videos
+These issues affect every one of Colombia's 50 million citizens. Our solution would particularly help the majority of citizens who are unable to secure private alternatives to government-provided services -- which constitutes more than 90% of the population.
+** DONE "Gender Equality"
+   :PROPERTIES:
+   :ID:       dfd72ac4-d488-4cf9-bb1f-dd2b39dbbfce
+   :END:
+Adequate provision of government services is especially important to the most vulnerable populations. To the extent -- which is substantial -- that women and female-led households have, on average, fewer resources than men and male-led households, our work will further gender equality.
 
-This project will solve a problem that nobody has attempted to solve. The only existing "solution" is to hope that individuals sampling droplets from the ocean of online data on public contracts will somehow be able to provide the accountability that a well-functioning democracy requires. Rather than requiring an absurd amount of human labor, our system will require 12 months of programming and research from a small team. Thereafter it will be able to run indefinitely on a single server, monitoring all public information on contracts available in Colombia, with occasional maintenance from a single programmer-economist.
+Furthermore, where it is possible, we will monitor for gender parity in the contracts themselves. This will be possible when a contract involves enough sub-contracts that the fractions going to men and women can be considered statistically meaningful evidence of unequal gender treatment.
+** BLOCKED Description of the Innovation or Solution
+   :PROPERTIES:
+   :ID:       d172453e-1881-4b31-a488-abab43f2dab1
+   :END:
+*** page 3, item 3
+*** our answer
+The information needed to monitor public contracts in Colombia is, technically, available to everybody. Colombia publishes data on public contracts in a number of online databases. The amount of data, while incomplete, is extremely large, and with some difficulty it can be searched. If a citizen suspected a specific contract of being mismanaged, they could typically find a great deal of information regarding it from these systems. But systematically traversing the data as it is updated to look for anomalies would require an impossible amount of time, were a human to do it.
+
+A computer could do it, though, and that is our plan. We have already written code that can extract data from some of the online contract databases. The software that remains to be written is a supervised learning algorithm to automatically detect anomalous contracts, and an automatic system for publication of anomalous results.
+
+We have two years of experience creating online systems -- in particular, our online tax microsimulation: http://www.ofiscal-puj.org/microsim/run_make/manual_ingest. And we have five years of experience communicating with lawmakers, the media, and civil society groups -- as abundantly evidenced by our Youtube channel: https://www.youtube.com/channel/UCf75rVz--QES-Xs83tdrl5A/videos We will rely on that experience as we pilot local dissemination efforts -- colloquia in small communities, explaining what the software has discovered about contracts in those communities, and how ordinary citizens can use it to monitor such activity.
+
+This project is not merely innovative, but unique -- it solves a problem nobody has tackled before. The only existing "solution" is to hope that individuals sampling droplets from the ocean of online data on public contracts will somehow be able to provide the accountability that a well-functioning democracy requires. Instead of that -- instead of needing an absurd amount of human labor -- our system will require 24 months of programming and research from a small team.
+
+Once the software is written, it will be able to run indefinitely on a single server, monitoring all public information on contracts available in Colombia, with occasional maintenance from a single programmer-economist. We will continue to engage in publicity efforts, but those will be cheap relative to the up-front cost of developing the system.
+*** TODO to add to that
+Our prior investigations of public contract databases revealed that the funds allocated by the Fondo de Mitigación de Emergencia (FOME) for the Covid emergency were being directed by a private agency under no obligation to make its spending public. The attention we brought to this issue forced the government to move those funds to the ministry of health, which as part of the government is so obligated to make its contracts public. The resulting transparency permitted citizen oversight of spending, resulting in more efficient spending, as well as savings, we believe, of thousands of millions of pesos.
 ** DONE theory of change
 *** their question
     "The theory of change identifies the prerequisites, pathways, and interventions needed to achieve that goal. A theory of change should include an identification of needs, inputs, outputs, intermediate outcomes, and final outcomes"
@@ -112,10 +149,13 @@ This project will solve a problem that nobody has attempted to solve. The only e
 ******* We will be permitted to publish the data.
 ******* The coding will take a year.
 **** text
+     :PROPERTIES:
+     :ID:       9e6d77be-38fd-467d-aeb8-41fbea9d98bb
+     :END:
 The assets this project requires are minimal: The labor of [[HOW MANY PEOPLE, OF WHAT KIND?]] and one server running 24/7.
 
 The work required consists of the following stages:
-(*) Learn to parse each of the remaining DBs. (We can already parse some of them.)
+(*) Learn to parse each of the remaining databases. (We can already parse some of them.)
 (*) Label a set of training data, identifying suspicious- and ordinary-looking contracts.
 (*) Experiment with supervised learning architectures. Select one.
 (*) Experiment with unsupervised learning algorithms. Select one.
@@ -129,9 +169,18 @@ The project relies on the following assumptions, each of which we presenttogethe
 (*) 99%: We will be permitted to publish the data.
 (*) 99%: Our work will attract attention and fuel debate.
 (*) 50%: The coding will take a year.
+
+The potential benefits of this program are literally too many to count, but three of the most salient are these:
+(*) Better provision of healthcare. This will benefit almost everybody, but it will disproportionately benefit the poorest, families with children, and caretakers (which are disproportionately women).
+(*) Better infrastructure, which has the direct effects of economic growth, higher wages, better employment, and better sanitation (hence public health).
+(*) Better education. This benefits not just the young, but also anyone who takes care of them (which again in Colombia is disproportionately women), and anyone who shares a household and hence resources with children.
+(*) Greater public safety. This, like infrastructure, enables people to spend more time at work, studying, or engaging in leisure. These benefits accrue disproportionately to the vulnerable populations, since wealthier ones have already bought a greater measure of safety from the private sector.
 ** DONE picture of theory of change
    [[/home/jeff/of/grants/Fund-for-Innovation-in-Development/theory of change, one page.png]]
 ** DONE Learning Agenda and expected results
+   :PROPERTIES:
+   :ID:       0383af4d-0cce-4452-bd5a-bf5b70920087
+   :END:
 We already have a deep understanding of how to make data on government activities available in an easily-digestible form, and how to bring citizens' attention to those data. We also have five years of evidence that doing so engages citizens, gets the attention of lawmakers and the media, and stimulates political debate.
 
 Therefore the only real research this project requires is of the engineering variety. We will determine how to parse every relevant source of data. We will experiment with machine learning architectures for identifying problematic contract data. We will learn how to continuously update the input data to the ML model from the relevant government databases, and how to continuously update the website where the AI's findings are published.
@@ -142,3 +191,6 @@ Once the software is written and running, it will immediately perform at full-sc
 
 The major expense is building the software. Once it is running it will only require occasional maintenance from a single developer, plus the cost of running the server itself, which might be two hundred dollars a month.
 ** BLOCKED Cost-effectiveness of the innovation
+** BLOCKED orphaned answers
+*** resource usage
+    The assets this project requires are minimal: The labor of [[HOW MANY PEOPLE, OF WHAT KIND?]] and one server running 24/7.
