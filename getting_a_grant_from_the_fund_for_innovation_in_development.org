@@ -152,8 +152,6 @@ Our prior investigations of public contract databases revealed that the funds al
      :PROPERTIES:
      :ID:       9e6d77be-38fd-467d-aeb8-41fbea9d98bb
      :END:
-The assets this project requires are minimal: The labor of [[HOW MANY PEOPLE, OF WHAT KIND?]] and one server running 24/7.
-
 The work required consists of the following stages:
 (*) Learn to parse each of the remaining databases. (We can already parse some of them.)
 (*) Label a set of training data, identifying suspicious- and ordinary-looking contracts.
@@ -161,14 +159,17 @@ The work required consists of the following stages:
 (*) Experiment with unsupervised learning algorithms. Select one.
 (*) Train both algorithms and integrate them.
 (*) Code a process to scrape the databases for updates.
-(*) Code a process to regularly publish suspicious contracts to one of our websites.
+(*) Code a process to regularly publish suspicious contracts to one of our websites, so that they are available to any internet user.
+(*) Share the system's results with lawmakers and the media.
+(*) Share the results in live colloquia, inviting academics, journalists and congresspeople.
 
-The project relies on the following assumptions, each of which we presenttogether with the probability we assign it:
+The project relies on the following assumptions, each of which we present together with the probability we assign it:
 (*) 95%: The online DBs will continue to exist.
 (*) 95%: The online DBs will continue to be parseable.
-(*) 99%: We will be permitted to publish the data.
-(*) 99%: Our work will attract attention and fuel debate.
-(*) 50%: The coding will take a year.
+(*) 99%: We will continue to be permitted to publish the data and host our colloquia.
+(*) 99%: Our work will continue to attract attention, fuel debate, and enable citizen oversight.
+(*) 95%: Citizen oversight will continue to result in changes in government policy.
+(*) 80%: The project will take two years.
 
 The potential benefits of this program are literally too many to count, but three of the most salient are these:
 (*) Better provision of healthcare. This will benefit almost everybody, but it will disproportionately benefit the poorest, families with children, and caretakers (which are disproportionately women).
