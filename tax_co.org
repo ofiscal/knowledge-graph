@@ -30,31 +30,7 @@
 ** TODO ? draw a poverty line
 ** verify we don't use retencion en la fuente
    P1652S2 & P1652S2A1
-** TODO mtg: DIAN-extending the model, <2022-08-30 Tue>
-*** TODO the regression uses *(natural) log of yearly* income
-    so to apply them to the microsimulation,
-    first divide by 12, then take the log,
-    then apply the coefficients,
-    then exponentiate (base e).
-*** notes
-**** imagine ganancias oc taxed at 10%
-     since can't tell in DIAN data
-**** maybe ge erate synthetic households
-     based on the ENPH data, from the DIAN data
-**** need income individuals for income taxes
-**** use a regression to predict DIAN quantile given an ENPH observation
-     income, no laboral
-     income, labor
-     income, capital
-     income, ganancias ocasionales (total)
-     income, pension
-     income, dividend
-*** questions
-**** DONE How do unequal income earners split wealth on their tax declarations?
-     like I thought -- hard.
-     Can change the divison each year, arbitrarily.
-**** what's the PILA?
-     SS contrib data
+** [[id:fed9bfe0-7b29-4dce-9367-b78658a8f772][extending tax.co with quantile data from DIAN]]
 * TODO [[id:390f47d2-bc82-4509-893d-f7e816f2b624][gender-split data sets might have bad quantile definitions]]
 * TODO Solve / Internalize : If the strategy changes but a user already has data generated from the other one, the makefile gets confused.
   A dumb solution is to nuke the user's data folder
