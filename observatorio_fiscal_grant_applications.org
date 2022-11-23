@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       7027abec-f105-4286-b966-76e4b83d7fe2
+:ROAM_ALIASES: "grant applications \ ofiscal"
+:END:
+#+title: Observatorio Fiscal grant applications
+* [[id:200e0a81-01ca-4845-a803-519ef0021e00][links to grant applications]]
+* TODO work the Ford Foundation concept note into [[id:ece43518-7a0b-44b8-88c3-979337b6a5a0][getting a grant from the Fund for Innovation in Development]]
+* DONE work the Ford Foundation concept note into [[id:2e4cec18-78e0-4457-a54b-ce55ad7f9d79][getting a grant from the Global Innovation Fund]]
+  [[/home/jeff/of/papers/Ford-Foundation-concept-note.docx]]
+* TODO [[id:0d8d7d94-72c7-44c5-8dc7-58432c5bec6f][mtg with AFD ("French Development Bank"?), 2022-10-19-ish]]
+  file, act on
+* TODO learn about [[id:1bfc20ac-3e04-4eca-a82c-be3e04ad7b49][CEQ (method for evaluating fiscal incidence)]]

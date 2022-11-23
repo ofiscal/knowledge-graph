@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       2cadcf81-17b7-4521-934d-75d3be63e273
+:END:
+#+title: some OF relationships with other entities
+* TODO [[id:b63d22cf-7f00-43fc-b81d-4be8884d402f][OF and DIAN]]

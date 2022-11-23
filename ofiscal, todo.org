@@ -2,83 +2,27 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO URGENT copy everything in that form to offline
-  because they might delete it
-* TODO work the Ford Foundation concept note into [[id:ece43518-7a0b-44b8-88c3-979337b6a5a0][getting a grant from the Fund for Innovation in Development]]
-* DONE work the Ford Foundation concept note into [[id:2e4cec18-78e0-4457-a54b-ce55ad7f9d79][getting a grant from the Global Innovation Fund]]
-  [[/home/jeff/of/papers/Ford-Foundation-concept-note.docx]]
-* TODO [[id:200e0a81-01ca-4845-a803-519ef0021e00][2022-10-31 read links for grant applications]]
-* TODO order households by per-capita income
-* TODO [[id:0d8d7d94-72c7-44c5-8dc7-58432c5bec6f][mtg with AFD ("French Development Bank"?), 2022-10-19-ish]]
-  file, act on
-* TODO (after Tuesday): extend [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]] with a comparison to [[id:300513f2-4ed7-408d-974d-df907e588b5b][Cedetrabajo and ACOPI propose taxing small firms less]]
-* mtg
-** subsidize healthy prepared food
-   for gender equity
-** hotels employ more women
-* TODO learn about [[id:1bfc20ac-3e04-4eca-a82c-be3e04ad7b49][CEQ (method for evaluating fiscal incidence)]]
-* TODO find someone who knows about the [[id:eb5f0108-ac6f-4718-b89e-a40e31f13b84][ELCA]]
-* TODO [[id:e4963fac-4f3a-46f5-8b69-e581195aa4f0][translate "Un año de la pandemia: opacidad en los gastos y una reforma tributaria para pagarlos"]]
-* TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
-* TODO un-hardcode those zero-income tests.
-** There are more!
-*** python/build/people_4_post_households.py
-    earners["share"] = np.where (
-      earners["income, household"] <= 200,
-      ...
-*** python/build/people_4_post_households_test.py
-    ptemp = ( # To make sure none of the ratios is infinite.
-      ptemp [ ( ptemp [ "income" ] > 2 ) &
-              ( ptemp [ "value, purchase" ] > 0 ) ] )
-* BLOCKED ask David Suarez
-  if we can send regressions for them to run
-* TODO Incorporate test_dependentsToClaim () into Makefile.
-  in python/build/people_3_income_taxish_functions.py
-* TODO data/vat/README.md is stale
-* TODO is the GO trick real?
-  ganancias ocasionales, non-monotonic total income tax rate
-  for poor people, GO is more likely to put them over the tax-paying threshold, so GO is a bigger fraction of poor taxpayers' incomes than richer ones, but then for the richest it becomes a big fraction again
-* TODO ? draw a poverty line
-* TODO [[id:d000cb7c-3f7c-408c-acec-0e330519335a][our report on the second Petro tax reform, <2022-09-28>-ish]]
-* TODO understand
-** make a "household income per capita"
-** Why do the poor pay more ganancias ocasionales as a fraction of income.
-   I think GOs bump them into the taxpaying region.
-** What's "depuracion"?
-** verify we don't use retencion en la fuente
-   P1652S2 & P1652S2A1
-* TODO new products
-** gender within percentiles
-** percentiles within gender
-*** households by gender of head of household
-*** individuals by gender
+* filing
+** TODO [[id:7027abec-f105-4286-b966-76e4b83d7fe2][Observatorio Fiscal grant applications]]
+** TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
+** [[id:448b41e2-e1b1-4659-beaa-e9661a03a048][document the microsimulation]]
+*** TODO data/vat/README.md is stale
+*** income-percentile is different for nonzero earners than others.
+** writing
+*** TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
+*** TODO (after Tuesday): extend [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]] with a comparison to [[id:300513f2-4ed7-408d-974d-df907e588b5b][Cedetrabajo and ACOPI propose taxing small firms less]]
+*** TODO [[id:e4963fac-4f3a-46f5-8b69-e581195aa4f0][translate "Un año de la pandemia: opacidad en los gastos y una reforma tributaria para pagarlos"]]
+*** TODO [[id:d000cb7c-3f7c-408c-acec-0e330519335a][our report on the second Petro tax reform, <2022-09-28>-ish]]
+** policy ideas
+*** subsidize healthy prepared food
+    for gender equity
+** about Colombia's economy
+*** hotels employ more women
+*** TODO find someone who knows about the [[id:eb5f0108-ac6f-4718-b89e-a40e31f13b84][ELCA]]
+** economics
+*** TODO learn about [[id:1bfc20ac-3e04-4eca-a82c-be3e04ad7b49][CEQ (method for evaluating fiscal incidence)]]
+** TODO [[id:2cadcf81-17b7-4521-934d-75d3be63e273][some OF relationships with other entities]]
 * TODO review [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]: in org-roam, and TODO notes in code
-* TODO mtg: DIAN-extending the model, <2022-08-30 Tue>
-** TODO the regression uses *(natural) log of yearly* income
-   so to apply them to the microsimulation,
-   first divide by 12, then take the log,
-   then apply the coefficients,
-   then exponentiate (base e).
-** notes
-*** imagine ganancias oc taxed at 10%
-    since can't tell in DIAN data
-*** maybe ge erate synthetic households
-    based on the ENPH data, from the DIAN data
-*** need income individuals for income taxes
-*** use a regression to predict DIAN quantile given an ENPH observation
-    income, no laboral
-    income, labor
-    income, capital
-    income, ganancias ocasionales (total)
-    income, pension
-    income, dividend
-** questions
-*** DONE How do unequal income earners split wealth on their tax declarations?
-    like I thought -- hard.
-    Can change the divison each year, arbitrarily.
-*** what's the PILA?
-    SS contrib data
-* TODO [[id:448b41e2-e1b1-4659-beaa-e9661a03a048][document the microsimulation]]
 * TODO testing whether email == quien@donde.net is failing
 ** how to test
    I already set a trace in requests.main.

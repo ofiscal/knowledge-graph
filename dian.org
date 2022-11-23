@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       17967eac-b8a4-4022-bd11-6bd5a47a139e
+:ROAM_ALIASES: "Dirección de Impuestos y Aduanas Nacional"
+:END:
+#+title: DIAN
+* [[id:b63d22cf-7f00-43fc-b81d-4be8884d402f][OF and DIAN]]
+* [[id:c0fc4cb4-6a54-4ce5-b24c-442549a89193][Can we send regressions for DIAN run?]]
