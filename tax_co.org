@@ -10,27 +10,26 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* u <2022-11-23 Wed>
-** TODO order households by per-capita income
-** TODO un-hardcode those zero-income tests.
-*** There are more!
-**** python/build/people_4_post_households.py
-     earners["share"] = np.where (
-       earners["income, household"] <= 200,
-       ...
-**** python/build/people_4_post_households_test.py
-     ptemp = ( # To make sure none of the ratios is infinite.
-       ptemp [ ( ptemp [ "income" ] > 2 ) &
-	       ( ptemp [ "value, purchase" ] > 0 ) ] )
-** TODO Incorporate test_dependentsToClaim () into Makefile.
-   in python/build/people_3_income_taxish_functions.py
-** TODO Is GO making total income tax non-monotonic?
-   ganancias ocasionales, non-monotonic total income tax rate
-   for poor people, GO is more likely to put them over the tax-paying threshold, so GO is a bigger fraction of poor taxpayers' incomes than richer ones, but then for the richest it becomes a big fraction again
-** TODO ? draw a poverty line
-** verify we don't use retencion en la fuente
-   P1652S2 & P1652S2A1
-** [[id:fed9bfe0-7b29-4dce-9367-b78658a8f772][extending tax.co with quantile data from DIAN]]
+* TODO order households by per-capita income
+* TODO un-hardcode those zero-income tests.
+** There are more!
+*** python/build/people_4_post_households.py
+    earners["share"] = np.where (
+      earners["income, household"] <= 200,
+      ...
+*** python/build/people_4_post_households_test.py
+    ptemp = ( # To make sure none of the ratios is infinite.
+      ptemp [ ( ptemp [ "income" ] > 2 ) &
+	      ( ptemp [ "value, purchase" ] > 0 ) ] )
+* TODO Incorporate test_dependentsToClaim () into Makefile.
+  in python/build/people_3_income_taxish_functions.py
+* TODO Is GO making total income tax non-monotonic?
+  ganancias ocasionales, non-monotonic total income tax rate
+  for poor people, GO is more likely to put them over the tax-paying threshold, so GO is a bigger fraction of poor taxpayers' incomes than richer ones, but then for the richest it becomes a big fraction again
+* TODO ? draw a poverty line
+* verify we don't use retencion en la fuente
+  P1652S2 & P1652S2A1
+* [[id:fed9bfe0-7b29-4dce-9367-b78658a8f772][extending tax.co with quantile data from DIAN]]
 * TODO [[id:390f47d2-bc82-4509-893d-f7e816f2b624][gender-split data sets might have bad quantile definitions]]
 * TODO Solve / Internalize : If the strategy changes but a user already has data generated from the other one, the makefile gets confused.
   A dumb solution is to nuke the user's data folder
