@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO URGENT copy everything in that form to offline
+  because they might delete it
 * TODO work the Ford Foundation concept note into [[id:ece43518-7a0b-44b8-88c3-979337b6a5a0][getting a grant from the Fund for Innovation in Development]]
 * DONE work the Ford Foundation concept note into [[id:2e4cec18-78e0-4457-a54b-ce55ad7f9d79][getting a grant from the Global Innovation Fund]]
   [[/home/jeff/of/papers/Ford-Foundation-concept-note.docx]]

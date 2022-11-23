@@ -18,11 +18,10 @@
 ** They want scalability. We're already in a sense at scale.
 * infinite money
 * The grant process takes at least half a year.
-* TODO questions
-** "Applicant Organization Type"
-   Are we Academic or an NGO?
+* DONE questions
+** "Applicant Organization Type" = Academic
 ** "How many employees are in your organization?"
-   <10, <50, <300, 300+
+   <50
 ** Who is responsible for the grant application
 *** Primary Contact
     First Name:
@@ -34,38 +33,8 @@
     Nationality:
 *** Secondary Contact
     same info
-** Do we have any involved partners?
-   "For each partner involved who is a recipient of a sub-grant from the funds being requested from FID, please indicate the name and type of organization"
-   I think PUJ takes a cut but I don't know if that makes it a partner.
 ** We have no research partners, right?
-** Contact info for "Professional references"
-*** qualifications : "individual who can attest
-    to your ability to implement the activities proposed. These may include previous funders, supervisors, partner organizations, or others, but not members of your organization or a partner organization involved in the proposed activities."
-*** fields to fill
-    First Name:
-    Last Name:
-    Job Title:
-    Employer:
-    Employer organization type:
-    Relation to the project:
-    Email:
-*** they want 2
-** TODO Which other funders have we applied to for the project?
-   "If yes, which funders?"
-   I only put two.
-** TODO [[id:c224ac6b-6bab-4c59-b0ce-cc51fa4cf138][title]] too long?
-** TODO have I described [[id:d172453e-1881-4b31-a488-abab43f2dab1][the solution]] correctly?
-** TODO am I overpromising in the [[id:dfd72ac4-d488-4cf9-bb1f-dd2b39dbbfce][gender section]]?
-** TODO [[id:9e6d77be-38fd-467d-aeb8-41fbea9d98bb][how many people]] will work on it?
-** TODO what [[id:0383af4d-0cce-4452-bd5a-bf5b70920087][research]] will be needed for divulgación?
-** What stage are we at?
-*** Stage 1: Pilot
-    goes up to 200K USD
-    "Pilot stage of innovations that are early in development and need real-world testing to refine the basic model and establish the viability of the innovation at small scale."
-*** Stage 2: Test and position to scale
-    goes up to 1.5M USD
-    "The further testing and continued growth of innovations to assess the likelihood that they can achieve both impact and viability at a larger scale"
-** [[id:8a84343d-03e9-4cba-b069-445fb3e200f2][In Theory of Change, how many people needed?]]
+   Right.
 * TODO difference between Stage 1 and Stage 2 questions
 ** same
 *** "1. Short description of the Solution"
@@ -106,22 +75,8 @@
 
     Greater transparency would result not just in better spending. It would also, by making officials accountable for their actions, improve democratic outcomes, specifically citizen participation and candidate quality. Colombia would not only better fulfill its existing promises, but make better ones in the future.
 
- These issues affect, and hence our solution would help, every one of Colombia's 50 million citizens. It would particularly help those citizens who are unable to secure private alternatives to government-provided services -- a group that constitutes more than 90% of the population.
-** DONE "Gender Equality"
-   :PROPERTIES:
-   :ID:       dfd72ac4-d488-4cf9-bb1f-dd2b39dbbfce
-   :END:
-*** their question
-    How have you considered gender equality in the design of your innovation? How can its implementation contribute to reducing gender inequalities? Note that additional information on gender is also expected in response to the questions below, including theory of change, expected impact, project team and prospects for scaling up.
-*** our answer
-    Our project will improve gender equality in three ways.
-
-    (1) Adequate provision of government services is especially important to the most vulnerable populations. To the extent -- which is substantial -- that women and female-led households have, on average, fewer resources than men and male-led households, our work will further gender equality.
-
-    (2) The databases of public contracts in Colombia include a flag for projects intended to benefit women specifically. Whenever our work detects suspicious information in such contracts, it will permit citizen oversight of a sort that can benefit the women for whom the spending was intended.
-
-    (3) Furthermore, where it is possible, we will monitor for gender parity in the contracts themselves. This will be possible when a contract involves enough sub-contracts that the fractions going to men and women can be considered statistically meaningful evidence of unequal gender treatment.
-** BLOCKED Description of the Innovation or Solution
+    These issues affect, and hence our solution would help, every one of Colombia's 50 million citizens. It would particularly help those citizens who are unable to secure private alternatives to government-provided services -- a group that constitutes more than 90% of the population.
+** DONE Description of the Innovation or Solution
    :PROPERTIES:
    :ID:       d172453e-1881-4b31-a488-abab43f2dab1
    :END:
@@ -139,59 +94,51 @@
     Once the software is written, it will be able to run indefinitely on a single server, monitoring all public information on contracts available in Colombia, with occasional maintenance from a single programmer-economist. We will continue to engage in publicity efforts, but those will be cheap relative to the up-front cost of developing the system.
 
     Our prior investigations of public contract databases revealed that the funds allocated by the Fondo de Mitigación de Emergencia (FOME) for the Covid emergency were being directed by a private agency under no obligation to make its spending public. The attention we brought to this issue forced the government to move those funds to the ministry of health, which as part of the government is so obligated to make its contracts public. The resulting transparency permitted citizen oversight of spending, resulting in more efficient spending, as well as savings, we believe, of thousands of millions of pesos. And those results came merely from monitoring a single database, manually. Our automated system will monitor contracts on a much greater scale.
+** DONE "Gender Equality"
+   :PROPERTIES:
+   :ID:       dfd72ac4-d488-4cf9-bb1f-dd2b39dbbfce
+   :END:
+*** their question
+    How have you considered gender equality in the design of your innovation? How can its implementation contribute to reducing gender inequalities? Note that additional information on gender is also expected in response to the questions below, including theory of change, expected impact, project team and prospects for scaling up.
+*** our answer
+    Our project will improve gender equality in three ways.
+
+    (1) Adequate provision of government services is especially important to the most vulnerable populations. To the extent -- which is substantial -- that women and female-led households have, on average, fewer resources than men and male-led households, our work will further gender equality.
+
+    (2) The databases of public contracts in Colombia include a flag for projects intended to benefit women specifically. Whenever our work detects suspicious information in such contracts, it will permit citizen oversight of a sort that can benefit the women for whom the spending was intended.
+
+    (3) Furthermore, where it is possible, we will monitor for gender parity in the contracts themselves. This will be possible when a contract involves enough sub-contracts that the fractions going to men and women can be considered statistically meaningful evidence of unequal gender treatment.
 ** DONE theory of change
 *** their question
     The “Theory of Change” describes a strategy or blueprint for achieving a desired long-term goal. The theory of change identifies the prerequisites, pathways, and interventions needed to achieve that goal. A theory of change should include an identification of needs, inputs, outputs, intermediate outcomes, and final outcomes. It allows you to build a clear narrative and highlight the causal chain of events and assumptions that explain your innovation and its impact on people. Please describe the theory of change behind your innovation (how the solution will lead to the desired results). Please specify the assumptions on which it is based, and your level of confidence around these assumptions. Please also explain the parts of the theory of change for which you already have evidence, and the parts for which evidence remains to be established. Further, please specify how a perspective of gender is integrated within your theory of change.Please state the intended impact of your innovation as a result of the activities proposed in this application, clearly stating the primary result you wish to achieve as well as any additional outcomes expected (e.g., impacts on gender, health outcomes, household income change, etc.). Note that you can also illustrate your Theory of Change with the help of a diagram by uploading an image of it (JPEG or PNG format) in Question 6.2 (highly recommended). If you upload a diagram in Question 5.2, please also respond to Question 5.1 with a narrative explanation of the diagram provided.
 *** our answer
-**** outline
-***** prereqs
-****** work
-******* Understand each DB.
-******* Manually label training data from them "fishy" or "normal".
-******* Experiment with supervised learning architectures, and select one.
-******* Train it.
-******* Experiment with unsupervised learning algorithms.
-******* Code a process to scrape the databases for updates.
-******* Code a process to publish fishy data to one of our websites.
-****** assets
-******* a year of labor (of how many people?)
-	:PROPERTIES:
-	:ID:       8a84343d-03e9-4cba-b069-445fb3e200f2
-	:END:
-******* a server running continuously
-****** assumptions
-******* The online DBs will continue to exist.
-******* The online DBs will continue to be parseable.
-******* We will be permitted to publish the data.
-******* The coding will take a year.
-**** text
-     :PROPERTIES:
-     :ID:       9e6d77be-38fd-467d-aeb8-41fbea9d98bb
-     :END:
-     The work required consists of the following stages:
-     (*) Learn to parse each of the remaining databases. (We can already parse some of them.)
-     (*) Label a set of training data, identifying suspicious- and ordinary-looking contracts.
-     (*) Experiment with supervised learning architectures. Select one.
-     (*) Experiment with unsupervised learning algorithms. Select one.
-     (*) Train both algorithms and integrate them.
-     (*) Code a process to scrape the databases for updates.
-     (*) Code a process to regularly publish suspicious contracts to one of our websites, so that they are available to any internet user.
-     (*) Share the system's results with lawmakers and the media.
-     (*) Share the results in live colloquia, inviting academics, journalists and congresspeople.
+    :PROPERTIES:
+    :ID:       9e6d77be-38fd-467d-aeb8-41fbea9d98bb
+    :END:
+    The work required consists of the following stages:
+    (*) Learn to parse each of the remaining databases. (We can already parse some of them.)
+    (*) Label a set of training data, identifying suspicious- and ordinary-looking contracts.
+    (*) Experiment with supervised learning architectures. Select one.
+    (*) Experiment with unsupervised learning algorithms. Select one.
+    (*) Train both algorithms and integrate them.
+    (*) Code a process to scrape the databases for updates.
+    (*) Code a process to regularly publish suspicious contracts to one of our websites, so that they are available to any internet user.
+    (*) Share the system's results with lawmakers and the media.
+    (*) Share the results in live colloquia, inviting academics, journalists and congresspeople.
 
-     The project relies on the following assumptions, each of which we present together with the probability we assign it:
-     (*) 95%: The online DBs will continue to exist.
-     (*) 95%: The online DBs will continue to be parseable.
-     (*) 99%: We will continue to be permitted to publish the data and host our colloquia.
-     (*) 99%: Our work will continue to attract attention, fuel debate, and enable citizen oversight.
-     (*) 95%: Citizen oversight will continue to result in changes in government policy.
-     (*) 80%: The project will take two years.
+    The project relies on the following assumptions, each of which we present together with the probability we assign it:
+    (*) 95%: The online DBs will continue to exist.
+    (*) 95%: The online DBs will continue to be parseable.
+    (*) 99%: We will continue to be permitted to publish the data and host our colloquia.
+    (*) 99%: Our work will continue to attract attention, fuel debate, and enable citizen oversight.
+    (*) 95%: Citizen oversight will continue to result in changes in government policy.
+    (*) 80%: The project will take two years.
 
-     The potential benefits of this program are literally too many to count, but three of the most salient are these:
-     (*) Better provision of healthcare. This will benefit almost everybody, but it will disproportionately benefit the poorest, families with children, and caretakers (which are disproportionately women).
-     (*) Better infrastructure, which has the direct effects of economic growth, higher wages, better employment, and better sanitation (hence public health).
-     (*) Better education. This benefits not just the young, but also anyone who takes care of them (which again in Colombia is disproportionately women), and anyone who shares a household and hence resources with children.
-     (*) Greater public safety. This, like infrastructure, enables people to spend more time at work, studying, or engaging in leisure. These benefits accrue disproportionately to the vulnerable populations, since wealthier ones have already bought a greater measure of safety from the private sector.
+    The potential benefits of this program are literally too many to count, but three of the most salient are these:
+    (*) Better provision of healthcare. This will benefit almost everybody, but it will disproportionately benefit the poorest, families with children, and caretakers (which are disproportionately women).
+    (*) Better infrastructure, which has the direct effects of economic growth, higher wages, better employment, and better sanitation (hence public health).
+    (*) Better education. This benefits not just the young, but also anyone who takes care of them (which again in Colombia is disproportionately women), and anyone who shares a household and hence resources with children.
+    (*) Greater public safety. This, like infrastructure, enables people to spend more time at work, studying, or engaging in leisure. These benefits accrue disproportionately to the vulnerable populations, since wealthier ones have already bought a greater measure of safety from the private sector.
 ** DONE picture of theory of change
    [[/home/jeff/of/grants/Fund-for-Innovation-in-Development/theory of change, one page.png]]
 ** DONE Hypothesis validation and assessment of pilot results
@@ -203,12 +150,43 @@
 *** our answer
     Since contracts include location data, we can run controlled experiments to determine the effectiveness of the program, by randomly dividing regions into treatment and control groups, and publishing our system's results for the treatment group while withholding it for the control group. After running the intervention for a period long enough to expect some impact -- at least half a year -- the change in contract problematicity in the control and treatment groups will permit statistical testing to determine whether the intervention makes a meaningful difference.
 
-    We will use supervised and unsupervised learning to develop our measure of problematicity in government contracts. Note that while this measure will not be the same as corruption or mismanagement, they will be correlated.
-** DONE Pathway to Scale
+    We will use supervised and unsupervised learning to develop our measure of problematicity in government contracts. While this measure will not be the same as corruption or mismanagement, they will be correlated.
+** BLOCKED Activities to be supported
+*** their question
+**** describe
+**** provide a tentative schedule
+**** explain how each investigates
+     Please describe how these activities will help you to determine the innovation’s technical or operational viability in a real-world setting.
+**** amounts and justifications
+     Please indicate approximate amounts (in euros) to be spent on each activity and provide a brief justification for the total amounts to be spent.
+**** indicate any amount of co-funding
+*** our response
+The activities in our budget are the following:
+(*) study, learn to parse the online databases
+(*) descriptive statistics, numerical analysis
+(*) build prediction models
+(*) build database scraping software
+(*) write and publish reports
+(*) public events and exposure efforts
+** Pathway to Scale
    Once the software is written and running, it will immediately perform at full-scale, monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and it will make the data available to everyone (indeed, even to people outside the country -- it's just a website, after all). Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will serve everyone equally.
 
    The major expense is building the software. Once it is running it will only require occasional maintenance from a single developer, plus the cost of running the server itself, which might be two hundred dollars a month.
-** BLOCKED Cost-effectiveness of the innovation
+** Cost-effectiveness of the innovation
+   FID is interested in understanding why your solution has the potential to have a greater impact per euro than alternative means of addressing the same development challenge, including the status quo. Briefly present the existing solutions to address the development challenge in your location or in other regions. To the best of your ability, please provide your best estimate of the current cost of the innovation per beneficiary served or unit treated (including any co-funding, but not including evaluation and data collection costs). Please include both fixed and variable costs. Please indicate how you plan to provide an initial measure of cost-effectiveness in terms of cost per development outcome in Stage 1. How do you expect these costs to change as your innovation scales? Note: FID understands that precise estimates can be difficult to calculate. Please include explanations for your working assumptions and supporting calculations to demonstrate how you reached your estimates.
+** Applicant Organization (who we are)
+   Please provide an overview of the lead implementing organization and include relevant past experience implementing similar activities. Describe your organization’s area of expertise and within the targeted context and explain both why it is uniquely positioned and has the capacity to implement the proposed activities.
+** Risks (to launch, to sustain and to scale) and mitigation plans
+   local context(s)
+   technical risks
+   institutional and regulatory risks
+   market risks
+   environmental and social risks
+   climate risks
+** BLOCKED (asked Oliver, Daniel, Angelica and Alejandro): citations?
+** BLOCKED (asking Angelica): maintenance cost
+   Daniel and I guess a month of one programmer-economist's labor per year.
+   I'm asking Angelica what that costs.
 ** BLOCKED orphaned answers
 *** resource usage
     The assets this project requires are minimal: The labor of [[HOW MANY PEOPLE, OF WHAT KIND?]] and one server running 24/7.
