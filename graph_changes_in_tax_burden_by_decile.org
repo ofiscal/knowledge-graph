@@ -22,7 +22,7 @@
   :PROPERTIES:
   :ID:       b8f2e47c-a378-439b-8836-769065fb41be
   :END:
-** Bear in mind that [[id:106ca7be-c9de-42c6-89aa-db93c5202304][this]] means the baseline is approximate.
+** Bear in mind that because [[id:106ca7be-c9de-42c6-89aa-db93c5202304][the IVA buckets are approximate]], the baseline is approximate.
 ** DONE Don't modify the Makefile, but create a new user.
    Call the user "baseline" (no ampersand needed).
    Check user/baseline/ into git.

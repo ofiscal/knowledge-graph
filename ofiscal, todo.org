@@ -2,12 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* filing
-** TODO [[id:7027abec-f105-4286-b966-76e4b83d7fe2][Observatorio Fiscal grant applications]]
-** TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
-** [[id:448b41e2-e1b1-4659-beaa-e9661a03a048][document the microsimulation]]
-*** TODO data/vat/README.md is stale
-*** income-percentile is different for nonzero earners than others.
+* TODO u
 ** writing
 *** TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 *** TODO (after Tuesday): extend [[id:dcc368b4-e09c-4334-9500-d11f203e1fd8][taxing firms by size]] with a comparison to [[id:300513f2-4ed7-408d-974d-df907e588b5b][Cedetrabajo and ACOPI propose taxing small firms less]]
@@ -22,6 +17,9 @@
 ** economics
 *** TODO learn about [[id:1bfc20ac-3e04-4eca-a82c-be3e04ad7b49][CEQ (method for evaluating fiscal incidence)]]
 ** TODO [[id:2cadcf81-17b7-4521-934d-75d3be63e273][some OF relationships with other entities]]
+* TODO [[id:7027abec-f105-4286-b966-76e4b83d7fe2][Observatorio Fiscal grant applications]]
+* TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
+* TODO [[id:448b41e2-e1b1-4659-beaa-e9661a03a048][document the microsimulation]]
 * TODO review [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]: in org-roam, and TODO notes in code
 * TODO testing whether email == quien@donde.net is failing
 ** how to test
