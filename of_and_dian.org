@@ -2,4 +2,4 @@
 :ID:       b63d22cf-7f00-43fc-b81d-4be8884d402f
 :END:
 #+title: OF and DIAN
-* [[id:c0fc4cb4-6a54-4ce5-b24c-442549a89193][Can we send regressions for DIAN run?]]
+* BLOCKED [[id:c0fc4cb4-6a54-4ce5-b24c-442549a89193][Can we send regressions for DIAN run?]]

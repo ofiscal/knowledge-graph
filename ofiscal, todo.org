@@ -16,10 +16,10 @@
 *** TODO find someone who knows about the [[id:eb5f0108-ac6f-4718-b89e-a40e31f13b84][ELCA]]
 ** economics
 *** TODO learn about [[id:1bfc20ac-3e04-4eca-a82c-be3e04ad7b49][CEQ (method for evaluating fiscal incidence)]]
-** TODO [[id:2cadcf81-17b7-4521-934d-75d3be63e273][some OF relationships with other entities]]
 * TODO [[id:7027abec-f105-4286-b966-76e4b83d7fe2][Observatorio Fiscal grant applications]]
 * TODO [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 * TODO [[id:448b41e2-e1b1-4659-beaa-e9661a03a048][document the microsimulation]]
+* BLOCKED [[id:c0fc4cb4-6a54-4ce5-b24c-442549a89193][Can we send regressions for DIAN run?]]
 * TODO review [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]: in org-roam, and TODO notes in code
 * TODO testing whether email == quien@donde.net is failing
 ** how to test
