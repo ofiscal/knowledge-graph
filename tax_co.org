@@ -10,7 +10,17 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO order households by per-capita income
+* include interpreting-the-output.md in attachments
+modified   python/requests/main.py
+@@ -179,7 +179,8 @@ def advance_request_queue ():
+           + glob.glob ( os.path.join ( data_path, "change-in*by*.png" ) )
+           + glob.glob ( os.path.join ( data_path, "changes_*.xlsx" ) )
+           + [ os.path.join ( data_path,
+-                             "../../logs.zip" ) ] ) )
++                             "../../logs.zip" ),
++              "markdown/interpreting-the-output.md" ] ) )
+       with open( defs.global_log_path, "a" ) as f:
+         f . write( "Email: Done.\n" )
 * TODO un-hardcode those zero-income tests.
 ** There are more!
 *** python/build/people_4_post_households.py
@@ -178,6 +188,9 @@ But I don't label them "tax, ss" like I do the other SS contributions.
 is-purchase we probably assume to be 1, but the others ...?
 (they are often missing)
 ** TODO "vat" conflates some taxes
+   :PROPERTIES:
+   :ID:       6a9d0d80-5a4f-4354-a85c-33195a15b68d
+   :END:
 That's why, for instance, its max in purchases_2_vat_test is 0.27, not 19.
 (0.27 is the total tax levied on big motorcycles --
 the usual 19%, plus 8% more.)
@@ -886,6 +899,7 @@ but zero people in the sample received any of it:
 ** "P6500 (asalariado income) > 0" should be perfecty corr'd with pension contrib's
 ** ??? pension contribs = formality.
 * DONE | hopefully stale
+** DONE order households by per-capita income
 ** [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 ** estimate november-2018 reform effects
 *** the motorbike tax

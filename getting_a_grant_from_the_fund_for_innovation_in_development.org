@@ -11,6 +11,7 @@
 *** PITFALL: It might be temporarily borken.
     It was broken <2022-11-23 Wed>.
     I waited an hour and then it worked.
+* TODO incorporate these data
 * their goals
   https://fundinnovation.dev/en/
 ** They want to reduce poverty.
