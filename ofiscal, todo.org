@@ -2,6 +2,31 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO check out what Transparencia wrote
+  https://transparenciacolombia.org.co/
+* TODO Daniel says
+** make public contracts more transparent
+** the information avail now is good only if you know how to navigate it
+** cruzar (merge) contract data with corruption data
+   but we don't have corruption data
+** aliados para crear el indice de corupción
+   Transparencia and Veinte are the most likely to be useful.
+*** Transparencia por Colombia
+    They work on discovering corruption.
+    Their data comes from the news.
+    Their data is biased toward big corruption scandals.
+*** Los Veinte
+    Lawyers working on transparency.
+    One of their interests is that some info that should be public,
+    re. penal or civil processes, is not made public.
+    That's information that judges most likely have.
+    We might be able to use their data to know whether parties to any public contract were sued. Best case.
+    Second best: They tell us the information doesn't exist.
+** if we can't use external data to identify corruption, we'll just cluster the data
+   or maybe not clustering but just look at how a contract's cost differs from what we predict.
+** problems with writing a citizens' guide
+   Transparencia para Colombia already did that.
+   Lots of bulletins, maps, things about SECOP, and how they scrape the news.
 * TODO u
 ** writing
 *** TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
