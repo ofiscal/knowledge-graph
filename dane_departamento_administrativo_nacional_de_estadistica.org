@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       4fc58c2b-d756-42ab-ae0b-6600d63bffb9
+:END:
+#+title: DANE (Departamento Administrativo Nacional de Estadística)
+* TODO [[id:e79b5d00-01ea-44bb-90d9-3772db555875][What are the aggregate income, expenditure variables in the ENPH?]]

@@ -109,24 +109,55 @@ https://www.iaf.gov/es/solicite-fondos/
     En primer lugar estructurar la información de contratación pública existente y consolidarla. En segundo lugar realizar tres tareas paralelas: 1. Desarrollar técnicas para actualizar los datos encontrados de forma automática. 2. Reconocer la información en las bases consolidadas a través de estadísticas descriptivas, realizar modelos de econometría y aprendizaje de maquina para reconocer estructuras dentro de los datos y encontrar datos extraños. 3.Diseñar una interfaz para publicar los resultados actualizados de forma frecuente. Por último realizaremos la publicación del ejercicio.
 ** DONE other groups involved
    The Observatorio Fiscal will bear sole responsibility for the project’s execution.
-** what changes do we expect? how will we recognize success?
-   Esperamos que las herramientas sean utilizadas por la ciudadanía para describir sus procesos locales y encontrar casos extraños o sospechosos. El desarrollo de los modelos, bases de datos e interfaz gráfica mostrará que tuvimos éxito en el desarrollo. Los resultados por parte de la ciudadanía en hacer veeduría efectiva mostrará si tenemos éxito en los ideales.
-** how to handle risks and opportunities
-   Los riesgos principales son la ausencia de información y carencia de variables explicativas. En el caso de la ausencia de información estamos preparados para extraer información de fuentes no tradicionales por medio de scraping, minería de datos y otras herramientas. En carencia de variables explicativas suficientes tenderemos a mostrar resultados solamente en contratos exageradamente extraños que aún con poca información sean reconocibles.
-*** ORPHANED: risks, by Jeff, before looking at D's answer
-**** essay
-     There are, of course, a few anticipable risks to the project.
-     The most catastrophic risk would be a violent act of revenge by someone who does not appreciate our revelations. However, we do not consider this likely. While assasinations of rural community leaders remain common, political violence is extremely rare in Bogotá, where we are located.
-     Second, the favorable conditions in Colombia could change. The public contract databases could be taken offline But we consider this unlikely because such a move would be highly visible and too politically damaging for anyone in government to be likely to consider it. Similarly, in theory the government could try to silence us, but given our outstanding reputation such a move would be at least as politically damaging, probably more so.
-     The risk with the greatest -- though we consider it small -- probability of materializing is that integrating the public databases, analyzing the data, setting up an automatic publication mechanism, and making all of those things understood by the public proves to take longer than we initially estimate. But this is not a risk to the project's viability; it would merely mean we would have to, say, seek funding for another year. But at that point we would already have useful initial results, and so could perhaps secure continued funding more easily.
-**** outline
-***** The favorable conditions in Colombia could change.
-****** Democracy might weaken.
-****** The DBs could disappear.
-***** Our estimate of the development task's duration could be wrong.
-***** We could be assasinated.
-** how will this continue once we stop funding?
-   Seguiremos actualizando la información, mejorando la interface y los modelos predictivos. Además, buscaremos utilidades [óther applications] extra de nuestra información en fomento de transparencia pública.
+** DONE what changes do we expect? how will we recognize success?
+*** 2, J
+**** 2, text
+     :PROPERTIES:
+     :ID:       dfb1c9d7-4a0f-424c-929a-35ddf323b50e
+     :END:
+     Upon completion of this project, we expect Colombia's citizenry to understand how to exercise oversight of public contracts, by using both the existing government-provided tools and the ones we will design, and to engage in such oversight. As a result, we expect government to recognize an increased political risk of contract mismanagement, and as a result, that contracts will be better managed.
+     The result should be better provision of essential services such as healthcare, education, infrastructure, public safety, and a corresponding increase in citizen welfare and economic output.
+     We will measure the program's effectiveness experimentally. Since public contracts are local, we can make the project available in some places and not others. After executing a power study to determine an appropriate size for it, we will randomly select a group of control localities for which we will withhold data. By monitoring for differences in suspicious contract activity in the treatment and control groups, we will be able to generate a useful measure of the program's effectiveness.
+     There are certain aspects of the program, such as the publication of laymens' guides to the oversight process, that cannot be restricted to certain regions. If those aspects are effective as well, then the experiment will yield an underestimate of the program's effectiveness. This will bolster our case, if (as we expect) the experiment reveals a meaningful difference between the treatment and control groups.
+**** 1, outline
+***** citizens identify contract mismanagement
+      using our tools and those already provided by the govt
+***** contract mismanagement carries greater political risk
+***** contracts are managed better
+***** effects of that
+****** healthcare
+****** infrastructure
+****** education
+****** public safety
+*** 1, D
+**** 2, outline
+***** citizens use our tools to find contract mismanagement
+**** 1, text
+     Esperamos que las herramientas sean utilizadas por la ciudadanía para describir sus procesos locales y encontrar casos extraños o sospechosos. El desarrollo de los modelos, bases de datos e interfaz gráfica mostrará que tuvimos éxito en el desarrollo. Los resultados por parte de la ciudadanía en hacer veeduría efectiva mostrará si tenemos éxito en los ideales.
+** DONE how to handle risks and opportunities
+*** 2, J
+    The opportunities we plan to take advantage of, and how, are described above in our response to an earlier question. To repeat them in brief, the opportunities are the following: that speech is free; that democracy is clean; that bringing light to government activities generates vigorous public debate, to which the government is responsive; that public contract databases exist, but are currently opaque; and that automated analysis of the database permits oversight on a massive scale. Our response to those opportunities is the plan we have set forth already: to collect the public databases into a single meta-database; to automate the search for and publication of supicious contract activity in that meta-database; and to explain to the public at large, through a variety of channels, how to use those tools to oversee government actiities.
+    The most catastrophic risk would be a violent act of revenge by someone who does not appreciate our revelations. We consider this unlikely. While assasinations of rural community leaders remain common, political violence is extremely rare in Bogotá, where we are located.
+    Second, the favorable conditions in Colombia could change. The public contract databases could, for instance, be taken offline. We consider this unlikely because such a move would be highly visible and very politically damaging to anyone who might consider it. Similarly, the government could try to silence us, but given our own high visibility and outstanding reputation, such a move would be at least as politically damaging as taking down the databases.
+    The risk with the greatest -- though we consider it small -- probability of materializing is that integrating the public databases, analyzing the data, setting up an automatic publication mechanism, and making all of those things understood by the public proves to take longer than we initially estimate. But this is not a risk to the project's viability; it would merely mean we would have to, say, seek funding for another year. But at that point we would already have useful initial results, and so could perhaps secure continued funding more easily.
+    Last, and most subtly, are potential obstacles in the contract data itself. While the databases we will draw from are enormous, they may not be complete. Even if they cover all contracts, they may not record everything about those contracts that they should. How to respond? If we believe it is necessary, we will supplement the contract databases with other information scraped from the web. Transparencia por Colombia has already performed such scraping for news articles, and is open to sharing information with us. Another potential response would be to limit our reports of suspicious activity to cases in which the mismanagement is severe enough that it is obvious even from incomplete data. (This second response not really an either-or condition; rather, regardless of what we find, we will flag exactly those results we feel confident of, and their scope will depend on the quality of the information at hand.)
+***** outline
+****** We could be assasinated.
+****** The favorable conditions in Colombia could change.
+******* Democracy might weaken.
+******* The DBs could disappear.
+****** Our estimate of the development task's duration could be wrong.
+****** (D wrote) Information problems
+******* Critical data might be missing.
+******* Mismanagement might be unidentifiable outside of the most extreme cases.
+*** 1, D
+    Los riesgos principales son la ausencia de información y carencia de variables explicativas. En el caso de la ausencia de información estamos preparados para extraer información de fuentes no tradicionales por medio de scraping, minería de datos y otras herramientas. En carencia de variables explicativas suficientes tenderemos a mostrar resultados solamente en contratos exageradamente extraños que aún con poca información sean reconocibles.
+** DONE how will this continue once we stop funding?
+*** 2, J
+    This project does not require substantial long-term funding. After two years we expect to have put in place the meta-database and the program to continuously monitor it for suspicious contract activity, and to have published guides regarding, and otherwise have made known, how citizens can use the public databases and the tools we have built to monitor public contracts.
+    Thereafter we will simply leave the program running. We estimate that a single month of a single programmer-economist's time will be needed per year to maintain the program. That labor, plus the continuos use of single server (probably on Amazon Web Services), are all that the project will require once your funding period ends. Javeriana University can easily cover those costs.
+*** 1, D
+    Seguiremos actualizando la información, mejorando la interface y los modelos predictivos. Además, buscaremos utilidades [óther applications] extra de nuestra información en fomento de transparencia pública.
 ** ORPHANED: Talk about how we have already changed laws.
 * the application form
 ** online
