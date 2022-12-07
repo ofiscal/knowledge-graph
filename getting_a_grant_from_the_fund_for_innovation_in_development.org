@@ -173,7 +173,7 @@ The potential benefits of this program are literally too many to count, but thre
 Since contracts include location data, we can run controlled experiments to determine the effectiveness of the program, by randomly dividing regions into treatment and control groups, and publishing our system's results for the treatment group while withholding it for the control group. After running the intervention for a period long enough to expect some impact -- at least half a year -- the change in contract problematicity in the control and treatment groups will permit statistical testing to determine whether the intervention makes a meaningful difference.
 
 We will use supervised and unsupervised learning to develop our measure of problematicity in government contracts. While this measure will not be the same as corruption or mismanagement, they will be correlated.
-** BLOCKED Activities to be supported
+** DONE Activities to be supported
 *** their question
 **** describe
 **** provide a tentative schedule
@@ -183,15 +183,25 @@ We will use supervised and unsupervised learning to develop our measure of probl
      Please indicate approximate amounts (in euros) to be spent on each activity and provide a brief justification for the total amounts to be spent.
 **** indicate any amount of co-funding
 *** our response
+We have as yet received no co-financing for the project.
+
 The activities in our budget are the following:
-(*) study, learn to parse the online databases
-(*) descriptive statistics, numerical analysis
-(*) build prediction models
-(*) build database scraping software
-(*) write and publish reports
-(*) public events and exposure efforts
+
+(1)  (9,700.00 €) Study, parse and unify the online databases. This stage will be brief but fundamental: the other stages all rely on it.
+
+Stages (2), (3) and (4) are concurrent.
+
+(2) (87,000.00 €) Descriptive statistics, numerical analysis. In this stage we build our own understanding of the data.
+
+(3) (47,650.00 €) Build prediction models. These models will be used to identify suspicious contract activity.
+
+(4) (18,500.00 €) Build scraping and publishing software. The scraping software will automatically update our meta-database as the databases that it was generated from are themselves updated. The publishing software will update our online analyses, including any suspicious activity the algorithm identifies.
+
+(5) (18,500.00 €) Write and publish reports. These will explain how to use the databases provided by the government and our own meta-database, and will detail our research findings from stages (2) and (3).
+
+(6) (18,500.00 €) Public events and exposure efforts. This stage consists of outreach to news media, the government and the citizenry at large. The outreach will use all available media: online, via traditional broadcast media, in small in-person meetings, and in seminars and colloquia.
 ** Pathway to Scale
-Once the software is written and running, it will immediately perform at full-scale, monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and it will make the data available to everyone (indeed, even to people outside the country -- it's just a website, after all). Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will serve everyone equally.
+As soon as the software is written and running, it will already be at full-scale: monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and it will make the data available to everyone (indeed, even to people outside the country -- it's just a website, after all). Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will serve everyone equally.
 
 The major expense is building the software. Once it is running it will only require occasional maintenance from a single developer, plus the cost of running the server itself, which might be two hundred dollars a month.
 ** Cost-effectiveness of the innovation
@@ -214,6 +224,5 @@ The major expense is building the software. Once it is running it will only requ
 ** BLOCKED (asking Angelica): maintenance cost
    Daniel and I guess a month of one programmer-economist's labor per year.
    I'm asking Angelica what that costs.
-** BLOCKED orphaned answers
 *** resource usage
     The assets this project requires are minimal: The labor of [[HOW MANY PEOPLE, OF WHAT KIND?]] and one server running 24/7.
