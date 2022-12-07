@@ -200,10 +200,14 @@ Stages (2), (3) and (4) are concurrent.
 (5) (18,500.00 €) Write and publish reports. These will explain how to use the databases provided by the government and our own meta-database, and will detail our research findings from stages (2) and (3).
 
 (6) (18,500.00 €) Public events and exposure efforts. This stage consists of outreach to news media, the government and the citizenry at large. The outreach will use all available media: online, via traditional broadcast media, in small in-person meetings, and in seminars and colloquia.
-** Pathway to Scale
-As soon as the software is written and running, it will already be at full-scale: monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and it will make the data available to everyone (indeed, even to people outside the country -- it's just a website, after all). Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will serve everyone equally.
+** DONE Pathway to Scale
+In brief: The system will perform at full scale, covering all of Colombia, as soon as it is built. The negligible cost of maintaining it can be absorbed by Javeriana University.
 
-The major expense is building the software. Once it is running it will only require occasional maintenance from a single developer, plus the cost of running the server itself, which might be two hundred dollars a month.
+In a little more detail:
+
+As soon as the software is written and running, it be monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and the system will (after the preliminary controlled experiment is complete) make the data on every region in Colombia available to everyone in the world. Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will, we expect, benefit the entire country.
+
+The project's major expenses are all up-front rather than in maintenance. Once the system is running, it will only require occasional maintenance from a single developer -- we estimate one person-month of labor per year, costing under $1000 -- plus the cost of the server time, which we believe will be less than $2500 USD per year. Javeriana University can easily absorb these maintenance costs.
 ** Cost-effectiveness of the innovation
 *** their question
     FID is interested in understanding why your solution has the potential to have a greater impact per euro than alternative means of addressing the same development challenge, including the status quo. Briefly present the existing solutions to address the development challenge in your location or in other regions. To the best of your ability, please provide your best estimate of the current cost of the innovation per beneficiary served or unit treated (including any co-funding, but not including evaluation and data collection costs). Please include both fixed and variable costs. Please indicate how you plan to provide an initial measure of cost-effectiveness in terms of cost per development outcome in Stage 1. How do you expect these costs to change as your innovation scales? Note: FID understands that precise estimates can be difficult to calculate. Please include explanations for your working assumptions and supporting calculations to demonstrate how you reached your estimates.
