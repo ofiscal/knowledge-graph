@@ -4,7 +4,7 @@
 #+title: tax.co
 * refs
 ** github
-         https://github.com/ofiscal/tax.co
+   https://github.com/ofiscal/tax.co
    git clone git@github.com:ofiscal/tax.co.git
 ** [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
@@ -59,7 +59,7 @@ for k,v in per_cell_spec.items():
   assert v . test( out[k] )
 * TODO It's confusing that the baseline gets emailed too.
 * TODO ? [[id:5c2e57e1-21ec-4be5-b2ce-6248fb301867][rewrite algorithm to compute cedula gravable general]]
-* TODO IMMEDIATE : Inflate from 2017 to 2022
+* TODO Inflate from 2017 to 2022
 * TODO automate this test
   python/regime/test.py
 * TODO run mypy everywhere
@@ -195,9 +195,7 @@ That's why, for instance, its max in purchases_2_vat_test is 0.27, not 19.
 (0.27 is the total tax levied on big motorcycles --
 the usual 19%, plus 8% more.)
 * TODO mysteries
-** TODO What are DANE's aggregate income, expenditure variables?
-They can't be monthly.
-They don't want to share the code.
+** TODO [[id:e79b5d00-01ea-44bb-90d9-3772db555875][What are the aggregate income, expenditure variables in the ENPH?]]
 ** TODO Do my income variables include SS withholdings, etc?
   Write this up somewhere.
 ** TODO What does "otros impuestos" include?

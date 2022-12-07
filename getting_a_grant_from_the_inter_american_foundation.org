@@ -4,6 +4,7 @@
 :END:
 #+title: getting a grant from the Inter-American Foundation
 https://www.iaf.gov/es/solicite-fondos/
+* TODO [[id:dfb1c9d7-4a0f-424c-929a-35ddf323b50e][resume HERE]]
 * BLOCKED asking Manuela how much the webpage would cost
 * BLOCKED asking Angelica to fill out the budget spreadsheet
 * TODO reworking Daniel's answers
