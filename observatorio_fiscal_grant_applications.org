@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       7027abec-f105-4286-b966-76e4b83d7fe2
-:ROAM_ALIASES: "grant applications \ ofiscal"
+:ROAM_ALIASES: "grant applications \ ofiscal" "grants \ ofiscal" "ofiscal / grants"
 :END:
 #+title: Observatorio Fiscal grant applications
 * [[id:200e0a81-01ca-4845-a803-519ef0021e00][links to grant opportunities]]

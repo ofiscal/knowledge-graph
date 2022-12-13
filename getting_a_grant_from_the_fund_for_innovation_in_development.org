@@ -51,7 +51,9 @@
    The Global Innovation Fund
 ** "Is this proposal still actively under consideration ..."
    We hope so. Nobody has responded so far.
-* TODO difference between Stage 1 and Stage 2 questions
+* BLOCKED change budget
+** The budget file I have asks for too much, 200 K USD
+* DONE difference between Stage 1 and Stage 2 questions
 ** same
 *** "1. Short description of the Solution"
 *** "2. Development Challenge"
@@ -208,19 +210,27 @@ In a little more detail:
 As soon as the software is written and running, it be monitoring all contracts in the public contract databases. Colombia's population is about 50 million people, and the system will (after the preliminary controlled experiment is complete) make the data on every region in Colombia available to everyone in the world. Of course not all 50 million people will be reading it, but the resulting improvements in visibility, accountability, and voter information will, we expect, benefit the entire country.
 
 The project's major expenses are all up-front rather than in maintenance. Once the system is running, it will only require occasional maintenance from a single developer -- we estimate one person-month of labor per year, costing under $1000 -- plus the cost of the server time, which we believe will be less than $2500 USD per year. Javeriana University can easily absorb these maintenance costs.
-** Cost-effectiveness of the innovation
+** BLOCKED Cost-effectiveness of the innovation
 *** their question
     FID is interested in understanding why your solution has the potential to have a greater impact per euro than alternative means of addressing the same development challenge, including the status quo. Briefly present the existing solutions to address the development challenge in your location or in other regions. To the best of your ability, please provide your best estimate of the current cost of the innovation per beneficiary served or unit treated (including any co-funding, but not including evaluation and data collection costs). Please include both fixed and variable costs. Please indicate how you plan to provide an initial measure of cost-effectiveness in terms of cost per development outcome in Stage 1. How do you expect these costs to change as your innovation scales? Note: FID understands that precise estimates can be difficult to calculate. Please include explanations for your working assumptions and supporting calculations to demonstrate how you reached your estimates.
 ** Applicant Organization (who we are)
 *** their question
     Please provide an overview of the lead implementing organization and include relevant past experience implementing similar activities. Describe your organization’s area of expertise and within the targeted context and explain both why it is uniquely positioned and has the capacity to implement the proposed activities.
-** Risks (to launch, to sustain and to scale) and mitigation plans
-   local context(s)
-   technical risks
-   institutional and regulatory risks
-   market risks
-   environmental and social risks
-   climate risks
+** DONE Risks (to launch, to sustain and to scale) and mitigation plans
+*** in their question
+    local context(s)
+    technical risks
+    institutional and regulatory risks
+    market risks
+    environmental and social risks
+    climate risks
+*** our answer
+    The opportunities we plan to take advantage of, and how, are described above in our response to an earlier question. To repeat them in brief, the opportunities are the following: that speech is free; that democracy is clean; that bringing light to government activities generates vigorous public debate, to which the government is responsive; that public contract databases exist, but are currently opaque; and that automated analysis of the database permits oversight on a massive scale. Our response to those opportunities is the plan we have set forth already: to collect the public databases into a single meta-database; to automate the search for and publication of supicious contract activity in that meta-database; and to explain to the public at large, through a variety of channels, how to use those tools to oversee government actiities.
+    The most catastrophic risk would be a violent act of revenge by someone who does not appreciate our revelations. We consider this unlikely. While assasinations of rural community leaders remain common, political violence is extremely rare in Bogotá, where we are located.
+    Second, the conditions in Colombia favorable to a transparency project like ours could change. The public contract databases could be taken offline -- but we consider this unlikely because such a move would be highly visible and very politically damaging to anyone who might consider it. Similarly, the government could try to silence us in particular -- but given our own high visibility and outstanding reputation, such a move would be at least as politically damaging as taking down the databases.
+    The risk with the greatest probability -- though we consider it small -- of materializing is that integrating the public databases, analyzing the data, setting up an automatic publication mechanism, and making all of those things understood by the public proves to take longer than we initially estimate. This is not a risk to the project's viability, however; it would merely mean we would have to, say, seek funding for another year. But at that point we would already have useful initial results, and so could perhaps secure continued funding more easily.
+    Last, and most subtly, are potential obstacles in the contract data itself. While the databases we will draw from are enormous, they unlikely to be complete. Even if they cover all contracts, they may not record everything about those contracts that they should. Therefore, if we believe it is necessary, we will supplement the contract databases with other information scraped from the web. Transparencia por Colombia has already performed such scraping for news articles, and is open to sharing information with us. Another potential response would be to limit our reports of suspicious activity to cases in which the mismanagement is severe enough that it is obvious even from incomplete data. (This second response not really an either-or condition; rather, regardless of what we find, we will flag exactly those results we feel confident of, and their scope will depend on the quality of the information at hand.)
+    Those are all risks to launch. We foresee no risks to scaling or maintaining the project, as it will launch at full scale and maintaining it is cheap.
 ** Partner Organizations
 *** our answer
     There are none so far.
