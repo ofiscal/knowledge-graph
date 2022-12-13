@@ -5,13 +5,16 @@
 #+title: getting a grant from the Inter-American Foundation
 https://www.iaf.gov/es/solicite-fondos/
 * BLOCKED asking Manuela how much the webpage would cost
-* BLOCKED asking Angelica to fill out the budget spreadsheet
 * BLOCKED questions I can't answer
 ** I emailed about it
    https://mail.google.com/mail/u/0/#search/to%3Aoliverpardo%40gmail.com/QgrcJHsTfQzCXMzBTvxWpqLMDDctXPsMScb
-** Estructura organizativa/de gobernanza actual: (Se refiere a la forma de liderazgo de la organización,  que puede incluir  una junta directiva, una asamblea general, un consejo fiscalizador  y/o un director ejecutivo; también indique cómo se toman las decisiones, la frecuencia de las reuniones, etc.) Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
-** Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
-** Logros pasados más importantes: (Describa la historia y los logros principales de su organización) Incluya los que sean pertinentes para este proyecto.
+** the list
+*** Estructura organizativa/de gobernanza actual:
+    (Se refiere a la forma de liderazgo de la organización,  que puede incluir  una junta directiva, una asamblea general, un consejo fiscalizador  y/o un director ejecutivo; también indique cómo se toman las decisiones, la frecuencia de las reuniones, etc.) Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
+*** who
+    Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
+*** Logros pasados más importantes:
+    (Describa la historia y los logros principales de su organización) Incluya los que sean pertinentes para este proyecto.
 * answers
 ** title
 *** 2, J
@@ -161,6 +164,8 @@ https://www.iaf.gov/es/solicite-fondos/
     Thereafter we will simply leave the program running. We estimate that a single month of a single programmer-economist's time will be needed per year to maintain the program. That labor, plus the continuos use of a single server (probably on Amazon Web Services) are all that the project will require once your funding period ends. Javeriana University, our parent organization, can easily cover those costs itself.
 *** 1, D
     Seguiremos actualizando la información, mejorando la interface y los modelos predictivos. Además, buscaremos utilidades [óther applications] extra de nuestra información en fomento de transparencia pública.
+** budget
+   /home/jeff/of/grants/Inter-American-Foundation/IAF-Budget-English.xlsx
 ** ORPHANED: Talk about how we have already changed laws.
 * the application form
 ** online
