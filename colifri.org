@@ -2,10 +2,11 @@
 :ID:       0d5db88b-9776-474b-87a4-ab98d19786c7
 :END:
 #+title: Colifri
+https://www.colifri.com/
 * what it is
 ** a network involving all kinds of organizations
 *** schools
-*** researchers
+*** researchers, including students
 *** businesses
 *** "instituciones públicas"
 ** its purpose seems to be to promote French cooperation with other countries in:
@@ -20,6 +21,7 @@
     another element of which is [[id:7d7e5cdb-e350-46a5-97b2-8280fe3cd63d][across-country student interchange]].
 *** innovation
 *** development
+* it collect membership fees
 * its organization
 ** "Colifri Colombia" and "Colifri France" are separate networks.
    I'm assuming of Colombian and French members, respectively.
@@ -43,8 +45,6 @@
 ***** decide what to think about
 ***** figure out who's good at what
 ***** work on academic policy
-* things they have done
+* things they have done in Colombia
 ** A research project on how to use sustainable energy in developing areas.
-*** More than 60 researchers were involved.
-** grow
-** collect membership fees
+   More than 60 researchers were involved.
