@@ -897,6 +897,12 @@ but zero people in the sample received any of it:
 ** "P6500 (asalariado income) > 0" should be perfecty corr'd with pension contrib's
 ** ??? pension contribs = formality.
 * DONE | hopefully stale
+** DONE (now run-makefile.py handles this) Internalize: Baseline config file must match sample size of user config file
+   :PROPERTIES:
+   :ID:       6c7711c7-c228-4400-bd26-ce39997e2681
+   :END:
+   This only matters when running by hand;
+   the online sim automatically sets both to 1.
 ** DONE order households by per-capita income
 ** [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
 ** estimate november-2018 reform effects
@@ -1051,12 +1057,6 @@ that's already implemented.
 ** some pics are drawn but not included in the report
 *** people/spending
 * TODO PITFALLs in code
-** Internalize: Baseline config file must match sample size of user config file
-   :PROPERTIES:
-   :ID:       6c7711c7-c228-4400-bd26-ce39997e2681
-   :END:
-   This only matters when running by hand;
-   the online sim automatically sets both to 1.
 ** in my own
 *** the special motorcycle tax
 It is represented in code, not data.
