@@ -25,6 +25,7 @@
 * our virtual office
   https://gather.town/preeaif0RiJXfiW6/Obsevatorio%20Fiscal
 * [[id:305eb465-cd34-4eb2-8998-85fd2daeaef5][some ofiscal-relevant contacts: people and organizations]]
+* [[id:99cefe98-22a4-44c6-aedf-9323f42a7d9b][some ofiscal-relevant data sources]]
 * ofiscal, processes
 ** [[id:3478dbef-feca-4776-858a-63e59b8efe83][pipeline for publication]]
 * ofiscal, some of our output

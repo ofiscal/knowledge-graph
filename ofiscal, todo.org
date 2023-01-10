@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO file notes from [[id:ba9b4f8e-36a9-48db-b8f0-0a1c79b43a53][meetings 2023-01-10]]
 * TODO put a limit on the number of requests the sim can do in a day
   because it will be published on our site
 * TODO keep copies of stuff on Oliver's Box account
