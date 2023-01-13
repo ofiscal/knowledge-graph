@@ -52,6 +52,9 @@
 ** "Is this proposal still actively under consideration ..."
    We hope so. Nobody has responded so far.
 * BLOCKED budget
+** ref : I asked here
+   message 8, <2023-01-13 Fri>
+   https://mail.google.com/mail/u/0/#search/angelica+innovation/KtbxLzGLlQnMdZqXKtGLRwRHxLxMsFHBMg
 ** reduce the amount
 *** The budget file I have asks for too much, 200 K USD
 ** adjust accordingly [[id:a70fcf94-b976-40d2-864e-fefb3f736465][our budget narrative for them]]
