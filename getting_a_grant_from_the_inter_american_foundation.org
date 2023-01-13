@@ -4,16 +4,16 @@
 :END:
 #+title: getting a grant from the Inter-American Foundation
 https://www.iaf.gov/es/solicite-fondos/
-* BLOCKED asking Manuela how much the webpage would cost
+* DONE Manu says the webpage cost 12 million COP
 * BLOCKED questions I can't answer
 ** I emailed about it
    https://mail.google.com/mail/u/0/#search/to%3Aoliverpardo%40gmail.com/QgrcJHsTfQzCXMzBTvxWpqLMDDctXPsMScb
 ** the list
-*** Estructura organizativa/de gobernanza actual:
-    (Se refiere a la forma de liderazgo de la organización,  que puede incluir  una junta directiva, una asamblea general, un consejo fiscalizador  y/o un director ejecutivo; también indique cómo se toman las decisiones, la frecuencia de las reuniones, etc.) Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
+*** Estructura organizativa/de gobernanza actual
+    (Se refiere a la forma de liderazgo de la organización,  que puede incluir una junta directiva, una asamblea general, un consejo fiscalizador  y/o un director ejecutivo; también indique cómo se toman las decisiones, la frecuencia de las reuniones, etc.) Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
 *** who
     Escriba los nombres completos de los integrantes de la junta directiva, afiliación a la organización y sus cargos. Indique sus profesiones (agricultor, técnico, maestro, etc.).
-*** Logros pasados más importantes:
+*** Logros pasados más importantes
     (Describa la historia y los logros principales de su organización) Incluya los que sean pertinentes para este proyecto.
 * answers
 ** title

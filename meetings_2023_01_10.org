@@ -13,15 +13,6 @@
      Someone wanted to build a pier in Boyaca,
      then moved it at the last minute to San Andres.
 **** I should code review Daniel.
-*** microsim
-**** updating it: wait to meet DANE
-**** might need to integrate GEIH data
-*** TODO tell Oliver which grant applications we've completed
-** get (access to) Stata
-*** ask Claudia
-*** Oliver's user name and pwd for Stata @ Javeriana
-    pardoo
-    JaverianaFiscal1979!
 ** TODO talk to Daniel, William, find out more about the contract program
 *** which web pages? how to navigate?
 * meeting w/ Daniel, 2 PM

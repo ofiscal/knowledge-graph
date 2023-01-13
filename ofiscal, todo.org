@@ -2,6 +2,13 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO send project description to William via group chat
+* [[id:9112e9d6-903f-4c9a-a6c3-d4dbbed20dd9][contract transparency (ofiscal project)]]
+* [[id:529da23b-382f-46cf-908f-7d8941ca865a][who the Observatorio is: essay(s)]]
+  https://mail.google.com/mail/u/0/#inbox/QgrcJHsTfQzCXMzBTvxWpqLMDDctXPsMScb
+* TODO learn the [[id:45a20eff-9c1e-4c93-ac93-597e81f14ef9][GEIH]]
+** ask Daniel about it
+** reproduce some of the stats DANE publishes
 * TODO file notes from [[id:ba9b4f8e-36a9-48db-b8f0-0a1c79b43a53][meetings 2023-01-10]]
 * TODO put a limit on the number of requests the sim can do in a day
   because it will be published on our site

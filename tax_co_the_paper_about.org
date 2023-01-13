@@ -2,6 +2,9 @@
 :ID:       30fb3fac-5f4b-472b-a437-cc224704ba30
 :END:
 #+title: tax.co, the paper about
+* TODO edits
+** We are estimating theoretical tax burden, not actual.
+   if all the laws were enforced and obeyed
 * refs
 ** in tax.co
    tax.co/tex/overview-paper.tex

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       41c235a2-3c26-4bfb-8f6c-4477bf9777c5
+:END:
+#+title: Instituto Anticorrupción
+* [[id:16bb5836-ff48-480e-9e8a-b536011d5786][some people at the Instituto Anticorrupción]]
+* what they do
+** study causes, effects of corrupcion
+** suggest solutions
+** They have an Observatorio de Justicia e Impunidad.
+* publications
+** [[id:f96e9e52-b4e5-406f-a78e-864534507112][best practices in poblic contracting]]
+* They have a way to measure heterogeneity in contracts of a business.
+  :PROPERTIES:
+  :ID:       f0dfd638-35b9-498c-8420-e239a1042d5c
+  :END:

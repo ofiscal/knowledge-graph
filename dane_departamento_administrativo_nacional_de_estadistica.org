@@ -3,3 +3,4 @@
 :END:
 #+title: DANE (Departamento Administrativo Nacional de Estadística)
 * TODO [[id:e79b5d00-01ea-44bb-90d9-3772db555875][What are the aggregate income, expenditure variables in the ENPH?]]
+* [[id:d047ae6a-25c0-4ce4-8617-f3c17d29421a][The ENPH and ENIG surveys of Colombian households, by DANE]]
