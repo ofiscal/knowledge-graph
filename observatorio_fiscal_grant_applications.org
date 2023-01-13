@@ -3,7 +3,7 @@
 :ROAM_ALIASES: "grant applications \ ofiscal" "grants \ ofiscal" "ofiscal / grants"
 :END:
 #+title: Observatorio Fiscal grant applications
-* [[id:529da23b-382f-46cf-908f-7d8941ca865a][who the Observatorio is: essay(s)]]
+* TODO [[id:529da23b-382f-46cf-908f-7d8941ca865a][who the Observatorio is: essay(s)]]
 * project descriptions
 ** [[id:d9a9122c-2758-4456-90c7-73fb18b5d39e][to the Fund for Innovation in Development]]
 * [[id:200e0a81-01ca-4845-a803-519ef0021e00][links to grant opportunities]]

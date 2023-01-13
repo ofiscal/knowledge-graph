@@ -8,6 +8,8 @@
 ** [[id:f96e9e52-b4e5-406f-a78e-864534507112][best practices in poblic contracting, by the Instituto Anticorrupción]]
 ** [[id:f0dfd638-35b9-498c-8420-e239a1042d5c][a way to measure heterogeneity in contracts of a business]]
 ** [[id:54bc5836-291f-4154-b1e9-7a85cd07ee50][SECOP]]
+* motivations
+** [[id:0ed98e46-508e-4700-9e27-46bae805a6a6][mismangaement of public funds in Colombia]]
 * TODO private repo for code, public for everything else
 * the UI we would like
 ** filters

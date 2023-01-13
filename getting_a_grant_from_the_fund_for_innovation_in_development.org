@@ -54,7 +54,7 @@
 * BLOCKED budget
 ** reduce the amount
 *** The budget file I have asks for too much, 200 K USD
-** adjust accordingly our response to [[id:e8ae3698-d403-4f78-b7da-038c5cf675d9][Activities to be supported]]
+** adjust accordingly [[id:a70fcf94-b976-40d2-864e-fefb3f736465][our budget narrative for them]]
 * DONE difference between Stage 1 and Stage 2 questions
 ** same
 *** "1. Short description of the Solution"
@@ -155,36 +155,7 @@ The potential benefits of this program are literally too many to count, but thre
 Since contracts include location data, we can run controlled experiments to determine the effectiveness of the program, by randomly dividing regions into treatment and control groups, and publishing our system's results for the treatment group while withholding it for the control group. After running the intervention for a period long enough to expect some impact -- at least half a year -- the change in contract problematicity in the control and treatment groups will permit statistical testing to determine whether the intervention makes a meaningful difference.
 
 We will use supervised and unsupervised learning to develop our measure of problematicity in government contracts. While this measure will not be the same as corruption or mismanagement, they will be correlated.
-** BLOCKED activities to be supported
-   :PROPERTIES:
-   :ID:       e8ae3698-d403-4f78-b7da-038c5cf675d9
-   :END:
-*** their question
-**** describe
-**** provide a tentative schedule
-**** explain how each investigates
-     Please describe how these activities will help you to determine the innovation’s technical or operational viability in a real-world setting.
-**** amounts and justifications
-     Please indicate approximate amounts (in euros) to be spent on each activity and provide a brief justification for the total amounts to be spent.
-**** indicate any amount of co-funding
-*** our response
-We have as yet received no co-financing for the project.
-
-The activities in our budget are the following:
-
-(1)  (9,700.00 €) Study, parse and unify the online databases. This stage will be brief but fundamental: the other stages all rely on it.
-
-Stages (2), (3) and (4) are concurrent.
-
-(2) (87,000.00 €) Descriptive statistics, numerical analysis. In this stage we build our own understanding of the data.
-
-(3) (47,650.00 €) Build prediction models. These models will be used to identify suspicious contract activity.
-
-(4) (18,500.00 €) Build scraping and publishing software. The scraping software will automatically update our meta-database as the databases that it was generated from are themselves updated. The publishing software will update our online analyses, including any suspicious activity the algorithm identifies.
-
-(5) (18,500.00 €) Write and publish reports. These will explain how to use the databases provided by the government and our own meta-database, and will detail our research findings from stages (2) and (3).
-
-(6) (18,500.00 €) Public events and exposure efforts. This stage consists of outreach to news media, the government and the citizenry at large. The outreach will use all available media: online, via traditional broadcast media, in small in-person meetings, and in seminars and colloquia.
+** BLOCKED [[id:a70fcf94-b976-40d2-864e-fefb3f736465][budget narrative to send to the Fund for Innovation in Development]]
 ** DONE Pathway to Scale
 In brief: The system will perform at full scale, covering all of Colombia, as soon as it is built. The negligible cost of maintaining it can be absorbed by Javeriana University.
 
@@ -218,25 +189,30 @@ The project's major expenses are all up-front rather than in maintenance. Once t
 *** our answer
     There are none so far.
 ** BLOCKED (asked Oliver, Daniel, Angelica and Alejandro): citations?
-*** the email where I asked Oliver, Dani, Angelica and Alejo
+*** an email in which I ask some team members for these
     https://mail.google.com/mail/u/0/#search/citations/QgrcJHsBscPbrDGWBWlNWtWvJpcmrTFDKKG
-*** points to support
+*** BLOCKED points to support
     Oliver directed each point at a different person.
-**** DONE Daniel: There exist public databases in Colombia to track contracts. They have a lot of data.
-Secop y Colombia compra: Bases de datos de información de contratación pública.
-https://www.colombiacompra.gov.co/transparencia/conjuntos-de-datos-abiertos
+**** There exist public databases in Colombia to track contracts. They have a lot of data.
+***** via Daniel
+***** the list
+      Secop y Colombia compra: Bases de datos de información de contratación pública.
+      https://www.colombiacompra.gov.co/transparencia/conjuntos-de-datos-abiertos
 
-Procesos rama judicial: Pagina de consultas de casos judiciales.
-https://consultaprocesos.ramajudicial.gov.co/Procesos/NombreRazonSocial
+      Procesos rama judicial: Pagina de consultas de casos judiciales.
+      https://consultaprocesos.ramajudicial.gov.co/Procesos/NombreRazonSocial
 
-Sistema General de Regalías: Varias paginas de consulta acerca del pago de regalias a los municipios.
-https://www.sgr.gov.co/Vigilancia/SeguimientoSGR.aspx
-https://www.datos.gov.co/Econom-a-y-Finanzas/DNP-ProyectosSGR/mzgh-shtp
-**** DONE Daniel: Some of the contracts look fishy.
-También esta página que es directamente de hechos de corrupción (son una entidad aliada)
-https://www.monitorciudadano.co/publicaciones/#datos-abiertos
-**** TODO Jeff: Maybe Sandy can point you to Contraloría's publications? Public contracts are mismanaged. This makes life worse and economic growth slower for everyone, and  is especially damaging to the most vulnerable households.
-**** Alejandro: The information we publish about what the government is doing attracts lots of attention, and ultimately changes public policy. (A good case in point could be our work on the FOME.)
-**** Alejandro: The public pressure of such publications makes industry and government more accountable
+      Sistema General de Regalías: Varias paginas de consulta acerca del pago de regalias a los municipios.
+      https://www.sgr.gov.co/Vigilancia/SeguimientoSGR.aspx
+      https://www.datos.gov.co/Econom-a-y-Finanzas/DNP-ProyectosSGR/mzgh-shtp
+**** Some of the contracts look fishy.
+***** via Daniel
+***** citation
+      También esta página que es directamente de hechos de corrupción (son una entidad aliada)
+      https://www.monitorciudadano.co/publicaciones/#datos-abiertos
+**** Public contracts are mismanaged. This makes life worse and economic growth slower for everyone, and  is especially damaging to the most vulnerable households.
+     [[id:0ed98e46-508e-4700-9e27-46bae805a6a6][mismangaement of public funds in Colombia]]
+**** BLOCKED Alejandro: The information we publish about what the government is doing attracts lots of attention, and ultimately changes public policy. (A good case in point could be our work on the FOME.)
+**** BLOCKED Alejandro: The public pressure of such publications makes industry and government more accountable.
 ** DONE yearly maintenance cost
    The yearly maintenance cost of this project are minimal: One month of a programmer-economist's labor (about 1800 EUR), and one year of server runtime (about 2400 EUR), for a total of 4200 EUR per year.
