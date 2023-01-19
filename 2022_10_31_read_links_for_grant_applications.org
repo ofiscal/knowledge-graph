@@ -12,6 +12,7 @@
 *** DONE [[id:ece43518-7a0b-44b8-88c3-979337b6a5a0][getting a grant from the Fund for Innovation in Development]]
 *** [[id:ec6401e9-a512-4237-be6f-b1273c9cc094][getting a grant from the OPEC Fund]]
 *** [[id:f483dbf9-24ed-4829-a3b0-397cad40add2][getting a grant from the IADB Transparency Fond]]
+*** [[id:5ff764f6-74c0-4151-a68f-7d4fb2a9be23][getting a grant from the Inter American Foundation]]
 ** BLOCKED for some reason
 *** BLOCKED (in French) Fundación S'AIDDES
     http://www.saiddes.org/subventions-aux-ong_110.html
@@ -34,7 +35,6 @@
     https://www.civicus.org/index.php/what-we-do/defend/crisis-response-fund
 **** Does not look well suited to us.
      It's about crises of civic freedom.
-*** [[id:5ff764f6-74c0-4151-a68f-7d4fb2a9be23][getting a grant from the Inter American Foundation]]
 *** The Lantos Foundation for Human Rights and Justice
     https://www.lantosfoundation.org/frontlinefundgrants
 **** currently closed so not an immediate priority

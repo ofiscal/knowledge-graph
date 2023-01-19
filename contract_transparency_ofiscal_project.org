@@ -10,7 +10,6 @@
 ** [[id:54bc5836-291f-4154-b1e9-7a85cd07ee50][SECOP]]
 * motivations
 ** [[id:0ed98e46-508e-4700-9e27-46bae805a6a6][mismangaement of public funds in Colombia]]
-* TODO private repo for code, public for everything else
 * the UI we would like
 ** filters
    value, sector, municipality
