@@ -2,6 +2,7 @@
 :ID:       5d4a167f-a3b0-477b-9539-eba0a157ad97
 :END:
 #+title: Colombia's pension system, and a possible 2023 reform
+* Constitutionally, a pension can't be less than one mínimo.
 * "pilar no contributivo"
 * the status quo: pension systems people have
   alternatives
@@ -31,3 +32,6 @@
   because the contributions alone aren't enough
 * Colpensiones *also* gets money from "traslados", which come from the ahorros fund (i.e. the other one)
 * If you don't finish your time it's worse if you were on the public system, because you don't get financial returns, just inflation.
+* workers also contribute to other things
+  Comision de seguros -- both public and privately pensioend people contribute to that.
+  The private system pensioned-to-be workers also contribute to the Fondo de Garantía de Pensión Mínima
