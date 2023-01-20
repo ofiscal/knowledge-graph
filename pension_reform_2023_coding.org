@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       aad4ddf1-a750-4686-b3fc-4f17c48f0f7c
+:END:
+#+title: pension reform 2023 coding
+* TODO questions
+** Is 0.16% the fraction of income that goes to pension savings?
+   :PROPERTIES:
+   :ID:       82ad6bf9-aae2-4876-a8ac-9ebb05493281
+   :END:
+** Is the income I see in the MPMD before or after pension contributions?
+** What if someone's "formal labor income" is below the minimum?
+   Should I imagine they contribute to the pension anyway?
+   Should I recode it at 0?
+   Angelica talked about special cases where
+   formal income can be less than the minimum wage.
+* TODO choosing income variables in the [[id:85593eb1-0594-4334-a936-6abb421c675f][MPMD]]
+** candidates
+*** RESUME in documentation if needed
+    After V480 (see below)
+   -- but hopefully not;
+   it was Daniel's idea nad looks good to me.
+*** TODO Personas V479 and V480: primary and secondary activity income
+**** filtered by V391 and V440: what those activities are
+*** V362: income before rent
+    Ingreso total de la unidad de
+gasto antes de imputación de
+arriendo a propietarios y
+usufructuarios
+*** V452: work income ("desocupados"?)
+*** V454: same as V452?
+* other important variables
+** weight
+   If this is at the household level, will also need household IDs,
+   and a merge.
+* pseudocode
+** In person data, build "formal labor income".
+** Make the threshold at which income goes to the private system a CL arg.
+** Compute "income below private pension threshold".
+   = min ( formal labor income
+         , threshold )
+** Compute "income above private pension threshold".
+   = formal labor income - income below private pension threshold
+** Compute "public pension contribution".
+   I *believe* that's this:
+   = 0.16 * income below private pension threshold".
+*** [[id:82ad6bf9-aae2-4876-a8ac-9ebb05493281][Is 0.16% the fraction of income that goes to pension savings?]]
+** Compute "private pension contribution".
+   I *believe* that's this:
+   = 0.16 * income above private pension threshold".
+*** [[id:82ad6bf9-aae2-4876-a8ac-9ebb05493281][Is 0.16% the fraction of income that goes to pension savings?]]
+** Compute weighted sums for public and private contributions.

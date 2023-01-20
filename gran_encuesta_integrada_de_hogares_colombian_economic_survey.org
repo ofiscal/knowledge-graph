@@ -4,3 +4,4 @@
 :END:
 #+title: Gran Encuesta Integrada de Hogares (Colombian economic survey)
 * [[id:84203014-dccc-4ca0-b57a-f83e52b4219b][some GEIH-ENPH variable correspondences]]
+* [[id:85593eb1-0594-4334-a936-6abb421c675f][Medición de Pobreza Monetaria]] : an easier GEIH data set

@@ -2,6 +2,7 @@
 :ID:       5d4a167f-a3b0-477b-9539-eba0a157ad97
 :END:
 #+title: Colombia's pension system, and a possible 2023 reform
+* [[id:aad4ddf1-a750-4686-b3fc-4f17c48f0f7c][pension reform 2023 coding]]
 * Constitutionally, a pension can't be less than one mínimo.
 * "pilar no contributivo"
 * the status quo: pension systems people have
