@@ -3,5 +3,17 @@
 :ROAM_ALIASES: GEIH
 :END:
 #+title: Gran Encuesta Integrada de Hogares (Colombian economic survey)
-* [[id:84203014-dccc-4ca0-b57a-f83e52b4219b][some GEIH-ENPH variable correspondences]]
+* refs
+** the data @ DANE
+   https://microdatos.dane.gov.co/index.php/catalog/701
 * [[id:85593eb1-0594-4334-a936-6abb421c675f][Medición de Pobreza Monetaria]] : an easier GEIH data set
+* the three kinds of data sets (per their titles)
+** "area" = rural
+** "cabecera" = urban
+** "resto" = complicated
+   We're not sure what it is, but it's small.
+   We're using it to catch people who for some reason
+   aren't in either of the other two kinds.
+* about the variables in it
+** [[id:84203014-dccc-4ca0-b57a-f83e52b4219b][some GEIH-ENPH variable correspondences]]
+** [[id:a62dcf88-7357-4b02-b059-b418cd0aa945][Reported labor income is what remains after *some* contributions.]]

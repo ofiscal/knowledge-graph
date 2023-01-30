@@ -2,10 +2,12 @@
 :ID:       85593eb1-0594-4334-a936-6abb421c675f
 :ROAM_ALIASES: MPMD
 :END:
-#+title: Medición de Pobreza Monetaria (Colombian economic survey)
-= like the [[id:45a20eff-9c1e-4c93-ac93-597e81f14ef9][GEIH]] but simpler
-* PITFALL: yearly rather than monthly
+#+title: Medición de Pobreza Monetaria y Desigualdad (survey)
+= on Colombia, like the [[id:45a20eff-9c1e-4c93-ac93-597e81f14ef9][GEIH]] but simpler
 * refs
   https://microdatos.dane.gov.co/index.php/catalog/708/get_microdata
   https://microdatos.dane.gov.co/index.php/catalog/708/pdf-documentation
   https://microdatos.dane.gov.co/index.php/catalog/708/data-dictionary
+* PITFALL: yearly rather than monthly
+* about the variables in it
+** (aborted) : [[id:da9fe607-708e-4d46-ac95-a2d9fb7a18ce][inferring formal labor income from the MPDM]]
