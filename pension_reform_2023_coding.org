@@ -3,13 +3,13 @@
 :END:
 #+title: pension reform 2023 coding
 * TODO
-** ingest gender
 ** cdf of wages
 *** cdf and pdf really
 *** informal and formal
     do you contribute to pensions
 ** cdf of pension receipts
-   hopefully they report receipts, not just a boolean
+   P7500S2A1 records pension receipts,
+   and is part of the "otros ingresos" data.
 * to know
 ** what percent goes to pensions
    see microsim / python/build/ss/schedules.py
@@ -41,8 +41,6 @@
     V2333 = P7050 in Resto_ocupados    -- segundo trabajo
 ** weight (statistical) is called "fex_c"
 * pseudocode
-** DONE In person data, build "labor income".
-** Deduplicate people.
 ** Make the threshold at which income goes to the private system a CL arg.
 ** Compute "income below private pension threshold".
    = min ( formal labor income
