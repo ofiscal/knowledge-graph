@@ -5,9 +5,10 @@
 * refs
 ** a paper Oliver thinks could help
    https://twitter.com/jorgeonrubia63/status/1612444295033651200?s=43&t=luNez5vaY-l3e6taY6h3dw
-** [[id:f96e9e52-b4e5-406f-a78e-864534507112][best practices in poblic contracting, by the Instituto Anticorrupción]]
+** [[id:f96e9e52-b4e5-406f-a78e-864534507112][best practices in poblic contracting]]
 ** [[id:f0dfd638-35b9-498c-8420-e239a1042d5c][a way to measure heterogeneity in contracts of a business]]
 ** [[id:54bc5836-291f-4154-b1e9-7a85cd07ee50][SECOP]]
+** [[id:3103f0d7-d2aa-484e-bdc1-ce3726ce778d][Ley 80: Regimen de Contratacion Estatal]]
 * motivations
 ** [[id:0ed98e46-508e-4700-9e27-46bae805a6a6][mismangaement of public funds in Colombia]]
 * the UI we would like
@@ -17,4 +18,3 @@
    a graph of value X risk
    a list of filter-satisfying contracts
    click in either for more info on that contract
-* [[id:3103f0d7-d2aa-484e-bdc1-ce3726ce778d][Ley 80: Regimen de Contratacion Estatal]]

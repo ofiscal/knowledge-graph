@@ -2,37 +2,44 @@
 :ID:       aad4ddf1-a750-4686-b3fc-4f17c48f0f7c
 :END:
 #+title: pension reform 2023 coding
+* TODO
+** ingest gender
+** cdf of wages
+*** cdf and pdf really
+*** informal and formal
+    do you contribute to pensions
+** cdf of pension receipts
+   hopefully they report receipts, not just a boolean
 * to know
 ** what percent goes to pensions
    see microsim / python/build/ss/schedules.py
 ** [[id:a62dcf88-7357-4b02-b059-b418cd0aa945][Reported labor income is what remains after *some* contributions.]]
-* income variables (in the GEIH)
-** ingresos
-   V1538 = INGLABO in Area_ocupados
-   V1765 = INGLABO in Cabecera_ocupados
-   V2374 = INGLABO in Resto_ocupados
-** pension contributions
-   V1474 = P6920 in Area_ocupados
-   V1700 = P6920 in Cabecera_ocupados
-   V2309 = P6920 in Resto_ocupados
-*** DONE There are more "are you contributing to a pension" variables.
-    But we will not use them.
-    They are for people who aren't earning labor income,
-    and no variable records how much they contribute.
-** weight = V345 = fex_c_2011
-** employee or contractor
-   We'll call values 1, 2 and 5
-   (for some reason that's "a", "b" and "e" in the docs)
-   formal, and the others informal.
-   V1536 = P6430 in Area_ocupados
-   V1763 = P6430 in Cabecera_ocupados
-   V2372 = P6430 in Resto_ocupados
-   V1498 = P7050 in Area_ocupados     -- segundo trabajo
-   V1724 = P7050 in Cabecera_ocupados -- segundo trabajo
-   V2333 = P7050 in Resto_ocupados    -- segundo trabajo
-* TODO weight
-  If this is at the household level, will also need household IDs,
-  and a merge.
+* variables
+** income variables (in the GEIH)
+*** ingresos
+    V1538 = INGLABO in Area_ocupados
+    V1765 = INGLABO in Cabecera_ocupados
+    V2374 = INGLABO in Resto_ocupados
+*** pension contributions
+    V1474 = P6920 in Area_ocupados
+    V1700 = P6920 in Cabecera_ocupados
+    V2309 = P6920 in Resto_ocupados
+**** DONE There are more "are you contributing to a pension" variables.
+     But we will not use them.
+     They are for people who aren't earning labor income,
+     and no variable records how much they contribute.
+*** weight = V345 = fex_c_2011
+*** employee or contractor
+    We'll call values 1, 2 and 5
+    (for some reason that's "a", "b" and "e" in the docs)
+    formal, and the others informal.
+    V1536 = P6430 in Area_ocupados
+    V1763 = P6430 in Cabecera_ocupados
+    V2372 = P6430 in Resto_ocupados
+    V1498 = P7050 in Area_ocupados     -- segundo trabajo
+    V1724 = P7050 in Cabecera_ocupados -- segundo trabajo
+    V2333 = P7050 in Resto_ocupados    -- segundo trabajo
+** weight (statistical) is called "fex_c"
 * pseudocode
 ** DONE In person data, build "labor income".
 ** Deduplicate people.
