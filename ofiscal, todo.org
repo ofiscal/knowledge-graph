@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* talk to Marcel about GEIH
 * [[id:9112e9d6-903f-4c9a-a6c3-d4dbbed20dd9][contract transparency (ofiscal project)]]
 * [[id:5d4a167f-a3b0-477b-9539-eba0a157ad97][pension reform]]
 * TODO file notes from [[id:ba9b4f8e-36a9-48db-b8f0-0a1c79b43a53][meetings 2023-01-10]]

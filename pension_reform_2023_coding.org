@@ -1,17 +1,44 @@
 :PROPERTIES:
 :ID:       aad4ddf1-a750-4686-b3fc-4f17c48f0f7c
+:ROAM_ALIASES: "coding \ pension reform 2023"
 :END:
 #+title: pension reform 2023 coding
 * TODO
+** make a submodule with cdf code
+   https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial
+*** To put a git submodule in a git module:
+    git submodule add <path to remote repo> [folder name]
+*** To clone a module with submodules
+    git clone <supermodule>
+      # At this point the submodule folders are empty.
+    git submodule init
+      # The results of this can be seen by running
+      # git config -l
+      # and looking for the word "submodule"
+    git submodule update
+      # checks out the commits specified in the supermodule
+*** submodule update vs. submodule add
+    "One major difference between "submodule update" and "submodule add" is that "update" checks out a specific commit, rather than the tip of a branch."
+*** PITFALL: don't use a forward slash after the submodule name
+    when running "git add submodule"
+*** PITFALL: Publish submodule changes before supermodule ones.
+*** PITFALL: Removing one is tricky.
+    serial
+**** Delete the relevant line from the .gitmodules file.
+**** Delete the relevant section from .git/config.
+**** Run git rm --cached path_to_submodule (no trailing slash).
+**** Commit the superproject.
+**** Delete the now untracked submodule files.
 ** cdf of wages
 *** cdf and pdf really
 *** informal and formal
     do you contribute to pensions
 ** cdf of pension receipts
-   P7500S2A1 records pension receipts,
-   and is part of the "otros ingresos" data.
 * to know
 ** what percent goes to pensions
+   :PROPERTIES:
+   :ID:       34187465-0cf4-46d9-bcce-9cb59c40fac6
+   :END:
    see microsim / python/build/ss/schedules.py
 ** [[id:a62dcf88-7357-4b02-b059-b418cd0aa945][Reported labor income is what remains after *some* contributions.]]
 * variables
@@ -50,3 +77,11 @@
 ** Compute "public pension contribution".
 ** Compute "private pension contribution".
 ** Compute weighted sums for public and private contributions.
+* nah
+** justify dropping the duplicate weights
+   I checked, I just didn't formalize the check.
+   But also this should be obvious --
+   it would make no sense for one individual to have
+   more than one statistical weight.
+   (df["weight_otros"] - df["weight_ocup"]) . describe()
+   (df["weight_cg"] - df["weight_ocup"]) . describe()
