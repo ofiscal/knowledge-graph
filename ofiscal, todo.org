@@ -15,7 +15,10 @@
 *** status quo: some percentage goes to either Colpensiones or RAIS, but can get the total, which should be around 38 (Colombian) billones COP
 *** my estimates from the status quo are too calibrate how much to expland what I estiamte for Ed's proposal
 *** threholds might be from 1.5 to 4 minima
-
+* TODO add notes on these
+** CAOBA
+** ADACOP
+** MINTIC
 * BLOCKED (emailed) to Marcel about GEIH
   https://mail.google.com/mail/u/0/#search/marce/KtbxLxgGDrdsNKNSgPmvWBdShVDpsDGZkL
 * [[id:9112e9d6-903f-4c9a-a6c3-d4dbbed20dd9][contract transparency (ofiscal project)]]
