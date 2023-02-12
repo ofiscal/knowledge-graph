@@ -6,6 +6,12 @@
 * refs
 ** the data @ DANE
    https://microdatos.dane.gov.co/index.php/catalog/701
+* PITFALLs
+** informal /= independiente
+   Independiente means contractor, as opposed to empleado.
+* some code that interprets some of it
+** [[id:aad4ddf1-a750-4686-b3fc-4f17c48f0f7c][pension reform 2023 coding]]
+*** git@github.com:ofiscal/pension-flows.git
 * TODO Understand the primary keys.
   inc. HOGAR?
 * [[id:85593eb1-0594-4334-a936-6abb421c675f][Medición de Pobreza Monetaria]] : an easier GEIH data set

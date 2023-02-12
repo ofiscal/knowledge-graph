@@ -2,9 +2,25 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* talk to Marcel about GEIH
+* meeting, pensions, <2023-02-08 Wed>
+** vocab
+   en vigencia
+   reácio
+** salario minimo se aumenta mas rapido que la inflacion
+** If you reach pension age without having saved enough, you can't keep saving to get one later!
+** TODO rules, for me to code using the GEIH
+*** earning less than 2 min, under Ed's proposal, 13% of wages go to Colpensiones (public)
+    need to know how much that is
+*** by Ed, 13% of the rest goes to RAIS (private)
+*** status quo: some percentage goes to either Colpensiones or RAIS, but can get the total, which should be around 38 (Colombian) billones COP
+*** my estimates from the status quo are too calibrate how much to expland what I estiamte for Ed's proposal
+*** threholds might be from 1.5 to 4 minima
+
+* BLOCKED (emailed) to Marcel about GEIH
+  https://mail.google.com/mail/u/0/#search/marce/KtbxLxgGDrdsNKNSgPmvWBdShVDpsDGZkL
 * [[id:9112e9d6-903f-4c9a-a6c3-d4dbbed20dd9][contract transparency (ofiscal project)]]
 * [[id:5d4a167f-a3b0-477b-9539-eba0a157ad97][pension reform]]
+* [[id:76d3185e-bfc4-43c9-ad3b-8560822f9948][ADACOP]]
 * TODO file notes from [[id:ba9b4f8e-36a9-48db-b8f0-0a1c79b43a53][meetings 2023-01-10]]
 * TODO put a limit on the number of requests the sim can do in a day
   because it will be published on our site
