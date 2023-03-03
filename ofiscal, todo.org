@@ -2,13 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO u
-  serial
-** TODO renta basica proposal
-*** TODO ask if P5130 is all I need
-*** TODO One additional rule: over 65, no pension and not been property owner or living in an own house.
-** Open soc doc.
-* meeting, pensions, <2023-02-15 Wed>
+* TODO find rate of formality among single mothers
+* Open soc doc.
 * questions about pensions
 ** If Colpensiones has mas afiliados than it does cotizantes, are the rest receiving pensions already?
 ** p3 par 3 in our writeup: what is the Sistema Obligatorio de Pensiones?

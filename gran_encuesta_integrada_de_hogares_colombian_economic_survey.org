@@ -5,7 +5,10 @@
 #+title: Gran Encuesta Integrada de Hogares (Colombian economic survey)
 * refs
 ** the data @ DANE
-   https://microdatos.dane.gov.co/index.php/catalog/701
+*** 2021
+    https://microdatos.dane.gov.co/index.php/catalog/701
+*** 2022
+    https://microdatos.dane.gov.co/index.php/catalog/771/get-microdata
 * PITFALLs
 ** informal /= independiente
    Independiente means contractor, as opposed to empleado.
