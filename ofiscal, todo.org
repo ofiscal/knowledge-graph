@@ -11,6 +11,7 @@
 ** 1. Sindicalistas
 * Edit OSF proposal
   https://docs.google.com/document/d/14WfUc3RscpVXKyzkb4bny5vuBBfqqILc34zgxmszCUo/edit
+** check for consistency in our parts. Give consistency comments for theirs but don't try to fix.
 * questions about pensions
 ** If Colpensiones has mas afiliados than it does cotizantes, are the rest receiving pensions already?
 ** p3 par 3 in our writeup: what is the Sistema Obligatorio de Pensiones?
