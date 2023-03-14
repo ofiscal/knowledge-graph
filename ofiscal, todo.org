@@ -2,6 +2,15 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO find unemp rates as function of gender & age
+** to know
+*** if 3 years from retirement age, aforado
+**** labor reform makes it even harder to fire
+** to do
+*** unemp rate for women 3 years before & 3 years after being within 3 years of retirement
+**** so age in [51,53] and [54,56] for women
+**** men: 56-58, 59-61
+*** construct unemp, which is tricky
 * TODO find rate of formality among aforados
 ** first: (2) single parents
    2. Madres o padres cabeza de familia sin otra alternativa económica, es decir, mujer u hombre con hijos menores de edad, biológicos o adoptivos; hijos inválidos; hijos mayores entre 18 y 25 años que sean estudiantes, o que tengan que atender a otras personas incapacitadas que dependan económicamente y de manera permanente y exclusiva de la madre o el padre, siempre y cuando la pareja se sustraiga del cumplimiento de sus obligaciones y cuyo ingreso familiar corresponda únicamente al salario que devenga. Para ser titular de este beneficio se debe demostrar que se dio aviso previo al empleador.
