@@ -2,8 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* at the AFD seminar
-** talk to [[id:dc156bd0-0475-4eab-a6d1-31451f1e8191][Jairo Nuñez]]
+* read this report on inequality, then talk to [[id:dc156bd0-0475-4eab-a6d1-31451f1e8191][Jairo Nuñez]]
+** https://www.afd.fr/fr/extension-facilite-recherche-inegalites-colombie
 * TODO find unemp rates as function of gender & age
 ** to know
 *** if 3 years from retirement age, aforado
