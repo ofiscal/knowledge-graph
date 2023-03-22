@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* [[id:393dab48-7547-406e-8d61-fff7264967d7][editing our pensions report, 2023-03-22]]
 * read this report on inequality, then talk to [[id:dc156bd0-0475-4eab-a6d1-31451f1e8191][Jairo Nuñez]]
 ** https://www.afd.fr/fr/extension-facilite-recherche-inegalites-colombie
 * TODO find unemp rates as function of gender & age

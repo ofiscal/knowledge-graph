@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       393dab48-7547-406e-8d61-fff7264967d7
+:END:
+#+title: editing our pensions report, 2023-03-22
+* questions
+** Why is admin more expensive for the public fund?
+* suggestions for the doc
+** this is unclear
+*** quote
+    mecanismos de ahorro voluntario subsidiado para quienes devengan menos de un
+salario mínimo (Beneficios Económicos Periódicos (BEPS)).
+*** Who is voluntarily saving, and who is subsidizing it?
+*** later it's explained better
+     quienes devengan menos de un salario mínimo pueden ahorrar
+voluntariamente en BEPS, tal como ocurre ahora
+** unclear
+*** quote
+     Aún sumando los pensionados de los regímenes
+exceptuados
+*** this is the first time we've used that term
+** I wuold move this from the bottom of the section it's in to the top.
+   Para más información sobre el sistema vigente hasta el 2024
+   ...
+** grammar
+*** quote
+    personas que cotizaron el pilar contributivo
+*** should be al, not el, no?
+** grammar
+*** quote
+    vale la pena distinguir entre lo ocurre
+durante su vida laboral
+*** should be "lo que ocurre"
+** what?
+*** quote
+    el 16% del salario... (aportes de empleadores y empleados)
+** unclear
+*** quote
+    2 puntos porcentuales para el pago de seguros
+*** What are they insuring? Has that ever paid out?
+** I would move this higher
+    En conclusión, quienes devengan menos de tres salarios mínimos cotizarán
+exclusivamente al componente de prima media del pilar contributivo. Sin embargo,
+quienes devengan más de tres salarios mínimos cotizarán a ambos componentes.
+** I would add to this
+*** quote
+     Con el fin de amortiguar el impacto sobre el ahorro, un 20% de las cotizaciones al
+componente de prima media se destinará a un fondo de ahorro público denominado
+el fondo de ahorro del pilar contributivo.
+*** I would add
+    that it also gets money from the other coomponent
+** why is this duplicated?
+Menos de 150 semanas
+Entre 150 y 1000 semanas
+Entre 1000 y 1300 semanas
+Más de 1300 semanas
+** grammar
+***  En cualquier eventualidad
+*** -> cualquiera?
+** unclear
+*** quote
+     Complementariamente, a los aportes al componente de ahorro individual del pilar
+contributivo que eventualmente hayan hecho durante su vida laboral se le
+reconocerán los rendimientos financieros
+*** are we still talking about people who worked between 150 and 1000 weeks?
+    We should use a subheading to make that scope clear.
+** unclear
+*** quote
+     En cualquier eventualidad, los saldos no se
+transferirán en su totalidad de manera inmediata al cotizante (como ocurre ahora)
+sino que serán transformados en una renta vitalicia.
+*** give examples of eventualidades that count?
+** unclear
+*** quote
+    no se podrá acceder al mecanismo de pensión anticipada.
+*** That term has not been introduced yet.
+* the four pillars, per the government's proposal as of yesterday
+** pilar solidario = 223k to poor pensionless old people
+** pilar semicontributivo = for people who
+   earn less than 1 min wage (hence don't contribute)
+   or
+   contributed but didn't accumulate enough weeks
+** pilar contributivo : all formal workers contribute, only people who get enough weeks enjoy
+   two components
+*** componente de prima media : money under 3 sm
+**** 1% -> admin
+**** 2% -> seguro
+**** 13% -> Colpensiones
+***** 80% -> payouts
+***** 20% -> fondo de ahorro del pilar contributivo
+      which also gets oney from the ther component
+*** componente de ahorro individual : money above 3 sm
+**** 0.5% -> admin
+**** 2% -> seguro
+**** 12.5% -> cuenta de ahorro individual
+**** 1% -> fondo de ahorro del pilar contributivo
+      which also gets oney from the ther component
+** pilar de ahorro voluntario
