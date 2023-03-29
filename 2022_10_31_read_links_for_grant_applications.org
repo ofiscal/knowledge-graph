@@ -8,6 +8,7 @@
 * TODO rank them by feasibility
 * the grants (links)
 ** promising
+*** [[id:64bb1c42-8733-40ce-a37f-a793de9ee58b][Lift grants from Open Contracting]]
 *** [[id:2e4cec18-78e0-4457-a54b-ce55ad7f9d79][getting a grant from the Global Innovation Fund]]
 *** DONE [[id:ece43518-7a0b-44b8-88c3-979337b6a5a0][getting a grant from the Fund for Innovation in Development]]
 *** [[id:ec6401e9-a512-4237-be6f-b1273c9cc094][getting a grant from the OPEC Fund]]

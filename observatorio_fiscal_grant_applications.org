@@ -5,6 +5,7 @@
 #+title: Observatorio Fiscal grant applications
 * canned responses
 ** DONE [[id:6ff3c5a3-e5f3-40e3-86e9-8f61715da81c][Risks (to launch, to sustain and to scale) and mitigation plans]]
+* [[id:64bb1c42-8733-40ce-a37f-a793de9ee58b][Lift grants from Open Contracting]]
 * TODO [[id:529da23b-382f-46cf-908f-7d8941ca865a][who the Observatorio is: essay(s)]]
 * TODO [[id:e76cf2b2-f2fe-4cde-a541-09b990906b86][getting a grant from the Global Partnership for Social Accountability]]
 * project descriptions

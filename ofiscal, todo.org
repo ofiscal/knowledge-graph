@@ -2,6 +2,14 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO today
+** update "cities" for new data
+** Daniel needs micro data from sim with gender and independiente
+** Angelica needs help renewing Wix and/or Bluehost.
+* TODO run that integral from 1.5 to 3, not 1 to 1.5
+* TODO scale money by 10/12
+* meeting with Asofondos, <2023-03-24 Fri>
+** no cap on TES in the new bill
 * my nix javeriana repo looks bad
   The repo has a different nixos-version.
   Probably I updated it for the new computer.
