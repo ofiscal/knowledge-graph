@@ -2,15 +2,18 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO today
-** BLOCKED on Angelica : [[id:0cb6f044-2bdc-44d8-ad73-e9537c4d8846][renew/fix billing for Wix and/or Bluehost]]
-** Daniel needs micro data from sim with gender and independiente
-   Should be all people, not just earners.
-*** TODO ? merge household data
-** update "cities" for new data
-* TODO scale money by 10/12
-* meeting with Asofondos, <2023-03-24 Fri>
-** no cap on TES in the new bill
+* TODO Proposals for porjects they would fund?
+** what to do
+*** Of the two, Oliver thinks the multidim ineq one might apply.
+**** assessing the impact of policies and projects on inequality
+     thinks microsim might fit it
+*** Wants to know if I see somewhere else we could fit.
+** links
+* TODO Why does DTI say they installed a new computer for me?
+* TODO update "cities" for new data
+* TODO scale money in pensions sim by 10/12
+  for everything presented as a yearly total,
+  gathered from 10 months of data
 * my nix javeriana repo looks bad
   The repo has a different nixos-version.
   Probably I updated it for the new computer.
@@ -147,14 +150,4 @@
 ** read the [[id:09717e0a-fb87-4a45-9685-270e6c13cd48][Guia Presupuestal 2022, by the Observatorio Fiscal]]
 ** learn [[id:f28ddaf7-698b-4d5e-a529-a34bc625f3dd][how to SSH over HTTPS, for Github or maybe anything]]
 ** [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]
-* DONE
-** write about [[id:bfa4ff53-54e7-4e25-b5b0-ab10f15280b6][gender inequality in Colombia, and how policy exacerbates it]], for OSF
-** [[id:2dde7214-a6b2-4324-961c-5ce4926671eb][frame our work in terms of UN SDGs]]
-** [[id:ad00525e-44a3-4483-aa7f-e49cc2e45055][Multidimensional Inequality Report, Fedesarrollo, Oct 2022]]
-** [[id:6e740e9c-0406-46d0-b7c7-5e6dd92cd286][changing the sim 2022-10-07]]
-** [[id:62c907a9-7b2b-487e-80a8-c7df64e7f591][look over section three of our report <2022-10-08 Sat>]]
-** [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
-** [[id:9019705d-fcda-422e-bc89-88442094ca66][tax.co, a high-level overview of]]
-** [[id:b03dbe01-ce5a-46ac-b2d3-7e22949781a1][tax hike proposal, Colombian Senate, 2020]]
-** [[id:dfb5198f-b392-4903-be09-bfa7217212cc][How TPC Distributes the Corporate Income Tax (paper)]]
-** [[id:e4a6a10f-a305-49fa-91b1-08482df14229][a CS skills assessment, with a moderate focus on Python]]
+* [[id:33758dec-e841-4965-af80-34f9a96cf894][DONE & not sure why I'm keeping \\ observatorio fiscal]]

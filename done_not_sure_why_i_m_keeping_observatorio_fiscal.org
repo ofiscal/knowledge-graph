@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       33758dec-e841-4965-af80-34f9a96cf894
+:END:
+#+title: DONE & not sure why I'm keeping \\ observatorio fiscal
+This list is very incomplete.
+* [[id:91b84cdd-19a1-4df4-9667-bf9c53e2af0b][build micro data from sim with gender and independiente, 2023-04-12]]
+* [[id:0cb6f044-2bdc-44d8-ad73-e9537c4d8846][renew/fix billing for Wix and/or Bluehost]]
+* write about [[id:bfa4ff53-54e7-4e25-b5b0-ab10f15280b6][gender inequality in Colombia, and how policy exacerbates it]], for OSF
+* [[id:2dde7214-a6b2-4324-961c-5ce4926671eb][frame our work in terms of UN SDGs]]
+* [[id:ad00525e-44a3-4483-aa7f-e49cc2e45055][Multidimensional Inequality Report, Fedesarrollo, Oct 2022]]
+* [[id:6e740e9c-0406-46d0-b7c7-5e6dd92cd286][changing the sim 2022-10-07]]
+* [[id:62c907a9-7b2b-487e-80a8-c7df64e7f591][look over section three of our report <2022-10-08 Sat>]]
+* [[id:58d82abc-96d5-4aa9-965e-d406c0f788dd][run models anticipating tax reform]]
+* [[id:9019705d-fcda-422e-bc89-88442094ca66][tax.co, a high-level overview of]]
+* [[id:b03dbe01-ce5a-46ac-b2d3-7e22949781a1][tax hike proposal, Colombian Senate, 2020]]
+* [[id:dfb5198f-b392-4903-be09-bfa7217212cc][How TPC Distributes the Corporate Income Tax (paper)]]
+* [[id:e4a6a10f-a305-49fa-91b1-08482df14229][a CS skills assessment, with a moderate focus on Python]]
