@@ -2,18 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO Proposals for porjects they would fund?
-** what to do
-*** Of the two, Oliver thinks the multidim ineq one might apply.
-**** assessing the impact of policies and projects on inequality
-     thinks microsim might fit it
-*** Wants to know if I see somewhere else we could fit.
-** links
-* TODO Why does DTI say they installed a new computer for me?
 * TODO update "cities" for new data
-* TODO scale money in pensions sim by 10/12
-  for everything presented as a yearly total,
-  gathered from 10 months of data
 * my nix javeriana repo looks bad
   The repo has a different nixos-version.
   Probably I updated it for the new computer.
