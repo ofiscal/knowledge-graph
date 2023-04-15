@@ -2,7 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO update "cities" for new data
+* TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]
 * my nix javeriana repo looks bad
   The repo has a different nixos-version.
   Probably I updated it for the new computer.

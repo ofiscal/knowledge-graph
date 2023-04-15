@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       86f3c13a-4dd2-42ca-9a56-03ea56368aac
+:END:
+#+title: cities repo : update for 2023
+* TODO Verify that the categories still mean the same thing.
+  The dictionary I wrote is here:
+  ~/of/cities/Code/build/classify_budget_codes.py
