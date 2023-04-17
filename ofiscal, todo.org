@@ -3,10 +3,11 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]
-** add Indice de Desempeño Fiscal to citiesa
+** add Indice de Desempeño Fiscal to cities
    available from SISFUT
    The new methodology might not be available for recent years.
 ** use new wide format for sisfut data
+* TODO give Jose Luis evidence I need more memory
 * my nix javeriana repo looks bad
   The repo has a different nixos-version.
   Probably I updated it for the new computer.
