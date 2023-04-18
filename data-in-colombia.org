@@ -2,6 +2,14 @@
 :ID:       2372a506-832e-4235-af0d-10e2e4fdc683
 :END:
 #+title: data sets on Colombia
+* inflation
+** PITFALL: DANE's is more useful
+   They actually give a deflator -- a rising series.
+   BanRep only gives changes -- a stationary series.
+** CPI, via DANE
+   https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-historico
+** changes, via el Banco de la República
+   https://www.banrep.gov.co/es/estadisticas/inflacion-total-y-meta
 * [[id:6a0f91be-f15b-460b-a1f0-1b64d9f797fc][geih]]
 ** [[id:85593eb1-0594-4334-a936-6abb421c675f][MPMD]]
 * [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
