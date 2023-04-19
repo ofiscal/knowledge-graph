@@ -2,6 +2,18 @@
 :ID:       86f3c13a-4dd2-42ca-9a56-03ea56368aac
 :END:
 #+title: cities repo : update for 2023
-* TODO Verify that the categories still mean the same thing.
-  The dictionary I wrote is here:
-  ~/of/cities/Code/build/classify_budget_codes.py
+* TODO
+** Split the data flow into 2019 and 2023
+   That data flow should be a CL parameter.
+   The source data should be similarly bifurcated in the folders,
+   and correspond as closely as possible.
+   Any differences between them can be handled in a separate Makefile
+   that makes the new data look like the old data.
+** Update data/sisfut/csv.
+   That's what's used in budget_0_*.py
+** Update data/regalias/*.csv
+   That's 2 data sets, `muni` and `dept`.
+** Determine whether output/keys/* need to change.
+** Verify that the categories still mean the same thing.
+   The dictionary I wrote is here:
+   ~/of/cities/Code/build/classify_budget_codes.py
