@@ -1,8 +1,11 @@
 :PROPERTIES:
 :ID:       86f3c13a-4dd2-42ca-9a56-03ea56368aac
 :END:
-#+title: cities repo : update for 2023
-* TODO
+#+title: cities (code base, Observatorio Fiscal)
+* refs
+  https://github.com/ofiscal/cities
+  https://github.com/ofiscal/cities-output
+* TODO update for 2023
 ** Makefile problems
 *** Why is sample_tables running?
 *** Why are some paths being read as files at /?

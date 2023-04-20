@@ -13,7 +13,7 @@
     https://www.elespectador.com/economia/macroeconomia/reforma-pensional-los-puntos-concertados-y-sobre-los-que-no-hay-acuerdo/
 *** our suggestion, two weeks earlier
     https://www.elespectador.com/economia/como-consensuar-la-reforma-pensional-y-que-elementos-debe-tener/
-
+* [[id:20e7e45b-1bba-4cc7-9d64-d9cc2ad0206c][some ofiscal code]]
 * [[id:f125cf6a-d351-466f-af96-a5c10126e552][budget history]]
 * [[id:cb1bb067-d8cc-48d2-ad90-60ba4308adf8][ofiscal, todo]]
 * [[id:2cadcf81-17b7-4521-934d-75d3be63e273][some OF relationships with other entities]]

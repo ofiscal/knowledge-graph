@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       20e7e45b-1bba-4cc7-9d64-d9cc2ad0206c
+:END:
+#+title: some ofiscal code
+* [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities (code base, Observatorio Fiscal)]]
+* [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]] (the microsimulation)
+* [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][tax.co.web]] (the web interface to the microsimulation)
