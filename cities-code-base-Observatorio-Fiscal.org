@@ -6,11 +6,7 @@
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
 * TODO update for 2023
-** Makefile problems
-*** Why is sample_tables running?
-*** Why are some paths being read as files at /?
-    They should be deeper in the tree.
-** Split the data flow into 2019 and 2023
+** TODO Split the data flow into 2019 and 2023
    That data flow should be a CL parameter.
    The source data should be similarly bifurcated in the folders,
    and correspond as closely as possible.
@@ -28,3 +24,8 @@
 ** add Indice de Desempeño Fiscal to cities
    available from SISFUT
    The new methodology might not be available for recent years.
+** DONE
+*** Makefile problems
+**** Why is sample_tables running?
+**** Why are some paths being read as files at /?
+     They should be deeper in the tree.
