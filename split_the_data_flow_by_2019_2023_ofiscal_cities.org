@@ -8,15 +8,14 @@
   and correspond as closely as possible.
   Any differences between them can be handled in a separate Makefile
   that makes the new data look like the old data.
-* TODO
-** DONE Make a new branch, "parameterize-by-vintage-of-source-data".
-** DONE Introduce a new command line argument "vintage" to the Makefile.
-** TODO organize the data
-*** TODO Push all source data from data/ to data/2019/.
-*** TODO Define `indata` and `outdata` in Code.common
+* DONE serial
+** Make a new branch, "parameterize-by-vintage-of-source-data".
+** Introduce a new command line argument "vintage" to the Makefile.
+** organize the data
+*** Push all source data from data/ to data/2019/.
+*** Define `indata` and `outdata` in Code.common
     This way, if I ever introduce more structure (e.g. not just vintage)
     that depends on CL arguments to the paths I'm using,
     I won't have to change a million paths.
 *** Push all output data from output/ to output/2019/.
 *** Make all paths to that data contingent on the vintage.
-*** Don't yet code for the case where vintage != 2019.

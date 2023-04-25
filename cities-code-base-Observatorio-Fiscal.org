@@ -6,7 +6,6 @@
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
 * TODO update for 2023
-** TODO [[id:30310432-6fe1-48ce-8bba-a5c77daf8b74][Split the data flow by 2019 | 2023 \\ ofiscal / cities]]
 ** Update data/sisfut/csv.
    That's what's used in budget_0_*.py
 *** use new wide format for sisfut data
@@ -22,6 +21,7 @@
    available from SISFUT
    The new methodology might not be available for recent years.
 ** DONE
+*** [[id:30310432-6fe1-48ce-8bba-a5c77daf8b74][Split the data flow by 2019 | 2023 \\ ofiscal / cities]]
 *** Makefile problems
 **** Why is sample_tables running?
 **** Why are some paths being read as files at /?
