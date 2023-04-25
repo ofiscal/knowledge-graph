@@ -16,6 +16,8 @@
 ** Verify that the categories still mean the same thing.
    The dictionary I wrote is here:
    ~/of/cities/Code/build/classify_budget_codes.py
+** restore integration tests
+   Code/integ_tests/
 ** add Indice de Desempeño Fiscal to cities
    available from SISFUT
    The new methodology might not be available for recent years.
