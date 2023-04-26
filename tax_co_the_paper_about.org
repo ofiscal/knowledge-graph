@@ -2,6 +2,18 @@
 :ID:       30fb3fac-5f4b-472b-a437-cc224704ba30
 :END:
 #+title: tax.co, the paper about
+* TODO RESUME: the last passage I edited is this one:
+     In the case of taxes on fuel,
+  we assume that not just household fuel purchases but also
+  a certain percentage of spending on public transportation
+  (which can be specified in the simulation)
+  SOMEONE:
+      I don't think it can, actually.
+      Did we promise that before writing the microsimulation,
+      or am I forgetting something?]]
+  is taxed at this rate.
+  In cases where inputs other than fuel are taxed, we do the same
+  (see the appendix for details).
 * TODO edits
 ** We are estimating theoretical tax burden, not actual.
    if all the laws were enforced and obeyed

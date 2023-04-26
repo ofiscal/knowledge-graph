@@ -2,12 +2,14 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO for our [[id:64bb1c42-8733-40ce-a37f-a793de9ee58b][Lift grant app to Open Contracting]]
+  determine whether we can get the money
+  even if we don't submit to some Colombian gov't agency
 * TODO look at Open Society reports
   See the four emails called OSF from Oliver,
   and the Whatsapp group called Open Society Reports.
 * TODO look for grants from Wellspring
   They have a gender focus.
-* TODO Tuesday: "bother Oliver about the microsim paper"
 * TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]
 * TODO give Jose Luis evidence I need more memory
   mention that it's less than $50 USD
