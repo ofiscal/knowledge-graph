@@ -2,6 +2,10 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* vulnerability: overpromise
+* TODO mention in Lift grant app
+** interoperability
+** indexing (elasticsearch, etc.)
 * TODO for our [[id:64bb1c42-8733-40ce-a37f-a793de9ee58b][Lift grant app to Open Contracting]]
   determine whether we can get the money
   even if we don't submit to some Colombian gov't agency
