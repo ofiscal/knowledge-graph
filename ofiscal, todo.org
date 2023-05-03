@@ -2,16 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* vulnerability: overpromise
-* TODO mention in Lift grant app
-** interoperability
-** indexing (elasticsearch, etc.)
-* TODO for our [[id:64bb1c42-8733-40ce-a37f-a793de9ee58b][Lift grant app to Open Contracting]]
-  determine whether we can get the money
-  even if we don't submit to some Colombian gov't agency
-* TODO look at Open Society reports
-  See the four emails called OSF from Oliver,
-  and the Whatsapp group called Open Society Reports.
+* resurrect microsim on AWS
+* BLOCKED (Alejandro writing draft) : [[id:dbace34b-1e96-411b-9580-2ea9b3a49662][Open Society report, May 2023]]
 * TODO look for grants from Wellspring
   They have a gender focus.
 * TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]
