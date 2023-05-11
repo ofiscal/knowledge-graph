@@ -26,3 +26,7 @@
 **** Why is sample_tables running?
 **** Why are some paths being read as files at /?
      They should be deeper in the tree.
+* some names for some spending categories
+** debt = amortizaciones + pago de intereses
+*** amortizaciones = payment of capital component of debt
+*** pago de intereses = payment of interest
