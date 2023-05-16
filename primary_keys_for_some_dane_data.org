@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       aa3b5635-9936-4c1a-82ce-78ce49bfea40
+:END:
+#+title: primary keys (DIR, SEC and ORD) for some DANE data
+* data sets this applies to
+** definitely the [[id:45a20eff-9c1e-4c93-ac93-597e81f14ef9][GEIH]]
+** probably the [[id:d047ae6a-25c0-4ce4-8617-f3c17d29421a][ENPH]]
+** probably others
+* the keys
+** DIR = vivienda
+** SEC = hogar / family
+   The same vivienda can have multiple hogares.
+** ORD = member of the family

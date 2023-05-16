@@ -9,11 +9,7 @@
     https://microdatos.dane.gov.co/index.php/catalog/701
 *** 2022
     https://microdatos.dane.gov.co/index.php/catalog/771/get-microdata
-* SOLVED: the primary keys
-** DIR = vivienda
-** SEC = hogar / family
-   The same vivienda can have multiple hogares.
-** ORD = member of the family
+* [[id:aa3b5635-9936-4c1a-82ce-78ce49bfea40][primary keys (DIR, SEC and ORD) for some DANE data]]
 * relevant pages in the DDI docs
   21-71
 * PITFALLs

@@ -9,6 +9,7 @@ There's an enig.org file, an enph.org file, and this one which pertains to both.
 * PITFALL: These notes are stale, from 2018-ish
 But they might include some insights into the data due to David Suarez not recorded elsewhere.
 * about the variables in it
+** [[id:aa3b5635-9936-4c1a-82ce-78ce49bfea40][primary keys (DIR, SEC and ORD) for some DANE data]]
 ** some GEIH-ENPH variable correspondences
    :PROPERTIES:
    :ID:       84203014-dccc-4ca0-b57a-f83e52b4219b
