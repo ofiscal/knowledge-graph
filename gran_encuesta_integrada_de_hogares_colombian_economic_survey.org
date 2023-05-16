@@ -9,6 +9,11 @@
     https://microdatos.dane.gov.co/index.php/catalog/701
 *** 2022
     https://microdatos.dane.gov.co/index.php/catalog/771/get-microdata
+* SOLVED: the primary keys
+** DIR = vivienda
+** SEC = hogar / family
+   The same vivienda can have multiple hogares.
+** ORD = member of the family
 * relevant pages in the DDI docs
   21-71
 * PITFALLs
@@ -17,8 +22,6 @@
 * some code that interprets some of it
 ** [[id:aad4ddf1-a750-4686-b3fc-4f17c48f0f7c][pension reform 2023 coding]]
 *** git@github.com:ofiscal/pension-flows.git
-* TODO Understand the primary keys.
-  inc. HOGAR?
 * [[id:85593eb1-0594-4334-a936-6abb421c675f][Medición de Pobreza Monetaria]] : an easier GEIH data set
 * the three kinds of data sets (per their titles)
 ** "area" = rural
