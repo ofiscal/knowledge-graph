@@ -5,6 +5,11 @@
 * refs
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
+* TODO ask someone to verify the set of codes we're using
+  :PROPERTIES:
+  :ID:       2b712914-221d-471e-b2ed-d962e4a0fabb
+  :END:
+  as coded in Code/build/classify_budget_codes.py
 * TODO update for 2023
 ** Update data/sisfut/csv.
    That's what's used in budget_0_*.py
