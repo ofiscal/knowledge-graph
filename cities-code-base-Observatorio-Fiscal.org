@@ -35,6 +35,8 @@
 **** Why is sample_tables running?
 **** Why are some paths being read as files at /?
      They should be deeper in the tree.
+* TODO maybe fill holes in SISFUT with CHIP data
+  but it's much more raw
 * some names for some spending categories
 ** debt = amortizaciones + pago de intereses
 *** amortizaciones = payment of capital component of debt
