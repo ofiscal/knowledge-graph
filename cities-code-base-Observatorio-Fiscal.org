@@ -5,11 +5,12 @@
 * refs
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
-* TODO can we get new [2023, updated from 2019] regalias data?
+* TODO Is debt maybe part of the spending data now?
+* TODO Can we get new [2023, updated from 2019] regalias data?
   See these files:
     data/2019/regalias/muni.csv
     Code/build/regalias.py
-* TODO ask someone to verify the set of codes we're using
+* TODO Ask someone to verify the set of codes we're using
   :PROPERTIES:
   :ID:       2b712914-221d-471e-b2ed-d962e4a0fabb
   :END:
