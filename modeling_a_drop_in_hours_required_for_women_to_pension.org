@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       94e1f993-f2c8-4d0d-9100-ee96abe08f31
+:END:
+#+title: modeling a drop in hours required for women to pension
+* to Juan Miguel,
+* our back-of-the-envelope steady-state calculation
+** reduce yearly female pension contribs by 10/13
+** increase yearly female pension payouts by (?)
+   We'd like to know how many women currently end with between 1000 and 1300 hours of contributions.
+* under- or over-estimating?
+** TODO senses in which we are underestimating the cost of the mooted change
+*** TODO mention : Contrary to our SS assumption, in reality the ratio of old to young is increasing.
+** senses in which we are overestimating the cost of the mooted change
+*** People who attain 1000 hours early will likely continue to work, and hence to contribute.
+*** ? Not everyone will switch to the public regime.
+    If they're rational, they will, and the government ought to be ready to pay for that.
+* mysteries
+** How to know who contributes how much?
+** How to compute state transition probabilities?
+   e.g. [[id:c98f44cb-4aea-497a-9e6f-f8e3a1ffc8e4][the way Andrea López does]]
+* [[id:378173df-3632-476b-915f-5340d3360b20]["Evaluación de políticas pensionales para reducir la brecha de género en la etapa de retiro en Colombia", by Andrea Lizeth López Rodríguez]]
