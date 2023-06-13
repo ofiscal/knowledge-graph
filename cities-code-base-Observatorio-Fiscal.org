@@ -5,16 +5,27 @@
 * refs
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
-* TODO Is debt maybe part of the spending data now?
-* TODO Can we get new [2023, updated from 2019] regalias data?
-  See these files:
-    data/2019/regalias/muni.csv
-    Code/build/regalias.py
-* TODO Ask someone to verify the set of codes we're using
-  :PROPERTIES:
-  :ID:       2b712914-221d-471e-b2ed-d962e4a0fabb
-  :END:
-  as coded in Code/build/classify_budget_codes.py
+* BLOCKED on other people
+** TODO can we get new [2023, updated from 2019] regalias data?
+   See these files:
+     data/2019/regalias/muni.csv
+     Code/build/regalias.py
+** TODO how to get deuda info?
+   Is it in the deuda columns?
+   I only want payment toward the debt.
+   Maybe it's in one of the gastos files now? If so, under what item code?
+** TODO ask someone to verify the set of codes we're using
+   :PROPERTIES:
+   :ID:       2b712914-221d-471e-b2ed-d962e4a0fabb
+   :END:
+   as coded in Code/build/classify_budget_codes.py
+* TODO check all "TODO" items in code.
+* TODO check that the new code does not materially differ for 2019
+  Run it and the old code on the 2019 data;
+  compare results with .describe().
+* TODO check that results for 2023 are not crazy different from 2019
+  esp. that for years they have in common,
+  they are nearly identical
 * TODO update for 2023
 ** Update data/sisfut/csv.
    That's what's used in budget_0_*.py
