@@ -20,7 +20,7 @@
    :END:
    as coded in Code/build/classify_budget_codes.py
 * TODO Generalize years.
-** generalize 2015 in building
+** in build/
 *** the problem
     The latest build stages compute an average from 2015 onward.
     Therefore that number appears in these files:
@@ -32,10 +32,11 @@
 *** TODO Also generalize, I think, the 3 in `get_muni_year_count`.
     defined in `Code/build/budget_6p7_avg_muni.py`.
     It's probably meant as a count of years 2016, 2017 and 2018.
-** generalize 2016-2018 in draw/chart_content.py
+** in draw/
 *** This quote appears twice in it.
     text = ["Se muestra el acumulado de los ingresos de esta " +
             "administración (2015 a 2018) en cada sector."],
+*** I think there are others.
 * TODO check all "TODO" items in code.
 * TODO check that the new code does not materially differ for 2019
   Run it and the old code on the 2019 data;
