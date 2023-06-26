@@ -37,6 +37,21 @@
     text = ["Se muestra el acumulado de los ingresos de esta " +
             "administración (2015 a 2018) en cada sector."],
 *** I think there are others.
+** write year window data
+   Do something like this, and save the resulting range,
+   as a small muni-specific data set --
+   maybe a one row, two column frame, or (more naturally) a series.
+**** code
+     import Code.build.budget_9_static_compare_lib as lib
+
+     for s in s4.series: # Compute min, max year for each space slice in dfs0.
+       # PITFALL: This is a little wasteful -- it computes min and max year
+       # four times per municipality. But moving it upstream would be hard.
+       for stat in ["min","max"]:
+         dfs1 [s.name] = lib.compute_stat_of_year_per_space_slice (
+           space_cols = ["dept code","muni code"],
+           stat = stat,
+           df = dfs1 [s.name] )
 * TODO check all "TODO" items in code.
 * TODO check that the new code does not materially differ for 2019
   Run it and the old code on the 2019 data;

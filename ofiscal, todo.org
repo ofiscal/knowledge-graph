@@ -2,10 +2,13 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* meeting <2023-06-26 Mon>
+  read things in Whatsapp Ofiscal group
 * u
 ** There are now three anexos provided for every bill passed in Congress, itemizing its spending for gender, ethnicity and peacemaking purposes. That data is the basis for Colombia's 3 Trazadores Presupuestales.
 ** The Plan Nacional de Desarrollo es una ley que dura 4 años, para cada presidente.
 ** [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
+* Suggest recaps in all team meetings
 * TODO write this into the microsim paper
   esp. p. 14
   https://www.ofiscal.org/_files/ugd/e33cdb_450d78d0701445b7a4b2fd4d0ad9fcb9.pdf
