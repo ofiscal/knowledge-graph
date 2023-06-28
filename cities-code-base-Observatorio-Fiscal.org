@@ -5,9 +5,6 @@
 * refs
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
-* TODO fetch, pull weird new temporary-temporary branch
-  It's called
-    vintage-dependent-admin-timespan.splitting
 * BLOCKED on other people
 ** TODO can we get new [2023, updated from 2019] regalias data?
    See these files:
