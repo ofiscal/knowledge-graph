@@ -3,6 +3,7 @@
 :ROAM_ALIASES: "Encuesta Nacional de Presupuestos de Hogares" ENIG ENPH
 :END:
 #+title: The ENPH and ENIG surveys of Colombian households, by DANE
+* TODO unmerged notes on the [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
 * TODO [[id:e79b5d00-01ea-44bb-90d9-3772db555875][What are the aggregate income, expenditure variables in the ENPH?]]
 * PITFALL: These notes files are redundant
 There's an enig.org file, an enph.org file, and this one which pertains to both.

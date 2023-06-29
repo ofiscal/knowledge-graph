@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       8775876f-9a10-4b3d-ac04-43cab48203d9
+:END:
+#+title: CUIPO data
+* TODO
+** Be sure it's year-level, not month-level.
+** Determine which columns to use.
+** Compare budget items and municipalities to SISFUT for 2020.
+* to know
+** contact info
+*** Secretaria Técnica FUT
+    secretariatecnicafut@contaduria.gov.co
+** CUIPO download pages for 2022
+*** Ingresos CUIPO Diciembre 2022
+    https://app.powerbi.com/view?r=eyJrIjoiNDI1Y2UzYzItMDY0ZS00NGQxLWE5NTMtYmRhNjIwZDFkNjgyIiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
+*** Gastos CUIPO Diciembre 2022
+    https://app.powerbi.com/view?r=eyJrIjoiM2E2ZGQ5N2YtZjFlOC00M2YzLTlmNzAtNTYwNGVhYjEyNTI5IiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
+** CUIPO guide
+   https://fedepapa.com/wp-content/uploads/2023/05/Instructivo-cuipo-presupuestal.pdf
+** columns
+*** Ejec gasto
+    29_COMPROMISOS
+    30_OBLIGACIONES
+    31_PAGOS
+*** Ejec ingreso
+    23_RECAUDO_VIGENCIA_ACTUAL_SIN_SITUACION_DE_FONDOS
+    24_RECAUDO_VIGENCIA_ACTUAL_CON_SITUACION_DE_FONDOS
+    26_RECAUDO_VIGENCIA_ANTERIOR_CON_SITUACION_DE_FONDOS
+    27_TOTAL_RECAUDO
