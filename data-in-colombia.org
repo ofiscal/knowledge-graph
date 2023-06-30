@@ -3,7 +3,10 @@
 :ROAM_ALIASES: "Colombia / data sets on"
 :END:
 #+title: data sets on Colombia
-* [[id:8775876f-9a10-4b3d-ac04-43cab48203d9][CUIPO]]
+* budget data
+** SISFUT
+** [[id:8775876f-9a10-4b3d-ac04-43cab48203d9][CUIPO]]
+** [[id:39953142-6f56-41b2-a1ae-da7436764633][Budget data from the Contraloría]]
 * inflation
 ** PITFALL: DANE's is more useful
    They actually give a deflator -- a rising series.

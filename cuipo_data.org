@@ -10,6 +10,8 @@
 ** contact info
 *** Secretaria Técnica FUT
     secretariatecnicafut@contaduria.gov.co
+*** [[id:af1b584c-e7df-4ccd-8836-12de91fdc1d2][Jose]] pointed us to this data.
+** for 2021, see [[id:39953142-6f56-41b2-a1ae-da7436764633][Budget data from the Contraloría]]
 ** CUIPO download pages for 2022
 *** Ingresos CUIPO Diciembre 2022
     https://app.powerbi.com/view?r=eyJrIjoiNDI1Y2UzYzItMDY0ZS00NGQxLWE5NTMtYmRhNjIwZDFkNjgyIiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
