@@ -3,8 +3,10 @@
 :END:
 #+title: CUIPO data
 * TODO
-** Be sure it's year-level, not month-level.
 ** Determine which columns to use.
+   Is the CHIP code an amalgamation of dept and muni codes?
+   If so, will probably have to read it as a string, then split the string.
+** Be sure it's year-level, not month-level.
 ** Compare budget items and municipalities to SISFUT for 2020.
 * to know
 ** contact info

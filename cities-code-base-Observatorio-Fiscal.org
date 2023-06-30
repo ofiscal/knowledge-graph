@@ -5,6 +5,11 @@
 * refs
   https://github.com/ofiscal/cities
   https://github.com/ofiscal/cities-output
+* TODO be sure that changing geo's "muni code" field to int has no material effect
+  It improves legibility,
+  as if it's a float Pandas shows it in scientific notation,
+  *lossily*. See:
+  [[id:5f093513-f49c-4536-ae3c-ab25ee2d4a20][Pandas sometimes rounds floats' displayed values, for no reason.]]
 * TODO understand and use [[id:8775876f-9a10-4b3d-ac04-43cab48203d9][CUIPO data]]
 * BLOCKED on other people
 ** TODO can we get new [2023, updated from 2019] regalias data?
