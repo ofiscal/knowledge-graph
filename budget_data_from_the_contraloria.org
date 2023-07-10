@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       39953142-6f56-41b2-a1ae-da7436764633
+:ROAM_ALIASES: "Contraloría, budget data hosted at"
 :END:
-#+title: Budget data from the Contraloría
+#+title: budget data from the Contraloría
 * via [[id:af1b584c-e7df-4ccd-8836-12de91fdc1d2][Jose]]
 * Contraloría download page for 2021
   https://www.contraloria.gov.co/web/finanzas-publicas/categoria-presupuestal
