@@ -3,6 +3,7 @@
 :END:
 #+title: DONE & not sure why I'm keeping \\ observatorio fiscal
 This list is very incomplete.
+* <2023-05-30> [[id:94e1f993-f2c8-4d0d-9100-ee96abe08f31][modeling a drop in hours required for women to pension]]
 * [[id:dbace34b-1e96-411b-9580-2ea9b3a49662][Open Society report, May 2023]]
 * [[id:91b84cdd-19a1-4df4-9667-bf9c53e2af0b][build micro data from sim with gender and independiente, 2023-04-12]]
 * [[id:0cb6f044-2bdc-44d8-ad73-e9537c4d8846][renew/fix billing for Wix and/or Bluehost]]
