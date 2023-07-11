@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e006b5d2-a2d5-4266-9321-1901bf762733
+:END:
+#+title: lawmaking in Colombia
+* TODO [[id:9a5bd227-9e5b-4464-ba45-52eea7b510f7][Colombia's constitution needs an electoral bugfix]]
+* spending is itemized 3 ways for all new bills
+** There are now three anexos provided for every bill passed in Congress, respectively itemizing its spending for gender, ethnicity and peacemaking purposes. That data is the basis for Colombia's 3 Trazadores Presupuestales.
+* El Plan Nacional de Desarrollo
+  es una ley que dura 4 años, para cada presidente.

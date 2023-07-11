@@ -3,23 +3,11 @@
 :END:
 #+title: cities (code base, Observatorio Fiscal)
 * refs
-  https://github.com/ofiscal/cities
-  https://github.com/ofiscal/cities-output
+** https://github.com/ofiscal/cities
+** https://github.com/ofiscal/cities-output
+** [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
 * [[id:5c9fd303-e261-4867-bb0a-d33c57694979][chip.gov.co]] *seems* to have what I need
-* TODO be sure that changing geo's "muni code" field to int has no material effect
-  It improves legibility,
-  as if it's a float Pandas shows it in scientific notation,
-  *lossily*. See:
-  [[id:5f093513-f49c-4536-ae3c-ab25ee2d4a20][Pandas sometimes rounds floats' displayed values, for no reason.]]
 * TODO understand and use [[id:8775876f-9a10-4b3d-ac04-43cab48203d9][CUIPO data]]
-* TODO Is this comment stale?
-** where
-   Code/build/budget_6p7_avg_muni.py
-** the comment
-   # TODO ? Should this only include years during this admin?
-** why I think it might be stale
-   I feel like I remember in fact limiting the years to only be
-   those of the current admin.
 * BLOCKED on other people
 ** TODO can we get new [2023, updated from 2019] regalias data?
    See these files:

@@ -2,13 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* meeting <2023-06-26 Mon>
-  read things in Whatsapp Ofiscal group
-* u
-** There are now three anexos provided for every bill passed in Congress, itemizing its spending for gender, ethnicity and peacemaking purposes. That data is the basis for Colombia's 3 Trazadores Presupuestales.
-** The Plan Nacional de Desarrollo es una ley que dura 4 años, para cada presidente.
-** [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
-* Suggest recaps in all team meetings
+* TODO Suggest recaps in all team meetings
 * TODO write this into the microsim paper
   esp. p. 14
   https://www.ofiscal.org/_files/ugd/e33cdb_450d78d0701445b7a4b2fd4d0ad9fcb9.pdf
@@ -25,22 +19,8 @@
 * DONE [[id:393dab48-7547-406e-8d61-fff7264967d7][editing our pensions report, 2023-03-22]]
 * read this report on inequality, then talk to [[id:dc156bd0-0475-4eab-a6d1-31451f1e8191][Jairo Nuñez]]
 ** https://www.afd.fr/fr/extension-facilite-recherche-inegalites-colombie
-* TODO find unemp rates as function of gender & age
-** to know
-*** if 3 years from retirement age, aforado
-**** labor reform makes it even harder to fire
-** to do
-*** unemp rate for women 3 years before & 3 years after being within 3 years of retirement
-**** so age in [51,53] and [54,56] for women
-**** men: 56-58, 59-61
-*** construct unemp, which is tricky
-* TODO find rate of formality among aforados
-** first: (2) single parents
-   2. Madres o padres cabeza de familia sin otra alternativa económica, es decir, mujer u hombre con hijos menores de edad, biológicos o adoptivos; hijos inválidos; hijos mayores entre 18 y 25 años que sean estudiantes, o que tengan que atender a otras personas incapacitadas que dependan económicamente y de manera permanente y exclusiva de la madre o el padre, siempre y cuando la pareja se sustraiga del cumplimiento de sus obligaciones y cuyo ingreso familiar corresponda únicamente al salario que devenga. Para ser titular de este beneficio se debe demostrar que se dio aviso previo al empleador.
-** 3. Personas con discapacidad.
-** 4. Mujer en estado de embarazo y hasta los 6 meses después del parto, o su cónyuge, pareja o compañero/a permanente si ella no tiene un empleo formal, y es su beneficiaria en el Sistema de Seguridad Social en Salud.
-** 5. Pre pensionados, es decir, a quienes les falten tres (3) años o menos para cumplir los requisitos para obtener la pensión de vejez.
-** 1. Sindicalistas
+* (stale? done?) [[id:57cca8b6-56cb-480c-89f4-d30c7990175d][find unemployment rates as function of gender & age]]
+* (stale? done?) [[id:b07fd99b-d814-4e43-a6ab-5f5e98af0838][find rate of formality among aforados]]
 * Edit OSF proposal
   https://docs.google.com/document/d/14WfUc3RscpVXKyzkb4bny5vuBBfqqILc34zgxmszCUo/edit
 ** check for consistency in our parts. Give consistency comments for theirs but don't try to fix.

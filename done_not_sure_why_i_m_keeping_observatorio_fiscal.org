@@ -3,6 +3,7 @@
 :END:
 #+title: DONE & not sure why I'm keeping \\ observatorio fiscal
 This list is very incomplete.
+* [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
 * <2023-05-30> [[id:94e1f993-f2c8-4d0d-9100-ee96abe08f31][modeling a drop in hours required for women to pension]]
 * [[id:dbace34b-1e96-411b-9580-2ea9b3a49662][Open Society report, May 2023]]
 * [[id:91b84cdd-19a1-4df4-9667-bf9c53e2af0b][build micro data from sim with gender and independiente, 2023-04-12]]
