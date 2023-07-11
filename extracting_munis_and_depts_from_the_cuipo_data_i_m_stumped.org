@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       9e455949-ed3a-4690-a85a-1f75988fbd9a
+:END:
+#+title: extracting munis and depts from the CUIPO data (I'm stumped)
+* Oliver sending Daniel's translation of it into Spanish to Juan Camilo
+  See Outlook, message entitled
+    Juan Camilo
+  sent <2023-07-06 Thu>
+* my message describing the problem, in English
+  https://mail.google.com/mail/u/0/#search/understand+Colombia's+municipal+and+department/QgrcJHsBnjQHLmfCXDlgSGlcfGhKBZlvZRg

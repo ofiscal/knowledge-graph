@@ -3,12 +3,14 @@
 :END:
 #+title: CUIPO data
 * TODO
+** [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data (I'm stumped)]]
 ** Determine which columns to use.
    Is the CHIP code an amalgamation of dept and muni codes?
    If so, will probably have to read it as a string, then split the string.
 ** Be sure it's year-level, not month-level.
 ** Compare budget items and municipalities to SISFUT for 2020.
 * to know
+** [[id:f7022bc3-f91e-402b-b3a1-d1777c9ee366][a description of the CUIPO data I hope for]]
 ** contact info
 *** Secretaria Técnica FUT
     secretariatecnicafut@contaduria.gov.co
