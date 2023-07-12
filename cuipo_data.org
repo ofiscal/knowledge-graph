@@ -3,6 +3,7 @@
 :END:
 #+title: CUIPO data
 * TODO
+** [[id:6c822159-d307-47ae-a9a9-166c079d9e27][asking the Contraloría for help with CUIPO]]
 ** [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data (I'm stumped)]]
 ** Determine which columns to use.
    Is the CHIP code an amalgamation of dept and muni codes?

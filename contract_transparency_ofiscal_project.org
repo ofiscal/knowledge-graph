@@ -1,8 +1,11 @@
 :PROPERTIES:
 :ID:       9112e9d6-903f-4c9a-a6c3-d4dbbed20dd9
+:ROAM_ALIASES: "proyecto transparencia \ ofiscal"
 :END:
 #+title: contract transparency (ofiscal project)
 * refs
+** Google Docs repo
+   https://drive.google.com/drive/folders/1X2Fw13Yz6dHjYRWlK2l3JJ0Yv2D58v2t
 ** a paper Oliver thinks could help
    https://twitter.com/jorgeonrubia63/status/1612444295033651200?s=43&t=luNez5vaY-l3e6taY6h3dw
 ** [[id:f96e9e52-b4e5-406f-a78e-864534507112][best practices in poblic contracting]]

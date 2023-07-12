@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO Could I just extract CHIPs from the old code?
 * TODO Suggest recaps in all team meetings
 * TODO write this into the microsim paper
   esp. p. 14
