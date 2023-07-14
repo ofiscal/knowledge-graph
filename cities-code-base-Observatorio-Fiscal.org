@@ -6,7 +6,7 @@
 ** https://github.com/ofiscal/cities
 ** https://github.com/ofiscal/cities-output
 ** [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
-* [[id:5c9fd303-e261-4867-bb0a-d33c57694979][chip.gov.co]] *seems* to have what I need
+* [[id:5c9fd303-e261-4867-bb0a-d33c57694979][chip.gov.co (website)]] *seems* to have what I need
 * TODO understand and use [[id:8775876f-9a10-4b3d-ac04-43cab48203d9][CUIPO data]]
 * BLOCKED on other people
 ** TODO can we get new [2023, updated from 2019] regalias data?

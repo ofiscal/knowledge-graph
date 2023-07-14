@@ -2,6 +2,7 @@
 :ID:       9e455949-ed3a-4690-a85a-1f75988fbd9a
 :END:
 #+title: extracting munis and depts from the CUIPO data (I'm stumped)
+* [[id:c5a83342-50fd-4e6f-9ec7-9f808c47229f][Juan Camilo's response]]
 * Daniel's translation of it into Spanish
 ** the message, formatted for Whatsapp
 ```

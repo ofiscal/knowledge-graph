@@ -3,6 +3,16 @@
 :END:
 #+title: CUIPO data
 * TODO
+** does CUIPO have the regalias data I need?
+*** It has some regalias data:
+		4_COD_CONCEPTO                                         5_CONCEPTO
+ 1319   1.1.02.06.003.04.01        PARTICIPACION EN REGALIAS DEL REGIMEN ANTERIOR
+ 1320   1.1.02.06.003.04.01.03         REGALIAS POR HIDROCARBUROS, PETROLEO Y GAS
+ 74688  1.1.02.06.003.04.01.01  REGALIAS POR CALIZAS, YESOS, ARCILLAS, GRAVAS ...
+ 74894  1.1.02.06.003.04.01.05  REGALIAS POR ORO, PLATA, PLATINO Y PIEDRAS PRE...
+*** but it's not clear to me whether that's enough.
+    I'd like a higher-level code indicating *all* regalias,
+    but maybe taht's all there is.
 ** [[id:6c822159-d307-47ae-a9a9-166c079d9e27][asking the Contraloría for help with CUIPO]]
 ** [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data (I'm stumped)]]
 ** Determine which columns to use.
