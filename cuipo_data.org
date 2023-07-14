@@ -3,6 +3,7 @@
 :END:
 #+title: CUIPO data
 * TODO
+** What about Áreas Metropolitanas?
 ** does CUIPO have the regalias data I need?
 *** It has some regalias data:
 		4_COD_CONCEPTO                                         5_CONCEPTO
@@ -14,7 +15,7 @@
     I'd like a higher-level code indicating *all* regalias,
     but maybe taht's all there is.
 ** [[id:6c822159-d307-47ae-a9a9-166c079d9e27][asking the Contraloría for help with CUIPO]]
-** [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data (I'm stumped)]]
+** asking Juan Camilo at Contaduría about [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data]]
 ** Determine which columns to use.
    Is the CHIP code an amalgamation of dept and muni codes?
    If so, will probably have to read it as a string, then split the string.
