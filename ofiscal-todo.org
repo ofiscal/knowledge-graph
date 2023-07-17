@@ -2,6 +2,10 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* new project "Desagregación del PGN"
+** Central gov reports transfers to munis and depts in PGN.
+** Munis and depts report receipts? CUIPO, supposedly.
+   Should correspond.
 * TODO Could I just extract CHIPs from the old code?
 * TODO Suggest recaps in all team meetings
 * TODO write this into the microsim paper
