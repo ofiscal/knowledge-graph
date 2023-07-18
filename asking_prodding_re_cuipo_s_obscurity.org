@@ -17,7 +17,11 @@ Provided one knows the right URL, one can download the data without even signing
 A number of Colombian government websites[3,4,5] are dedicated to the CUIPO data, but none of them (to our knowledge) actually provides a way to access the data. Until they do, the data cannot be considered truly public.
 
 [1] Ingresos CUIPO Diciembre 2022: https://app.powerbi.com/view?r=eyJrIjoiNDI1Y2UzYzItMDY0ZS00NGQxLWE5NTMtYmRhNjIwZDFkNjgyIiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
+
 [2] Gastos CUIPO Diciembre 2022: https://app.powerbi.com/view?r=eyJrIjoiM2E2ZGQ5N2YtZjFlOC00M2YzLTlmNzAtNTYwNGVhYjEyNTI5IiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
+
 [3] CUIPO documentation at Fedepapa: https://fedepapa.com/wp-content/uploads/2023/05/Instructivo-cuipo-presupuestal.pdf
+
 [4] CUIPO documentation at CHIP: https://www.chip.gov.co/schip_rt/index.jsf
+
 [5] CUIPO documentation at the Contraloría: https://www.contraloria.gov.co/web/finanzas-publicas/categoria-presupuestal
