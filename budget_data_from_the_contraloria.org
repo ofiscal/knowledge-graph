@@ -4,6 +4,9 @@
 :END:
 #+title: budget data from the Contraloría
 * via [[id:af1b584c-e7df-4ccd-8836-12de91fdc1d2][Jose]]
-* Contraloría download page for 2021
+* Contraloría's page on CUIPO 2021
+  :PROPERTIES:
+  :ID:       0dbc6ab0-3338-4e80-b7b5-02800672388d
+  :END:
   https://www.contraloria.gov.co/web/finanzas-publicas/categoria-presupuestal
 * [[id:f7022bc3-f91e-402b-b3a1-d1777c9ee366][a description of the CUIPO data I hope for]]

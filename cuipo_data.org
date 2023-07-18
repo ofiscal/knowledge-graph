@@ -16,8 +16,9 @@
      I'd like a higher-level code indicating *all* regalias,
      but maybe taht's all there is.
 ** asking people about it
-*** [[id:6c822159-d307-47ae-a9a9-166c079d9e27][asking the Contraloría for help with CUIPO]]
-*** asked Juan Camilo at Contaduría about [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data]]
+*** 3 - [[id:8034ee58-77dc-4b27-9888-c3890b1f177d][asking/prodding re. CUIPO's obscurity]]
+*** 2 - [[id:6c822159-d307-47ae-a9a9-166c079d9e27][asking the Contraloría for help with CUIPO]]
+*** 1 - asked Juan Camilo at Contaduría about [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data]]
 ** Determine which columns to use.
    Is the CHIP code an amalgamation of dept and muni codes?
    If so, will probably have to read it as a string, then split the string.
@@ -35,8 +36,15 @@
     https://app.powerbi.com/view?r=eyJrIjoiNDI1Y2UzYzItMDY0ZS00NGQxLWE5NTMtYmRhNjIwZDFkNjgyIiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
 *** Gastos CUIPO Diciembre 2022
     https://app.powerbi.com/view?r=eyJrIjoiM2E2ZGQ5N2YtZjFlOC00M2YzLTlmNzAtNTYwNGVhYjEyNTI5IiwidCI6IjYwYzMyNGFkLTIzMTItNDUwMy04NTA3LTE4OGVlNGZiNDk3YyIsImMiOjR9
-** CUIPO guide
-   https://fedepapa.com/wp-content/uploads/2023/05/Instructivo-cuipo-presupuestal.pdf
+** CUIPO guides
+*** https://fedepapa.com/wp-content/uploads/2023/05/Instructivo-cuipo-presupuestal.pdf
+*** https://www.chip.gov.co/schip_rt/index.jsf
+    If that link dies, the way I got to it was to (in serial):
+
+    visit https://www.chip.gov.co,
+    click on "Categorías",
+    and select "Información de Apoyo CUIPO ..."
+*** [[id:0dbc6ab0-3338-4e80-b7b5-02800672388d][Contraloría's page on CUIPO 2021]]
 ** columns
 *** Ejec gasto
     29_COMPROMISOS
