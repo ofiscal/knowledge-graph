@@ -3,27 +3,24 @@
 :END:
 #+title: CUIPO data
 * TODO
+** how to process it
+*** Subset it using Juan Camilo's geo key.
+*** Generate dept and muni codes.
+*** Restrict columns.
 ** questions about it
-*** What about Áreas Metropolitanas?
-*** Does CUIPO have sufficient regalias data?
-**** It has some regalias data:
-|       |         4_COD_CONCEPTO | 5_CONCEPTO                                        |
-|  1319 | 1.1.02.06.003.04.01    | PARTICIPACION EN REGALIAS DEL REGIMEN ANTERIOR    |
-|  1320 | 1.1.02.06.003.04.01.03 | REGALIAS POR HIDROCARBUROS, PETROLEO Y GAS        |
-| 74688 | 1.1.02.06.003.04.01.01 | REGALIAS POR CALIZAS, YESOS, ARCILLAS, GRAVAS ... |
-| 74894 | 1.1.02.06.003.04.01.05 | REGALIAS POR ORO, PLATA, PLATINO Y PIEDRAS PRE... |
-**** but it's not clear to me whether that's enough.
-     I'd like a higher-level code indicating *all* regalias,
-     but maybe taht's all there is.
+*** [[id:929c37d6-8f39-49c9-89c0-9f8b76928d3d][Áreas Metropolitanas \ CUIPO]]
+*** [[id:46c0219d-2ceb-4b69-bdd9-06d7acf56274][Regalias data:- sufficient? \ CUIPO]]
+*** Compare budget items and municipalities to SISFUT for 2020.
+    If 12-ish times smaller,
+    maybe it's month-level rather than year-level.
+*** Determine which columns to use.
+    Is the CHIP code an amalgamation of dept and muni codes?
+    If so, will probably have to read it as a string, then split the string.
 ** asking people about it
+*** 4 - asked [[id:5bbf5d0c-ed28-404f-809e-0e6d82af75f8][Juan Camilo]] where CUIPO 2021 is
 *** 3 - [[id:8034ee58-77dc-4b27-9888-c3890b1f177d][asking/prodding re. CUIPO's obscurity]]
 *** 2 - [[id:6c822159-d307-47ae-a9a9-166c079d9e27][asking the Contraloría for help with CUIPO]]
 *** 1 - asked Juan Camilo at Contaduría about [[id:9e455949-ed3a-4690-a85a-1f75988fbd9a][extracting munis and depts from the CUIPO data]]
-** Determine which columns to use.
-   Is the CHIP code an amalgamation of dept and muni codes?
-   If so, will probably have to read it as a string, then split the string.
-** Be sure it's year-level, not month-level.
-** Compare budget items and municipalities to SISFUT for 2020.
 * to know
 ** [[id:f7022bc3-f91e-402b-b3a1-d1777c9ee366][a description of the CUIPO data I hope for]]
 ** contact info
