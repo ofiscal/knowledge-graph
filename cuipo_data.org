@@ -7,6 +7,16 @@
 *** Subset it using Juan Camilo's geo key.
 *** Generate dept and muni codes.
 *** Restrict columns.
+*** verify column choices
+    Maybe also "*ambito*" (case-insensitive) and
+    "34_Conceptos_Cuipo_Agregacion".
+
+    Other options for 27_TOTAL_RECAUDO include
+    23_RECAUDO_VIGENCIA_ACTUAL_SIN_SITUACION_DE_FONDOS   float64
+    24_RECAUDO_VIGENCIA_ACTUAL_CON_SITUACION_DE_FONDOS   float64
+    25_RECAUDO_VIGENCIA_ANTERIOR_SIN_SITUACION_DE_FONDOS float64
+    26_RECAUDO_VIGENCIA_ANTERIOR_CON_SITUACION_DE_FONDOS float64
+    28_VALOR_DESTINACION_ESPECIFICA                      float64
 ** questions about it
 *** [[id:929c37d6-8f39-49c9-89c0-9f8b76928d3d][Áreas Metropolitanas \ CUIPO]]
 *** [[id:46c0219d-2ceb-4b69-bdd9-06d7acf56274][Regalias data:- sufficient? \ CUIPO]]
