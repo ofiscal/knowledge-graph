@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO Change a message to "todo salió bien" in the microsim
+  instead of "si todo fue bien"
 * new project "Desagregación del PGN"
 ** Central gov reports transfers to munis and depts in PGN.
 ** Munis and depts report receipts? CUIPO, supposedly.
