@@ -2,6 +2,7 @@
 :ID:       8775876f-9a10-4b3d-ac04-43cab48203d9
 :END:
 #+title: CUIPO data
+* [[id:5d9b07fe-e109-4eb0-8b43-48744d7f98c2][Oliver explains the SISFUT-CUIPO transition]]
 * TODO
 ** DONE how to process it
 *** Subset it using Juan Camilo's geo key.
@@ -36,6 +37,7 @@
 ** contact info
 *** Secretaria Técnica FUT
     secretariatecnicafut@contaduria.gov.co
+*** [[id:4dc557f5-0df4-4ab0-a611-0327673ff7a5][Claudia at Minhacienda]]
 *** [[id:af1b584c-e7df-4ccd-8836-12de91fdc1d2][Jose]] pointed us to this data.
 ** for 2021, see [[id:39953142-6f56-41b2-a1ae-da7436764633][Budget data from the Contraloría]]
 ** CUIPO download pages for 2022

@@ -2,5 +2,7 @@
 :ID:       8332072d-f14d-4f57-bbee-5b7cae7c4616
 :END:
 #+title: SISFUT
-https://sisfut.dnp.gov.co/app/login
-Use it as an invitado (to avoid having to log in).
+* refs
+  https://sisfut.dnp.gov.co/app/login
+  Use it as an invitado (to avoid having to log in).
+* [[id:5d9b07fe-e109-4eb0-8b43-48744d7f98c2][Oliver explains the SISFUT-CUIPO transition]]
