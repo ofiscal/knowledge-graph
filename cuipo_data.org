@@ -4,6 +4,12 @@
 #+title: CUIPO data
 * [[id:5d9b07fe-e109-4eb0-8b43-48744d7f98c2][Oliver explains the SISFUT-CUIPO transition]]
 * TODO
+** Ask MH about the sisfut-cuipo aggregates correspondence
+   FUT is entirely MinHacienda,
+   and they also know (and have some ownership of) CUIPO.
+   CGR doesn't know FUT.
+   Ask for the Direccion General de Apoyo Fiscal's help
+   (they're part of MH).
 ** DONE how to process it
 *** Subset it using Juan Camilo's geo key.
 *** Generate dept and muni codes.
