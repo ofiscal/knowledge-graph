@@ -2,18 +2,10 @@
 :ID:       30fb3fac-5f4b-472b-a437-cc224704ba30
 :END:
 #+title: tax.co, the paper about
-* TODO RESUME: the last passage I edited is this one:
-     In the case of taxes on fuel,
-  we assume that not just household fuel purchases but also
-  a certain percentage of spending on public transportation
-  (which can be specified in the simulation)
-  SOMEONE:
-      I don't think it can, actually.
-      Did we promise that before writing the microsimulation,
-      or am I forgetting something?]]
-  is taxed at this rate.
-  In cases where inputs other than fuel are taxed, we do the same
-  (see the appendix for details).
+* TODO write this into the microsim paper
+  esp. p. 14
+  https://www.ofiscal.org/_files/ugd/e33cdb_450d78d0701445b7a4b2fd4d0ad9fcb9.pdf
+** Just say what happens to the top and bottom deciles.
 * BLOCKED (emailed) : [[id:616dd4c9-f1e1-461d-8d14-2ebc5286a663][LCR, questions about it that I sent]]
 * TODO edits
 ** We are estimating theoretical tax burden, not actual.

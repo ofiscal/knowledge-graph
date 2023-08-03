@@ -7,10 +7,7 @@
 ** Munis and depts report receipts? CUIPO, supposedly.
    Should correspond.
 * TODO Suggest recaps in all team meetings
-* TODO write this into the microsim paper
-  esp. p. 14
-  https://www.ofiscal.org/_files/ugd/e33cdb_450d78d0701445b7a4b2fd4d0ad9fcb9.pdf
-** Just say what happens to the top and bottom deciles.
+* TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 * TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]
 ** TODO cities: [[id:2b712914-221d-471e-b2ed-d962e4a0fabb][ask someone to verify the set of codes we're using]]
 * TODO [[id:42065532-4a3b-4ec1-a3f0-8e563ef918ce][Makefile running var_summaries_by_group.py too many times from cron job \ bug, tax.co.web]]
