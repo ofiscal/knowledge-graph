@@ -21,7 +21,7 @@ https://www.colifri.com/
     another element of which is [[id:7d7e5cdb-e350-46a5-97b2-8280fe3cd63d][across-country student interchange]].
 *** innovation
 *** development
-* it collect membership fees
+* it collects membership fees
 * its organization
 ** "Colifri Colombia" and "Colifri France" are separate networks.
    I'm assuming of Colombian and French members, respectively.

@@ -138,4 +138,5 @@
 ** read the [[id:09717e0a-fb87-4a45-9685-270e6c13cd48][Guia Presupuestal 2022, by the Observatorio Fiscal]]
 ** learn [[id:f28ddaf7-698b-4d5e-a529-a34bc625f3dd][how to SSH over HTTPS, for Github or maybe anything]]
 ** [[id:804931df-c3ad-41fd-9356-124fe6b478ae][move ofiscal.org to javeriana.edu.co]]
+* u, notes from [[id:9f25197b-790f-4503-bfac-fba383b5151a][Observatorio Fiscal's trip to Washington DC, circa 2019]]
 * [[id:33758dec-e841-4965-af80-34f9a96cf894][DONE & not sure why I'm keeping \\ observatorio fiscal]]

@@ -14,6 +14,7 @@
   is taxed at this rate.
   In cases where inputs other than fuel are taxed, we do the same
   (see the appendix for details).
+* BLOCKED (emailed) : [[id:616dd4c9-f1e1-461d-8d14-2ebc5286a663][LCR, questions about it that I sent]]
 * TODO edits
 ** We are estimating theoretical tax burden, not actual.
    if all the laws were enforced and obeyed

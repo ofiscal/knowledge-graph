@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       89bfefbd-6ac6-42b0-9f61-e2272d0e830e
+:END:
+#+title: Fedesarrollo
+* [[id:ad00525e-44a3-4483-aa7f-e49cc2e45055][Multidimensional Inequality Report, Fedesarrollo, Oct 2022]]

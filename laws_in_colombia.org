@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       10ce18c2-bac2-4d74-bbdb-63ed002bdfd0
+:END:
+#+title: laws in Colombia
+* [[id:022e597b-245d-4103-b7da-3b65291bce0f][Secret recording is sometimes legal in Colombia.]]
+* [[id:3103f0d7-d2aa-484e-bdc1-ce3726ce778d][Ley 80: Regimen de Contratacion Estatal]]
