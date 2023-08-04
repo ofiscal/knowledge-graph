@@ -2,6 +2,9 @@
 :ID:       30fb3fac-5f4b-472b-a437-cc224704ba30
 :END:
 #+title: tax.co, the paper about
+* TODO tell the economists they have to read the source code
+  because comments are invisible.
+* TODO assign tasks to co-authors
 * TODO write this into the microsim paper
   esp. p. 14
   https://www.ofiscal.org/_files/ugd/e33cdb_450d78d0701445b7a4b2fd4d0ad9fcb9.pdf
