@@ -10,7 +10,18 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
+* TODO long-term: use [[id:6a0f91be-f15b-460b-a1f0-1b64d9f797fc][geih]] to supplement the [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
+** some people Oliver thinks could help
+   [[id:dc156bd0-0475-4eab-a6d1-31451f1e8191][Jairo Nuñez]] + David Guerrero (Externado) + someone junior (ask him)
+** TODO separate growth rates: labor, capital, pension, maybe dividend
+** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
+** goal: maximally up-to-date income, expenditure data
+** GEIH has no consumption data
+** the "Medicion de Pobreza ..."
+ask Daniel about it
+is a good measure of income distribution
 * TODO use [[id:911bfaf0-5d29-40ab-8855-02b1c8f5f4f6][Pyright]]
+* TODO Would be cool if there were a field for a user-provided name.
 * include interpreting-the-output.md in attachments
 modified   python/requests/main.py
 @@ -179,7 +179,8 @@ def advance_request_queue ():
@@ -164,14 +175,6 @@ https://mail.google.com/mail/u/0/#inbox/KtbxLxgNNvtdCSsLXNSGsTqfdGprqpbgsq
 ** TODO "income, govt" and "income, private": include edu funds.
 Yes.
 * TODO When it's safe, delete definitions specific to the 2020 tax proposal
-* TODO long-term: use [[id:6a0f91be-f15b-460b-a1f0-1b64d9f797fc][geih]] to supplement the [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
-** TODO separate growth rates: labor, capital, pension, maybe dividend
-** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
-** goal: maximally up-to-date income, expenditure data
-** GEIH has no consumption data
-** the "Medicion de Pobreza ..."
-ask Daniel about it
-is a good measure of income distribution
 * TODO shared decision
 ** TODO cesantias + primas is mysterious
     :PROPERTIES:
