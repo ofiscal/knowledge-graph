@@ -6,6 +6,11 @@
   esp. p. 14
   https://www.ofiscal.org/_files/ugd/e33cdb_450d78d0701445b7a4b2fd4d0ad9fcb9.pdf
 ** Just say what happens to the top and bottom deciles.
+* TODO write up flat VAT sim results
+** what the sims Daniel ran are
+*** one is the default -- no changes
+*** one is the VAT all at 19%
+* BLOCKED (whatsapped) : ask Oliver for institutional details of flat tax sim
 * BLOCKED (emailed) : [[id:616dd4c9-f1e1-461d-8d14-2ebc5286a663][LCR, questions about it that I sent]]
 * TODO edits
 ** We are estimating theoretical tax burden, not actual.

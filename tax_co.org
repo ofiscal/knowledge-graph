@@ -21,6 +21,7 @@
 ask Daniel about it
 is a good measure of income distribution
 * TODO use [[id:911bfaf0-5d29-40ab-8855-02b1c8f5f4f6][Pyright]]
+* TODO Would be cool if there were a field for a user-provided name.
 * include interpreting-the-output.md in attachments
 modified   python/requests/main.py
 @@ -179,7 +179,8 @@ def advance_request_queue ():
