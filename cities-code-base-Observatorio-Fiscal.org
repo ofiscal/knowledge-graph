@@ -6,6 +6,10 @@
 ** https://github.com/ofiscal/cities
 ** https://github.com/ofiscal/cities-output
 ** [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
+* TODO BUG: Where did muni code = -2 go?
+  It is created, supposedly, in
+    Code/build/budget_6p7_avg_muni.py
+  but I don't see it in the data.
 * [[id:5c9fd303-e261-4867-bb0a-d33c57694979][chip.gov.co (website)]] *seems* to have what I need
 * TODO [[id:95d54d2b-6f6a-4810-90c1-e6b242a48632][ask whether codes are comparable from SISFUT to CUIPO \\ ofisca./cities]]
 * TODO incorporate this change
