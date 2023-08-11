@@ -2,10 +2,22 @@
 :ID:       86f3c13a-4dd2-42ca-9a56-03ea56368aac
 :END:
 #+title: cities (code base, Observatorio Fiscal)
+* u, meeting with Dirección de Apoyo Fiscal, <2023-08-09 Wed>
+  CCPET = catalogo calsificacion, doesn't divide by functionamiento/inversion,
+
+  funcionamiento cannot be divided by sector
+    for instance, salary
+  but for inversion, in CUIPO, can classify very well by sector
+
+  Andres suggests looking at the COFOG.
+
+  producto mga, first two digits, indicates sector. this is part of cuipo. for instance, 22 = salud. can find in "catalogo de productos del dept nacional de planeacion". but only for gastos de inversion.
 * refs
 ** https://github.com/ofiscal/cities
 ** https://github.com/ofiscal/cities-output
 ** [[id:2d647146-fb8b-4f82-a34c-74e523a57821][history of municipal finance in Colombia : meeting <2023-05-24 Wed> with Jaime from Banco de la República]]
+* TODO Rename "TOTAL DE LA DEUDA" in the CUIPO gastos key
+  to "Pago de la deuda"
 * TODO BUG: Where did muni code = -2 go?
   It is created, supposedly, in
     Code/build/budget_6p7_avg_muni.py

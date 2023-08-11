@@ -2,6 +2,17 @@
 :ID:       30fb3fac-5f4b-472b-a437-cc224704ba30
 :END:
 #+title: tax.co, the paper about
+* TODO add a "limitations" section
+** a list
+*** desactualizado
+*** not representative in the upper tail of income
+*** divide by zero, consumption not matching income
+*** restaurants and hotels are grouped together but have different VAT rates
+** make clear which are our fault and which are data limitations
+* TODO mention how flexibly we can model VAT changes
+  makes it hard to export but more useful for Colombia
+* TODO say why each VAT in the 12 main categories is what it is
+* TODO talk about the COICOP table
 * TODO tell the economists they have to read the source code
   because comments are invisible.
 * TODO assign tasks to co-authors

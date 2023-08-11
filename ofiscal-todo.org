@@ -6,7 +6,8 @@
 ** Central gov reports transfers to munis and depts in PGN.
 ** Munis and depts report receipts? CUIPO, supposedly.
    Should correspond.
-* TODO Suggest recaps in all team meetings
+* TODO explain the VAT-COICOP keys to the microsim paper *group*
+* TODO suggest recaps in all team meetings
 * TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 * TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]
 ** TODO cities: [[id:2b712914-221d-471e-b2ed-d962e4a0fabb][ask someone to verify the set of codes we're using]]
