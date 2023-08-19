@@ -2,11 +2,14 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* Help Silvana with backups, maybe version control
 * new project "Desagregación del PGN"
 ** Central gov reports transfers to munis and depts in PGN.
 ** Munis and depts report receipts? CUIPO, supposedly.
    Should correspond.
-* TODO explain the VAT-COICOP keys to the microsim paper *group*
+* TODO bughunt for Gabriel
+  Why didn't he get a response?
+* TODO compare microsim output to Downloads/boletin-enph-2017.pdf
 * TODO suggest recaps in all team meetings
 * TODO [[id:30fb3fac-5f4b-472b-a437-cc224704ba30][tax.co, the paper about]]
 * TODO [[id:86f3c13a-4dd2-42ca-9a56-03ea56368aac][cities repo : update for 2023]]

@@ -10,6 +10,11 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
+* TODO BUG: compare.py
+** Why is it running multiple times?
+** Why did it get stuck for a day?
+   When I killed it, make completed, with a "terminated by user" error in the stderr file but otherwise the stdout file looked normal.
+   Does the sim not like negative tax rates? That's the only difference I see between the run that got stuck (had negative rates) and the one that merely ran compare.py three times.
 * TODO | PITFALL: [[id:27ce0bd9-cb6c-428a-bdc6-25d69ea66dcc][Do not exceed daily automatic Gmail send limit.]]
 * TODO long-term: use [[id:6a0f91be-f15b-460b-a1f0-1b64d9f797fc][geih]] to supplement the [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
 ** some people Oliver thinks could help
