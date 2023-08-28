@@ -2,6 +2,9 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO in sim
+** TODO add INGTOT to sim, and use it to calculate another VAT / ING
+** TODO compare my total expenses to DANE's magic one
 * Help Silvana with backups, maybe version control
 * new project "Desagregación del PGN"
 ** Central gov reports transfers to munis and depts in PGN.
