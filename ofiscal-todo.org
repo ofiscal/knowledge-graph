@@ -3,8 +3,14 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO in sim
-** TODO add INGTOT to sim, and use it to calculate another VAT / ING
+** TODO see also [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
+** TODO add IT to sim, and use it to calculate another VAT / ingresos
+*** DONE It's in all of people_*
+    which is kind of strange, since it's a household-level variable --
+    it would be more natural to introduce it in the household-level output,
+    and then thread it back into people when they are merged.
 ** TODO compare my total expenses to DANE's magic one
+* TODO get latest viviendas and personales ENPH from Gabriel
 * Help Silvana with backups, maybe version control
 * new project "Desagregación del PGN"
 ** Central gov reports transfers to munis and depts in PGN.

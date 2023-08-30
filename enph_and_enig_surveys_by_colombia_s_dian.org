@@ -3,6 +3,9 @@
 :ROAM_ALIASES: "Encuesta Nacional de Presupuestos de Hogares" ENIG ENPH
 :END:
 #+title: The ENPH and ENIG surveys of Colombian households, by DANE
+* references
+  https://microdatos.dane.gov.co/index.php/catalog/566/get_microdata
+  tax.co/hopefully-obsolete/enig-enph,email,david-suarez,2018-02-23.md
 * TODO unmerged notes on the [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
 * TODO [[id:e79b5d00-01ea-44bb-90d9-3772db555875][What are the aggregate income, expenditure variables in the ENPH?]]
 * PITFALL: These notes files are redundant
@@ -58,5 +61,3 @@ This can be done for all of 2017, and for 2007 goods, but for 2007 services the 
 8 » 7. Trimestral
 9 » 9. Esporádica"
 ss frequently than every year", assuming that the terms are ordered. But over here it interprets 9 as "Esporádica por semana".
-* references
-  tax.co/hopefully-obsolete/enig-enph,email,david-suarez,2018-02-23.md

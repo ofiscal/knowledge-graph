@@ -10,9 +10,21 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO BUG: compare.py
-** Why is it running multiple times?
-** Why did it get stuck for a day?
+* TODO Is the Makefile buggy?
+** reports and/or compare might be running too much.
+** In reports, one data set took much longer than the others.
+   earners
+     started 2023-08-29 21:19:38.276671
+   nonzero_earners_by_labor_income
+     started 2023-08-29 21:32:35.332169
+   households
+     started 2023-08-29 21:33:34.441767
+   finished
+     2023-08-29 21:34:16.877658
+* TODO Can my computer no longer handle the sim?
+  Just *one* of the many data sets that var_summaries...py computes
+  is taking at least 10 minutes.
+* TODO BUG: Why did compare.py get stuck for a day?
    When I killed it, make completed, with a "terminated by user" error in the stderr file but otherwise the stdout file looked normal.
    Does the sim not like negative tax rates? That's the only difference I see between the run that got stuck (had negative rates) and the one that merely ran compare.py three times.
 * TODO | PITFALL: [[id:27ce0bd9-cb6c-428a-bdc6-25d69ea66dcc][Do not exceed daily automatic Gmail send limit.]]
