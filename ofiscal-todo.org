@@ -3,13 +3,16 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO in sim
-** TODO see also [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
-** TODO add IT to sim, and use it to calculate another VAT / ingresos
+** see also [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
+** Sing it loud: I need the subsample in the baseline config to match that of the user config!
+** use [[id:a2bff01a-db10-4ada-956d-740455840caa][parallel processing in GNU make with a multi-output rule that does not create redundant processes]]
+   Ideally, via pymake, since text manipulation is hard in make, and I need to create a list of rules from a list of targets.
+** add IT to sim, and use it to calculate another VAT / ingresos
 *** DONE It's in all of people_*
     which is kind of strange, since it's a household-level variable --
     it would be more natural to introduce it in the household-level output,
     and then thread it back into people when they are merged.
-** TODO compare my total expenses to DANE's magic one
+** compare my total expenses to DANE's magic one
 * TODO get latest viviendas and personales ENPH from Gabriel
 * Help Silvana with backups, maybe version control
 * new project "Desagregación del PGN"
