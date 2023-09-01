@@ -2,6 +2,7 @@
 :ID:       dc968fea-dd45-4734-b375-9e60b87005c6
 :END:
 #+title: tax.co
+* SEE ALSO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][tax.co.web]]
 * refs
 ** github
    https://github.com/ofiscal/tax.co
@@ -10,23 +11,16 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO I restored all the data sets that were disabled in var_summaries_by_group, but have not updated the Makefile accordingly.
+* reasons our total income measure might not match DANE's
+** reasons, via Juan Miguel Villa
+*** Value of house
+*** Autoconsumo (e.g. farming)
+** Daniel says he thinks we considered these
+   and had good reason not to include them.
+* TODO [[id:6cfbd409-c45a-46f9-b25a-9d33f8f2971b][un-hardcode those zero-income tests \ tax.co]]
+* TODO ? I restored all the data sets that were disabled in var_summaries_by_group, but have not updated the Makefile accordingly.
   and it's not clear that I should.
   Maybe I should just put one of them as a representative.
-* TODO Is the Makefile buggy?
-** reports and/or compare might be running too much.
-** In reports, one data set took much longer than the others.
-   earners
-     started 2023-08-29 21:19:38.276671
-   nonzero_earners_by_labor_income
-     started 2023-08-29 21:32:35.332169
-   households
-     started 2023-08-29 21:33:34.441767
-   finished
-     2023-08-29 21:34:16.877658
-* TODO Can my computer no longer handle the sim?
-  Just *one* of the many data sets that var_summaries...py computes
-  is taking at least 10 minutes.
 * TODO BUG: Why did compare.py get stuck for a day?
    When I killed it, make completed, with a "terminated by user" error in the stderr file but otherwise the stdout file looked normal.
    Does the sim not like negative tax rates? That's the only difference I see between the run that got stuck (had negative rates) and the one that merely ran compare.py three times.
@@ -54,16 +48,6 @@ modified   python/requests/main.py
 +              "markdown/interpreting-the-output.md" ] ) )
        with open( defs.global_log_path, "a" ) as f:
          f . write( "Email: Done.\n" )
-* TODO un-hardcode those zero-income tests.
-** There are more!
-*** python/build/people_4_post_households.py
-    earners["share"] = np.where (
-      earners["income, household"] <= 200,
-      ...
-*** python/build/people_4_post_households_test.py
-    ptemp = ( # To make sure none of the ratios is infinite.
-      ptemp [ ( ptemp [ "income" ] > 2 ) &
-	      ( ptemp [ "value, purchase" ] > 0 ) ] )
 * TODO Incorporate test_dependentsToClaim () into Makefile.
   in python/build/people_3_income_taxish_functions.py
 * TODO Is GO making total income tax non-monotonic?
