@@ -17,6 +17,9 @@
 *** Autoconsumo (e.g. farming)
 ** Daniel says he thinks we considered these
    and had good reason not to include them.
+* TODO use IT to compute household income quantiles
+  but keep using "income" for quantiles in the individual-level reports
+** compare IT to "income"
 * TODO [[id:6cfbd409-c45a-46f9-b25a-9d33f8f2971b][un-hardcode those zero-income tests \ tax.co]]
 * TODO ? I restored all the data sets that were disabled in var_summaries_by_group, but have not updated the Makefile accordingly.
   and it's not clear that I should.
