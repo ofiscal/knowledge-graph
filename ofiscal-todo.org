@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
 * TODO in sim
 ** see also [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 ** Sing it loud: I need the subsample in the baseline config to match that of the user config!
