@@ -4,6 +4,7 @@
 :END:
 #+title: tax.co.web
 * refs
+  [[id:1ce3f194-cd72-4163-a0ea-88e672f3760a][manual_ingest online]]
 ** [[id:dc3cf615-f76e-40ed-b20d-2ea09ba3f74b][deploy tax.co.web over EC2]]
 ** tax.co.web on github
    https://github.com/ofiscal/tax.co.web

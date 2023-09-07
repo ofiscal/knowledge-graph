@@ -22,6 +22,7 @@
     and above the next special row.
 *** The header is complex.
     But Pandas can read a hierarchical (multi-row) header, if told to.
+    http://blog.jjsantoso.com/pandas-excel/
 *** There are garbage rows.
     Both above the header and below the main table.
 *** The second page is garbage.
