@@ -2,6 +2,8 @@
 :ID:       8231ac1d-f1d6-4988-af21-5d48f79b916e
 :END:
 #+title: organizing the gasto and presupuesto público tutela results
+https://drive.google.com/drive/folders/1JlcRgcPDsjhJx7oP5g_A64wZkKYwH2rp?usp=sharing
+* TODO [[id:783189af-5163-4167-aa36-5f40e872a5ac][u, meeting notes <2023-09-12 Tue>: legal structure of the budget]]
 * what's in the data
 ** Each entity's data is funcionamiento, inversion and deuda.
 ** There is "una capa extra" para funcionamiento:
