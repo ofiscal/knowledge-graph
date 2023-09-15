@@ -2,6 +2,15 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TEFISCON
+** (someone) estimates more than 25% of tax revenue is foregone for tax expenditures
+** "political discount rates" depend on politicians' incentives -- e.g. just get to the next election
+* reading a law
+  https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=56882
+** NGOs can be petitioned too
+   The law seems mostly targeted at users of pulic funds, but:
+
+   "Las disposiciones de esta ley serán aplicables a las siguientes personas en calidad de sujetos obligados: ... Los partidos o movimientos políticos y los grupos significativos de ciudadanos."
 * TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
 * TODO in sim
 ** see also [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
