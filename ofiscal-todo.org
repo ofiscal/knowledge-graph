@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO a single labor income instead of four
+* TODO ingest DANE's mystery aggregate consumption, too
 * TEFISCON
 ** (someone) estimates more than 25% of tax revenue is foregone for tax expenditures
 ** "political discount rates" depend on politicians' incentives -- e.g. just get to the next election
