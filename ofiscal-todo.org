@@ -11,8 +11,6 @@
 * TODO talk to Mauricio, compare his work on SS contribs to mine
 * TODO Run a VAT simulation that Oliver has been asking Gabriel for.
   Baseline v. 19% flat VAT.
-* TODO push the latest docker image
-* TODO separate the docker code into its own repo
 * TODO ask [[id:5f6ccd9d-146b-49c0-b53e-95abfed3f957][Jaime Trujillo]] to show me what data he's extracting from [[id:1e87a8da-9a5c-46fc-9bd8-837c4e25750a][Función Pública]]
   Hola Jaime! Oliver pidió que yo te pidiera a ti que me muestres lo que estás sacando de Función Pública, una vez has sacado algo.
 * TODO a single labor income instead of four
