@@ -4,4 +4,5 @@
 :END:
 #+title: DIAN
 * [[id:b63d22cf-7f00-43fc-b81d-4be8884d402f][OF and DIAN]]
-* [[id:c0fc4cb4-6a54-4ce5-b24c-442549a89193][Can we send regressions for DIAN run?]]
+* [[id:c0fc4cb4-6a54-4ce5-b24c-442549a89193][Can we send regressions for DIAN to run?]]
+* [[id:cfcfe1ba-83fa-49cd-975d-a0cba8c18c9e][DIAN & jbb]]
