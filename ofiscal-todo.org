@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO [[id:c0c23f3f-4e53-4634-83cc-12c94d921f71][? Pension income should mostly be exempt from income tax.]]
 * TODO compare SS contribs at 1 min wage from sim to Mauricio's code
   might need dotaciones
   and maybe even more stuff, but dotaciones is huge

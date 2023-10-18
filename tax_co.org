@@ -2,6 +2,11 @@
 :ID:       dc968fea-dd45-4734-b375-9e60b87005c6
 :END:
 #+title: tax.co
+* TODO ? Pension income should mostly be exempt from income tax.
+  :PROPERTIES:
+  :ID:       c0c23f3f-4e53-4634-83cc-12c94d921f71
+  :END:
+  Is something subtracted from it at some point?
 * SEE ALSO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][tax.co.web]]
 * refs
 ** github
