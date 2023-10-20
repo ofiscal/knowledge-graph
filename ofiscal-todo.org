@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO Read Chapter 3 of what Oliver just sent on Whatsapp.
+  <2023-10-20 Fri> at 3:02 PM
 * TODO [[id:c0c23f3f-4e53-4634-83cc-12c94d921f71][? Pension income should mostly be exempt from income tax.]]
 * TODO compare SS contribs at 1 min wage from sim to Mauricio's code
   might need dotaciones
@@ -27,8 +29,7 @@
 ** use [[id:a2bff01a-db10-4ada-956d-740455840caa][parallel processing in GNU make with a multi-output rule that does not create redundant processes]]
    Ideally, via pymake, since text manipulation is hard in make, and I need to create a list of rules from a list of targets.
 * [[id:23c15b94-66aa-4744-bef4-edf912c5ba45][Are these data the Contralía sent us useful?]]
-* TODO get latest viviendas and personales ENPH from Gabriel
-* Help Silvana with backups, maybe version control
+* TODO Help Silvana with backups, maybe version control
 * new project "Desagregación del PGN"
 ** Central gov reports transfers to munis and depts in PGN.
 ** Munis and depts report receipts? CUIPO, supposedly.
