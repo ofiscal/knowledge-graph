@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* podcast from Mauricio
+  https://spotify.link/rHzgcbJP8Db
 * collect PGN data across years
 ** use 2024 prices for all years
 ** desired shape: year, sector, and type of spending (inversion, funcionamiento, servicio de deuda)
