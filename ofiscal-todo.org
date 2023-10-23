@@ -2,6 +2,12 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* collect PGN data across years
+** use 2024 prices for all years
+** desired shape: year, sector, and type of spending (inversion, funcionamiento, servicio de deuda)
+** PITFALL: Entities switch sectors and name over time. Use the classification for the 2024.
+* suggest buying a mic and speaker for laptop
+* update passwords
 * TODO Read Chapter 3 of what Oliver just sent on Whatsapp.
   <2023-10-20 Fri> at 3:02 PM
 * TODO [[id:c0c23f3f-4e53-4634-83cc-12c94d921f71][? Pension income should mostly be exempt from income tax.]]
