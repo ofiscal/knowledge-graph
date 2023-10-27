@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f34ebb0a-f038-43ae-8c6b-23d91c1ae829
+:END:
+#+title: pgn-years
+git@github.com:ofiscal/pgn-years.git
+* purpose
+  collect PGN data across years

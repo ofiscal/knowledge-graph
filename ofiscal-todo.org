@@ -2,10 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO read, edit
-  https://docs.google.com/document/d/1OnYD2rSodYV338VAuieqHfdY0l4KL9x1cIIzugDz5fo/edit
-* TODO collect PGN data across years
-  git@github.com:ofiscal/pgn-years.git
+* TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO break out predial and vehiculos, and don't use other "value" taxes.
   where "don't use" = "don't propogate into aggregate tax figures"
 * podcast from Mauricio
