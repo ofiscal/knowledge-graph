@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO [[id:f92b0b06-c93b-447e-bc3e-ccae6d3193f0][test a CTO]]
 * TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO break out predial and vehiculos, and don't use other "value" taxes.
   where "don't use" = "don't propogate into aggregate tax figures"
@@ -31,7 +32,7 @@
 ** Sing it loud: I need the subsample in the baseline config to match that of the user config!
 ** use [[id:a2bff01a-db10-4ada-956d-740455840caa][parallel processing in GNU make with a multi-output rule that does not create redundant processes]]
    Ideally, via pymake, since text manipulation is hard in make, and I need to create a list of rules from a list of targets.
-* [[id:23c15b94-66aa-4744-bef4-edf912c5ba45][Are these data the Contralía sent us useful?]]
+* [[id:23c15b94-66aa-4744-bef4-edf912c5ba45][Are these data the Contraloría sent us useful?]]
 * TODO Help Silvana with backups, maybe version control
 * new project "Desagregación del PGN"
 ** Central gov reports transfers to munis and depts in PGN.

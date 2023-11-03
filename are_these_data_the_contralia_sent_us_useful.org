@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       23c15b94-66aa-4744-bef4-edf912c5ba45
 :END:
-#+title: Are these data the Contralía sent us useful?
+#+title: Are these data the Contraloría sent us useful?
   https://www.contraloria.gov.co/en/web/observatorio-de-control-y-vigilancia-de-las-finanzas/inicio
 * they write
 ** where
