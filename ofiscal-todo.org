@@ -3,7 +3,7 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO talk to DIAN about having to leave either end of Nov or end of Jan
-* write the ad for the data analyst
+* TODO Write the [[id:51c4ebdf-2525-495e-b3d9-0f3650a8adea][test for the data analyst]].
 * TODO [[id:f92b0b06-c93b-447e-bc3e-ccae6d3193f0][test a CTO]]
 * TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO break out predial and vehiculos, and don't use other "value" taxes.
