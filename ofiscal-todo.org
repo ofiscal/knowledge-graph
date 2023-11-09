@@ -5,6 +5,7 @@
 * TODO [[id:9efac453-223b-47c4-8d31-0e5d7702feb9][install python 3.12 in Ubuntu]]
 * TODO ? rather than regexes across column names, write out all column names in some kind of data structure, but include a test that the regex relationship holds on that structure
 * TODO add "it per capita" to tax.co's output
+* TODO [[id:fc56bc8f-0aca-4376-bd4f-98e9f69a57ef][tax.co and tax.co.web : document how to run]] (more)
 * TODO talk to DIAN about having to leave either end of Nov or end of Jan
 * TODO Write the [[id:51c4ebdf-2525-495e-b3d9-0f3650a8adea][test for the data analyst]].
 * TODO [[id:f92b0b06-c93b-447e-bc3e-ccae6d3193f0][test a CTO]]

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       fc56bc8f-0aca-4376-bd4f-98e9f69a57ef
+:END:
+#+title: tax.co and tax.co.web : document how to run
+* the jq dependency somewhere
+* that create.sh need customization
+* make system_specific a submodule of tax.co.web
+* in tax.co.web, system_specific should be called that, not tax.co.web-system.specific or whatever
+* document how to start tax.co.web, not just set it up
+  using create.sh
