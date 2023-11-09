@@ -915,6 +915,7 @@ but zero people in the sample received any of it:
 ** "P6500 (asalariado income) > 0" should be perfecty corr'd with pension contrib's
 ** ??? pension contribs = formality.
 * DONE | hopefully stale
+** NAH [[id:9efac453-223b-47c4-8d31-0e5d7702feb9][install python 3.12 in Ubuntu]]
 ** DONE (now run-makefile.py handles this) Internalize: Baseline config file must match sample size of user config file
    :PROPERTIES:
    :ID:       6c7711c7-c228-4400-bd26-ce39997e2681
