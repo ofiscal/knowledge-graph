@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO [[id:3560284a-36d4-465d-836a-4d47d44c21ec][subdivide "labor income" into "indep" and "dep" \ tax.co]]
 * TODO [[id:9efac453-223b-47c4-8d31-0e5d7702feb9][install python 3.12 in Ubuntu]]
 * TODO ? rather than regexes across column names, write out all column names in some kind of data structure, but include a test that the regex relationship holds on that structure
 * TODO add "it per capita" to tax.co's output
