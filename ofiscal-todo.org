@@ -2,6 +2,20 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO amend tax.co installation instructions
+When updating git submodules, you'll need (if you haven't done it already) to configure git to use the git (ssh) protocol, as described here:
+
+    https://stackoverflow.com/a/42641637/916142
+
+  or change the submodule URL to the http protocol:
+
+    cd tax.co.web/system_specific/
+    git remote set-url origin https://github.com/ofiscal/tax.co.web-system.specific
+* TODO add new SS taxes to sim output
+** the new vars in python/build/ss/schedules.py
+   ARL
+   aux transporte
+   vacaciones
 * TODO [[id:3560284a-36d4-465d-836a-4d47d44c21ec][subdivide "labor income" into "indep" and "dep" \ tax.co]]
 * TODO ? rather than regexes across column names, write out all column names in some kind of data structure, but include a test that the regex relationship holds on that structure
 * TODO show Daniel [[id:09d7afcb-9397-4720-9ae8-f117a522f5c0][commit a8ba8ce21a9a87ac9993a4111b65a5ddb20a63fb in tax.co]]

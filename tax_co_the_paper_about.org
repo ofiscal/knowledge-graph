@@ -7,6 +7,7 @@
    tax.co/tex/overview-paper.tex
 ** on Overleaf
    https://www.overleaf.com/project/5e595b989b19b0000110cfbe
+* TODO u [[id:630a57f2-5203-4272-98ec-44e9fad555a4][notes on the paper about tax.co taken with Liliana & Daniel, <2023-11-17 Fri>]]
 * TODO add a "limitations" section
 ** a list
 *** we assume sales are immediate

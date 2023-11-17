@@ -30,6 +30,7 @@ But they might include some insights into the data due to David Suarez not recor
      "p6351" : "P6350",
    }
 ** [[id:a62dcf88-7357-4b02-b059-b418cd0aa945][Reported labor income is what remains after *some* contributions.]]
+** [[id:c9595020-d67a-4139-a7d4-49d806edb8d5][hours worked variables]]
 * to do
 ** interpreting frequencies
 *** problem: 2.1 or 2?
