@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       221ad7b4-ca6c-49d9-a7bf-8377c56872a1
+:END:
+#+title: add SS taxes to sim output <2023-11-17 Fri> \ tax.co
+* the new functions in python/build/ss/functions.py
+  mk_arl
+  mk_arl_employer
+  mk_aux_transporte_employer
+  mk_vacaciones_employer
+* the new vars in python/build/ss/schedules.py
+  ARL
+  aux transporte
+  vacaciones
