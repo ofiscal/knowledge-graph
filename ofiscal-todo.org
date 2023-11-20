@@ -3,6 +3,12 @@
 :END:
 #+TITLE: ofiscal, todo
 * TODO [[id:221ad7b4-ca6c-49d9-a7bf-8377c56872a1][add SS taxes to sim output <2023-11-17 Fri> \ tax.cco]]
+* TODO redraw the tax.co makefile graph
+* TODO come up with a time estimate for the sim paper
+  Explain all the TODO items to Oliver,
+  ask which he wants.
+* TODO make a separate tax.co repo, with the PDF
+  Suggest this as "the link" to share.
 * TODO amend tax.co installation instructions
 When updating git submodules, you'll need (if you haven't done it already) to configure git to use the git (ssh) protocol, as described here:
 
