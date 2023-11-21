@@ -5,6 +5,10 @@
 * TODO test fake-master branch on AWS
   If it works, move those changes into master
   (from SS-2023) and update AWS.
+* TODO pgn-years
+** two COP columns: nominal and 2023 COP
+** assign its 2024 sector to each entity regardless of year
+   If the entity disappears, use the last sector it belonged to.
 * TODO [[id:221ad7b4-ca6c-49d9-a7bf-8377c56872a1][add SS taxes to sim output <2023-11-17 Fri> \ tax.cco]]
 * TODO redraw the tax.co makefile graph
 * TODO come up with a time estimate for the sim paper
