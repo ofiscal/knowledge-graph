@@ -2,7 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO test fake-master branch on AWS
+* TODO test SS-2023 branch on AWS
   If it works, move those changes into master
   (from SS-2023) and update AWS.
 * TODO pgn-years

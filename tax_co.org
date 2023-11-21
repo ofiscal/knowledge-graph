@@ -17,16 +17,12 @@
 ** [[id:090a81f4-8cc4-4b78-9593-f876c848b75f][tricks - how to do some things]]
 ** [[id:51b591db-dbc7-460f-9066-075c21fafc77][Multi-Sample Estimation (econometrics)]]
 ** [[id:a4c4ce8d-fe87-4f66-91dc-b1cade8c1f08][how to onboard someone to the tax.co* repositories]]
-* TODO [[id:42065532-4a3b-4ec1-a3f0-8e563ef918ce][Makefile *still* <2023-09-08 Fri> running baseline programs when nothing has changed \ bug, tax.co.web]]
 * reasons our total income measure might not match DANE's
 ** reasons, via Juan Miguel Villa
 *** Value of house
 *** Autoconsumo (e.g. farming)
 ** Daniel says he thinks we considered these
    and had good reason not to include them.
-* TODO use IT to compute household income quantiles
-  but keep using "income" for quantiles in the individual-level reports
-** compare IT to "income"
 * TODO [[id:6cfbd409-c45a-46f9-b25a-9d33f8f2971b][un-hardcode those zero-income tests \ tax.co]]
 * TODO ? I restored all the data sets that were disabled in var_summaries_by_group, but have not updated the Makefile accordingly.
   and it's not clear that I should.
@@ -916,6 +912,10 @@ but zero people in the sample received any of it:
 ** "P6500 (asalariado income) > 0" should be perfecty corr'd with pension contrib's
 ** ??? pension contribs = formality.
 * DONE | hopefully stale
+** DONE [[id:42065532-4a3b-4ec1-a3f0-8e563ef918ce][Makefile *still* <2023-09-08 Fri> running baseline programs when nothing has changed \ bug, tax.co.web]]
+** DONE use IT to compute household income quantiles
+   but keep using "income" for quantiles in the individual-level reports
+*** compare IT to "income"
 ** NAH [[id:9efac453-223b-47c4-8d31-0e5d7702feb9][install python 3.12 in Ubuntu]]
 ** DONE (now run-makefile.py handles this) Internalize: Baseline config file must match sample size of user config file
    :PROPERTIES:
