@@ -2,6 +2,8 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO send top ten highest paid that I can find to Gabriel
+* TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
 * TODO test SS-2023 branch on AWS
   If it works, move those changes into master
   (from SS-2023) and update AWS.
@@ -26,10 +28,8 @@ When updating git submodules, you'll need (if you haven't done it already) to co
     cd tax.co.web/system_specific/
     git remote set-url origin https://github.com/ofiscal/tax.co.web-system.specific
 * TODO [[id:3560284a-36d4-465d-836a-4d47d44c21ec][subdivide "labor income" into "indep" and "dep" \ tax.co]]
-* TODO include vacaciones, cesantias and primas in labor income
 * TODO ? rather than regexes across column names, write out all column names in some kind of data structure, but include a test that the regex relationship holds on that structure
 * TODO show Daniel [[id:09d7afcb-9397-4720-9ae8-f117a522f5c0][commit a8ba8ce21a9a87ac9993a4111b65a5ddb20a63fb in tax.co]]
-* TODO talk to DIAN about having to leave either end of Nov or end of Jan
 * TODO Write the [[id:51c4ebdf-2525-495e-b3d9-0f3650a8adea][test for the data analyst]].
 * TODO [[id:f92b0b06-c93b-447e-bc3e-ccae6d3193f0][test a CTO]]
 * TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
@@ -45,7 +45,6 @@ When updating git submodules, you'll need (if you haven't done it already) to co
   Baseline v. 19% flat VAT.
 * TODO ask [[id:5f6ccd9d-146b-49c0-b53e-95abfed3f957][Jaime Trujillo]] to show me what data he's extracting from [[id:1e87a8da-9a5c-46fc-9bd8-837c4e25750a][Función Pública]]
   Hola Jaime! Oliver pidió que yo te pidiera a ti que me muestres lo que estás sacando de Función Pública, una vez has sacado algo.
-* TODO a single labor income instead of four
 * TEFISCON
 ** (someone) estimates more than 25% of tax revenue is foregone for tax expenditures
 ** "political discount rates" depend on politicians' incentives -- e.g. just get to the next election
@@ -55,7 +54,6 @@ When updating git submodules, you'll need (if you haven't done it already) to co
    The law seems mostly targeted at users of pulic funds, but:
 
    "Las disposiciones de esta ley serán aplicables a las siguientes personas en calidad de sujetos obligados: ... Los partidos o movimientos políticos y los grupos significativos de ciudadanos."
-* TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
 * TODO in sim
 ** see also [[id:dc968fea-dd45-4734-b375-9e60b87005c6][tax.co]]
 ** Sing it loud: I need the subsample in the baseline config to match that of the user config!
