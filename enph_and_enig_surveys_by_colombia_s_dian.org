@@ -6,6 +6,7 @@
 * references
   https://microdatos.dane.gov.co/index.php/catalog/566/get_microdata
   tax.co/hopefully-obsolete/enig-enph,email,david-suarez,2018-02-23.md
+* [[id:5cd13164-4e73-4ecf-9229-444aa4dc66b7][unit of observation in the ENPH]]
 * TODO unmerged notes on the [[id:cf5eb548-54b3-48bf-b231-b29d3b627399][enph]]
 * TODO [[id:e79b5d00-01ea-44bb-90d9-3772db555875][What are the aggregate income, expenditure variables in the ENPH?]]
 * PITFALL: These notes files are redundant

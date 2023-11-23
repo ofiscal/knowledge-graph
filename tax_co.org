@@ -8,6 +8,9 @@
   :ID:       c0c23f3f-4e53-4634-83cc-12c94d921f71
   :END:
   Is something subtracted from it at some point?
+* TODO ? quantiles are computed without weights.
+  This might be the best way to do it:
+  https://stackoverflow.com/questions/21844024/weighted-percentile-using-numpy/63440143#63440143
 * SEE ALSO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][tax.co.web]]
 * refs
 ** github
