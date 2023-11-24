@@ -8,9 +8,11 @@
   :ID:       c0c23f3f-4e53-4634-83cc-12c94d921f71
   :END:
   Is something subtracted from it at some point?
+* TODO [[id:9acc7ee7-b314-42d1-bae8-f92509dfdc7d][make microsimulation (if possible) match DANE's and Gabriel's income stats]]
 * TODO ? quantiles are computed without weights.
   This might be the best way to do it:
   https://stackoverflow.com/questions/21844024/weighted-percentile-using-numpy/63440143#63440143
+  Oliver believes Gabriel already did this.
 * SEE ALSO [[id:f8d67417-cc75-4e62-b219-abaee0f73b0b][tax.co.web]]
 * refs
 ** github

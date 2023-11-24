@@ -4,6 +4,8 @@
 :END:
 #+title: organizing the gasto and presupuesto público tutela results
 https://drive.google.com/drive/folders/1JlcRgcPDsjhJx7oP5g_A64wZkKYwH2rp?usp=sharing
+* these are actually derechos de petición
+  not tutelas
 * TODO include these subtotals
   Salario
   Remuneraciones no constitutivas de factor salarial

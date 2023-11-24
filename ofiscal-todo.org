@@ -2,14 +2,15 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO FIRST [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
+  at least see if I can get the first 75%
+* TODO [[id:3b014afa-9eec-4c10-b8a4-bde25d6b9bb0][giving Daniel permissions in AWS]]
+* TODO [[id:9acc7ee7-b314-42d1-bae8-f92509dfdc7d][make microsimulation (if possible) match DANE's and Gabriel's income stats]]
+* TODO [[id:3560284a-36d4-465d-836a-4d47d44c21ec][subdivide "labor income" into "indep" and "dep" \ tax.co]]
 * TODO test SS-2023 branch on AWS
   If it works, move those changes into master
   (from SS-2023) and update AWS.
-* TODO pgn-years
-** two COP columns: nominal and 2023 COP
-** assign its 2024 sector to each entity regardless of year
-   If the entity disappears, use the last sector it belonged to.
 * TODO [[id:221ad7b4-ca6c-49d9-a7bf-8377c56872a1][add SS taxes to sim output <2023-11-17 Fri> \ tax.cco]]
 * TODO redraw the tax.co makefile graph
 * TODO come up with a time estimate for the sim paper
@@ -26,12 +27,10 @@ When updating git submodules, you'll need (if you haven't done it already) to co
 
     cd tax.co.web/system_specific/
     git remote set-url origin https://github.com/ofiscal/tax.co.web-system.specific
-* TODO [[id:3560284a-36d4-465d-836a-4d47d44c21ec][subdivide "labor income" into "indep" and "dep" \ tax.co]]
 * TODO ? rather than regexes across column names, write out all column names in some kind of data structure, but include a test that the regex relationship holds on that structure
 * TODO show Daniel [[id:09d7afcb-9397-4720-9ae8-f117a522f5c0][commit a8ba8ce21a9a87ac9993a4111b65a5ddb20a63fb in tax.co]]
 * TODO Write the [[id:51c4ebdf-2525-495e-b3d9-0f3650a8adea][test for the data analyst]].
 * TODO [[id:f92b0b06-c93b-447e-bc3e-ccae6d3193f0][test a CTO]]
-* TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO break out predial and vehiculos, and don't use other "value" taxes.
   where "don't use" = "don't propogate into aggregate tax figures"
 * podcast from Mauricio
