@@ -4,7 +4,24 @@
 :END:
 #+title: organizing the gasto and presupuesto público tutela results
 https://drive.google.com/drive/folders/1JlcRgcPDsjhJx7oP5g_A64wZkKYwH2rp?usp=sharing
-* TODO commit `paths.py` from PUJ computer
+* TODO understanding the code
+  tree | grep -v -e "\.pyc\|__.*__\|TAG"
+
+  ├── clean_one_file
+  │   ├── defs.py        # understood
+  │   └── test.py
+  ├── collect.py         # understood
+  ├── exceptions
+  │   ├── discoveries.py # understood
+  │   ├── explore.py
+  ├── find_files
+  │   ├── defs.py        # HARD
+  │   └── test.py
+  ├── main.py            # understood
+  ├── paths.py
+  ├── reconnaissance.py
+  ├── temp.py
+  └── types.py           # understood
 * TODO [[id:783189af-5163-4167-aa36-5f40e872a5ac][u, meeting notes <2023-09-12 Tue>: legal structure of the budget]]
 * TODO understand what Angelica sent
   when I asked if responses were complete
