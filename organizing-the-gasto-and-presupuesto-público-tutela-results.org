@@ -4,6 +4,11 @@
 :END:
 #+title: organizing the gasto and presupuesto público tutela results
 https://drive.google.com/drive/folders/1JlcRgcPDsjhJx7oP5g_A64wZkKYwH2rp?usp=sharing
+* TODO include these subtotals
+  Salario
+  Remuneraciones no constitutivas de factor salarial
+  Contribuciones inherentes a la nómina
+  Prestaciones sociales relacionadas con el empleo
 * TODO understanding the code
   tree | grep -v -e "\.pyc\|__.*__\|TAG"
 

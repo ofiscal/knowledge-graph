@@ -2,7 +2,6 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO send top ten highest paid that I can find to Gabriel
 * TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
 * TODO test SS-2023 branch on AWS
   If it works, move those changes into master
