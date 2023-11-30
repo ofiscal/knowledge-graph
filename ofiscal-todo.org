@@ -2,9 +2,9 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* TODO FIRST [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
   at least see if I can get the first 75%
+* TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO [[id:3b014afa-9eec-4c10-b8a4-bde25d6b9bb0][giving Daniel permissions in AWS]]
 * TODO [[id:9acc7ee7-b314-42d1-bae8-f92509dfdc7d][make microsimulation (if possible) match DANE's and Gabriel's income stats]]
 * TODO [[id:3560284a-36d4-465d-836a-4d47d44c21ec][subdivide "labor income" into "indep" and "dep" \ tax.co]]
