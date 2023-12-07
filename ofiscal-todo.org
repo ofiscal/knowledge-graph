@@ -2,6 +2,7 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
+* TODO weight the deciles in the microsimulation
 * TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
   at least see if I can get the first 75%
 * TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
