@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       8231ac1d-f1d6-4988-af21-5d48f79b916e
-:ROAM_ALIASES: "unir-tutelas-de-presupuesto (git repo)"
+:ROAM_ALIASES: "unir-derechos-de-peticion-salariales (git repo)" "clean derechos de petición for salaries"
 :END:
-#+title: organizing the gasto and presupuesto público tutela results
+#+title: organizing the responses to our derechos de petición for salary data
 https://drive.google.com/drive/folders/1JlcRgcPDsjhJx7oP5g_A64wZkKYwH2rp?usp=sharing
 * these are actually derechos de petición
   not tutelas

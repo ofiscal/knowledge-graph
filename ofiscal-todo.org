@@ -5,7 +5,7 @@
 * BLOCKED (Angelica should say go by noon Tuesday) : Edit the grant doc.
   Shorten it
 * TODO weight the deciles in the microsimulation
-* TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][organizing tutela results]]
+* TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][clean derechos de petición for salaries]]
   at least see if I can get the first 75%
 * TODO [[id:f34ebb0a-f038-43ae-8c6b-23d91c1ae829][pgn-years]]
 * TODO [[id:3b014afa-9eec-4c10-b8a4-bde25d6b9bb0][giving Daniel permissions in AWS]]
