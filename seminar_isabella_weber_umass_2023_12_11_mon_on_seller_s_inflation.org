@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9c98e0f1-ce34-4804-ba95-7e1a850481dd
+:END:
+#+title: Isabella Weber (UMass), seminar <2023-12-11 Mon>: seller's inflation
+* [[id:4424e774-84d5-4373-9313-d03ab89b03fd][Annual average profit fluctuates wildly.]]
+* [[id:b4ead8e8-2891-489b-b8cf-f39e29232aaa][Earnings calls permit something resembling collusion.]]
+* strangely just-so argument
+  Lots of just-so stories, esp. for asymmetric price changes, not a lot of data backing them up. Firms willing to reprice to protect profit margins, but otherwise not.

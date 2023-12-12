@@ -2,6 +2,7 @@
 :ID:       b5b1e9a8-12ab-4f46-8d3a-59202df8a57a
 :END:
 #+title: ofiscal
+* [[id:9c98e0f1-ce34-4804-ba95-7e1a850481dd][seminar, Isabella Weber (UMass), <2023-12-11 Mon>, on seller's inflation]]
 * address
   Cra 7 #40b-36, Piso 7
   Bogotá, Colombia 110231
