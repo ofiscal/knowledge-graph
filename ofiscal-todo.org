@@ -2,8 +2,10 @@
 :ID:       cb1bb067-d8cc-48d2-ad90-60ba4308adf8
 :END:
 #+TITLE: ofiscal, todo
-* BLOCKED (Angelica should say go by noon Tuesday) : Edit the grant doc.
-  Shorten it
+* TODO pgn data
+  https://mail.google.com/mail/u/0/#search/from%3Awilliam/QgrcJHrnxSwGZZCqcZmVLxgdzkgrmMjzgng
+  If two rows in the same year have the same code,
+  add their data.
 * TODO weight the deciles in the microsimulation
 * TODO [[id:8231ac1d-f1d6-4988-af21-5d48f79b916e][clean derechos de petición for salaries]]
   at least see if I can get the first 75%
