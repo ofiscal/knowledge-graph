@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       7c5fdba6-be07-4486-b4d7-06c0299f1438
+:END:
+#+title: download AWS stuff and then delete everything, inc. card
